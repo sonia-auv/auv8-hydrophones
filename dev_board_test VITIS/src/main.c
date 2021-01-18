@@ -5,43 +5,18 @@
  *      Author: franc
  */
 
-#include <stdio.h>
-#include <stdlib.h>
-#include "xparameters.h"
-#include "xiomodule.h"
-#include "xiomodule_io.h"
-#include "xil_printf.h"
-
-#define COMMAND_NORMAL_OP '1'
-#define COMMAND_TEST_PING '2'
-#define COMMAND_SET_GAIN '3'
-#define COMMAND_GET_RAW_DATA '4'
-
-typedef enum {menu, waitcommand, normalop, testping, setgain, getrawdata} state_machine;
-
-void initperipherals(void);
-void displaymenu(void);
-void setpgagain(u8 gain);
-void commandsetpgagain(void);
-char receivedcommand(void);
-u8 dataready(void);
-u32 readdata(XIOModule *ref, u8 device);
-void writedata(XIOModule *ref, u8 device, u32 data);
-void error(u8 value);
-void printvoltage(float sample);
-char polluart(void);
-
-XIOModule peripherals;
-XIOModule dataout;
-XIOModule dataout2;
-u8 gain = 7;
-float LSB = 4.096/65536;
+#include "x7_function.h"
 
 int main()
 {
 	state_machine state = menu;
 
+	XIOModule peripherals;
+	XIOModule dataout;
+	XIOModule dataout2;
+
 	char command = 0;
+	float LSB = 4.096/65536;
 
 	u32 frequency;
 	u8 heading_first;
@@ -57,7 +32,7 @@ int main()
 
 	xil_printf("\n\r");
 
-	initperipherals();
+	initperipherals(&peripherals, &dataout, &dataout2);
 
 	while(1)
 	{
@@ -104,7 +79,7 @@ int main()
 
 			case setgain:
 				state = menu;
-				commandsetpgagain();
+				commandsetpgagain(&peripherals);
 			break;
 
 			case getrawdata:
@@ -117,7 +92,7 @@ int main()
 			break;
 		}
 
-		if(dataready())
+		if(dataready(&peripherals))
 		{
 			if(state == normalop || state == testping)
 			{
@@ -157,129 +132,4 @@ int main()
 		}
 	}
 	return 0;
-}
-
-void initperipherals(void)
-{
-	u8 state = 0;
-
-	state = XIOModule_Initialize(&peripherals, XPAR_IOMODULE_0_DEVICE_ID);
-	error(state);
-	state = XIOModule_Initialize(&dataout, XPAR_IOMODULE_1_DEVICE_ID);
-	error(state);
-	state = XIOModule_Initialize(&dataout2, XPAR_IOMODULE_2_DEVICE_ID);
-	error(state);
-	state = XIOModule_Start(&peripherals);
-	error(state);
-	state = XIOModule_Start(&dataout);
-	error(state);
-	state = XIOModule_Start(&dataout2);
-	error(state);
-	setpgagain(gain);
-}
-
-void displaymenu(void)
-{
-	xil_printf("\n\r========= Hydrophone Application =========\n\n\r");
-	xil_printf("Main menu :\n\n\r");
-	xil_printf("%c - Normal Operation\n\r", COMMAND_NORMAL_OP);
-	xil_printf("%c - Test Ping\n\r", COMMAND_TEST_PING);
-	xil_printf("%c - Set PGA gain\n\r", COMMAND_SET_GAIN);
-	xil_printf("%c - Get Raw Data\n\n\r", COMMAND_GET_RAW_DATA);
-	xil_printf(" Your choice :");
-}
-
-void setpgagain(u8 gain)
-{
-	if(gain >= 0 && gain <= 7)
-	{
-		XIOModule_DiscreteWrite(&peripherals, 1, gain);
-		xil_printf("\n\r========= The gain is set =========\n\r");
-	}
-	else
-	{
-		xil_printf("\n\r========= The gain can't be set =========\n\r");
-	}
-}
-
-void commandsetpgagain(void)
-{
-	xil_printf("\n\r========= Set gain =========\n\r");
-	u8 new_gain = receivedcommand();
-	setpgagain(new_gain-48);
-}
-
-char receivedcommand(void)
-{
-	char c = 0;
-	char returned = 0;
-
-	while(returned == 0)
-	{
-		c = getchar(); // 0x0D is enter key
-		xil_printf(" %c \n\r", c);
-
-		if(c != 0x0D)
-		{
-			returned = c;
-		}
-	}
-	return returned;
-}
-
-u8 dataready(void)
-{
-	u8 ready = readdata(&peripherals, 2);
-
-	if(ready == 1)
-	{
-		return 1;
-	}
-	return 0;
-}
-
-u32 readdata(XIOModule *ref, u8 device)
-{
-	return XIOModule_DiscreteRead(ref, device);
-}
-
-void writedata(XIOModule *ref, u8 device, u32 data)
-{
-	XIOModule_DiscreteWrite(ref, device, data);
-}
-
-void error(u8 value)
-{
-	static int i = 0;
-
-	if(value != 0)
-	{
-		xil_printf("\n\r========= Init didn't work =========\n\r");
-	}
-
-	if(i < 100)
-	{
-		i += 20;
-		xil_printf("%d %%	", i);
-	}
-	else
-	{
-		xil_printf("\n\n\r========= Init worked =========\n\r");
-		i=0;
-	}
-}
-
-void printvoltage(float sample)
-{
-	u16 whole, thousand;
-
-	whole = sample;
-	thousand = (sample - whole) * 100000;
-
-	xil_printf("%d.%05d V ", whole, thousand);
-}
-
-char polluart(void)
-{
-	return XIomodule_In32(XPAR_AXI_UARTLITE_0_BASEADDR);
 }
