@@ -1,0 +1,12 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/franc/dev_board_test/dev_board_test.ip_user_files/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0_clk_wiz.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module design_1_clk_wiz_0_0_clk_wiz
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/franc/dev_board_test/dev_board_test.ip_user_files/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module design_1_clk_wiz_0_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/franc/dev_board_test/dev_board_test.ip_user_files/bd/design_1/ip/design_1_lmb_bram_0/sim/design_1_lmb_bram_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module design_1_lmb_bram_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/franc/dev_board_test/dev_board_test.ip_user_files/bd/design_1/ip/design_1_xbar_0/sim/design_1_xbar_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module design_1_xbar_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/franc/dev_board_test/dev_board_test.ip_user_files/bd/design_1/ip/design_1_axi_bram_ctrl_0_bram_0/sim/design_1_axi_bram_ctrl_0_bram_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module design_1_axi_bram_ctrl_0_bram_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/franc/dev_board_test/dev_board_test.ip_user_files/bd/design_1/ip/design_1_auto_pc_0/sim/design_1_auto_pc_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module design_1_auto_pc_0

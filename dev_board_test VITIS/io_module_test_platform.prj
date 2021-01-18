@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="ASCII"?>
+<sdkproject:SdkProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sdkproject="http://www.xilinx.com/sdkproject" name="io_module_test_platform" location="C:/Users/franc/workspace/io_module_test_platform" platform="C:/Users/franc/workspace/io_module/export/io_module/io_module.xpfm" platformUID="xilinx:cmod-s7-25::0.0(custom)" systemProject="io_module_test_platform_system" sysConfig="io_module" runtime="C/C++" cpu="standalone_microblaze_0" cpuInstance="microblaze_0" os="standalone" mssSignature="9d8868c5ac4dc3e86d675127bbce374e">
+  <configuration name="Debug" id="xilinx.gnu.mb.exe.debug.197930378">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+    <lastBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <configuration name="Release" id="xilinx.gnu.mb.exe.release.1391162641" dirty="true">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <template appTemplateName="hello_world"/>
+</sdkproject:SdkProject>

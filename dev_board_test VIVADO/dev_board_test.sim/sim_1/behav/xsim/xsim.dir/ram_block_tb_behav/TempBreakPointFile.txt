@@ -1,0 +1,3 @@
+Breakpoint File Version 1.0
+80,true,"C:/Users/franc/dev_board_test/dev_board_test.srcs/sim_1/new/ram_block_tb.vhd"
+78,true,"C:/Users/franc/dev_board_test/dev_board_test.srcs/sim_1/new/ram_block_tb.vhd"

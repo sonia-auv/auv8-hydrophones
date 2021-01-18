@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Sun Jan 17 17:49:04 2021
+# Process ID: 672
+# Current directory: C:/Users/franc/dev_board_test/dev_board_test.runs/synth_1
+# Command line: vivado.exe -log ram_block.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source ram_block.tcl
+# Log file: C:/Users/franc/dev_board_test/dev_board_test.runs/synth_1/ram_block.vds
+# Journal file: C:/Users/franc/dev_board_test/dev_board_test.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source ram_block.tcl -notrace

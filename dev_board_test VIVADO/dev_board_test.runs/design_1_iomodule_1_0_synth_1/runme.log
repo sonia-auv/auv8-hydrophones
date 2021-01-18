@@ -1,0 +1,940 @@
+
+*** Running vivado
+    with args -log design_1_iomodule_1_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_iomodule_1_0.tcl
+
+
+
+****** Vivado v2020.2 (64-bit)
+  **** SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+  **** IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source design_1_iomodule_1_0.tcl -notrace
+Command: synth_design -top design_1_iomodule_1_0 -part xc7s25csga225-1 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7s25'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7s25'
+INFO: [Device 21-403] Loading part xc7s25csga225-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 9308
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1155.891 ; gain = 12.074
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'design_1_iomodule_1_0' [c:/Users/franc/dev_board_test/dev_board_test.gen/sources_1/bd/design_1/ip/design_1_iomodule_1_0/synth/design_1_iomodule_1_0.vhd:80]
+	Parameter C_FAMILY bound to: spartan7 - type: string 
+	Parameter C_FREQ bound to: 100000000 - type: integer 
+	Parameter C_INSTANCE bound to: iomodule_0 - type: string 
+	Parameter C_USE_CONFIG_RESET bound to: 0 - type: integer 
+	Parameter C_AVOID_PRIMITIVES bound to: 0 - type: integer 
+	Parameter C_TMR bound to: 0 - type: integer 
+	Parameter C_USE_TMR_DISABLE bound to: 0 - type: integer 
+	Parameter C_HIGHADDR bound to: 64'b0000000000000000000000000000000001000100101000101111111111111111 
+	Parameter C_BASEADDR bound to: 64'b0000000000000000000000000000000001000100101000100000000000000000 
+	Parameter C_MASK bound to: 64'b0000000000000000000000000000000000000000000000110000000000000000 
+	Parameter C_IO_HIGHADDR bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter C_IO_BASEADDR bound to: 64'b1111111111111111111111111111111111111111111111111111111111111111 
+	Parameter C_IO_MASK bound to: 64'b0000000000000000000000000000000000000000100000000000000000000000 
+	Parameter C_LMB_AWIDTH bound to: 32 - type: integer 
+	Parameter C_LMB_DWIDTH bound to: 32 - type: integer 
+	Parameter C_LMB_PROTOCOL bound to: 0 - type: integer 
+	Parameter C_USE_IO_BUS bound to: 0 - type: integer 
+	Parameter C_USE_UART_RX bound to: 0 - type: integer 
+	Parameter C_USE_UART_TX bound to: 0 - type: integer 
+	Parameter C_UART_BAUDRATE bound to: 9600 - type: integer 
+	Parameter C_UART_DATA_BITS bound to: 8 - type: integer 
+	Parameter C_UART_USE_PARITY bound to: 0 - type: integer 
+	Parameter C_UART_ODD_PARITY bound to: 0 - type: integer 
+	Parameter C_UART_RX_INTERRUPT bound to: 0 - type: integer 
+	Parameter C_UART_TX_INTERRUPT bound to: 0 - type: integer 
+	Parameter C_UART_ERROR_INTERRUPT bound to: 0 - type: integer 
+	Parameter C_UART_PROG_BAUDRATE bound to: 0 - type: integer 
+	Parameter C_UART_FREQ bound to: 100000000 - type: integer 
+	Parameter C_UART_ASYNC bound to: 0 - type: integer 
+	Parameter C_UART_NUM_SYNC_FF bound to: 2 - type: integer 
+	Parameter C_USE_FIT1 bound to: 0 - type: integer 
+	Parameter C_FIT1_No_CLOCKS bound to: 6216 - type: integer 
+	Parameter C_FIT1_INTERRUPT bound to: 0 - type: integer 
+	Parameter C_USE_FIT2 bound to: 0 - type: integer 
+	Parameter C_FIT2_No_CLOCKS bound to: 6216 - type: integer 
+	Parameter C_FIT2_INTERRUPT bound to: 0 - type: integer 
+	Parameter C_USE_FIT3 bound to: 0 - type: integer 
+	Parameter C_FIT3_No_CLOCKS bound to: 6216 - type: integer 
+	Parameter C_FIT3_INTERRUPT bound to: 0 - type: integer 
+	Parameter C_USE_FIT4 bound to: 0 - type: integer 
+	Parameter C_FIT4_No_CLOCKS bound to: 6216 - type: integer 
+	Parameter C_FIT4_INTERRUPT bound to: 0 - type: integer 
+	Parameter C_USE_PIT1 bound to: 0 - type: integer 
+	Parameter C_PIT1_SIZE bound to: 32 - type: integer 
+	Parameter C_PIT1_READABLE bound to: 1 - type: integer 
+	Parameter C_PIT1_PRESCALER bound to: 0 - type: integer 
+	Parameter C_PIT1_INTERRUPT bound to: 0 - type: integer 
+	Parameter C_USE_PIT2 bound to: 0 - type: integer 
+	Parameter C_PIT2_SIZE bound to: 32 - type: integer 
+	Parameter C_PIT2_READABLE bound to: 1 - type: integer 
+	Parameter C_PIT2_PRESCALER bound to: 0 - type: integer 
+	Parameter C_PIT2_INTERRUPT bound to: 0 - type: integer 
+	Parameter C_USE_PIT3 bound to: 0 - type: integer 
+	Parameter C_PIT3_SIZE bound to: 32 - type: integer 
+	Parameter C_PIT3_READABLE bound to: 1 - type: integer 
+	Parameter C_PIT3_PRESCALER bound to: 0 - type: integer 
+	Parameter C_PIT3_INTERRUPT bound to: 0 - type: integer 
+	Parameter C_USE_PIT4 bound to: 0 - type: integer 
+	Parameter C_PIT4_SIZE bound to: 32 - type: integer 
+	Parameter C_PIT4_READABLE bound to: 1 - type: integer 
+	Parameter C_PIT4_PRESCALER bound to: 0 - type: integer 
+	Parameter C_PIT4_INTERRUPT bound to: 0 - type: integer 
+	Parameter C_USE_GPO1 bound to: 0 - type: integer 
+	Parameter C_GPO1_SIZE bound to: 32 - type: integer 
+	Parameter C_GPO1_INIT bound to: 32'b00000000000000000000000000000000 
+	Parameter C_USE_GPO2 bound to: 0 - type: integer 
+	Parameter C_GPO2_SIZE bound to: 32 - type: integer 
+	Parameter C_GPO2_INIT bound to: 32'b00000000000000000000000000000000 
+	Parameter C_USE_GPO3 bound to: 0 - type: integer 
+	Parameter C_GPO3_SIZE bound to: 32 - type: integer 
+	Parameter C_GPO3_INIT bound to: 32'b00000000000000000000000000000000 
+	Parameter C_USE_GPO4 bound to: 0 - type: integer 
+	Parameter C_GPO4_SIZE bound to: 32 - type: integer 
+	Parameter C_GPO4_INIT bound to: 32'b00000000000000000000000000000000 
+	Parameter C_USE_GPI1 bound to: 1 - type: integer 
+	Parameter C_GPI1_SIZE bound to: 32 - type: integer 
+	Parameter C_GPI1_INTERRUPT bound to: 0 - type: integer 
+	Parameter C_USE_GPI2 bound to: 1 - type: integer 
+	Parameter C_GPI2_SIZE bound to: 32 - type: integer 
+	Parameter C_GPI2_INTERRUPT bound to: 0 - type: integer 
+	Parameter C_USE_GPI3 bound to: 1 - type: integer 
+	Parameter C_GPI3_SIZE bound to: 32 - type: integer 
+	Parameter C_GPI3_INTERRUPT bound to: 0 - type: integer 
+	Parameter C_USE_GPI4 bound to: 0 - type: integer 
+	Parameter C_GPI4_SIZE bound to: 32 - type: integer 
+	Parameter C_GPI4_INTERRUPT bound to: 0 - type: integer 
+	Parameter C_INTC_USE_EXT_INTR bound to: 0 - type: integer 
+	Parameter C_INTC_INTR_SIZE bound to: 1 - type: integer 
+	Parameter C_INTC_LEVEL_EDGE bound to: 16'b0000000000000000 
+	Parameter C_INTC_POSITIVE bound to: 16'b1111111111111111 
+	Parameter C_INTC_HAS_FAST bound to: 0 - type: integer 
+	Parameter C_INTC_ADDR_WIDTH bound to: 32 - type: integer 
+	Parameter C_INTC_BASE_VECTORS bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter C_INTC_ASYNC_INTR bound to: 16'b1111111111111111 
+	Parameter C_INTC_NUM_SYNC_FF bound to: 2 - type: integer 
+INFO: [Synth 8-3491] module 'iomodule' declared at 'c:/Users/franc/dev_board_test/dev_board_test.gen/sources_1/bd/design_1/ipshared/8c53/hdl/iomodule_v3_1_vh_rfs.vhd:9898' bound to instance 'U0' of component 'iomodule' [c:/Users/franc/dev_board_test/dev_board_test.gen/sources_1/bd/design_1/ip/design_1_iomodule_1_0/synth/design_1_iomodule_1_0.vhd:287]
+INFO: [Synth 8-638] synthesizing module 'iomodule' [c:/Users/franc/dev_board_test/dev_board_test.gen/sources_1/bd/design_1/ipshared/8c53/hdl/iomodule_v3_1_vh_rfs.vhd:10107]
+	Parameter C_FAMILY bound to: spartan7 - type: string 
+	Parameter C_FREQ bound to: 100000000 - type: integer 
+	Parameter C_INSTANCE bound to: iomodule_0 - type: string 
+	Parameter C_USE_CONFIG_RESET bound to: 0 - type: integer 
+	Parameter C_AVOID_PRIMITIVES bound to: 0 - type: integer 
+	Parameter C_TMR bound to: 0 - type: integer 
+	Parameter C_USE_TMR_DISABLE bound to: 0 - type: integer 
+	Parameter C_HIGHADDR bound to: 64'b0000000000000000000000000000000001000100101000101111111111111111 
+	Parameter C_BASEADDR bound to: 64'b0000000000000000000000000000000001000100101000100000000000000000 
+	Parameter C_MASK bound to: 64'b0000000000000000000000000000000000000000000000110000000000000000 
+	Parameter C_IO_HIGHADDR bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter C_IO_BASEADDR bound to: 64'b1111111111111111111111111111111111111111111111111111111111111111 
+	Parameter C_IO_MASK bound to: 64'b0000000000000000000000000000000000000000100000000000000000000000 
+	Parameter C_LMB_AWIDTH bound to: 32 - type: integer 
+	Parameter C_LMB_DWIDTH bound to: 32 - type: integer 
+	Parameter C_LMB_PROTOCOL bound to: 0 - type: integer 
+	Parameter C_USE_IO_BUS bound to: 0 - type: integer 
+	Parameter C_USE_UART_RX bound to: 0 - type: integer 
+	Parameter C_USE_UART_TX bound to: 0 - type: integer 
+	Parameter C_UART_BAUDRATE bound to: 9600 - type: integer 
+	Parameter C_UART_DATA_BITS bound to: 8 - type: integer 
+	Parameter C_UART_USE_PARITY bound to: 0 - type: integer 
+	Parameter C_UART_ODD_PARITY bound to: 0 - type: integer 
+	Parameter C_UART_RX_INTERRUPT bound to: 0 - type: integer 
+	Parameter C_UART_TX_INTERRUPT bound to: 0 - type: integer 
+	Parameter C_UART_ERROR_INTERRUPT bound to: 0 - type: integer 
+	Parameter C_UART_PROG_BAUDRATE bound to: 0 - type: integer 
+	Parameter C_UART_FREQ bound to: 100000000 - type: integer 
+	Parameter C_UART_ASYNC bound to: 0 - type: integer 
+	Parameter C_UART_NUM_SYNC_FF bound to: 2 - type: integer 
+	Parameter C_USE_FIT1 bound to: 0 - type: integer 
+	Parameter C_FIT1_No_CLOCKS bound to: 6216 - type: integer 
+	Parameter C_FIT1_INTERRUPT bound to: 0 - type: integer 
+	Parameter C_USE_FIT2 bound to: 0 - type: integer 
+	Parameter C_FIT2_No_CLOCKS bound to: 6216 - type: integer 
+	Parameter C_FIT2_INTERRUPT bound to: 0 - type: integer 
+	Parameter C_USE_FIT3 bound to: 0 - type: integer 
+	Parameter C_FIT3_No_CLOCKS bound to: 6216 - type: integer 
+	Parameter C_FIT3_INTERRUPT bound to: 0 - type: integer 
+	Parameter C_USE_FIT4 bound to: 0 - type: integer 
+	Parameter C_FIT4_No_CLOCKS bound to: 6216 - type: integer 
+	Parameter C_FIT4_INTERRUPT bound to: 0 - type: integer 
+	Parameter C_USE_PIT1 bound to: 0 - type: integer 
+	Parameter C_PIT1_SIZE bound to: 32 - type: integer 
+	Parameter C_PIT1_READABLE bound to: 1 - type: integer 
+	Parameter C_PIT1_PRESCALER bound to: 0 - type: integer 
+	Parameter C_PIT1_INTERRUPT bound to: 0 - type: integer 
+	Parameter C_USE_PIT2 bound to: 0 - type: integer 
+	Parameter C_PIT2_SIZE bound to: 32 - type: integer 
+	Parameter C_PIT2_READABLE bound to: 1 - type: integer 
+	Parameter C_PIT2_PRESCALER bound to: 0 - type: integer 
+	Parameter C_PIT2_INTERRUPT bound to: 0 - type: integer 
+	Parameter C_USE_PIT3 bound to: 0 - type: integer 
+	Parameter C_PIT3_SIZE bound to: 32 - type: integer 
+	Parameter C_PIT3_READABLE bound to: 1 - type: integer 
+	Parameter C_PIT3_PRESCALER bound to: 0 - type: integer 
+	Parameter C_PIT3_INTERRUPT bound to: 0 - type: integer 
+	Parameter C_USE_PIT4 bound to: 0 - type: integer 
+	Parameter C_PIT4_SIZE bound to: 32 - type: integer 
+	Parameter C_PIT4_READABLE bound to: 1 - type: integer 
+	Parameter C_PIT4_PRESCALER bound to: 0 - type: integer 
+	Parameter C_PIT4_INTERRUPT bound to: 0 - type: integer 
+	Parameter C_USE_GPO1 bound to: 0 - type: integer 
+	Parameter C_GPO1_SIZE bound to: 32 - type: integer 
+	Parameter C_GPO1_INIT bound to: 0 - type: integer 
+	Parameter C_USE_GPO2 bound to: 0 - type: integer 
+	Parameter C_GPO2_SIZE bound to: 32 - type: integer 
+	Parameter C_GPO2_INIT bound to: 0 - type: integer 
+	Parameter C_USE_GPO3 bound to: 0 - type: integer 
+	Parameter C_GPO3_SIZE bound to: 32 - type: integer 
+	Parameter C_GPO3_INIT bound to: 0 - type: integer 
+	Parameter C_USE_GPO4 bound to: 0 - type: integer 
+	Parameter C_GPO4_SIZE bound to: 32 - type: integer 
+	Parameter C_GPO4_INIT bound to: 0 - type: integer 
+	Parameter C_USE_GPI1 bound to: 1 - type: integer 
+	Parameter C_GPI1_SIZE bound to: 32 - type: integer 
+	Parameter C_GPI1_INTERRUPT bound to: 0 - type: integer 
+	Parameter C_USE_GPI2 bound to: 1 - type: integer 
+	Parameter C_GPI2_SIZE bound to: 32 - type: integer 
+	Parameter C_GPI2_INTERRUPT bound to: 0 - type: integer 
+	Parameter C_USE_GPI3 bound to: 1 - type: integer 
+	Parameter C_GPI3_SIZE bound to: 32 - type: integer 
+	Parameter C_GPI3_INTERRUPT bound to: 0 - type: integer 
+	Parameter C_USE_GPI4 bound to: 0 - type: integer 
+	Parameter C_GPI4_SIZE bound to: 32 - type: integer 
+	Parameter C_GPI4_INTERRUPT bound to: 0 - type: integer 
+	Parameter C_INTC_USE_EXT_INTR bound to: 0 - type: integer 
+	Parameter C_INTC_INTR_SIZE bound to: 1 - type: integer 
+	Parameter C_INTC_LEVEL_EDGE bound to: 16'b0000000000000000 
+	Parameter C_INTC_POSITIVE bound to: 16'b1111111111111111 
+	Parameter C_INTC_HAS_FAST bound to: 0 - type: integer 
+	Parameter C_INTC_ADDR_WIDTH bound to: 32 - type: integer 
+	Parameter C_INTC_BASE_VECTORS bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter C_INTC_ASYNC_INTR bound to: 16'b1111111111111111 
+	Parameter C_INTC_NUM_SYNC_FF bound to: 2 - type: integer 
+	Parameter C_AW bound to: 32 - type: integer 
+	Parameter C_BAR bound to: 64'b0000000000000000000000000000000001000100101000100000000000000000 
+	Parameter C_MASK bound to: 64'b0000000000000000000000000000000000000000000000110000000000000000 
+INFO: [Synth 8-3491] module 'pselect_mask' declared at 'c:/Users/franc/dev_board_test/dev_board_test.gen/sources_1/bd/design_1/ipshared/8c53/hdl/iomodule_v3_1_vh_rfs.vhd:9731' bound to instance 'pselect_mask_reg' of component 'pselect_mask' [c:/Users/franc/dev_board_test/dev_board_test.gen/sources_1/bd/design_1/ipshared/8c53/hdl/iomodule_v3_1_vh_rfs.vhd:10455]
+INFO: [Synth 8-638] synthesizing module 'pselect_mask' [c:/Users/franc/dev_board_test/dev_board_test.gen/sources_1/bd/design_1/ipshared/8c53/hdl/iomodule_v3_1_vh_rfs.vhd:9746]
+	Parameter C_AW bound to: 32 - type: integer 
+	Parameter C_BAR bound to: 64'b0000000000000000000000000000000001000100101000100000000000000000 
+	Parameter C_MASK bound to: 64'b0000000000000000000000000000000000000000000000110000000000000000 
+INFO: [Synth 8-256] done synthesizing module 'pselect_mask' (1#1) [c:/Users/franc/dev_board_test/dev_board_test.gen/sources_1/bd/design_1/ipshared/8c53/hdl/iomodule_v3_1_vh_rfs.vhd:9746]
+	Parameter C_TARGET bound to: 1'b0 
+	Parameter C_FREQ bound to: 100000000 - type: integer 
+	Parameter C_USE_CONFIG_RESET bound to: 0 - type: integer 
+	Parameter C_AVOID_PRIMITIVES bound to: 0 - type: integer 
+	Parameter C_TMR bound to: 0 - type: integer 
+	Parameter C_USE_TMR_DISABLE bound to: 0 - type: integer 
+	Parameter C_USE_UART_RX bound to: 0 - type: integer 
+	Parameter C_USE_UART_TX bound to: 0 - type: integer 
+	Parameter C_UART_BAUDRATE bound to: 9600 - type: integer 
+	Parameter C_UART_DATA_BITS bound to: 8 - type: integer 
+	Parameter C_UART_USE_PARITY bound to: 0 - type: integer 
+	Parameter C_UART_ODD_PARITY bound to: 0 - type: integer 
+	Parameter C_UART_RX_INTERRUPT bound to: 0 - type: integer 
+	Parameter C_UART_TX_INTERRUPT bound to: 0 - type: integer 
+	Parameter C_UART_ERROR_INTERRUPT bound to: 0 - type: integer 
+	Parameter C_UART_PROG_BAUDRATE bound to: 0 - type: integer 
+	Parameter C_UART_FREQ bound to: 100000000 - type: integer 
+	Parameter C_UART_ASYNC bound to: 0 - type: integer 
+	Parameter C_UART_NUM_SYNC_FF bound to: 2 - type: integer 
+	Parameter C_USE_FIT1 bound to: 0 - type: integer 
+	Parameter C_FIT1_No_CLOCKS bound to: 6216 - type: integer 
+	Parameter C_FIT1_INTERRUPT bound to: 0 - type: integer 
+	Parameter C_USE_FIT2 bound to: 0 - type: integer 
+	Parameter C_FIT2_No_CLOCKS bound to: 6216 - type: integer 
+	Parameter C_FIT2_INTERRUPT bound to: 0 - type: integer 
+	Parameter C_USE_FIT3 bound to: 0 - type: integer 
+	Parameter C_FIT3_No_CLOCKS bound to: 6216 - type: integer 
+	Parameter C_FIT3_INTERRUPT bound to: 0 - type: integer 
+	Parameter C_USE_FIT4 bound to: 0 - type: integer 
+	Parameter C_FIT4_No_CLOCKS bound to: 6216 - type: integer 
+	Parameter C_FIT4_INTERRUPT bound to: 0 - type: integer 
+	Parameter C_USE_PIT1 bound to: 0 - type: integer 
+	Parameter C_PIT1_SIZE bound to: 32 - type: integer 
+	Parameter C_PIT1_READABLE bound to: 1 - type: integer 
+	Parameter C_PIT1_PRESCALER bound to: 0 - type: integer 
+	Parameter C_PIT1_INTERRUPT bound to: 0 - type: integer 
+	Parameter C_USE_PIT2 bound to: 0 - type: integer 
+	Parameter C_PIT2_SIZE bound to: 32 - type: integer 
+	Parameter C_PIT2_READABLE bound to: 1 - type: integer 
+	Parameter C_PIT2_PRESCALER bound to: 0 - type: integer 
+	Parameter C_PIT2_INTERRUPT bound to: 0 - type: integer 
+	Parameter C_USE_PIT3 bound to: 0 - type: integer 
+	Parameter C_PIT3_SIZE bound to: 32 - type: integer 
+	Parameter C_PIT3_READABLE bound to: 1 - type: integer 
+	Parameter C_PIT3_PRESCALER bound to: 0 - type: integer 
+	Parameter C_PIT3_INTERRUPT bound to: 0 - type: integer 
+	Parameter C_USE_PIT4 bound to: 0 - type: integer 
+	Parameter C_PIT4_SIZE bound to: 32 - type: integer 
+	Parameter C_PIT4_READABLE bound to: 1 - type: integer 
+	Parameter C_PIT4_PRESCALER bound to: 0 - type: integer 
+	Parameter C_PIT4_INTERRUPT bound to: 0 - type: integer 
+	Parameter C_USE_GPO1 bound to: 0 - type: integer 
+	Parameter C_GPO1_SIZE bound to: 32 - type: integer 
+	Parameter C_GPO1_INIT bound to: 0 - type: integer 
+	Parameter C_USE_GPO2 bound to: 0 - type: integer 
+	Parameter C_GPO2_SIZE bound to: 32 - type: integer 
+	Parameter C_GPO2_INIT bound to: 0 - type: integer 
+	Parameter C_USE_GPO3 bound to: 0 - type: integer 
+	Parameter C_GPO3_SIZE bound to: 32 - type: integer 
+	Parameter C_GPO3_INIT bound to: 0 - type: integer 
+	Parameter C_USE_GPO4 bound to: 0 - type: integer 
+	Parameter C_GPO4_SIZE bound to: 32 - type: integer 
+	Parameter C_GPO4_INIT bound to: 0 - type: integer 
+	Parameter C_USE_GPI1 bound to: 1 - type: integer 
+	Parameter C_GPI1_SIZE bound to: 32 - type: integer 
+	Parameter C_GPI1_INTERRUPT bound to: 0 - type: integer 
+	Parameter C_USE_GPI2 bound to: 1 - type: integer 
+	Parameter C_GPI2_SIZE bound to: 32 - type: integer 
+	Parameter C_GPI2_INTERRUPT bound to: 0 - type: integer 
+	Parameter C_USE_GPI3 bound to: 1 - type: integer 
+	Parameter C_GPI3_SIZE bound to: 32 - type: integer 
+	Parameter C_GPI3_INTERRUPT bound to: 0 - type: integer 
+	Parameter C_USE_GPI4 bound to: 0 - type: integer 
+	Parameter C_GPI4_SIZE bound to: 32 - type: integer 
+	Parameter C_GPI4_INTERRUPT bound to: 0 - type: integer 
+	Parameter C_ADDR_WIDTH bound to: 32 - type: integer 
+	Parameter C_INTC_USE_EXT_INTR bound to: 0 - type: integer 
+	Parameter C_INTC_INTR_SIZE bound to: 1 - type: integer 
+	Parameter C_INTC_LEVEL_EDGE bound to: 16'b0000000000000000 
+	Parameter C_INTC_POSITIVE bound to: 16'b1111111111111111 
+	Parameter C_INTC_HAS_FAST bound to: 0 - type: integer 
+	Parameter C_INTC_ADDR_WIDTH bound to: 32 - type: integer 
+	Parameter C_INTC_BASE_VECTORS bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter C_INTC_ASYNC_INTR bound to: 16'b1111111111111111 
+	Parameter C_INTC_NUM_SYNC_FF bound to: 2 - type: integer 
+INFO: [Synth 8-3491] module 'Iomodule_core' declared at 'c:/Users/franc/dev_board_test/dev_board_test.gen/sources_1/bd/design_1/ipshared/8c53/hdl/iomodule_v3_1_vh_rfs.vhd:8525' bound to instance 'IOModule_Core_I1' of component 'iomodule_core' [c:/Users/franc/dev_board_test/dev_board_test.gen/sources_1/bd/design_1/ipshared/8c53/hdl/iomodule_v3_1_vh_rfs.vhd:10680]
+INFO: [Synth 8-638] synthesizing module 'Iomodule_core' [c:/Users/franc/dev_board_test/dev_board_test.gen/sources_1/bd/design_1/ipshared/8c53/hdl/iomodule_v3_1_vh_rfs.vhd:8739]
+	Parameter C_TARGET bound to: 1'b0 
+	Parameter C_FREQ bound to: 100000000 - type: integer 
+	Parameter C_USE_CONFIG_RESET bound to: 0 - type: integer 
+	Parameter C_AVOID_PRIMITIVES bound to: 0 - type: integer 
+	Parameter C_TMR bound to: 0 - type: integer 
+	Parameter C_USE_TMR_DISABLE bound to: 0 - type: integer 
+	Parameter C_USE_UART_RX bound to: 0 - type: integer 
+	Parameter C_USE_UART_TX bound to: 0 - type: integer 
+	Parameter C_UART_BAUDRATE bound to: 9600 - type: integer 
+	Parameter C_UART_DATA_BITS bound to: 8 - type: integer 
+	Parameter C_UART_USE_PARITY bound to: 0 - type: integer 
+	Parameter C_UART_ODD_PARITY bound to: 0 - type: integer 
+	Parameter C_UART_RX_INTERRUPT bound to: 0 - type: integer 
+	Parameter C_UART_TX_INTERRUPT bound to: 0 - type: integer 
+	Parameter C_UART_ERROR_INTERRUPT bound to: 0 - type: integer 
+	Parameter C_UART_PROG_BAUDRATE bound to: 0 - type: integer 
+	Parameter C_UART_FREQ bound to: 100000000 - type: integer 
+	Parameter C_UART_ASYNC bound to: 0 - type: integer 
+	Parameter C_UART_NUM_SYNC_FF bound to: 2 - type: integer 
+	Parameter C_USE_FIT1 bound to: 0 - type: integer 
+	Parameter C_FIT1_No_CLOCKS bound to: 6216 - type: integer 
+	Parameter C_FIT1_INTERRUPT bound to: 0 - type: integer 
+	Parameter C_USE_FIT2 bound to: 0 - type: integer 
+	Parameter C_FIT2_No_CLOCKS bound to: 6216 - type: integer 
+	Parameter C_FIT2_INTERRUPT bound to: 0 - type: integer 
+	Parameter C_USE_FIT3 bound to: 0 - type: integer 
+	Parameter C_FIT3_No_CLOCKS bound to: 6216 - type: integer 
+	Parameter C_FIT3_INTERRUPT bound to: 0 - type: integer 
+	Parameter C_USE_FIT4 bound to: 0 - type: integer 
+	Parameter C_FIT4_No_CLOCKS bound to: 6216 - type: integer 
+	Parameter C_FIT4_INTERRUPT bound to: 0 - type: integer 
+	Parameter C_USE_PIT1 bound to: 0 - type: integer 
+	Parameter C_PIT1_SIZE bound to: 32 - type: integer 
+	Parameter C_PIT1_READABLE bound to: 1 - type: integer 
+	Parameter C_PIT1_PRESCALER bound to: 0 - type: integer 
+	Parameter C_PIT1_INTERRUPT bound to: 0 - type: integer 
+	Parameter C_USE_PIT2 bound to: 0 - type: integer 
+	Parameter C_PIT2_SIZE bound to: 32 - type: integer 
+	Parameter C_PIT2_READABLE bound to: 1 - type: integer 
+	Parameter C_PIT2_PRESCALER bound to: 0 - type: integer 
+	Parameter C_PIT2_INTERRUPT bound to: 0 - type: integer 
+	Parameter C_USE_PIT3 bound to: 0 - type: integer 
+	Parameter C_PIT3_SIZE bound to: 32 - type: integer 
+	Parameter C_PIT3_READABLE bound to: 1 - type: integer 
+	Parameter C_PIT3_PRESCALER bound to: 0 - type: integer 
+	Parameter C_PIT3_INTERRUPT bound to: 0 - type: integer 
+	Parameter C_USE_PIT4 bound to: 0 - type: integer 
+	Parameter C_PIT4_SIZE bound to: 32 - type: integer 
+	Parameter C_PIT4_READABLE bound to: 1 - type: integer 
+	Parameter C_PIT4_PRESCALER bound to: 0 - type: integer 
+	Parameter C_PIT4_INTERRUPT bound to: 0 - type: integer 
+	Parameter C_USE_GPO1 bound to: 0 - type: integer 
+	Parameter C_GPO1_SIZE bound to: 32 - type: integer 
+	Parameter C_GPO1_INIT bound to: 0 - type: integer 
+	Parameter C_USE_GPO2 bound to: 0 - type: integer 
+	Parameter C_GPO2_SIZE bound to: 32 - type: integer 
+	Parameter C_GPO2_INIT bound to: 0 - type: integer 
+	Parameter C_USE_GPO3 bound to: 0 - type: integer 
+	Parameter C_GPO3_SIZE bound to: 32 - type: integer 
+	Parameter C_GPO3_INIT bound to: 0 - type: integer 
+	Parameter C_USE_GPO4 bound to: 0 - type: integer 
+	Parameter C_GPO4_SIZE bound to: 32 - type: integer 
+	Parameter C_GPO4_INIT bound to: 0 - type: integer 
+	Parameter C_USE_GPI1 bound to: 1 - type: integer 
+	Parameter C_GPI1_SIZE bound to: 32 - type: integer 
+	Parameter C_GPI1_INTERRUPT bound to: 0 - type: integer 
+	Parameter C_USE_GPI2 bound to: 1 - type: integer 
+	Parameter C_GPI2_SIZE bound to: 32 - type: integer 
+	Parameter C_GPI2_INTERRUPT bound to: 0 - type: integer 
+	Parameter C_USE_GPI3 bound to: 1 - type: integer 
+	Parameter C_GPI3_SIZE bound to: 32 - type: integer 
+	Parameter C_GPI3_INTERRUPT bound to: 0 - type: integer 
+	Parameter C_USE_GPI4 bound to: 0 - type: integer 
+	Parameter C_GPI4_SIZE bound to: 32 - type: integer 
+	Parameter C_GPI4_INTERRUPT bound to: 0 - type: integer 
+	Parameter C_ADDR_WIDTH bound to: 32 - type: integer 
+	Parameter C_INTC_USE_EXT_INTR bound to: 0 - type: integer 
+	Parameter C_INTC_INTR_SIZE bound to: 1 - type: integer 
+	Parameter C_INTC_LEVEL_EDGE bound to: 16'b0000000000000000 
+	Parameter C_INTC_POSITIVE bound to: 16'b1111111111111111 
+	Parameter C_INTC_HAS_FAST bound to: 0 - type: integer 
+	Parameter C_INTC_ADDR_WIDTH bound to: 32 - type: integer 
+	Parameter C_INTC_BASE_VECTORS bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter C_INTC_ASYNC_INTR bound to: 16'b1111111111111111 
+	Parameter C_INTC_NUM_SYNC_FF bound to: 2 - type: integer 
+	Parameter C_TARGET bound to: 1'b0 
+	Parameter C_FREQ bound to: 100000000 - type: integer 
+	Parameter C_UART_FREQ bound to: 100000000 - type: integer 
+	Parameter C_TMR bound to: 0 - type: integer 
+	Parameter C_USE_TMR_DISABLE bound to: 0 - type: integer 
+	Parameter C_VOTE_SIZE bound to: 199 - type: integer 
+	Parameter C_USE_SRL16 bound to: yes - type: string 
+	Parameter C_UART_PROG_BAUDRATE bound to: 0 - type: integer 
+	Parameter C_UART_ASYNC bound to: 0 - type: integer 
+	Parameter C_UART_NUM_SYNC_FF bound to: 2 - type: integer 
+	Parameter C_UART_BAUDRATE bound to: 9600 - type: integer 
+	Parameter C_USE_UART_RX bound to: 0 - type: integer 
+	Parameter C_USE_UART_TX bound to: 0 - type: integer 
+	Parameter C_UART_DATA_BITS bound to: 8 - type: integer 
+	Parameter C_UART_USE_PARITY bound to: 0 - type: integer 
+	Parameter C_UART_ODD_PARITY bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'UART' declared at 'c:/Users/franc/dev_board_test/dev_board_test.gen/sources_1/bd/design_1/ipshared/8c53/hdl/iomodule_v3_1_vh_rfs.vhd:7680' bound to instance 'UART_I1' of component 'UART' [c:/Users/franc/dev_board_test/dev_board_test.gen/sources_1/bd/design_1/ipshared/8c53/hdl/iomodule_v3_1_vh_rfs.vhd:9058]
+INFO: [Synth 8-638] synthesizing module 'UART' [c:/Users/franc/dev_board_test/dev_board_test.gen/sources_1/bd/design_1/ipshared/8c53/hdl/iomodule_v3_1_vh_rfs.vhd:7731]
+	Parameter C_TARGET bound to: 1'b0 
+	Parameter C_FREQ bound to: 100000000 - type: integer 
+	Parameter C_UART_FREQ bound to: 100000000 - type: integer 
+	Parameter C_TMR bound to: 0 - type: integer 
+	Parameter C_USE_TMR_DISABLE bound to: 0 - type: integer 
+	Parameter C_VOTE_SIZE bound to: 199 - type: integer 
+	Parameter C_USE_SRL16 bound to: yes - type: string 
+	Parameter C_UART_PROG_BAUDRATE bound to: 0 - type: integer 
+	Parameter C_UART_ASYNC bound to: 0 - type: integer 
+	Parameter C_UART_NUM_SYNC_FF bound to: 2 - type: integer 
+	Parameter C_UART_BAUDRATE bound to: 9600 - type: integer 
+	Parameter C_USE_UART_RX bound to: 0 - type: integer 
+	Parameter C_USE_UART_TX bound to: 0 - type: integer 
+	Parameter C_UART_DATA_BITS bound to: 8 - type: integer 
+	Parameter C_UART_USE_PARITY bound to: 0 - type: integer 
+	Parameter C_UART_ODD_PARITY bound to: 0 - type: integer 
+	Parameter C_TARGET bound to: 1'b0 
+	Parameter C_FREQ bound to: 100000000 - type: integer 
+	Parameter C_TMR bound to: 0 - type: integer 
+	Parameter C_USE_TMR_DISABLE bound to: 0 - type: integer 
+	Parameter C_VOTE_SIZE bound to: 136 - type: integer 
+	Parameter C_USE_SRL16 bound to: yes - type: string 
+	Parameter C_UART_PROG_BAUDRATE bound to: 0 - type: integer 
+	Parameter C_UART_BAUDRATE bound to: 9600 - type: integer 
+	Parameter C_USE_UART_RX bound to: 0 - type: integer 
+	Parameter C_USE_UART_TX bound to: 0 - type: integer 
+	Parameter C_UART_DATA_BITS bound to: 8 - type: integer 
+	Parameter C_UART_USE_PARITY bound to: 0 - type: integer 
+	Parameter C_UART_ODD_PARITY bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'UART_Core' declared at 'c:/Users/franc/dev_board_test/dev_board_test.gen/sources_1/bd/design_1/ipshared/8c53/hdl/iomodule_v3_1_vh_rfs.vhd:7133' bound to instance 'UART_Core_I' of component 'UART_Core' [c:/Users/franc/dev_board_test/dev_board_test.gen/sources_1/bd/design_1/ipshared/8c53/hdl/iomodule_v3_1_vh_rfs.vhd:7850]
+INFO: [Synth 8-638] synthesizing module 'UART_Core' [c:/Users/franc/dev_board_test/dev_board_test.gen/sources_1/bd/design_1/ipshared/8c53/hdl/iomodule_v3_1_vh_rfs.vhd:7177]
+	Parameter C_TARGET bound to: 1'b0 
+	Parameter C_FREQ bound to: 100000000 - type: integer 
+	Parameter C_TMR bound to: 0 - type: integer 
+	Parameter C_USE_TMR_DISABLE bound to: 0 - type: integer 
+	Parameter C_VOTE_SIZE bound to: 136 - type: integer 
+	Parameter C_USE_SRL16 bound to: yes - type: string 
+	Parameter C_UART_PROG_BAUDRATE bound to: 0 - type: integer 
+	Parameter C_UART_BAUDRATE bound to: 9600 - type: integer 
+	Parameter C_USE_UART_RX bound to: 0 - type: integer 
+	Parameter C_USE_UART_TX bound to: 0 - type: integer 
+	Parameter C_UART_DATA_BITS bound to: 8 - type: integer 
+	Parameter C_UART_USE_PARITY bound to: 0 - type: integer 
+	Parameter C_UART_ODD_PARITY bound to: 0 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'UART_Core' (2#1) [c:/Users/franc/dev_board_test/dev_board_test.gen/sources_1/bd/design_1/ipshared/8c53/hdl/iomodule_v3_1_vh_rfs.vhd:7177]
+INFO: [Synth 8-256] done synthesizing module 'UART' (3#1) [c:/Users/franc/dev_board_test/dev_board_test.gen/sources_1/bd/design_1/ipshared/8c53/hdl/iomodule_v3_1_vh_rfs.vhd:7731]
+	Parameter C_TARGET bound to: 1'b0 
+	Parameter C_TMR bound to: 0 - type: integer 
+	Parameter C_USE_TMR_DISABLE bound to: 0 - type: integer 
+	Parameter C_VOTE_SIZE bound to: 34 - type: integer 
+	Parameter C_USE_SRL16 bound to: yes - type: string 
+	Parameter C_USE_FIT bound to: 0 - type: integer 
+	Parameter C_NO_CLOCKS bound to: 6216 - type: integer 
+	Parameter C_INACCURACY bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'FIT_Module' declared at 'c:/Users/franc/dev_board_test/dev_board_test.gen/sources_1/bd/design_1/ipshared/8c53/hdl/iomodule_v3_1_vh_rfs.vhd:2505' bound to instance 'FIT_I1' of component 'FIT_Module' [c:/Users/franc/dev_board_test/dev_board_test.gen/sources_1/bd/design_1/ipshared/8c53/hdl/iomodule_v3_1_vh_rfs.vhd:9111]
+INFO: [Synth 8-638] synthesizing module 'FIT_Module' [c:/Users/franc/dev_board_test/dev_board_test.gen/sources_1/bd/design_1/ipshared/8c53/hdl/iomodule_v3_1_vh_rfs.vhd:2533]
+	Parameter C_TARGET bound to: 1'b0 
+	Parameter C_TMR bound to: 0 - type: integer 
+	Parameter C_USE_TMR_DISABLE bound to: 0 - type: integer 
+	Parameter C_VOTE_SIZE bound to: 34 - type: integer 
+	Parameter C_USE_SRL16 bound to: yes - type: string 
+	Parameter C_USE_FIT bound to: 0 - type: integer 
+	Parameter C_NO_CLOCKS bound to: 6216 - type: integer 
+	Parameter C_INACCURACY bound to: 0 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'FIT_Module' (4#1) [c:/Users/franc/dev_board_test/dev_board_test.gen/sources_1/bd/design_1/ipshared/8c53/hdl/iomodule_v3_1_vh_rfs.vhd:2533]
+	Parameter C_TARGET bound to: 1'b0 
+	Parameter C_TMR bound to: 0 - type: integer 
+	Parameter C_USE_TMR_DISABLE bound to: 0 - type: integer 
+	Parameter C_VOTE_SIZE bound to: 34 - type: integer 
+	Parameter C_USE_SRL16 bound to: yes - type: string 
+	Parameter C_USE_FIT bound to: 0 - type: integer 
+	Parameter C_NO_CLOCKS bound to: 6216 - type: integer 
+	Parameter C_INACCURACY bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'FIT_Module' declared at 'c:/Users/franc/dev_board_test/dev_board_test.gen/sources_1/bd/design_1/ipshared/8c53/hdl/iomodule_v3_1_vh_rfs.vhd:2505' bound to instance 'FIT_I2' of component 'FIT_Module' [c:/Users/franc/dev_board_test/dev_board_test.gen/sources_1/bd/design_1/ipshared/8c53/hdl/iomodule_v3_1_vh_rfs.vhd:9134]
+	Parameter C_TARGET bound to: 1'b0 
+	Parameter C_TMR bound to: 0 - type: integer 
+	Parameter C_USE_TMR_DISABLE bound to: 0 - type: integer 
+	Parameter C_VOTE_SIZE bound to: 34 - type: integer 
+	Parameter C_USE_SRL16 bound to: yes - type: string 
+	Parameter C_USE_FIT bound to: 0 - type: integer 
+	Parameter C_NO_CLOCKS bound to: 6216 - type: integer 
+	Parameter C_INACCURACY bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'FIT_Module' declared at 'c:/Users/franc/dev_board_test/dev_board_test.gen/sources_1/bd/design_1/ipshared/8c53/hdl/iomodule_v3_1_vh_rfs.vhd:2505' bound to instance 'FIT_I3' of component 'FIT_Module' [c:/Users/franc/dev_board_test/dev_board_test.gen/sources_1/bd/design_1/ipshared/8c53/hdl/iomodule_v3_1_vh_rfs.vhd:9157]
+	Parameter C_TARGET bound to: 1'b0 
+	Parameter C_TMR bound to: 0 - type: integer 
+	Parameter C_USE_TMR_DISABLE bound to: 0 - type: integer 
+	Parameter C_VOTE_SIZE bound to: 34 - type: integer 
+	Parameter C_USE_SRL16 bound to: yes - type: string 
+	Parameter C_USE_FIT bound to: 0 - type: integer 
+	Parameter C_NO_CLOCKS bound to: 6216 - type: integer 
+	Parameter C_INACCURACY bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'FIT_Module' declared at 'c:/Users/franc/dev_board_test/dev_board_test.gen/sources_1/bd/design_1/ipshared/8c53/hdl/iomodule_v3_1_vh_rfs.vhd:2505' bound to instance 'FIT_I4' of component 'FIT_Module' [c:/Users/franc/dev_board_test/dev_board_test.gen/sources_1/bd/design_1/ipshared/8c53/hdl/iomodule_v3_1_vh_rfs.vhd:9180]
+	Parameter C_TARGET bound to: 1'b0 
+	Parameter C_TMR bound to: 0 - type: integer 
+	Parameter C_USE_TMR_DISABLE bound to: 0 - type: integer 
+	Parameter C_VOTE_SIZE bound to: 70 - type: integer 
+	Parameter C_USE_PIT bound to: 0 - type: integer 
+	Parameter C_PIT_SIZE bound to: 32 - type: integer 
+	Parameter C_PIT_READABLE bound to: 1 - type: integer 
+INFO: [Synth 8-3491] module 'PIT_Module' declared at 'c:/Users/franc/dev_board_test/dev_board_test.gen/sources_1/bd/design_1/ipshared/8c53/hdl/iomodule_v3_1_vh_rfs.vhd:4268' bound to instance 'PIT_I1' of component 'PIT_Module' [c:/Users/franc/dev_board_test/dev_board_test.gen/sources_1/bd/design_1/ipshared/8c53/hdl/iomodule_v3_1_vh_rfs.vhd:9218]
+INFO: [Synth 8-638] synthesizing module 'PIT_Module' [c:/Users/franc/dev_board_test/dev_board_test.gen/sources_1/bd/design_1/ipshared/8c53/hdl/iomodule_v3_1_vh_rfs.vhd:4299]
+	Parameter C_TARGET bound to: 1'b0 
+	Parameter C_TMR bound to: 0 - type: integer 
+	Parameter C_USE_TMR_DISABLE bound to: 0 - type: integer 
+	Parameter C_VOTE_SIZE bound to: 70 - type: integer 
+	Parameter C_USE_PIT bound to: 0 - type: integer 
+	Parameter C_PIT_SIZE bound to: 32 - type: integer 
+	Parameter C_PIT_READABLE bound to: 1 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'PIT_Module' (5#1) [c:/Users/franc/dev_board_test/dev_board_test.gen/sources_1/bd/design_1/ipshared/8c53/hdl/iomodule_v3_1_vh_rfs.vhd:4299]
+	Parameter C_TARGET bound to: 1'b0 
+	Parameter C_TMR bound to: 0 - type: integer 
+	Parameter C_USE_TMR_DISABLE bound to: 0 - type: integer 
+	Parameter C_VOTE_SIZE bound to: 70 - type: integer 
+	Parameter C_USE_PIT bound to: 0 - type: integer 
+	Parameter C_PIT_SIZE bound to: 32 - type: integer 
+	Parameter C_PIT_READABLE bound to: 1 - type: integer 
+INFO: [Synth 8-3491] module 'PIT_Module' declared at 'c:/Users/franc/dev_board_test/dev_board_test.gen/sources_1/bd/design_1/ipshared/8c53/hdl/iomodule_v3_1_vh_rfs.vhd:4268' bound to instance 'PIT_I2' of component 'PIT_Module' [c:/Users/franc/dev_board_test/dev_board_test.gen/sources_1/bd/design_1/ipshared/8c53/hdl/iomodule_v3_1_vh_rfs.vhd:9257]
+	Parameter C_TARGET bound to: 1'b0 
+	Parameter C_TMR bound to: 0 - type: integer 
+	Parameter C_USE_TMR_DISABLE bound to: 0 - type: integer 
+	Parameter C_VOTE_SIZE bound to: 70 - type: integer 
+	Parameter C_USE_PIT bound to: 0 - type: integer 
+	Parameter C_PIT_SIZE bound to: 32 - type: integer 
+	Parameter C_PIT_READABLE bound to: 1 - type: integer 
+INFO: [Synth 8-3491] module 'PIT_Module' declared at 'c:/Users/franc/dev_board_test/dev_board_test.gen/sources_1/bd/design_1/ipshared/8c53/hdl/iomodule_v3_1_vh_rfs.vhd:4268' bound to instance 'PIT_I3' of component 'PIT_Module' [c:/Users/franc/dev_board_test/dev_board_test.gen/sources_1/bd/design_1/ipshared/8c53/hdl/iomodule_v3_1_vh_rfs.vhd:9296]
+	Parameter C_TARGET bound to: 1'b0 
+	Parameter C_TMR bound to: 0 - type: integer 
+	Parameter C_USE_TMR_DISABLE bound to: 0 - type: integer 
+	Parameter C_VOTE_SIZE bound to: 70 - type: integer 
+	Parameter C_USE_PIT bound to: 0 - type: integer 
+	Parameter C_PIT_SIZE bound to: 32 - type: integer 
+	Parameter C_PIT_READABLE bound to: 1 - type: integer 
+INFO: [Synth 8-3491] module 'PIT_Module' declared at 'c:/Users/franc/dev_board_test/dev_board_test.gen/sources_1/bd/design_1/ipshared/8c53/hdl/iomodule_v3_1_vh_rfs.vhd:4268' bound to instance 'PIT_I4' of component 'PIT_Module' [c:/Users/franc/dev_board_test/dev_board_test.gen/sources_1/bd/design_1/ipshared/8c53/hdl/iomodule_v3_1_vh_rfs.vhd:9335]
+	Parameter C_TMR bound to: 0 - type: integer 
+	Parameter C_USE_TMR_DISABLE bound to: 0 - type: integer 
+	Parameter C_VOTE_SIZE bound to: 32 - type: integer 
+	Parameter C_USE_GPO bound to: 0 - type: integer 
+	Parameter C_GPO_SIZE bound to: 32 - type: integer 
+	Parameter C_GPO_INIT bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'GPO_Module' declared at 'c:/Users/franc/dev_board_test/dev_board_test.gen/sources_1/bd/design_1/ipshared/8c53/hdl/iomodule_v3_1_vh_rfs.vhd:3194' bound to instance 'GPO_I1' of component 'GPO_Module' [c:/Users/franc/dev_board_test/dev_board_test.gen/sources_1/bd/design_1/ipshared/8c53/hdl/iomodule_v3_1_vh_rfs.vhd:9363]
+INFO: [Synth 8-638] synthesizing module 'GPO_Module' [c:/Users/franc/dev_board_test/dev_board_test.gen/sources_1/bd/design_1/ipshared/8c53/hdl/iomodule_v3_1_vh_rfs.vhd:3218]
+	Parameter C_TMR bound to: 0 - type: integer 
+	Parameter C_USE_TMR_DISABLE bound to: 0 - type: integer 
+	Parameter C_VOTE_SIZE bound to: 32 - type: integer 
+	Parameter C_USE_GPO bound to: 0 - type: integer 
+	Parameter C_GPO_SIZE bound to: 32 - type: integer 
+	Parameter C_GPO_INIT bound to: 0 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'GPO_Module' (6#1) [c:/Users/franc/dev_board_test/dev_board_test.gen/sources_1/bd/design_1/ipshared/8c53/hdl/iomodule_v3_1_vh_rfs.vhd:3218]
+	Parameter C_TMR bound to: 0 - type: integer 
+	Parameter C_USE_TMR_DISABLE bound to: 0 - type: integer 
+	Parameter C_VOTE_SIZE bound to: 32 - type: integer 
+	Parameter C_USE_GPO bound to: 0 - type: integer 
+	Parameter C_GPO_SIZE bound to: 32 - type: integer 
+	Parameter C_GPO_INIT bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'GPO_Module' declared at 'c:/Users/franc/dev_board_test/dev_board_test.gen/sources_1/bd/design_1/ipshared/8c53/hdl/iomodule_v3_1_vh_rfs.vhd:3194' bound to instance 'GPO_I2' of component 'GPO_Module' [c:/Users/franc/dev_board_test/dev_board_test.gen/sources_1/bd/design_1/ipshared/8c53/hdl/iomodule_v3_1_vh_rfs.vhd:9382]
+	Parameter C_TMR bound to: 0 - type: integer 
+	Parameter C_USE_TMR_DISABLE bound to: 0 - type: integer 
+	Parameter C_VOTE_SIZE bound to: 32 - type: integer 
+	Parameter C_USE_GPO bound to: 0 - type: integer 
+	Parameter C_GPO_SIZE bound to: 32 - type: integer 
+	Parameter C_GPO_INIT bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'GPO_Module' declared at 'c:/Users/franc/dev_board_test/dev_board_test.gen/sources_1/bd/design_1/ipshared/8c53/hdl/iomodule_v3_1_vh_rfs.vhd:3194' bound to instance 'GPO_I3' of component 'GPO_Module' [c:/Users/franc/dev_board_test/dev_board_test.gen/sources_1/bd/design_1/ipshared/8c53/hdl/iomodule_v3_1_vh_rfs.vhd:9401]
+	Parameter C_TMR bound to: 0 - type: integer 
+	Parameter C_USE_TMR_DISABLE bound to: 0 - type: integer 
+	Parameter C_VOTE_SIZE bound to: 32 - type: integer 
+	Parameter C_USE_GPO bound to: 0 - type: integer 
+	Parameter C_GPO_SIZE bound to: 32 - type: integer 
+	Parameter C_GPO_INIT bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'GPO_Module' declared at 'c:/Users/franc/dev_board_test/dev_board_test.gen/sources_1/bd/design_1/ipshared/8c53/hdl/iomodule_v3_1_vh_rfs.vhd:3194' bound to instance 'GPO_I4' of component 'GPO_Module' [c:/Users/franc/dev_board_test/dev_board_test.gen/sources_1/bd/design_1/ipshared/8c53/hdl/iomodule_v3_1_vh_rfs.vhd:9420]
+	Parameter C_USE_GPI bound to: 1 - type: integer 
+	Parameter C_GPI_SIZE bound to: 32 - type: integer 
+	Parameter C_GPI_INTERRUPT bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'GPI_Module' declared at 'c:/Users/franc/dev_board_test/dev_board_test.gen/sources_1/bd/design_1/ipshared/8c53/hdl/iomodule_v3_1_vh_rfs.vhd:3022' bound to instance 'GPI_I1' of component 'GPI_Module' [c:/Users/franc/dev_board_test/dev_board_test.gen/sources_1/bd/design_1/ipshared/8c53/hdl/iomodule_v3_1_vh_rfs.vhd:9442]
+INFO: [Synth 8-638] synthesizing module 'GPI_Module' [c:/Users/franc/dev_board_test/dev_board_test.gen/sources_1/bd/design_1/ipshared/8c53/hdl/iomodule_v3_1_vh_rfs.vhd:3038]
+	Parameter C_USE_GPI bound to: 1 - type: integer 
+	Parameter C_GPI_SIZE bound to: 32 - type: integer 
+	Parameter C_GPI_INTERRUPT bound to: 0 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'GPI_Module' (7#1) [c:/Users/franc/dev_board_test/dev_board_test.gen/sources_1/bd/design_1/ipshared/8c53/hdl/iomodule_v3_1_vh_rfs.vhd:3038]
+	Parameter C_USE_GPI bound to: 1 - type: integer 
+	Parameter C_GPI_SIZE bound to: 32 - type: integer 
+	Parameter C_GPI_INTERRUPT bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'GPI_Module' declared at 'c:/Users/franc/dev_board_test/dev_board_test.gen/sources_1/bd/design_1/ipshared/8c53/hdl/iomodule_v3_1_vh_rfs.vhd:3022' bound to instance 'GPI_I2' of component 'GPI_Module' [c:/Users/franc/dev_board_test/dev_board_test.gen/sources_1/bd/design_1/ipshared/8c53/hdl/iomodule_v3_1_vh_rfs.vhd:9458]
+	Parameter C_USE_GPI bound to: 1 - type: integer 
+	Parameter C_GPI_SIZE bound to: 32 - type: integer 
+	Parameter C_GPI_INTERRUPT bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'GPI_Module' declared at 'c:/Users/franc/dev_board_test/dev_board_test.gen/sources_1/bd/design_1/ipshared/8c53/hdl/iomodule_v3_1_vh_rfs.vhd:3022' bound to instance 'GPI_I3' of component 'GPI_Module' [c:/Users/franc/dev_board_test/dev_board_test.gen/sources_1/bd/design_1/ipshared/8c53/hdl/iomodule_v3_1_vh_rfs.vhd:9474]
+	Parameter C_USE_GPI bound to: 0 - type: integer 
+	Parameter C_GPI_SIZE bound to: 32 - type: integer 
+	Parameter C_GPI_INTERRUPT bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'GPI_Module' declared at 'c:/Users/franc/dev_board_test/dev_board_test.gen/sources_1/bd/design_1/ipshared/8c53/hdl/iomodule_v3_1_vh_rfs.vhd:3022' bound to instance 'GPI_I4' of component 'GPI_Module' [c:/Users/franc/dev_board_test/dev_board_test.gen/sources_1/bd/design_1/ipshared/8c53/hdl/iomodule_v3_1_vh_rfs.vhd:9490]
+INFO: [Synth 8-638] synthesizing module 'GPI_Module__parameterized2' [c:/Users/franc/dev_board_test/dev_board_test.gen/sources_1/bd/design_1/ipshared/8c53/hdl/iomodule_v3_1_vh_rfs.vhd:3038]
+	Parameter C_USE_GPI bound to: 0 - type: integer 
+	Parameter C_GPI_SIZE bound to: 32 - type: integer 
+	Parameter C_GPI_INTERRUPT bound to: 0 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'GPI_Module__parameterized2' (7#1) [c:/Users/franc/dev_board_test/dev_board_test.gen/sources_1/bd/design_1/ipshared/8c53/hdl/iomodule_v3_1_vh_rfs.vhd:3038]
+	Parameter C_TARGET bound to: 1'b0 
+	Parameter C_TMR bound to: 0 - type: integer 
+	Parameter C_USE_TMR_DISABLE bound to: 0 - type: integer 
+	Parameter C_VOTE_SIZE bound to: 170 - type: integer 
+	Parameter C_ADDR_WIDTH bound to: 32 - type: integer 
+	Parameter C_INTC_ENABLED bound to: 0 - type: integer 
+	Parameter C_INTC_LEVEL_EDGE bound to: 32'b00000000000000001111111111111111 
+	Parameter C_INTC_POSITIVE bound to: 32'b11111111111111111111111111111111 
+	Parameter C_INTC_ASYNC_INTR bound to: 32'b11111111111111110000000000000000 
+	Parameter C_INTC_HAS_FAST bound to: 0 - type: integer 
+	Parameter C_INTC_ADDR_WIDTH bound to: 32 - type: integer 
+	Parameter C_INTC_NUM_SYNC_FF bound to: 2 - type: integer 
+	Parameter C_INTC_BASE_VECTORS bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter C_USE_LUTRAM bound to: yes - type: string 
+INFO: [Synth 8-3491] module 'intr_ctrl' declared at 'c:/Users/franc/dev_board_test/dev_board_test.gen/sources_1/bd/design_1/ipshared/8c53/hdl/iomodule_v3_1_vh_rfs.vhd:3374' bound to instance 'intr_ctrl_I1' of component 'intr_ctrl' [c:/Users/franc/dev_board_test/dev_board_test.gen/sources_1/bd/design_1/ipshared/8c53/hdl/iomodule_v3_1_vh_rfs.vhd:9532]
+INFO: [Synth 8-638] synthesizing module 'intr_ctrl' [c:/Users/franc/dev_board_test/dev_board_test.gen/sources_1/bd/design_1/ipshared/8c53/hdl/iomodule_v3_1_vh_rfs.vhd:3420]
+	Parameter C_TARGET bound to: 1'b0 
+	Parameter C_TMR bound to: 0 - type: integer 
+	Parameter C_USE_TMR_DISABLE bound to: 0 - type: integer 
+	Parameter C_VOTE_SIZE bound to: 170 - type: integer 
+	Parameter C_USE_COMB_MUX bound to: 0 - type: integer 
+	Parameter C_ADDR_WIDTH bound to: 32 - type: integer 
+	Parameter C_INTC_ENABLED bound to: 0 - type: integer 
+	Parameter C_INTC_LEVEL_EDGE bound to: 65535 - type: integer 
+	Parameter C_INTC_POSITIVE bound to: -1 - type: integer 
+	Parameter C_INTC_ASYNC_INTR bound to: -65536 - type: integer 
+	Parameter C_INTC_HAS_FAST bound to: 0 - type: integer 
+	Parameter C_INTC_ADDR_WIDTH bound to: 32 - type: integer 
+	Parameter C_INTC_NUM_SYNC_FF bound to: 2 - type: integer 
+	Parameter C_INTC_BASE_VECTORS bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter C_USE_LUTRAM bound to: yes - type: string 
+	Parameter C_TARGET bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-3491] module 'MB_FDR' declared at 'c:/Users/franc/dev_board_test/dev_board_test.gen/sources_1/bd/design_1/ipshared/8c53/hdl/iomodule_v3_1_vh_rfs.vhd:1018' bound to instance 'fdr_i' of component 'MB_FDR' [c:/Users/franc/dev_board_test/dev_board_test.gen/sources_1/bd/design_1/ipshared/8c53/hdl/iomodule_v3_1_vh_rfs.vhd:4164]
+INFO: [Synth 8-638] synthesizing module 'MB_FDR' [c:/Users/franc/dev_board_test/dev_board_test.gen/sources_1/bd/design_1/ipshared/8c53/hdl/iomodule_v3_1_vh_rfs.vhd:1034]
+	Parameter C_TARGET bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'Native' to cell 'FDR' [c:/Users/franc/dev_board_test/dev_board_test.gen/sources_1/bd/design_1/ipshared/8c53/hdl/iomodule_v3_1_vh_rfs.vhd:1063]
+INFO: [Synth 8-256] done synthesizing module 'MB_FDR' (8#1) [c:/Users/franc/dev_board_test/dev_board_test.gen/sources_1/bd/design_1/ipshared/8c53/hdl/iomodule_v3_1_vh_rfs.vhd:1034]
+	Parameter C_TARGET bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-3491] module 'MB_FDR' declared at 'c:/Users/franc/dev_board_test/dev_board_test.gen/sources_1/bd/design_1/ipshared/8c53/hdl/iomodule_v3_1_vh_rfs.vhd:1018' bound to instance 'fdr_i' of component 'MB_FDR' [c:/Users/franc/dev_board_test/dev_board_test.gen/sources_1/bd/design_1/ipshared/8c53/hdl/iomodule_v3_1_vh_rfs.vhd:4164]
+	Parameter C_TARGET bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-3491] module 'MB_FDR' declared at 'c:/Users/franc/dev_board_test/dev_board_test.gen/sources_1/bd/design_1/ipshared/8c53/hdl/iomodule_v3_1_vh_rfs.vhd:1018' bound to instance 'fdr_i' of component 'MB_FDR' [c:/Users/franc/dev_board_test/dev_board_test.gen/sources_1/bd/design_1/ipshared/8c53/hdl/iomodule_v3_1_vh_rfs.vhd:4164]
+	Parameter C_TARGET bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-3491] module 'MB_FDR' declared at 'c:/Users/franc/dev_board_test/dev_board_test.gen/sources_1/bd/design_1/ipshared/8c53/hdl/iomodule_v3_1_vh_rfs.vhd:1018' bound to instance 'fdr_i' of component 'MB_FDR' [c:/Users/franc/dev_board_test/dev_board_test.gen/sources_1/bd/design_1/ipshared/8c53/hdl/iomodule_v3_1_vh_rfs.vhd:4164]
+	Parameter C_TARGET bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-3491] module 'MB_FDR' declared at 'c:/Users/franc/dev_board_test/dev_board_test.gen/sources_1/bd/design_1/ipshared/8c53/hdl/iomodule_v3_1_vh_rfs.vhd:1018' bound to instance 'fdr_i' of component 'MB_FDR' [c:/Users/franc/dev_board_test/dev_board_test.gen/sources_1/bd/design_1/ipshared/8c53/hdl/iomodule_v3_1_vh_rfs.vhd:4164]
+	Parameter C_TARGET bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-3491] module 'MB_FDR' declared at 'c:/Users/franc/dev_board_test/dev_board_test.gen/sources_1/bd/design_1/ipshared/8c53/hdl/iomodule_v3_1_vh_rfs.vhd:1018' bound to instance 'fdr_i' of component 'MB_FDR' [c:/Users/franc/dev_board_test/dev_board_test.gen/sources_1/bd/design_1/ipshared/8c53/hdl/iomodule_v3_1_vh_rfs.vhd:4164]
+	Parameter C_TARGET bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-3491] module 'MB_FDR' declared at 'c:/Users/franc/dev_board_test/dev_board_test.gen/sources_1/bd/design_1/ipshared/8c53/hdl/iomodule_v3_1_vh_rfs.vhd:1018' bound to instance 'fdr_i' of component 'MB_FDR' [c:/Users/franc/dev_board_test/dev_board_test.gen/sources_1/bd/design_1/ipshared/8c53/hdl/iomodule_v3_1_vh_rfs.vhd:4164]
+	Parameter C_TARGET bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-3491] module 'MB_FDR' declared at 'c:/Users/franc/dev_board_test/dev_board_test.gen/sources_1/bd/design_1/ipshared/8c53/hdl/iomodule_v3_1_vh_rfs.vhd:1018' bound to instance 'fdr_i' of component 'MB_FDR' [c:/Users/franc/dev_board_test/dev_board_test.gen/sources_1/bd/design_1/ipshared/8c53/hdl/iomodule_v3_1_vh_rfs.vhd:4164]
+	Parameter C_TARGET bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-3491] module 'MB_FDR' declared at 'c:/Users/franc/dev_board_test/dev_board_test.gen/sources_1/bd/design_1/ipshared/8c53/hdl/iomodule_v3_1_vh_rfs.vhd:1018' bound to instance 'fdr_i' of component 'MB_FDR' [c:/Users/franc/dev_board_test/dev_board_test.gen/sources_1/bd/design_1/ipshared/8c53/hdl/iomodule_v3_1_vh_rfs.vhd:4164]
+	Parameter C_TARGET bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-3491] module 'MB_FDR' declared at 'c:/Users/franc/dev_board_test/dev_board_test.gen/sources_1/bd/design_1/ipshared/8c53/hdl/iomodule_v3_1_vh_rfs.vhd:1018' bound to instance 'fdr_i' of component 'MB_FDR' [c:/Users/franc/dev_board_test/dev_board_test.gen/sources_1/bd/design_1/ipshared/8c53/hdl/iomodule_v3_1_vh_rfs.vhd:4164]
+	Parameter C_TARGET bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-3491] module 'MB_FDR' declared at 'c:/Users/franc/dev_board_test/dev_board_test.gen/sources_1/bd/design_1/ipshared/8c53/hdl/iomodule_v3_1_vh_rfs.vhd:1018' bound to instance 'fdr_i' of component 'MB_FDR' [c:/Users/franc/dev_board_test/dev_board_test.gen/sources_1/bd/design_1/ipshared/8c53/hdl/iomodule_v3_1_vh_rfs.vhd:4164]
+	Parameter C_TARGET bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-3491] module 'MB_FDR' declared at 'c:/Users/franc/dev_board_test/dev_board_test.gen/sources_1/bd/design_1/ipshared/8c53/hdl/iomodule_v3_1_vh_rfs.vhd:1018' bound to instance 'fdr_i' of component 'MB_FDR' [c:/Users/franc/dev_board_test/dev_board_test.gen/sources_1/bd/design_1/ipshared/8c53/hdl/iomodule_v3_1_vh_rfs.vhd:4164]
+	Parameter C_TARGET bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-3491] module 'MB_FDR' declared at 'c:/Users/franc/dev_board_test/dev_board_test.gen/sources_1/bd/design_1/ipshared/8c53/hdl/iomodule_v3_1_vh_rfs.vhd:1018' bound to instance 'fdr_i' of component 'MB_FDR' [c:/Users/franc/dev_board_test/dev_board_test.gen/sources_1/bd/design_1/ipshared/8c53/hdl/iomodule_v3_1_vh_rfs.vhd:4164]
+	Parameter C_TARGET bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-3491] module 'MB_FDR' declared at 'c:/Users/franc/dev_board_test/dev_board_test.gen/sources_1/bd/design_1/ipshared/8c53/hdl/iomodule_v3_1_vh_rfs.vhd:1018' bound to instance 'fdr_i' of component 'MB_FDR' [c:/Users/franc/dev_board_test/dev_board_test.gen/sources_1/bd/design_1/ipshared/8c53/hdl/iomodule_v3_1_vh_rfs.vhd:4164]
+	Parameter C_TARGET bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-3491] module 'MB_FDR' declared at 'c:/Users/franc/dev_board_test/dev_board_test.gen/sources_1/bd/design_1/ipshared/8c53/hdl/iomodule_v3_1_vh_rfs.vhd:1018' bound to instance 'fdr_i' of component 'MB_FDR' [c:/Users/franc/dev_board_test/dev_board_test.gen/sources_1/bd/design_1/ipshared/8c53/hdl/iomodule_v3_1_vh_rfs.vhd:4164]
+	Parameter C_TARGET bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-3491] module 'MB_FDR' declared at 'c:/Users/franc/dev_board_test/dev_board_test.gen/sources_1/bd/design_1/ipshared/8c53/hdl/iomodule_v3_1_vh_rfs.vhd:1018' bound to instance 'fdr_i' of component 'MB_FDR' [c:/Users/franc/dev_board_test/dev_board_test.gen/sources_1/bd/design_1/ipshared/8c53/hdl/iomodule_v3_1_vh_rfs.vhd:4164]
+	Parameter C_TARGET bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-3491] module 'MB_FDR' declared at 'c:/Users/franc/dev_board_test/dev_board_test.gen/sources_1/bd/design_1/ipshared/8c53/hdl/iomodule_v3_1_vh_rfs.vhd:1018' bound to instance 'fdr_i' of component 'MB_FDR' [c:/Users/franc/dev_board_test/dev_board_test.gen/sources_1/bd/design_1/ipshared/8c53/hdl/iomodule_v3_1_vh_rfs.vhd:4164]
+	Parameter C_TARGET bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-3491] module 'MB_FDR' declared at 'c:/Users/franc/dev_board_test/dev_board_test.gen/sources_1/bd/design_1/ipshared/8c53/hdl/iomodule_v3_1_vh_rfs.vhd:1018' bound to instance 'fdr_i' of component 'MB_FDR' [c:/Users/franc/dev_board_test/dev_board_test.gen/sources_1/bd/design_1/ipshared/8c53/hdl/iomodule_v3_1_vh_rfs.vhd:4164]
+	Parameter C_TARGET bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-3491] module 'MB_FDR' declared at 'c:/Users/franc/dev_board_test/dev_board_test.gen/sources_1/bd/design_1/ipshared/8c53/hdl/iomodule_v3_1_vh_rfs.vhd:1018' bound to instance 'fdr_i' of component 'MB_FDR' [c:/Users/franc/dev_board_test/dev_board_test.gen/sources_1/bd/design_1/ipshared/8c53/hdl/iomodule_v3_1_vh_rfs.vhd:4164]
+	Parameter C_TARGET bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-3491] module 'MB_FDR' declared at 'c:/Users/franc/dev_board_test/dev_board_test.gen/sources_1/bd/design_1/ipshared/8c53/hdl/iomodule_v3_1_vh_rfs.vhd:1018' bound to instance 'fdr_i' of component 'MB_FDR' [c:/Users/franc/dev_board_test/dev_board_test.gen/sources_1/bd/design_1/ipshared/8c53/hdl/iomodule_v3_1_vh_rfs.vhd:4164]
+	Parameter C_TARGET bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-3491] module 'MB_FDR' declared at 'c:/Users/franc/dev_board_test/dev_board_test.gen/sources_1/bd/design_1/ipshared/8c53/hdl/iomodule_v3_1_vh_rfs.vhd:1018' bound to instance 'fdr_i' of component 'MB_FDR' [c:/Users/franc/dev_board_test/dev_board_test.gen/sources_1/bd/design_1/ipshared/8c53/hdl/iomodule_v3_1_vh_rfs.vhd:4164]
+	Parameter C_TARGET bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-3491] module 'MB_FDR' declared at 'c:/Users/franc/dev_board_test/dev_board_test.gen/sources_1/bd/design_1/ipshared/8c53/hdl/iomodule_v3_1_vh_rfs.vhd:1018' bound to instance 'fdr_i' of component 'MB_FDR' [c:/Users/franc/dev_board_test/dev_board_test.gen/sources_1/bd/design_1/ipshared/8c53/hdl/iomodule_v3_1_vh_rfs.vhd:4164]
+	Parameter C_TARGET bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-3491] module 'MB_FDR' declared at 'c:/Users/franc/dev_board_test/dev_board_test.gen/sources_1/bd/design_1/ipshared/8c53/hdl/iomodule_v3_1_vh_rfs.vhd:1018' bound to instance 'fdr_i' of component 'MB_FDR' [c:/Users/franc/dev_board_test/dev_board_test.gen/sources_1/bd/design_1/ipshared/8c53/hdl/iomodule_v3_1_vh_rfs.vhd:4164]
+	Parameter C_TARGET bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-3491] module 'MB_FDR' declared at 'c:/Users/franc/dev_board_test/dev_board_test.gen/sources_1/bd/design_1/ipshared/8c53/hdl/iomodule_v3_1_vh_rfs.vhd:1018' bound to instance 'fdr_i' of component 'MB_FDR' [c:/Users/franc/dev_board_test/dev_board_test.gen/sources_1/bd/design_1/ipshared/8c53/hdl/iomodule_v3_1_vh_rfs.vhd:4164]
+	Parameter C_TARGET bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-3491] module 'MB_FDR' declared at 'c:/Users/franc/dev_board_test/dev_board_test.gen/sources_1/bd/design_1/ipshared/8c53/hdl/iomodule_v3_1_vh_rfs.vhd:1018' bound to instance 'fdr_i' of component 'MB_FDR' [c:/Users/franc/dev_board_test/dev_board_test.gen/sources_1/bd/design_1/ipshared/8c53/hdl/iomodule_v3_1_vh_rfs.vhd:4164]
+	Parameter C_TARGET bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-3491] module 'MB_FDR' declared at 'c:/Users/franc/dev_board_test/dev_board_test.gen/sources_1/bd/design_1/ipshared/8c53/hdl/iomodule_v3_1_vh_rfs.vhd:1018' bound to instance 'fdr_i' of component 'MB_FDR' [c:/Users/franc/dev_board_test/dev_board_test.gen/sources_1/bd/design_1/ipshared/8c53/hdl/iomodule_v3_1_vh_rfs.vhd:4164]
+	Parameter C_TARGET bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-3491] module 'MB_FDR' declared at 'c:/Users/franc/dev_board_test/dev_board_test.gen/sources_1/bd/design_1/ipshared/8c53/hdl/iomodule_v3_1_vh_rfs.vhd:1018' bound to instance 'fdr_i' of component 'MB_FDR' [c:/Users/franc/dev_board_test/dev_board_test.gen/sources_1/bd/design_1/ipshared/8c53/hdl/iomodule_v3_1_vh_rfs.vhd:4164]
+	Parameter C_TARGET bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-3491] module 'MB_FDR' declared at 'c:/Users/franc/dev_board_test/dev_board_test.gen/sources_1/bd/design_1/ipshared/8c53/hdl/iomodule_v3_1_vh_rfs.vhd:1018' bound to instance 'fdr_i' of component 'MB_FDR' [c:/Users/franc/dev_board_test/dev_board_test.gen/sources_1/bd/design_1/ipshared/8c53/hdl/iomodule_v3_1_vh_rfs.vhd:4164]
+	Parameter C_TARGET bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-3491] module 'MB_FDR' declared at 'c:/Users/franc/dev_board_test/dev_board_test.gen/sources_1/bd/design_1/ipshared/8c53/hdl/iomodule_v3_1_vh_rfs.vhd:1018' bound to instance 'fdr_i' of component 'MB_FDR' [c:/Users/franc/dev_board_test/dev_board_test.gen/sources_1/bd/design_1/ipshared/8c53/hdl/iomodule_v3_1_vh_rfs.vhd:4164]
+	Parameter C_TARGET bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-3491] module 'MB_FDR' declared at 'c:/Users/franc/dev_board_test/dev_board_test.gen/sources_1/bd/design_1/ipshared/8c53/hdl/iomodule_v3_1_vh_rfs.vhd:1018' bound to instance 'fdr_i' of component 'MB_FDR' [c:/Users/franc/dev_board_test/dev_board_test.gen/sources_1/bd/design_1/ipshared/8c53/hdl/iomodule_v3_1_vh_rfs.vhd:4164]
+	Parameter C_TARGET bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-3491] module 'MB_FDR' declared at 'c:/Users/franc/dev_board_test/dev_board_test.gen/sources_1/bd/design_1/ipshared/8c53/hdl/iomodule_v3_1_vh_rfs.vhd:1018' bound to instance 'fdr_i' of component 'MB_FDR' [c:/Users/franc/dev_board_test/dev_board_test.gen/sources_1/bd/design_1/ipshared/8c53/hdl/iomodule_v3_1_vh_rfs.vhd:4164]
+	Parameter C_TARGET bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-3491] module 'MB_FDR' declared at 'c:/Users/franc/dev_board_test/dev_board_test.gen/sources_1/bd/design_1/ipshared/8c53/hdl/iomodule_v3_1_vh_rfs.vhd:1018' bound to instance 'fdr_i' of component 'MB_FDR' [c:/Users/franc/dev_board_test/dev_board_test.gen/sources_1/bd/design_1/ipshared/8c53/hdl/iomodule_v3_1_vh_rfs.vhd:4164]
+INFO: [Synth 8-256] done synthesizing module 'intr_ctrl' (9#1) [c:/Users/franc/dev_board_test/dev_board_test.gen/sources_1/bd/design_1/ipshared/8c53/hdl/iomodule_v3_1_vh_rfs.vhd:3420]
+INFO: [Synth 8-256] done synthesizing module 'Iomodule_core' (10#1) [c:/Users/franc/dev_board_test/dev_board_test.gen/sources_1/bd/design_1/ipshared/8c53/hdl/iomodule_v3_1_vh_rfs.vhd:8739]
+INFO: [Synth 8-256] done synthesizing module 'iomodule' (11#1) [c:/Users/franc/dev_board_test/dev_board_test.gen/sources_1/bd/design_1/ipshared/8c53/hdl/iomodule_v3_1_vh_rfs.vhd:10107]
+INFO: [Synth 8-256] done synthesizing module 'design_1_iomodule_1_0' (12#1) [c:/Users/franc/dev_board_test/dev_board_test.gen/sources_1/bd/design_1/ip/design_1_iomodule_1_0/synth/design_1_iomodule_1_0.vhd:80]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1219.500 ; gain = 75.684
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1219.500 ; gain = 75.684
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1219.500 ; gain = 75.684
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.092 . Memory (MB): peak = 1219.500 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 32 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/Users/franc/dev_board_test/dev_board_test.gen/sources_1/bd/design_1/ip/design_1_iomodule_1_0/design_1_iomodule_1_0_ooc.xdc] for cell 'U0'
+Finished Parsing XDC File [c:/Users/franc/dev_board_test/dev_board_test.gen/sources_1/bd/design_1/ip/design_1_iomodule_1_0/design_1_iomodule_1_0_ooc.xdc] for cell 'U0'
+Parsing XDC File [c:/Users/franc/dev_board_test/dev_board_test.gen/sources_1/bd/design_1/ip/design_1_iomodule_1_0/design_1_iomodule_1_0_board.xdc] for cell 'U0'
+Finished Parsing XDC File [c:/Users/franc/dev_board_test/dev_board_test.gen/sources_1/bd/design_1/ip/design_1_iomodule_1_0/design_1_iomodule_1_0_board.xdc] for cell 'U0'
+Parsing XDC File [C:/Users/franc/dev_board_test/dev_board_test.runs/design_1_iomodule_1_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [C:/Users/franc/dev_board_test/dev_board_test.runs/design_1_iomodule_1_0_synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1301.266 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 32 instances were transformed.
+  FDR => FDRE: 32 instances
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.038 . Memory (MB): peak = 1310.445 ; gain = 9.180
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1310.445 ; gain = 166.629
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7s25csga225-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1310.445 ; gain = 166.629
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property KEEP_HIERARCHY = SOFT for U0. (constraint file  C:/Users/franc/dev_board_test/dev_board_test.runs/design_1_iomodule_1_0_synth_1/dont_touch.xdc, line 9).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1310.445 ; gain = 166.629
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 1310.445 ; gain = 166.629
+---------------------------------------------------------------------------------
+INFO: [Synth 8-223] decloning instance 'U0/IOModule_Core_I1/FIT_I1' (FIT_Module) to 'U0/IOModule_Core_I1/FIT_I2'
+INFO: [Synth 8-223] decloning instance 'U0/IOModule_Core_I1/FIT_I1' (FIT_Module) to 'U0/IOModule_Core_I1/FIT_I3'
+INFO: [Synth 8-223] decloning instance 'U0/IOModule_Core_I1/FIT_I1' (FIT_Module) to 'U0/IOModule_Core_I1/FIT_I4'
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 5     
+	                5 Bit    Registers := 1     
+	                1 Bit    Registers := 3     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 80 (col length:40)
+BRAMs: 90 (col length: RAMB18 40 RAMB36 20)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:21 ; elapsed = 00:00:21 . Memory (MB): peak = 1310.445 ; gain = 166.629
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:29 ; elapsed = 00:00:29 . Memory (MB): peak = 1310.445 ; gain = 166.629
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:29 ; elapsed = 00:00:29 . Memory (MB): peak = 1313.383 ; gain = 169.566
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 1323.902 ; gain = 180.086
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:34 ; elapsed = 00:00:34 . Memory (MB): peak = 1328.691 ; gain = 184.875
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:34 ; elapsed = 00:00:34 . Memory (MB): peak = 1328.691 ; gain = 184.875
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:34 ; elapsed = 00:00:34 . Memory (MB): peak = 1328.691 ; gain = 184.875
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:34 ; elapsed = 00:00:34 . Memory (MB): peak = 1328.691 ; gain = 184.875
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:34 ; elapsed = 00:00:34 . Memory (MB): peak = 1328.691 ; gain = 184.875
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:34 ; elapsed = 00:00:34 . Memory (MB): peak = 1328.691 ; gain = 184.875
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-----+------+
+|      |Cell |Count |
++------+-----+------+
+|1     |LUT2 |     1|
+|2     |LUT3 |    32|
+|3     |LUT4 |     2|
+|4     |LUT6 |     4|
+|5     |FDRE |   136|
++------+-----+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:34 ; elapsed = 00:00:34 . Memory (MB): peak = 1328.691 ; gain = 184.875
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:22 ; elapsed = 00:00:31 . Memory (MB): peak = 1328.691 ; gain = 93.930
+Synthesis Optimization Complete : Time (s): cpu = 00:00:34 ; elapsed = 00:00:35 . Memory (MB): peak = 1328.691 ; gain = 184.875
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.024 . Memory (MB): peak = 1328.691 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1345.180 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+98 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:40 ; elapsed = 00:00:43 . Memory (MB): peak = 1345.180 ; gain = 201.363
+INFO: [Common 17-1381] The checkpoint 'C:/Users/franc/dev_board_test/dev_board_test.runs/design_1_iomodule_1_0_synth_1/design_1_iomodule_1_0.dcp' has been generated.
+WARNING: [Common 17-576] 'use_project_ipc' is deprecated. This option is deprecated and no longer used.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP design_1_iomodule_1_0, cache-ID = b36558c92cebcc9e
+INFO: [Coretcl 2-1174] Renamed 5 cell refs.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/franc/dev_board_test/dev_board_test.runs/design_1_iomodule_1_0_synth_1/design_1_iomodule_1_0.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file design_1_iomodule_1_0_utilization_synth.rpt -pb design_1_iomodule_1_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Fri Jan 15 15:24:55 2021...
