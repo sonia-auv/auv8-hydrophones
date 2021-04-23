@@ -1,0 +1,547 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="synth_1" LaunchPart="xc7s25ftgb196-1" LaunchTime="1617727715">
+  <File Type="PA-TCL" Name="hydro_spartan_7.tcl"/>
+  <File Type="REPORTS-TCL" Name="hydro_spartan_7_reports.tcl"/>
+  <File Type="RDS-RDS" Name="hydro_spartan_7.vds"/>
+  <File Type="RDS-UTIL" Name="hydro_spartan_7_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="hydro_spartan_7_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="hydro_spartan_7.dcp"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PSRCDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/bd/mb_system/mb_system.bd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../OneDrive/Documents techniques/ETS/SONIA/Hydro software/ADS8327_SPI.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/clock.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/bd/mb_system/hdl/mb_system_wrapper.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/pga.vhd">
+      <FileInfo>
+        <Attr Name="UserDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/hydro_spartan_7.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../OneDrive/Documents techniques/ETS/SONIA/Hydro software/vivado_files/CordicKernelMag_block2.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../OneDrive/Documents techniques/ETS/SONIA/Hydro software/vivado_files/MINRESRX2FFT_CTRL_block2.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../OneDrive/Documents techniques/ETS/SONIA/Hydro software/vivado_files/TWDLROM_block.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../OneDrive/Documents techniques/ETS/SONIA/Hydro software/vivado_files/SimpleDualPortRAM_generic.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../OneDrive/Documents techniques/ETS/SONIA/Hydro software/vivado_files/MINRESRX2FFT_OUTMux.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../OneDrive/Documents techniques/ETS/SONIA/Hydro software/vivado_files/MINRESRX2FFT_MEMSEL_block.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../OneDrive/Documents techniques/ETS/SONIA/Hydro software/vivado_files/FFT_HDL_Optimized_block.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../OneDrive/Documents techniques/ETS/SONIA/Hydro software/vivado_files/HDL_CMA_core_block1.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../OneDrive/Documents techniques/ETS/SONIA/Hydro software/vivado_files/MINRESRX2FFT_CTRL_block.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../OneDrive/Documents techniques/ETS/SONIA/Hydro software/vivado_files/Quadrant_Correction.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../OneDrive/Documents techniques/ETS/SONIA/Hydro software/vivado_files/MINRESRX2FFT_MEMSEL_block2.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../OneDrive/Documents techniques/ETS/SONIA/Hydro software/vivado_files/Sample_and_Hold1.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../OneDrive/Documents techniques/ETS/SONIA/Hydro software/vivado_files/MINRESRX2FFT_MEMORY.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../OneDrive/Documents techniques/ETS/SONIA/Hydro software/vivado_files/Subsystem4.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../OneDrive/Documents techniques/ETS/SONIA/Hydro software/vivado_files/MINRESRX2FFT_BTFSEL_block2.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../OneDrive/Documents techniques/ETS/SONIA/Hydro software/vivado_files/MINRESRX2FFT_MEMORY_block.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../OneDrive/Documents techniques/ETS/SONIA/Hydro software/vivado_files/MINRESRX2FFT_CTRL_block1.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../OneDrive/Documents techniques/ETS/SONIA/Hydro software/vivado_files/MINRESRX2FFT_CTRL.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../OneDrive/Documents techniques/ETS/SONIA/Hydro software/vivado_files/HDL_CMA_core_block2.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../OneDrive/Documents techniques/ETS/SONIA/Hydro software/vivado_files/Maximum_Hydro_1.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../OneDrive/Documents techniques/ETS/SONIA/Hydro software/vivado_files/MINRESRX2FFT_BTFSEL_block1.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../OneDrive/Documents techniques/ETS/SONIA/Hydro software/vivado_files/Sample_and_Hold4.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../OneDrive/Documents techniques/ETS/SONIA/Hydro software/vivado_files/MINRESRX2FFT_MEMSEL_block1.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../OneDrive/Documents techniques/ETS/SONIA/Hydro software/vivado_files/Quadrant_Mapper_block1.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../OneDrive/Documents techniques/ETS/SONIA/Hydro software/vivado_files/Sample_and_Hold.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../OneDrive/Documents techniques/ETS/SONIA/Hydro software/vivado_files/MINRESRX2FFT_BTFSEL.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../OneDrive/Documents techniques/ETS/SONIA/Hydro software/vivado_files/Subsystem_block3.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../OneDrive/Documents techniques/ETS/SONIA/Hydro software/vivado_files/MINRESRX2_BUTTERFLY.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../OneDrive/Documents techniques/ETS/SONIA/Hydro software/vivado_files/Subsystem.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../OneDrive/Documents techniques/ETS/SONIA/Hydro software/vivado_files/Fenetrage.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../OneDrive/Documents techniques/ETS/SONIA/Hydro software/vivado_files/TWDLROM_block1.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../OneDrive/Documents techniques/ETS/SONIA/Hydro software/vivado_files/Complex3Multiply_block.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../OneDrive/Documents techniques/ETS/SONIA/Hydro software/vivado_files/Complex3Multiply.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../OneDrive/Documents techniques/ETS/SONIA/Hydro software/vivado_files/HDL_CMA_core_block.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../OneDrive/Documents techniques/ETS/SONIA/Hydro software/vivado_files/Subsystem_block2.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../OneDrive/Documents techniques/ETS/SONIA/Hydro software/vivado_files/TWDLROM_block2.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../OneDrive/Documents techniques/ETS/SONIA/Hydro software/vivado_files/MINRESRX2FFT_MEMORY_block1.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../OneDrive/Documents techniques/ETS/SONIA/Hydro software/vivado_files/TWDLROM.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../OneDrive/Documents techniques/ETS/SONIA/Hydro software/vivado_files/MINRESRX2_BUTTERFLY_block2.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../OneDrive/Documents techniques/ETS/SONIA/Hydro software/vivado_files/Signal_Trigger.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../OneDrive/Documents techniques/ETS/SONIA/Hydro software/vivado_files/FFT_Hydro_Ref.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../OneDrive/Documents techniques/ETS/SONIA/Hydro software/vivado_files/Triggered_Subsystem1.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../OneDrive/Documents techniques/ETS/SONIA/Hydro software/vivado_files/Quadrant_Mapper_block.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../OneDrive/Documents techniques/ETS/SONIA/Hydro software/vivado_files/Subsystem_block1.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../OneDrive/Documents techniques/ETS/SONIA/Hydro software/vivado_files/DOA_simplifie.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../OneDrive/Documents techniques/ETS/SONIA/Hydro software/vivado_files/MINRESRX2FFT_MEMORY_block2.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../OneDrive/Documents techniques/ETS/SONIA/Hydro software/vivado_files/MINRESRX2_BUTTERFLY_block1.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../OneDrive/Documents techniques/ETS/SONIA/Hydro software/vivado_files/CordicKernelMag_block.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../OneDrive/Documents techniques/ETS/SONIA/Hydro software/vivado_files/DOA_simplifie_pkg.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../OneDrive/Documents techniques/ETS/SONIA/Hydro software/vivado_files/MINRESRX2FFT_MEMSEL.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../OneDrive/Documents techniques/ETS/SONIA/Hydro software/vivado_files/Quadrant_Correction_block.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../OneDrive/Documents techniques/ETS/SONIA/Hydro software/vivado_files/MINRESRX2FFT_BTFSEL_block.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../OneDrive/Documents techniques/ETS/SONIA/Hydro software/vivado_files/Quadrant_Correction_block1.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../OneDrive/Documents techniques/ETS/SONIA/Hydro software/vivado_files/Subsystem_block.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../OneDrive/Documents techniques/ETS/SONIA/Hydro software/vivado_files/Quadrant_Mapper_block2.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../OneDrive/Documents techniques/ETS/SONIA/Hydro software/vivado_files/FFT_HDL_Optimized_block2.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../OneDrive/Documents techniques/ETS/SONIA/Hydro software/vivado_files/FFT_Hydro_3.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../OneDrive/Documents techniques/ETS/SONIA/Hydro software/vivado_files/Sample_and_Hold_block.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../OneDrive/Documents techniques/ETS/SONIA/Hydro software/vivado_files/MINRESRX2_BUTTERFLY_block.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../OneDrive/Documents techniques/ETS/SONIA/Hydro software/vivado_files/MINRESRX2FFT_OUTMux_block1.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../OneDrive/Documents techniques/ETS/SONIA/Hydro software/vivado_files/CordicKernelMag.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../OneDrive/Documents techniques/ETS/SONIA/Hydro software/vivado_files/Maximum_Hydro_Ref.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../OneDrive/Documents techniques/ETS/SONIA/Hydro software/vivado_files/FFT_Hydro_2.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../OneDrive/Documents techniques/ETS/SONIA/Hydro software/vivado_files/Maximum_Hydro_2.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../OneDrive/Documents techniques/ETS/SONIA/Hydro software/vivado_files/FFT_HDL_Optimized_block1.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../OneDrive/Documents techniques/ETS/SONIA/Hydro software/vivado_files/Complex3Multiply_block2.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../OneDrive/Documents techniques/ETS/SONIA/Hydro software/vivado_files/Quadrant_Mapper.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../OneDrive/Documents techniques/ETS/SONIA/Hydro software/vivado_files/CordicKernelMag_block1.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../OneDrive/Documents techniques/ETS/SONIA/Hydro software/vivado_files/MINRESRX2FFT_OUTMux_block2.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../OneDrive/Documents techniques/ETS/SONIA/Hydro software/vivado_files/HDL_CMA_core.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../OneDrive/Documents techniques/ETS/SONIA/Hydro software/vivado_files/FFT_Hydro_1.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../OneDrive/Documents techniques/ETS/SONIA/Hydro software/vivado_files/MINRESRX2FFT_OUTMux_block.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../OneDrive/Documents techniques/ETS/SONIA/Hydro software/vivado_files/Complex3Multiply_block1.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../OneDrive/Documents techniques/ETS/SONIA/Hydro software/vivado_files/FFT_HDL_Optimized.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../OneDrive/Documents techniques/ETS/SONIA/Hydro software/vivado_files/Maximum_Hydro_3.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../OneDrive/Documents techniques/ETS/SONIA/Hydro software/vivado_files/Quadrant_Correction_block2.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/hydro_simplife.elf">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="IsVisible" Val="1"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="hydro_spartan_7"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PSRCDIR/constrs_1/new/xc7s50_pinout.xdc">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TargetConstrsFile" Val="$PSRCDIR/constrs_1/new/xc7s50_pinout.xdc"/>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1">
+    <Filter Type="Utils"/>
+    <Config>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020"/>
+    <Step Id="synth_design"/>
+  </Strategy>
+  <BlockFileSet Type="BlockSrcs" Name="mb_system_clk_wiz_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="mb_system_dlmb_v10_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="mb_system_xbar_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="mb_system_rst_clk_wiz_0_100M_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="mb_system_axi_quad_spi_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="mb_system_iomodule_1_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="mb_system_iomodule_2_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="mb_system_microblaze_0_0"/>
+</GenRun>
