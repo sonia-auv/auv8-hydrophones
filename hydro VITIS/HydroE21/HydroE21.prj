@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="ASCII"?>
+<sdkproject:SdkProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sdkproject="http://www.xilinx.com/sdkproject" name="HydroE21" location="C:/Users/franc/workspace/HydroE21" platform="C:/Users/franc/workspace/Hydro_XC7S50/export/Hydro_XC7S50/Hydro_XC7S50.xpfm" platformUID="xilinx:::0.0(custom)" systemProject="HydroE21_system" sysConfig="Hydro_XC7S50" runtime="C/C++" cpu="standalone_domain" cpuInstance="microblaze_0" os="standalone" mssSignature="13b8e0a1bc1353b965ffe33be34041b0">
+  <configuration name="Debug" id="xilinx.gnu.mb.exe.debug.231875077">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+    <lastBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <configuration name="Release" id="xilinx.gnu.mb.exe.release.999702741" dirty="true">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <template appTemplateName="hello_world"/>
+</sdkproject:SdkProject>
