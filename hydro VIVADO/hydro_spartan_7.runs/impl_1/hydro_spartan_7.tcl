@@ -115,8 +115,6 @@ proc step_failed { step } {
 OPTRACE "impl_1" END { }
 }
 
-set_msg_config -id {Synth 8-256} -limit 10000
-set_msg_config -id {Synth 8-638} -limit 10000
 
 OPTRACE "impl_1" START { ROLLUP_1 }
 OPTRACE "Phase: Write Bitstream" START { ROLLUP_AUTO }
@@ -132,6 +130,9 @@ set_property TOP hydro_spartan_7 [current_fileset]
 OPTRACE "read constraints: write_bitstream" START { }
 OPTRACE "read constraints: write_bitstream" END { }
   set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]
+  add_files C:/Users/franc/hydro_spartan_7/HydroE21.elf
+  set_property SCOPED_TO_REF mb_system [get_files -all C:/Users/franc/hydro_spartan_7/HydroE21.elf]
+  set_property SCOPED_TO_CELLS microblaze_0 [get_files -all C:/Users/franc/hydro_spartan_7/HydroE21.elf]
   catch { write_mem_info -force -no_partial_mmi hydro_spartan_7.mmi }
   catch { write_bmm -force hydro_spartan_7_bd.bmm }
 OPTRACE "write_bitstream setup" END { }

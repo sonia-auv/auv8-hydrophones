@@ -70,6 +70,8 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
+set_param chipscope.maxJobs 3
+set_msg_config -id {Common 17-41} -limit 10000000
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7s50ftgb196-2
 
@@ -93,11 +95,14 @@ read_vhdl -library xil_defaultlib {
   C:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/new/hydro_spartan_7.vhd
   C:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/new/fifo_buffer.vhd
   C:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/new/DOA/CordicKernelMag.vhd
+  C:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/new/DOA/Test_DOA_pkg.vhd
   C:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/new/DOA/Sample_and_Hold_block2.vhd
   C:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/new/DOA/MINRESRX2_BUTTERFLY_block.vhd
   C:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/new/DOA/Sample_and_Hold_block1.vhd
   C:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/new/DOA/Complex3Multiply.vhd
+  C:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/new/DOA/Test_DOA.vhd
   C:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/new/DOA/MINRESRX2FFT_OUTMux_block1.vhd
+  C:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/new/DOA/FFT_Hydro_Ref.vhd
   C:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/new/DOA/MINRESRX2FFT_CTRL.vhd
   C:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/new/DOA/Quadrant_Mapper.vhd
   C:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/new/DOA/Sample_and_Hold_block.vhd
@@ -113,6 +118,7 @@ read_vhdl -library xil_defaultlib {
   C:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/new/DOA/MINRESRX2FFT_MEMSEL_block.vhd
   C:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/new/DOA/CordicKernelMag_block1.vhd
   C:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/new/DOA/FFT_Hydro_3.vhd
+  C:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/new/DOA/SNR_Check.vhd
   C:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/new/DOA/HDL_CMA_core_block2.vhd
   C:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/new/DOA/MINRESRX2FFT_MEMORY_block2.vhd
   C:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/new/DOA/Quadrant_Correction_block.vhd
@@ -120,15 +126,13 @@ read_vhdl -library xil_defaultlib {
   C:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/new/DOA/TWDLROM_block1.vhd
   C:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/new/DOA/FFT_Hydro_2.vhd
   C:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/new/DOA/SampleHold3.vhd
+  C:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/new/DOA/Division.vhd
   C:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/new/DOA/CordicKernelMag_block.vhd
-  C:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/new/DOA/DOA_rearanged.vhd
   C:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/new/DOA/SampleHold.vhd
   C:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/new/DOA/CordicKernelMag_block2.vhd
-  C:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/new/DOA/DOA_rearanged_pkg.vhd
   C:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/new/DOA/FFT_Hydro_1.vhd
   C:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/new/DOA/MINRESRX2FFT_BTFSEL_block.vhd
   C:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/new/DOA/SampleHold5.vhd
-  C:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/new/DOA/Subsystem_block3.vhd
   C:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/new/DOA/Quadrant_Mapper_block2.vhd
   C:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/new/DOA/TWDLROM_block2.vhd
   C:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/new/DOA/Quadrant_Mapper_block1.vhd
@@ -140,7 +144,6 @@ read_vhdl -library xil_defaultlib {
   C:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/new/DOA/HDL_CMA_core.vhd
   C:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/new/DOA/Quadrant_Mapper_block.vhd
   C:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/new/DOA/Subsystem_block2.vhd
-  C:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/new/DOA/Triggered_Subsystem1.vhd
   C:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/new/DOA/MINRESRX2_BUTTERFLY.vhd
   C:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/new/DOA/Maximum_Hydro_2.vhd
   C:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/new/DOA/FFT_HDL_Optimized_block2.vhd
@@ -154,7 +157,6 @@ read_vhdl -library xil_defaultlib {
   C:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/new/DOA/Subsystem_block1.vhd
   C:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/new/DOA/HDL_CMA_core_block.vhd
   C:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/new/DOA/MINRESRX2FFT_OUTMux_block.vhd
-  C:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/new/DOA/Subsystem4.vhd
   C:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/new/DOA/MINRESRX2FFT_MEMSEL_block2.vhd
   C:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/new/DOA/MINRESRX2FFT_BTFSEL_block2.vhd
   C:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/new/DOA/FFT_HDL_Optimized.vhd
@@ -173,7 +175,6 @@ read_vhdl -library xil_defaultlib {
   C:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/new/DOA/MINRESRX2FFT_BTFSEL.vhd
   C:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/new/DOA/Sample_and_Hold.vhd
 }
-read_vhdl -library work {{C:/Users/franc/OneDrive/Documents techniques/ETS/SONIA/Hydro software/vivado_files/DOA_rearanged_pkg.vhd}}
 add_files C:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/bd/mb_system/mb_system.bd
 set_property used_in_implementation false [get_files -all c:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/bd/mb_system/ip/mb_system_microblaze_0_2/mb_system_microblaze_0_2.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/bd/mb_system/ip/mb_system_microblaze_0_2/mb_system_microblaze_0_2_ooc_debug.xdc]

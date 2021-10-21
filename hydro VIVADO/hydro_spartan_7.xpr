@@ -81,26 +81,20 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
-        <CompFileExtendedInfo CompFileName="mb_system.bd" FileRelPathName="ip/mb_system_microblaze_0_2/mb_system_microblaze_0_2.xci">
-          <Proxy FileSetName="mb_system_microblaze_0_2"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="mb_system.bd" FileRelPathName="ip/mb_system_ilmb_bram_if_cntlr_2/mb_system_ilmb_bram_if_cntlr_2.xci">
-          <Proxy FileSetName="mb_system_ilmb_bram_if_cntlr_2"/>
-        </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="mb_system.bd" FileRelPathName="ip/mb_system_clk_wiz_1_1/mb_system_clk_wiz_1_1.xci">
           <Proxy FileSetName="mb_system_clk_wiz_1_1"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="mb_system.bd" FileRelPathName="ip/mb_system_dlmb_bram_if_cntlr_2/mb_system_dlmb_bram_if_cntlr_2.xci">
-          <Proxy FileSetName="mb_system_dlmb_bram_if_cntlr_2"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="mb_system.bd" FileRelPathName="ip/mb_system_rst_clk_wiz_1_100M_1/mb_system_rst_clk_wiz_1_100M_1.xci">
-          <Proxy FileSetName="mb_system_rst_clk_wiz_1_100M_1"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="mb_system.bd" FileRelPathName="ip/mb_system_dlmb_v10_2/mb_system_dlmb_v10_2.xci">
           <Proxy FileSetName="mb_system_dlmb_v10_2"/>
         </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="mb_system.bd" FileRelPathName="ip/mb_system_dlmb_bram_if_cntlr_2/mb_system_dlmb_bram_if_cntlr_2.xci">
+          <Proxy FileSetName="mb_system_dlmb_bram_if_cntlr_2"/>
+        </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="mb_system.bd" FileRelPathName="ip/mb_system_ilmb_v10_2/mb_system_ilmb_v10_2.xci">
           <Proxy FileSetName="mb_system_ilmb_v10_2"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="mb_system.bd" FileRelPathName="ip/mb_system_ilmb_bram_if_cntlr_2/mb_system_ilmb_bram_if_cntlr_2.xci">
+          <Proxy FileSetName="mb_system_ilmb_bram_if_cntlr_2"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="mb_system.bd" FileRelPathName="ip/mb_system_lmb_bram_2/mb_system_lmb_bram_2.xci">
           <Proxy FileSetName="mb_system_lmb_bram_2"/>
@@ -108,23 +102,29 @@
         <CompFileExtendedInfo CompFileName="mb_system.bd" FileRelPathName="ip/mb_system_mdm_1_2/mb_system_mdm_1_2.xci">
           <Proxy FileSetName="mb_system_mdm_1_2"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="mb_system.bd" FileRelPathName="ip/mb_system_axi_quad_spi_0_1/mb_system_axi_quad_spi_0_1.xci">
-          <Proxy FileSetName="mb_system_axi_quad_spi_0_1"/>
+        <CompFileExtendedInfo CompFileName="mb_system.bd" FileRelPathName="ip/mb_system_microblaze_0_2/mb_system_microblaze_0_2.xci">
+          <Proxy FileSetName="mb_system_microblaze_0_2"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="mb_system.bd" FileRelPathName="ip/mb_system_iomodule_2_1/mb_system_iomodule_2_1.xci">
           <Proxy FileSetName="mb_system_iomodule_2_1"/>
         </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="mb_system.bd" FileRelPathName="ip/mb_system_axi_quad_spi_0_1/mb_system_axi_quad_spi_0_1.xci">
+          <Proxy FileSetName="mb_system_axi_quad_spi_0_1"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="mb_system.bd" FileRelPathName="ip/mb_system_iomodule_0_1/mb_system_iomodule_0_1.xci">
+          <Proxy FileSetName="mb_system_iomodule_0_1"/>
+        </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="mb_system.bd" FileRelPathName="ip/mb_system_iomodule_1_1/mb_system_iomodule_1_1.xci">
           <Proxy FileSetName="mb_system_iomodule_1_1"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="mb_system.bd" FileRelPathName="ip/mb_system_clk_wiz_0_0/mb_system_clk_wiz_0_0.xci">
-          <Proxy FileSetName="mb_system_clk_wiz_0_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="mb_system.bd" FileRelPathName="ip/mb_system_xbar_0/mb_system_xbar_0.xci">
           <Proxy FileSetName="mb_system_xbar_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="mb_system.bd" FileRelPathName="ip/mb_system_iomodule_0_1/mb_system_iomodule_0_1.xci">
-          <Proxy FileSetName="mb_system_iomodule_0_1"/>
+        <CompFileExtendedInfo CompFileName="mb_system.bd" FileRelPathName="ip/mb_system_clk_wiz_0_0/mb_system_clk_wiz_0_0.xci">
+          <Proxy FileSetName="mb_system_clk_wiz_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="mb_system.bd" FileRelPathName="ip/mb_system_rst_clk_wiz_1_100M_1/mb_system_rst_clk_wiz_1_100M_1.xci">
+          <Proxy FileSetName="mb_system_rst_clk_wiz_1_100M_1"/>
         </CompFileExtendedInfo>
       </File>
       <File Path="$PPRDIR/../OneDrive/Documents techniques/ETS/SONIA/Hydro software/ADS8327_SPI.vhd">
@@ -151,13 +151,6 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../OneDrive/Documents techniques/ETS/SONIA/Hydro software/vivado_files/DOA_rearanged_pkg.vhd">
-        <FileInfo>
-          <Attr Name="Library" Val="work"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
       <File Path="$PSRCDIR/sources_1/new/fifo_buffer.vhd">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -165,6 +158,12 @@
         </FileInfo>
       </File>
       <File Path="$PSRCDIR/sources_1/new/DOA/CordicKernelMag.vhd">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/new/DOA/Test_DOA_pkg.vhd">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -194,7 +193,19 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
+      <File Path="$PSRCDIR/sources_1/new/DOA/Test_DOA.vhd">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
       <File Path="$PSRCDIR/sources_1/new/DOA/MINRESRX2FFT_OUTMux_block1.vhd">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/new/DOA/FFT_Hydro_Ref.vhd">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -290,6 +301,12 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
+      <File Path="$PSRCDIR/sources_1/new/DOA/SNR_Check.vhd">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
       <File Path="$PSRCDIR/sources_1/new/DOA/HDL_CMA_core_block2.vhd">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -332,13 +349,13 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/new/DOA/CordicKernelMag_block.vhd">
+      <File Path="$PSRCDIR/sources_1/new/DOA/Division.vhd">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/new/DOA/DOA_rearanged.vhd">
+      <File Path="$PSRCDIR/sources_1/new/DOA/CordicKernelMag_block.vhd">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -351,12 +368,6 @@
         </FileInfo>
       </File>
       <File Path="$PSRCDIR/sources_1/new/DOA/CordicKernelMag_block2.vhd">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sources_1/new/DOA/DOA_rearanged_pkg.vhd">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -375,12 +386,6 @@
         </FileInfo>
       </File>
       <File Path="$PSRCDIR/sources_1/new/DOA/SampleHold5.vhd">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sources_1/new/DOA/Subsystem_block3.vhd">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -447,12 +452,6 @@
         </FileInfo>
       </File>
       <File Path="$PSRCDIR/sources_1/new/DOA/Subsystem_block2.vhd">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sources_1/new/DOA/Triggered_Subsystem1.vhd">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -531,12 +530,6 @@
         </FileInfo>
       </File>
       <File Path="$PSRCDIR/sources_1/new/DOA/MINRESRX2FFT_OUTMux_block.vhd">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sources_1/new/DOA/Subsystem4.vhd">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -642,6 +635,14 @@
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/HydroE21.elf">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="ScopedToRef" Val="mb_system"/>
+          <Attr Name="ScopedToCell" Val="microblaze_0"/>
+          <Attr Name="IsVisible" Val="1"/>
         </FileInfo>
       </File>
       <Config>

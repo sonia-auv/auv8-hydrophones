@@ -10,7 +10,7 @@
    "Interfaces View_Layers":"/clk_wiz_0_clk_26mhz:false|/clk_wiz_0_clk_50mhz:false|/rst_clk_wiz_0_100M_bus_struct_reset:false|/mdm_1_Debug_SYS_Rst:false|/clk_100MHz_1:false|/rst_clk_wiz_0_100M_peripheral_reset:false|/clk_wiz_0_clk_10mhz:false|/reset_rtl_0_1:false|/rst_clk_wiz_0_100M_peripheral_aresetn:false|/rst_clk_wiz_0_100M_mb_reset:false|",
    "Interfaces View_ScaleFactor":"0.553218",
    "Interfaces View_TopLeft":"0,-859",
-   "guistr":"# # String gsaved with Nlview 7.0r6  2020-01-29 bk=1.5227 VDI=41 GEI=36 GUI=JA:10.0 non-TLS-threadsafe
+   "guistr":"# # String gsaved with Nlview 7.0r6  2020-01-29 bk=1.5227 VDI=41 GEI=36 GUI=JA:10.0 non-TLS
 #  -string -flagsOSRD
 preplace port uart_rs232 -pg 1 -lvl 5 -x 1570 -y 680 -defaultsOSRD
 preplace port spi_0 -pg 1 -lvl 5 -x 1570 -y 820 -defaultsOSRD

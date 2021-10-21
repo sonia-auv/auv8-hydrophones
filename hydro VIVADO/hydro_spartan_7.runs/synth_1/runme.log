@@ -21,27 +21,27 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7s50'
 INFO: [Device 21-403] Loading part xc7s50ftgb196-2
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 11920
+INFO: [Synth 8-7075] Helper process launched with PID 18044
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1196.188 ; gain = 51.945
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1195.887 ; gain = 69.805
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'hydro_spartan_7' [C:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/new/hydro_spartan_7.vhd:76]
-INFO: [Synth 8-3491] module 'DOA_rearanged' declared at 'C:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/new/DOA/DOA_rearanged.vhd:45' bound to instance 'PhaseHydrophones' of component 'DOA_rearanged' [C:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/new/hydro_spartan_7.vhd:246]
-INFO: [Synth 8-638] synthesizing module 'DOA_rearanged' [C:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/new/DOA/DOA_rearanged.vhd:66]
-INFO: [Synth 8-3491] module 'FFTs' declared at 'C:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/new/DOA/FFTs.vhd:22' bound to instance 'u_FFTs' of component 'FFTs' [C:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/new/DOA/DOA_rearanged.vhd:220]
+INFO: [Synth 8-3491] module 'Test_DOA' declared at 'C:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/new/DOA/Test_DOA.vhd:45' bound to instance 'PhaseHydrophones' of component 'Test_DOA' [C:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/new/hydro_spartan_7.vhd:246]
+INFO: [Synth 8-638] synthesizing module 'Test_DOA' [C:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/new/DOA/Test_DOA.vhd:66]
+INFO: [Synth 8-3491] module 'FFTs' declared at 'C:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/new/DOA/FFTs.vhd:22' bound to instance 'u_FFTs' of component 'FFTs' [C:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/new/DOA/Test_DOA.vhd:224]
 INFO: [Synth 8-638] synthesizing module 'FFTs' [C:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/new/DOA/FFTs.vhd:48]
 INFO: [Synth 8-3491] module 'Fenetrage' declared at 'C:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/new/DOA/Fenetrage.vhd:23' bound to instance 'u_Fenetrage' of component 'Fenetrage' [C:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/new/DOA/FFTs.vhd:156]
 INFO: [Synth 8-638] synthesizing module 'Fenetrage' [C:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/new/DOA/Fenetrage.vhd:37]
-INFO: [Synth 8-3491] module 'SampleHold' declared at 'C:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/new/DOA/SampleHold.vhd:22' bound to instance 'u_SampleHold' of component 'SampleHold' [C:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/new/DOA/Fenetrage.vhd:141]
+INFO: [Synth 8-3491] module 'SampleHold' declared at 'C:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/new/DOA/SampleHold.vhd:22' bound to instance 'u_SampleHold' of component 'SampleHold' [C:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/new/DOA/Fenetrage.vhd:143]
 INFO: [Synth 8-638] synthesizing module 'SampleHold' [C:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/new/DOA/SampleHold.vhd:33]
 INFO: [Synth 8-3491] module 'Sample_and_Hold' declared at 'C:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/new/DOA/Sample_and_Hold.vhd:22' bound to instance 'u_Sample_and_Hold' of component 'Sample_and_Hold' [C:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/new/DOA/SampleHold.vhd:54]
 INFO: [Synth 8-638] synthesizing module 'Sample_and_Hold' [C:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/new/DOA/Sample_and_Hold.vhd:33]
 INFO: [Synth 8-256] done synthesizing module 'Sample_and_Hold' (1#1) [C:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/new/DOA/Sample_and_Hold.vhd:33]
 INFO: [Synth 8-256] done synthesizing module 'SampleHold' (2#1) [C:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/new/DOA/SampleHold.vhd:33]
 INFO: [Synth 8-256] done synthesizing module 'Fenetrage' (3#1) [C:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/new/DOA/Fenetrage.vhd:37]
-INFO: [Synth 8-3491] module 'Subsystem' declared at 'C:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/new/DOA/Subsystem.vhd:22' bound to instance 'u_Subsystem' of component 'Subsystem' [C:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/new/DOA/FFTs.vhd:168]
-INFO: [Synth 8-638] synthesizing module 'Subsystem' [C:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/new/DOA/Subsystem.vhd:36]
-INFO: [Synth 8-3491] module 'FFT_HDL_Optimized_block2' declared at 'C:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/new/DOA/FFT_HDL_Optimized_block2.vhd:24' bound to instance 'u_FFT_HDL_Optimized' of component 'FFT_HDL_Optimized_block2' [C:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/new/DOA/Subsystem.vhd:82]
+INFO: [Synth 8-3491] module 'FFT_Hydro_Ref' declared at 'C:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/new/DOA/FFT_Hydro_Ref.vhd:22' bound to instance 'u_FFT_Hydro_Ref' of component 'FFT_Hydro_Ref' [C:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/new/DOA/FFTs.vhd:168]
+INFO: [Synth 8-638] synthesizing module 'FFT_Hydro_Ref' [C:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/new/DOA/FFT_Hydro_Ref.vhd:36]
+INFO: [Synth 8-3491] module 'FFT_HDL_Optimized_block2' declared at 'C:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/new/DOA/FFT_HDL_Optimized_block2.vhd:24' bound to instance 'u_FFT_HDL_Optimized' of component 'FFT_HDL_Optimized_block2' [C:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/new/DOA/FFT_Hydro_Ref.vhd:82]
 INFO: [Synth 8-638] synthesizing module 'FFT_HDL_Optimized_block2' [C:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/new/DOA/FFT_HDL_Optimized_block2.vhd:38]
 INFO: [Synth 8-3491] module 'TWDLROM_block2' declared at 'C:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/new/DOA/TWDLROM_block2.vhd:23' bound to instance 'u_MinResRX2FFT_TWDLROM' of component 'TWDLROM_block2' [C:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/new/DOA/FFT_HDL_Optimized_block2.vhd:258]
 INFO: [Synth 8-638] synthesizing module 'TWDLROM_block2' [C:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/new/DOA/TWDLROM_block2.vhd:36]
@@ -91,7 +91,7 @@ INFO: [Synth 8-3491] module 'MINRESRX2FFT_OUTMux_block2' declared at 'C:/Users/f
 INFO: [Synth 8-638] synthesizing module 'MINRESRX2FFT_OUTMux_block2' [C:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/new/DOA/MINRESRX2FFT_OUTMux_block2.vhd:41]
 INFO: [Synth 8-256] done synthesizing module 'MINRESRX2FFT_OUTMux_block2' (12#1) [C:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/new/DOA/MINRESRX2FFT_OUTMux_block2.vhd:41]
 INFO: [Synth 8-256] done synthesizing module 'FFT_HDL_Optimized_block2' (13#1) [C:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/new/DOA/FFT_HDL_Optimized_block2.vhd:38]
-INFO: [Synth 8-3491] module 'HDL_CMA_core_block2' declared at 'C:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/new/DOA/HDL_CMA_core_block2.vhd:25' bound to instance 'u_Complex_to_Magnitude_Angle_HDL_Optimized' of component 'HDL_CMA_core_block2' [C:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/new/DOA/Subsystem.vhd:94]
+INFO: [Synth 8-3491] module 'HDL_CMA_core_block2' declared at 'C:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/new/DOA/HDL_CMA_core_block2.vhd:25' bound to instance 'u_Complex_to_Magnitude_Angle_HDL_Optimized' of component 'HDL_CMA_core_block2' [C:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/new/DOA/FFT_Hydro_Ref.vhd:94]
 INFO: [Synth 8-638] synthesizing module 'HDL_CMA_core_block2' [C:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/new/DOA/HDL_CMA_core_block2.vhd:39]
 INFO: [Synth 8-3491] module 'Quadrant_Mapper_block2' declared at 'C:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/new/DOA/Quadrant_Mapper_block2.vhd:22' bound to instance 'u_QuadrantMapper' of component 'Quadrant_Mapper_block2' [C:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/new/DOA/HDL_CMA_core_block2.vhd:247]
 INFO: [Synth 8-638] synthesizing module 'Quadrant_Mapper_block2' [C:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/new/DOA/Quadrant_Mapper_block2.vhd:35]
@@ -114,7 +114,7 @@ INFO: [Synth 8-3491] module 'Quadrant_Correction_block2' declared at 'C:/Users/f
 INFO: [Synth 8-638] synthesizing module 'Quadrant_Correction_block2' [C:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/new/DOA/Quadrant_Correction_block2.vhd:30]
 INFO: [Synth 8-256] done synthesizing module 'Quadrant_Correction_block2' (16#1) [C:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/new/DOA/Quadrant_Correction_block2.vhd:30]
 INFO: [Synth 8-256] done synthesizing module 'HDL_CMA_core_block2' (17#1) [C:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/new/DOA/HDL_CMA_core_block2.vhd:39]
-INFO: [Synth 8-256] done synthesizing module 'Subsystem' (18#1) [C:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/new/DOA/Subsystem.vhd:36]
+INFO: [Synth 8-256] done synthesizing module 'FFT_Hydro_Ref' (18#1) [C:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/new/DOA/FFT_Hydro_Ref.vhd:36]
 INFO: [Synth 8-3491] module 'FFT_Hydro_1' declared at 'C:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/new/DOA/FFT_Hydro_1.vhd:22' bound to instance 'u_FFT_Hydro_1' of component 'FFT_Hydro_1' [C:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/new/DOA/FFTs.vhd:180]
 INFO: [Synth 8-638] synthesizing module 'FFT_Hydro_1' [C:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/new/DOA/FFT_Hydro_1.vhd:35]
 INFO: [Synth 8-3491] module 'FFT_HDL_Optimized' declared at 'C:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/new/DOA/FFT_HDL_Optimized.vhd:24' bound to instance 'u_FFT_HDL_Optimized' of component 'FFT_HDL_Optimized' [C:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/new/DOA/FFT_Hydro_1.vhd:79]
@@ -305,8 +305,8 @@ INFO: [Synth 8-256] done synthesizing module 'HDL_CMA_core_block1' (59#1) [C:/Us
 INFO: [Synth 8-256] done synthesizing module 'FFT_Hydro_3' (60#1) [C:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/new/DOA/FFT_Hydro_3.vhd:35]
 INFO: [Synth 8-256] done synthesizing module 'FFTs' (61#1) [C:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/new/DOA/FFTs.vhd:48]
 INFO: [Synth 8-638] synthesizing module 'Maximum_Hydro_Ref' [C:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/new/DOA/Maximum_Hydro_Ref.vhd:38]
-INFO: [Synth 8-638] synthesizing module 'Subsystem_block3' [C:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/new/DOA/Subsystem_block3.vhd:32]
-INFO: [Synth 8-256] done synthesizing module 'Subsystem_block3' (62#1) [C:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/new/DOA/Subsystem_block3.vhd:32]
+INFO: [Synth 8-638] synthesizing module 'Subsystem_block2' [C:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/new/DOA/Subsystem_block2.vhd:32]
+INFO: [Synth 8-256] done synthesizing module 'Subsystem_block2' (62#1) [C:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/new/DOA/Subsystem_block2.vhd:32]
 INFO: [Synth 8-638] synthesizing module 'SampleHold_block' [C:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/new/DOA/SampleHold_block.vhd:33]
 INFO: [Synth 8-638] synthesizing module 'Sample_and_Hold_block' [C:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/new/DOA/Sample_and_Hold_block.vhd:33]
 INFO: [Synth 8-256] done synthesizing module 'Sample_and_Hold_block' (63#1) [C:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/new/DOA/Sample_and_Hold_block.vhd:33]
@@ -320,36 +320,36 @@ INFO: [Synth 8-638] synthesizing module 'Sample_and_Hold_block2' [C:/Users/franc
 INFO: [Synth 8-256] done synthesizing module 'Sample_and_Hold_block2' (67#1) [C:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/new/DOA/Sample_and_Hold_block2.vhd:33]
 INFO: [Synth 8-256] done synthesizing module 'SampleHold3' (68#1) [C:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/new/DOA/SampleHold3.vhd:33]
 INFO: [Synth 8-256] done synthesizing module 'Maximum_Hydro_Ref' (69#1) [C:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/new/DOA/Maximum_Hydro_Ref.vhd:38]
-INFO: [Synth 8-638] synthesizing module 'Subsystem4' [C:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/new/DOA/Subsystem4.vhd:37]
-INFO: [Synth 8-638] synthesizing module 'Triggered_Subsystem1' [C:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/new/DOA/Triggered_Subsystem1.vhd:36]
-INFO: [Synth 8-256] done synthesizing module 'Triggered_Subsystem1' (70#1) [C:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/new/DOA/Triggered_Subsystem1.vhd:36]
-INFO: [Synth 8-256] done synthesizing module 'Subsystem4' (71#1) [C:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/new/DOA/Subsystem4.vhd:37]
+INFO: [Synth 8-638] synthesizing module 'SNR_Check' [C:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/new/DOA/SNR_Check.vhd:37]
+INFO: [Synth 8-638] synthesizing module 'Division' [C:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/new/DOA/Division.vhd:36]
+INFO: [Synth 8-256] done synthesizing module 'Division' (70#1) [C:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/new/DOA/Division.vhd:36]
+INFO: [Synth 8-256] done synthesizing module 'SNR_Check' (71#1) [C:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/new/DOA/SNR_Check.vhd:37]
 INFO: [Synth 8-638] synthesizing module 'Maximum_Hydro_1' [C:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/new/DOA/Maximum_Hydro_1.vhd:35]
-INFO: [Synth 8-638] synthesizing module 'Subsystem_block' [C:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/new/DOA/Subsystem_block.vhd:32]
-INFO: [Synth 8-256] done synthesizing module 'Subsystem_block' (72#1) [C:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/new/DOA/Subsystem_block.vhd:32]
+INFO: [Synth 8-638] synthesizing module 'Subsystem' [C:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/new/DOA/Subsystem.vhd:32]
+INFO: [Synth 8-256] done synthesizing module 'Subsystem' (72#1) [C:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/new/DOA/Subsystem.vhd:32]
 INFO: [Synth 8-256] done synthesizing module 'Maximum_Hydro_1' (73#1) [C:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/new/DOA/Maximum_Hydro_1.vhd:35]
 INFO: [Synth 8-638] synthesizing module 'Maximum_Hydro_2' [C:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/new/DOA/Maximum_Hydro_2.vhd:35]
-INFO: [Synth 8-638] synthesizing module 'Subsystem_block1' [C:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/new/DOA/Subsystem_block1.vhd:32]
-INFO: [Synth 8-256] done synthesizing module 'Subsystem_block1' (74#1) [C:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/new/DOA/Subsystem_block1.vhd:32]
+INFO: [Synth 8-638] synthesizing module 'Subsystem_block' [C:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/new/DOA/Subsystem_block.vhd:32]
+INFO: [Synth 8-256] done synthesizing module 'Subsystem_block' (74#1) [C:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/new/DOA/Subsystem_block.vhd:32]
 INFO: [Synth 8-256] done synthesizing module 'Maximum_Hydro_2' (75#1) [C:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/new/DOA/Maximum_Hydro_2.vhd:35]
 INFO: [Synth 8-638] synthesizing module 'Maximum_Hydro_3' [C:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/new/DOA/Maximum_Hydro_3.vhd:35]
-INFO: [Synth 8-638] synthesizing module 'Subsystem_block2' [C:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/new/DOA/Subsystem_block2.vhd:32]
-INFO: [Synth 8-256] done synthesizing module 'Subsystem_block2' (76#1) [C:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/new/DOA/Subsystem_block2.vhd:32]
+INFO: [Synth 8-638] synthesizing module 'Subsystem_block1' [C:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/new/DOA/Subsystem_block1.vhd:32]
+INFO: [Synth 8-256] done synthesizing module 'Subsystem_block1' (76#1) [C:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/new/DOA/Subsystem_block1.vhd:32]
 INFO: [Synth 8-256] done synthesizing module 'Maximum_Hydro_3' (77#1) [C:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/new/DOA/Maximum_Hydro_3.vhd:35]
 INFO: [Synth 8-638] synthesizing module 'Calcul_Direction' [C:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/new/DOA/Calcul_Direction.vhd:40]
 INFO: [Synth 8-256] done synthesizing module 'Calcul_Direction' (78#1) [C:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/new/DOA/Calcul_Direction.vhd:40]
-INFO: [Synth 8-256] done synthesizing module 'DOA_rearanged' (79#1) [C:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/new/DOA/DOA_rearanged.vhd:66]
+INFO: [Synth 8-256] done synthesizing module 'Test_DOA' (79#1) [C:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/new/DOA/Test_DOA.vhd:66]
 INFO: [Synth 8-638] synthesizing module 'mb_system_wrapper' [C:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/bd/mb_system/hdl/mb_system_wrapper.vhd:41]
 INFO: [Synth 8-638] synthesizing module 'mb_system' [C:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/bd/mb_system/synth/mb_system.vhd:1491]
-INFO: [Synth 8-638] synthesizing module 'mb_system_axi_quad_spi_0_1' [C:/Users/franc/hydro_spartan_7/hydro_spartan_7.runs/synth_1/.Xil/Vivado-7980-DESKTOP-3JGF4VF/realtime/mb_system_axi_quad_spi_0_1_stub.vhdl:51]
-INFO: [Synth 8-638] synthesizing module 'mb_system_axi_uartlite_0_1' [C:/Users/franc/hydro_spartan_7/hydro_spartan_7.runs/synth_1/.Xil/Vivado-7980-DESKTOP-3JGF4VF/realtime/mb_system_axi_uartlite_0_1_stub.vhdl:33]
-INFO: [Synth 8-638] synthesizing module 'mb_system_clk_wiz_0_0' [C:/Users/franc/hydro_spartan_7/hydro_spartan_7.runs/synth_1/.Xil/Vivado-7980-DESKTOP-3JGF4VF/realtime/mb_system_clk_wiz_0_0_stub.vhdl:15]
-INFO: [Synth 8-638] synthesizing module 'mb_system_clk_wiz_1_1' [C:/Users/franc/hydro_spartan_7/hydro_spartan_7.runs/synth_1/.Xil/Vivado-7980-DESKTOP-3JGF4VF/realtime/mb_system_clk_wiz_1_1_stub.vhdl:17]
-INFO: [Synth 8-638] synthesizing module 'mb_system_iomodule_0_1' [C:/Users/franc/hydro_spartan_7/hydro_spartan_7.runs/synth_1/.Xil/Vivado-7980-DESKTOP-3JGF4VF/realtime/mb_system_iomodule_0_1_stub.vhdl:27]
-INFO: [Synth 8-638] synthesizing module 'mb_system_iomodule_1_1' [C:/Users/franc/hydro_spartan_7/hydro_spartan_7.runs/synth_1/.Xil/Vivado-7980-DESKTOP-3JGF4VF/realtime/mb_system_iomodule_1_1_stub.vhdl:27]
-INFO: [Synth 8-638] synthesizing module 'mb_system_iomodule_2_1' [C:/Users/franc/hydro_spartan_7/hydro_spartan_7.runs/synth_1/.Xil/Vivado-7980-DESKTOP-3JGF4VF/realtime/mb_system_iomodule_2_1_stub.vhdl:28]
-INFO: [Synth 8-638] synthesizing module 'mb_system_mdm_1_2' [C:/Users/franc/hydro_spartan_7/hydro_spartan_7.runs/synth_1/.Xil/Vivado-7980-DESKTOP-3JGF4VF/realtime/mb_system_mdm_1_2_stub.vhdl:21]
-INFO: [Synth 8-638] synthesizing module 'mb_system_microblaze_0_2' [C:/Users/franc/hydro_spartan_7/hydro_spartan_7.runs/synth_1/.Xil/Vivado-7980-DESKTOP-3JGF4VF/realtime/mb_system_microblaze_0_2_stub.vhdl:63]
+INFO: [Synth 8-638] synthesizing module 'mb_system_axi_quad_spi_0_1' [C:/Users/franc/hydro_spartan_7/hydro_spartan_7.runs/synth_1/.Xil/Vivado-19284-DESKTOP-3JGF4VF/realtime/mb_system_axi_quad_spi_0_1_stub.vhdl:51]
+INFO: [Synth 8-638] synthesizing module 'mb_system_axi_uartlite_0_1' [C:/Users/franc/hydro_spartan_7/hydro_spartan_7.runs/synth_1/.Xil/Vivado-19284-DESKTOP-3JGF4VF/realtime/mb_system_axi_uartlite_0_1_stub.vhdl:33]
+INFO: [Synth 8-638] synthesizing module 'mb_system_clk_wiz_0_0' [C:/Users/franc/hydro_spartan_7/hydro_spartan_7.runs/synth_1/.Xil/Vivado-19284-DESKTOP-3JGF4VF/realtime/mb_system_clk_wiz_0_0_stub.vhdl:15]
+INFO: [Synth 8-638] synthesizing module 'mb_system_clk_wiz_1_1' [C:/Users/franc/hydro_spartan_7/hydro_spartan_7.runs/synth_1/.Xil/Vivado-19284-DESKTOP-3JGF4VF/realtime/mb_system_clk_wiz_1_1_stub.vhdl:17]
+INFO: [Synth 8-638] synthesizing module 'mb_system_iomodule_0_1' [C:/Users/franc/hydro_spartan_7/hydro_spartan_7.runs/synth_1/.Xil/Vivado-19284-DESKTOP-3JGF4VF/realtime/mb_system_iomodule_0_1_stub.vhdl:27]
+INFO: [Synth 8-638] synthesizing module 'mb_system_iomodule_1_1' [C:/Users/franc/hydro_spartan_7/hydro_spartan_7.runs/synth_1/.Xil/Vivado-19284-DESKTOP-3JGF4VF/realtime/mb_system_iomodule_1_1_stub.vhdl:27]
+INFO: [Synth 8-638] synthesizing module 'mb_system_iomodule_2_1' [C:/Users/franc/hydro_spartan_7/hydro_spartan_7.runs/synth_1/.Xil/Vivado-19284-DESKTOP-3JGF4VF/realtime/mb_system_iomodule_2_1_stub.vhdl:28]
+INFO: [Synth 8-638] synthesizing module 'mb_system_mdm_1_2' [C:/Users/franc/hydro_spartan_7/hydro_spartan_7.runs/synth_1/.Xil/Vivado-19284-DESKTOP-3JGF4VF/realtime/mb_system_mdm_1_2_stub.vhdl:21]
+INFO: [Synth 8-638] synthesizing module 'mb_system_microblaze_0_2' [C:/Users/franc/hydro_spartan_7/hydro_spartan_7.runs/synth_1/.Xil/Vivado-19284-DESKTOP-3JGF4VF/realtime/mb_system_microblaze_0_2_stub.vhdl:63]
 INFO: [Synth 8-638] synthesizing module 'mb_system_microblaze_0_axi_periph_2' [C:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/bd/mb_system/synth/mb_system.vhd:1047]
 INFO: [Synth 8-638] synthesizing module 'm00_couplers_imp_6TPEIZ' [C:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/bd/mb_system/synth/mb_system.vhd:57]
 INFO: [Synth 8-256] done synthesizing module 'm00_couplers_imp_6TPEIZ' (80#1) [C:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/bd/mb_system/synth/mb_system.vhd:57]
@@ -357,16 +357,16 @@ INFO: [Synth 8-638] synthesizing module 'm01_couplers_imp_1LKHNRN' [C:/Users/fra
 INFO: [Synth 8-256] done synthesizing module 'm01_couplers_imp_1LKHNRN' (81#1) [C:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/bd/mb_system/synth/mb_system.vhd:158]
 INFO: [Synth 8-638] synthesizing module 's00_couplers_imp_ZPICGN' [C:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/bd/mb_system/synth/mb_system.vhd:917]
 INFO: [Synth 8-256] done synthesizing module 's00_couplers_imp_ZPICGN' (82#1) [C:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/bd/mb_system/synth/mb_system.vhd:917]
-INFO: [Synth 8-638] synthesizing module 'mb_system_xbar_0' [C:/Users/franc/hydro_spartan_7/hydro_spartan_7.runs/synth_1/.Xil/Vivado-7980-DESKTOP-3JGF4VF/realtime/mb_system_xbar_0_stub.vhdl:51]
+INFO: [Synth 8-638] synthesizing module 'mb_system_xbar_0' [C:/Users/franc/hydro_spartan_7/hydro_spartan_7.runs/synth_1/.Xil/Vivado-19284-DESKTOP-3JGF4VF/realtime/mb_system_xbar_0_stub.vhdl:51]
 INFO: [Synth 8-256] done synthesizing module 'mb_system_microblaze_0_axi_periph_2' (83#1) [C:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/bd/mb_system/synth/mb_system.vhd:1047]
 INFO: [Synth 8-638] synthesizing module 'microblaze_0_local_memory_imp_TERCO3' [C:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/bd/mb_system/synth/mb_system.vhd:275]
-INFO: [Synth 8-638] synthesizing module 'mb_system_dlmb_bram_if_cntlr_2' [C:/Users/franc/hydro_spartan_7/hydro_spartan_7.runs/synth_1/.Xil/Vivado-7980-DESKTOP-3JGF4VF/realtime/mb_system_dlmb_bram_if_cntlr_2_stub.vhdl:31]
-INFO: [Synth 8-638] synthesizing module 'mb_system_dlmb_v10_2' [C:/Users/franc/hydro_spartan_7/hydro_spartan_7.runs/synth_1/.Xil/Vivado-7980-DESKTOP-3JGF4VF/realtime/mb_system_dlmb_v10_2_stub.vhdl:36]
-INFO: [Synth 8-638] synthesizing module 'mb_system_ilmb_bram_if_cntlr_2' [C:/Users/franc/hydro_spartan_7/hydro_spartan_7.runs/synth_1/.Xil/Vivado-7980-DESKTOP-3JGF4VF/realtime/mb_system_ilmb_bram_if_cntlr_2_stub.vhdl:31]
-INFO: [Synth 8-638] synthesizing module 'mb_system_ilmb_v10_2' [C:/Users/franc/hydro_spartan_7/hydro_spartan_7.runs/synth_1/.Xil/Vivado-7980-DESKTOP-3JGF4VF/realtime/mb_system_ilmb_v10_2_stub.vhdl:36]
-INFO: [Synth 8-638] synthesizing module 'mb_system_lmb_bram_2' [C:/Users/franc/hydro_spartan_7/hydro_spartan_7.runs/synth_1/.Xil/Vivado-7980-DESKTOP-3JGF4VF/realtime/mb_system_lmb_bram_2_stub.vhdl:27]
+INFO: [Synth 8-638] synthesizing module 'mb_system_dlmb_bram_if_cntlr_2' [C:/Users/franc/hydro_spartan_7/hydro_spartan_7.runs/synth_1/.Xil/Vivado-19284-DESKTOP-3JGF4VF/realtime/mb_system_dlmb_bram_if_cntlr_2_stub.vhdl:31]
+INFO: [Synth 8-638] synthesizing module 'mb_system_dlmb_v10_2' [C:/Users/franc/hydro_spartan_7/hydro_spartan_7.runs/synth_1/.Xil/Vivado-19284-DESKTOP-3JGF4VF/realtime/mb_system_dlmb_v10_2_stub.vhdl:36]
+INFO: [Synth 8-638] synthesizing module 'mb_system_ilmb_bram_if_cntlr_2' [C:/Users/franc/hydro_spartan_7/hydro_spartan_7.runs/synth_1/.Xil/Vivado-19284-DESKTOP-3JGF4VF/realtime/mb_system_ilmb_bram_if_cntlr_2_stub.vhdl:31]
+INFO: [Synth 8-638] synthesizing module 'mb_system_ilmb_v10_2' [C:/Users/franc/hydro_spartan_7/hydro_spartan_7.runs/synth_1/.Xil/Vivado-19284-DESKTOP-3JGF4VF/realtime/mb_system_ilmb_v10_2_stub.vhdl:36]
+INFO: [Synth 8-638] synthesizing module 'mb_system_lmb_bram_2' [C:/Users/franc/hydro_spartan_7/hydro_spartan_7.runs/synth_1/.Xil/Vivado-19284-DESKTOP-3JGF4VF/realtime/mb_system_lmb_bram_2_stub.vhdl:27]
 INFO: [Synth 8-256] done synthesizing module 'microblaze_0_local_memory_imp_TERCO3' (84#1) [C:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/bd/mb_system/synth/mb_system.vhd:275]
-INFO: [Synth 8-638] synthesizing module 'mb_system_rst_clk_wiz_1_100M_1' [C:/Users/franc/hydro_spartan_7/hydro_spartan_7.runs/synth_1/.Xil/Vivado-7980-DESKTOP-3JGF4VF/realtime/mb_system_rst_clk_wiz_1_100M_1_stub.vhdl:21]
+INFO: [Synth 8-638] synthesizing module 'mb_system_rst_clk_wiz_1_100M_1' [C:/Users/franc/hydro_spartan_7/hydro_spartan_7.runs/synth_1/.Xil/Vivado-19284-DESKTOP-3JGF4VF/realtime/mb_system_rst_clk_wiz_1_100M_1_stub.vhdl:21]
 INFO: [Synth 8-256] done synthesizing module 'mb_system' (85#1) [C:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/bd/mb_system/synth/mb_system.vhd:1491]
 INFO: [Synth 8-6157] synthesizing module 'IOBUF' [C:/Xilinx/Vivado/2020.2/scripts/rt/data/unisim_comp.v:36242]
 	Parameter DRIVE bound to: 12 - type: integer 
@@ -378,24 +378,24 @@ INFO: [Synth 8-256] done synthesizing module 'mb_system_wrapper' (87#1) [C:/User
 INFO: [Synth 8-638] synthesizing module 'ADS8327_SPI' [C:/Users/franc/OneDrive/Documents techniques/ETS/SONIA/Hydro software/ADS8327_SPI.vhd:35]
 INFO: [Synth 8-256] done synthesizing module 'ADS8327_SPI' (88#1) [C:/Users/franc/OneDrive/Documents techniques/ETS/SONIA/Hydro software/ADS8327_SPI.vhd:35]
 INFO: [Synth 8-638] synthesizing module 'fifo_buffer' [C:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/new/fifo_buffer.vhd:57]
-INFO: [Synth 8-638] synthesizing module 'fifo_generator_0' [C:/Users/franc/hydro_spartan_7/hydro_spartan_7.runs/synth_1/.Xil/Vivado-7980-DESKTOP-3JGF4VF/realtime/fifo_generator_0_stub.vhdl:21]
+INFO: [Synth 8-638] synthesizing module 'fifo_generator_0' [C:/Users/franc/hydro_spartan_7/hydro_spartan_7.runs/synth_1/.Xil/Vivado-19284-DESKTOP-3JGF4VF/realtime/fifo_generator_0_stub.vhdl:21]
 INFO: [Synth 8-256] done synthesizing module 'fifo_buffer' (89#1) [C:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/new/fifo_buffer.vhd:57]
 INFO: [Synth 8-638] synthesizing module 'clock' [C:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/new/clock.vhd:43]
 INFO: [Synth 8-256] done synthesizing module 'clock' (90#1) [C:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/new/clock.vhd:43]
 INFO: [Synth 8-256] done synthesizing module 'hydro_spartan_7' (91#1) [C:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/new/hydro_spartan_7.vhd:76]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1349.598 ; gain = 205.355
+Finished RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1348.727 ; gain = 222.645
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1349.598 ; gain = 205.355
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1348.727 ; gain = 222.645
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1349.598 ; gain = 205.355
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1348.727 ; gain = 222.645
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.648 . Memory (MB): peak = 1349.598 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.651 . Memory (MB): peak = 1348.727 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 5 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -450,22 +450,22 @@ Parsing XDC File [C:/Users/franc/hydro_spartan_7/hydro_spartan_7.runs/synth_1/do
 Finished Parsing XDC File [C:/Users/franc/hydro_spartan_7/hydro_spartan_7.runs/synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1497.297 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.006 . Memory (MB): peak = 1501.598 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 5 instances were transformed.
   IOBUF => IOBUF (IBUF, OBUFT): 5 instances
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.138 . Memory (MB): peak = 1497.297 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.130 . Memory (MB): peak = 1501.598 ; gain = 0.000
 WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'FPGA_system/mb_system_i/microblaze_0_local_memory/lmb_bram' at clock pin 'clka' is different from the actual clock period '10.000', this can lead to different synthesis results.
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:23 ; elapsed = 00:00:23 . Memory (MB): peak = 1511.199 ; gain = 366.957
+Finished Constraint Validation : Time (s): cpu = 00:00:23 ; elapsed = 00:00:23 . Memory (MB): peak = 1515.531 ; gain = 389.449
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7s50ftgb196-2
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:23 ; elapsed = 00:00:23 . Memory (MB): peak = 1511.199 ; gain = 366.957
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:23 ; elapsed = 00:00:23 . Memory (MB): peak = 1515.531 ; gain = 389.449
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -503,7 +503,7 @@ Applied set_property KEEP_HIERARCHY = SOFT for FIFO_BUFFERS/FIFO_buffer_2. (cons
 Applied set_property KEEP_HIERARCHY = SOFT for FIFO_BUFFERS/FIFO_buffer_3. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for FIFO_BUFFERS/FIFO_buffer_4. (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1511.199 ; gain = 366.957
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1515.531 ; gain = 389.449
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'minResRX2FFTCtrl_state_reg' in module 'MINRESRX2FFT_CTRL_block2'
 INFO: [Synth 8-802] inferred FSM for state register 'minResRX2FFTCtrl_state_reg' in module 'MINRESRX2FFT_CTRL'
@@ -580,7 +580,7 @@ INFO: [Synth 8-3354] encoded FSM with state register 'minResRX2FFTCtrl_state_reg
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'uart_progress_reg' using encoding 'sequential' in module 'fifo_buffer'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 1511.199 ; gain = 366.957
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:30 ; elapsed = 00:00:32 . Memory (MB): peak = 1515.531 ; gain = 389.449
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -617,7 +617,7 @@ Detailed RTL Component Info :
 	               48 Bit    Registers := 24    
 	               31 Bit    Registers := 6     
 	               29 Bit    Registers := 20    
-	               27 Bit    Registers := 199   
+	               27 Bit    Registers := 200   
 	               26 Bit    Registers := 264   
 	               18 Bit    Registers := 28    
 	               17 Bit    Registers := 7     
@@ -631,7 +631,7 @@ Detailed RTL Component Info :
 	                4 Bit    Registers := 4     
 	                3 Bit    Registers := 68    
 	                2 Bit    Registers := 13    
-	                1 Bit    Registers := 234   
+	                1 Bit    Registers := 235   
 +---RAMs : 
 	               3K Bit	(128 X 26 bit)          RAMs := 24    
 +---Muxes : 
@@ -908,7 +908,7 @@ DSP Report: register Delay2_out1_reg is absorbed into DSP Delay2_out1_reg.
 DSP Report: operator MatrixMultiply_0_0 is absorbed into DSP Delay2_out1_reg.
 DSP Report: operator tmp_MatrixMultiply_dotp_0_1 is absorbed into DSP Delay2_out1_reg.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:03 ; elapsed = 00:01:05 . Memory (MB): peak = 1511.199 ; gain = 366.957
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:05 ; elapsed = 00:01:07 . Memory (MB): peak = 1515.531 ; gain = 389.449
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -935,7 +935,7 @@ ROM: Preliminary Mapping	Report
 |TWDLROM        | Twiddle_im_table_data[0]                          | 32x26         | LUT            | 
 |TWDLROM_block2 | Twiddle_re_table_data[0]                          | 32x25         | LUT            | 
 |TWDLROM_block2 | Twiddle_im_table_data[0]                          | 32x26         | LUT            | 
-|DOA_rearanged  | u_Fenetrage/Direct_Lookup_Table_n_D_table_data[0] | 256x9         | LUT            | 
+|Test_DOA       | u_Fenetrage/Direct_Lookup_Table_n_D_table_data[0] | 256x9         | LUT            | 
 +---------------+---------------------------------------------------+---------------+----------------+
 
 
@@ -961,12 +961,12 @@ Block RAM: Preliminary Mapping	Report (see note below)
 |PhaseHydrophones                        | u_FFT_Hydro_1/u_FFT_HDL_Optimized/u_MinResRX2FFT_MEMORY/u_dataMEM_re_10/ram_reg         | 128 x 26(READ_FIRST)   | W |   | 128 x 26(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
 |PhaseHydrophones                        | u_FFT_Hydro_1/u_FFT_HDL_Optimized/u_MinResRX2FFT_MEMORY/u_dataMEM_re_01_generic/ram_reg | 128 x 26(READ_FIRST)   | W |   | 128 x 26(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
 |PhaseHydrophones                        | u_FFT_Hydro_1/u_FFT_HDL_Optimized/u_MinResRX2FFT_MEMORY/u_dataMEM_im_01/ram_reg         | 128 x 26(READ_FIRST)   | W |   | 128 x 26(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
-|PhaseHydrophones                        | u_Subsystem/u_FFT_HDL_Optimized/u_MinResRX2FFT_MEMORY/u_dataMEM_im_11/ram_reg           | 128 x 26(READ_FIRST)   | W |   | 128 x 26(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
-|PhaseHydrophones                        | u_Subsystem/u_FFT_HDL_Optimized/u_MinResRX2FFT_MEMORY/u_dataMEM_re_11/ram_reg           | 128 x 26(READ_FIRST)   | W |   | 128 x 26(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
-|PhaseHydrophones                        | u_Subsystem/u_FFT_HDL_Optimized/u_MinResRX2FFT_MEMORY/u_dataMEM_im_10/ram_reg           | 128 x 26(READ_FIRST)   | W |   | 128 x 26(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
-|PhaseHydrophones                        | u_Subsystem/u_FFT_HDL_Optimized/u_MinResRX2FFT_MEMORY/u_dataMEM_re_10/ram_reg           | 128 x 26(READ_FIRST)   | W |   | 128 x 26(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
-|PhaseHydrophones                        | u_Subsystem/u_FFT_HDL_Optimized/u_MinResRX2FFT_MEMORY/u_dataMEM_re_01/ram_reg           | 128 x 26(READ_FIRST)   | W |   | 128 x 26(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
-|PhaseHydrophones                        | u_Subsystem/u_FFT_HDL_Optimized/u_MinResRX2FFT_MEMORY/u_dataMEM_im_01/ram_reg           | 128 x 26(READ_FIRST)   | W |   | 128 x 26(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|PhaseHydrophones                        | u_FFT_Hydro_Ref/u_FFT_HDL_Optimized/u_MinResRX2FFT_MEMORY/u_dataMEM_im_11/ram_reg       | 128 x 26(READ_FIRST)   | W |   | 128 x 26(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|PhaseHydrophones                        | u_FFT_Hydro_Ref/u_FFT_HDL_Optimized/u_MinResRX2FFT_MEMORY/u_dataMEM_re_11/ram_reg       | 128 x 26(READ_FIRST)   | W |   | 128 x 26(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|PhaseHydrophones                        | u_FFT_Hydro_Ref/u_FFT_HDL_Optimized/u_MinResRX2FFT_MEMORY/u_dataMEM_im_10/ram_reg       | 128 x 26(READ_FIRST)   | W |   | 128 x 26(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|PhaseHydrophones                        | u_FFT_Hydro_Ref/u_FFT_HDL_Optimized/u_MinResRX2FFT_MEMORY/u_dataMEM_re_10/ram_reg       | 128 x 26(READ_FIRST)   | W |   | 128 x 26(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|PhaseHydrophones                        | u_FFT_Hydro_Ref/u_FFT_HDL_Optimized/u_MinResRX2FFT_MEMORY/u_dataMEM_re_01/ram_reg       | 128 x 26(READ_FIRST)   | W |   | 128 x 26(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|PhaseHydrophones                        | u_FFT_Hydro_Ref/u_FFT_HDL_Optimized/u_MinResRX2FFT_MEMORY/u_dataMEM_im_01/ram_reg       | 128 x 26(READ_FIRST)   | W |   | 128 x 26(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
 +----------------------------------------+-----------------------------------------------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
 
 Note: The table above is a preliminary report that shows the Block RAMs at the current stage of the synthesis flow. Some Block RAMs may be reimplemented as non Block RAM primitives later in the synthesis flow. Multiple instantiated Block RAMs are reported only once. 
@@ -1015,8 +1015,8 @@ DSP: Preliminary Mapping	Report (see note below)
 |MINRESRX2_BUTTERFLY_block2 | A2*B2                          | 18     | 18     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
 |Complex3Multiply_block2    | (PCIN>>17)+A2*B2               | 18     | 10     | -      | -      | 37     | 1    | 1    | -    | -    | -     | 0    | 1    | 
 |FFTs                       | A*B                            | 16     | 9      | -      | -      | 25     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|Subsystem4                 | A:B                            | 11     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|Subsystem4                 | (PCIN>>17)+A:B                 | 30     | 18     | -      | -      | 18     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|SNR_Check                  | A:B                            | 11     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|SNR_Check                  | (PCIN>>17)+A:B                 | 30     | 18     | -      | -      | 18     | 0    | 0    | -    | -    | -     | 0    | 0    | 
 |Calcul_Direction           | (0 or C)+((A*(B:0x3e8))' or 0) | 17     | 10     | 27     | -      | 27     | 0    | 0    | 0    | -    | -     | 1    | 0    | 
 |Calcul_Direction           | A*(B:0x1792)                   | 16     | 14     | -      | -      | 30     | 0    | 0    | -    | -    | -     | 0    | 0    | 
 |Calcul_Direction           | PCIN+A*(B:0x3e86e)             | 16     | 14     | -      | -      | 31     | 0    | 0    | -    | -    | -     | 0    | 1    | 
@@ -1033,13 +1033,13 @@ Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:14 ; elapsed = 00:01:16 . Memory (MB): peak = 1511.199 ; gain = 366.957
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:16 ; elapsed = 00:01:18 . Memory (MB): peak = 1515.531 ; gain = 389.449
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:01:20 ; elapsed = 00:01:21 . Memory (MB): peak = 1561.227 ; gain = 416.984
+Finished Timing Optimization : Time (s): cpu = 00:01:23 ; elapsed = 00:01:25 . Memory (MB): peak = 1558.809 ; gain = 432.727
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -1067,12 +1067,12 @@ Block RAM: Final Mapping	Report
 |PhaseHydrophones                        | u_FFT_Hydro_1/u_FFT_HDL_Optimized/u_MinResRX2FFT_MEMORY/u_dataMEM_re_10/ram_reg         | 128 x 26(READ_FIRST)   | W |   | 128 x 26(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
 |PhaseHydrophones                        | u_FFT_Hydro_1/u_FFT_HDL_Optimized/u_MinResRX2FFT_MEMORY/u_dataMEM_re_01_generic/ram_reg | 128 x 26(READ_FIRST)   | W |   | 128 x 26(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
 |PhaseHydrophones                        | u_FFT_Hydro_1/u_FFT_HDL_Optimized/u_MinResRX2FFT_MEMORY/u_dataMEM_im_01/ram_reg         | 128 x 26(READ_FIRST)   | W |   | 128 x 26(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
-|PhaseHydrophones                        | u_Subsystem/u_FFT_HDL_Optimized/u_MinResRX2FFT_MEMORY/u_dataMEM_im_11/ram_reg           | 128 x 26(READ_FIRST)   | W |   | 128 x 26(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
-|PhaseHydrophones                        | u_Subsystem/u_FFT_HDL_Optimized/u_MinResRX2FFT_MEMORY/u_dataMEM_re_11/ram_reg           | 128 x 26(READ_FIRST)   | W |   | 128 x 26(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
-|PhaseHydrophones                        | u_Subsystem/u_FFT_HDL_Optimized/u_MinResRX2FFT_MEMORY/u_dataMEM_im_10/ram_reg           | 128 x 26(READ_FIRST)   | W |   | 128 x 26(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
-|PhaseHydrophones                        | u_Subsystem/u_FFT_HDL_Optimized/u_MinResRX2FFT_MEMORY/u_dataMEM_re_10/ram_reg           | 128 x 26(READ_FIRST)   | W |   | 128 x 26(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
-|PhaseHydrophones                        | u_Subsystem/u_FFT_HDL_Optimized/u_MinResRX2FFT_MEMORY/u_dataMEM_re_01/ram_reg           | 128 x 26(READ_FIRST)   | W |   | 128 x 26(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
-|PhaseHydrophones                        | u_Subsystem/u_FFT_HDL_Optimized/u_MinResRX2FFT_MEMORY/u_dataMEM_im_01/ram_reg           | 128 x 26(READ_FIRST)   | W |   | 128 x 26(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|PhaseHydrophones                        | u_FFT_Hydro_Ref/u_FFT_HDL_Optimized/u_MinResRX2FFT_MEMORY/u_dataMEM_im_11/ram_reg       | 128 x 26(READ_FIRST)   | W |   | 128 x 26(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|PhaseHydrophones                        | u_FFT_Hydro_Ref/u_FFT_HDL_Optimized/u_MinResRX2FFT_MEMORY/u_dataMEM_re_11/ram_reg       | 128 x 26(READ_FIRST)   | W |   | 128 x 26(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|PhaseHydrophones                        | u_FFT_Hydro_Ref/u_FFT_HDL_Optimized/u_MinResRX2FFT_MEMORY/u_dataMEM_im_10/ram_reg       | 128 x 26(READ_FIRST)   | W |   | 128 x 26(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|PhaseHydrophones                        | u_FFT_Hydro_Ref/u_FFT_HDL_Optimized/u_MinResRX2FFT_MEMORY/u_dataMEM_re_10/ram_reg       | 128 x 26(READ_FIRST)   | W |   | 128 x 26(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|PhaseHydrophones                        | u_FFT_Hydro_Ref/u_FFT_HDL_Optimized/u_MinResRX2FFT_MEMORY/u_dataMEM_re_01/ram_reg       | 128 x 26(READ_FIRST)   | W |   | 128 x 26(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|PhaseHydrophones                        | u_FFT_Hydro_Ref/u_FFT_HDL_Optimized/u_MinResRX2FFT_MEMORY/u_dataMEM_im_01/ram_reg       | 128 x 26(READ_FIRST)   | W |   | 128 x 26(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
 +----------------------------------------+-----------------------------------------------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
 
 ---------------------------------------------------------------------------------
@@ -1099,14 +1099,14 @@ INFO: [Synth 8-7052] The timing for the instance PhaseHydrophones/u_FFTs/u_FFT_H
 INFO: [Synth 8-7052] The timing for the instance PhaseHydrophones/u_FFTs/u_FFT_Hydro_1/u_FFT_HDL_Optimized/u_MinResRX2FFT_MEMORY/u_dataMEM_re_10/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
 INFO: [Synth 8-7052] The timing for the instance PhaseHydrophones/u_FFTs/u_FFT_Hydro_1/u_FFT_HDL_Optimized/u_MinResRX2FFT_MEMORY/u_dataMEM_re_01_generic/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
 INFO: [Synth 8-7052] The timing for the instance PhaseHydrophones/u_FFTs/u_FFT_Hydro_1/u_FFT_HDL_Optimized/u_MinResRX2FFT_MEMORY/u_dataMEM_im_01/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance PhaseHydrophones/u_FFTs/u_Subsystem/u_FFT_HDL_Optimized/u_MinResRX2FFT_MEMORY/u_dataMEM_im_11/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance PhaseHydrophones/u_FFTs/u_Subsystem/u_FFT_HDL_Optimized/u_MinResRX2FFT_MEMORY/u_dataMEM_re_11/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance PhaseHydrophones/u_FFTs/u_Subsystem/u_FFT_HDL_Optimized/u_MinResRX2FFT_MEMORY/u_dataMEM_im_10/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance PhaseHydrophones/u_FFTs/u_Subsystem/u_FFT_HDL_Optimized/u_MinResRX2FFT_MEMORY/u_dataMEM_re_10/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance PhaseHydrophones/u_FFTs/u_Subsystem/u_FFT_HDL_Optimized/u_MinResRX2FFT_MEMORY/u_dataMEM_re_01/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance PhaseHydrophones/u_FFTs/u_Subsystem/u_FFT_HDL_Optimized/u_MinResRX2FFT_MEMORY/u_dataMEM_im_01/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance PhaseHydrophones/u_FFTs/u_FFT_Hydro_Ref/u_FFT_HDL_Optimized/u_MinResRX2FFT_MEMORY/u_dataMEM_im_11/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance PhaseHydrophones/u_FFTs/u_FFT_Hydro_Ref/u_FFT_HDL_Optimized/u_MinResRX2FFT_MEMORY/u_dataMEM_re_11/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance PhaseHydrophones/u_FFTs/u_FFT_Hydro_Ref/u_FFT_HDL_Optimized/u_MinResRX2FFT_MEMORY/u_dataMEM_im_10/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance PhaseHydrophones/u_FFTs/u_FFT_Hydro_Ref/u_FFT_HDL_Optimized/u_MinResRX2FFT_MEMORY/u_dataMEM_re_10/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance PhaseHydrophones/u_FFTs/u_FFT_Hydro_Ref/u_FFT_HDL_Optimized/u_MinResRX2FFT_MEMORY/u_dataMEM_re_01/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance PhaseHydrophones/u_FFTs/u_FFT_Hydro_Ref/u_FFT_HDL_Optimized/u_MinResRX2FFT_MEMORY/u_dataMEM_im_01/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:01:34 ; elapsed = 00:01:36 . Memory (MB): peak = 1610.723 ; gain = 466.480
+Finished Technology Mapping : Time (s): cpu = 00:01:44 ; elapsed = 00:01:47 . Memory (MB): peak = 1610.180 ; gain = 484.098
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -1124,231 +1124,231 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:01:39 ; elapsed = 00:01:41 . Memory (MB): peak = 1618.098 ; gain = 473.855
+Finished IO Insertion : Time (s): cpu = 00:01:51 ; elapsed = 00:01:54 . Memory (MB): peak = 1615.250 ; gain = 489.168
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:01:39 ; elapsed = 00:01:41 . Memory (MB): peak = 1618.098 ; gain = 473.855
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:51 ; elapsed = 00:01:54 . Memory (MB): peak = 1615.250 ; gain = 489.168
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:44 ; elapsed = 00:01:46 . Memory (MB): peak = 1618.098 ; gain = 473.855
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:57 ; elapsed = 00:02:00 . Memory (MB): peak = 1615.250 ; gain = 489.168
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:01:44 ; elapsed = 00:01:46 . Memory (MB): peak = 1618.098 ; gain = 473.855
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:57 ; elapsed = 00:02:00 . Memory (MB): peak = 1615.250 ; gain = 489.168
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:01:45 ; elapsed = 00:01:47 . Memory (MB): peak = 1620.059 ; gain = 475.816
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:58 ; elapsed = 00:02:01 . Memory (MB): peak = 1618.273 ; gain = 492.191
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:01:45 ; elapsed = 00:01:47 . Memory (MB): peak = 1620.059 ; gain = 475.816
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:58 ; elapsed = 00:02:01 . Memory (MB): peak = 1618.273 ; gain = 492.191
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
 ---------------------------------------------------------------------------------
 
 Static Shift Register Report:
-+--------------+---------------------------------------------------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
-|Module Name   | RTL Name                                                                                                      | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
-+--------------+---------------------------------------------------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
-|DOA_rearanged | u_FFTs/u_FFT_Hydro_2/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/intdelay_reg_3_reg[7][25]                   | 9      | 26    | YES          | NO                 | YES               | 26     | 0       | 
-|DOA_rearanged | u_FFTs/u_FFT_Hydro_2/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/intdelay_reg_4_reg[7][25]                   | 9      | 26    | YES          | NO                 | YES               | 26     | 0       | 
-|DOA_rearanged | u_FFTs/u_FFT_Hydro_2/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/btfOut_vld_reg                              | 11     | 1     | YES          | NO                 | YES               | 1      | 0       | 
-|DOA_rearanged | u_FFTs/u_FFT_Hydro_2/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/din_re_reg_reg__0                    | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
-|DOA_rearanged | u_FFTs/u_FFT_Hydro_2/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/din_re_reg_reg                       | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
-|DOA_rearanged | u_FFTs/u_FFT_Hydro_2/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/din_im_reg_reg__0                    | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
-|DOA_rearanged | u_FFTs/u_FFT_Hydro_2/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/din_im_reg_reg                       | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
-|DOA_rearanged | u_FFTs/u_FFT_Hydro_2/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/din_re_reg_reg[17]                   | 4      | 7     | YES          | NO                 | YES               | 7      | 0       | 
-|DOA_rearanged | u_FFTs/u_FFT_Hydro_2/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/din_im_reg_reg[17]                   | 4      | 7     | YES          | NO                 | YES               | 7      | 0       | 
-|DOA_rearanged | u_FFTs/u_FFT_Hydro_2/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_prodOfRe_pipe10__35 | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
-|DOA_rearanged | u_FFTs/u_FFT_Hydro_2/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_ProdOfIm_pipe10__35 | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
-|DOA_rearanged | u_FFTs/u_FFT_Hydro_2/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_prodOfRe_pipe10__34 | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
-|DOA_rearanged | u_FFTs/u_FFT_Hydro_2/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_ProdOfIm_pipe10__34 | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
-|DOA_rearanged | u_FFTs/u_FFT_Hydro_2/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_prodOfRe_pipe10__33 | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
-|DOA_rearanged | u_FFTs/u_FFT_Hydro_2/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_ProdOfIm_pipe10__33 | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
-|DOA_rearanged | u_FFTs/u_FFT_Hydro_2/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_prodOfRe_pipe10__32 | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
-|DOA_rearanged | u_FFTs/u_FFT_Hydro_2/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_ProdOfIm_pipe10__32 | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
-|DOA_rearanged | u_FFTs/u_FFT_Hydro_2/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_prodOfRe_pipe10__31 | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
-|DOA_rearanged | u_FFTs/u_FFT_Hydro_2/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_ProdOfIm_pipe10__31 | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
-|DOA_rearanged | u_FFTs/u_FFT_Hydro_2/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_prodOfRe_pipe10__30 | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
-|DOA_rearanged | u_FFTs/u_FFT_Hydro_2/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_ProdOfIm_pipe10__30 | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
-|DOA_rearanged | u_FFTs/u_FFT_Hydro_2/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_prodOfRe_pipe10__29 | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
-|DOA_rearanged | u_FFTs/u_FFT_Hydro_2/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_ProdOfIm_pipe10__29 | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
-|DOA_rearanged | u_FFTs/u_FFT_Hydro_2/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_prodOfRe_pipe10__28 | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
-|DOA_rearanged | u_FFTs/u_FFT_Hydro_2/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_ProdOfIm_pipe10__28 | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
-|DOA_rearanged | u_FFTs/u_FFT_Hydro_2/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_prodOfRe_pipe10__27 | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
-|DOA_rearanged | u_FFTs/u_FFT_Hydro_2/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_ProdOfIm_pipe10__27 | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
-|DOA_rearanged | u_FFTs/u_FFT_Hydro_2/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_prodOfRe_pipe10__26 | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
-|DOA_rearanged | u_FFTs/u_FFT_Hydro_2/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_ProdOfIm_pipe10__26 | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
-|DOA_rearanged | u_FFTs/u_FFT_Hydro_2/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_prodOfRe_pipe10__25 | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
-|DOA_rearanged | u_FFTs/u_FFT_Hydro_2/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_ProdOfIm_pipe10__25 | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
-|DOA_rearanged | u_FFTs/u_FFT_Hydro_2/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_prodOfRe_pipe10__24 | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
-|DOA_rearanged | u_FFTs/u_FFT_Hydro_2/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_ProdOfIm_pipe10__24 | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
-|DOA_rearanged | u_FFTs/u_FFT_Hydro_2/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_prodOfRe_pipe10__23 | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
-|DOA_rearanged | u_FFTs/u_FFT_Hydro_2/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_ProdOfIm_pipe10__23 | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
-|DOA_rearanged | u_FFTs/u_FFT_Hydro_2/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_prodOfRe_pipe10__22 | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
-|DOA_rearanged | u_FFTs/u_FFT_Hydro_2/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_ProdOfIm_pipe10__22 | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
-|DOA_rearanged | u_FFTs/u_FFT_Hydro_2/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_prodOfRe_pipe10__21 | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
-|DOA_rearanged | u_FFTs/u_FFT_Hydro_2/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_ProdOfIm_pipe10__21 | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
-|DOA_rearanged | u_FFTs/u_FFT_Hydro_2/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_prodOfRe_pipe10__20 | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
-|DOA_rearanged | u_FFTs/u_FFT_Hydro_2/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_ProdOfIm_pipe10__20 | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
-|DOA_rearanged | u_FFTs/u_FFT_Hydro_2/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_prodOfRe_pipe10__19 | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
-|DOA_rearanged | u_FFTs/u_FFT_Hydro_2/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_ProdOfIm_pipe10__19 | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
-|DOA_rearanged | u_FFTs/u_FFT_Hydro_2/u_Complex_to_Magnitude_Angle_HDL_Optimized/Delay_ValidIn_reg_reg[14]                     | 16     | 1     | YES          | NO                 | YES               | 1      | 0       | 
-|DOA_rearanged | u_FFTs/u_FFT_Hydro_2/u_Complex_to_Magnitude_Angle_HDL_Optimized/DelayQC_Control_reg_reg[12][2]                | 13     | 1     | YES          | NO                 | YES               | 1      | 0       | 
-|DOA_rearanged | u_FFTs/u_FFT_Hydro_2/u_Complex_to_Magnitude_Angle_HDL_Optimized/DelayQC_Control_reg_reg[12][1]                | 14     | 2     | YES          | NO                 | YES               | 2      | 0       | 
-|DOA_rearanged | u_FFTs/u_FFT_Hydro_3/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/intdelay_reg_3_reg[7][25]                   | 9      | 26    | YES          | NO                 | YES               | 26     | 0       | 
-|DOA_rearanged | u_FFTs/u_FFT_Hydro_3/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/intdelay_reg_4_reg[7][25]                   | 9      | 26    | YES          | NO                 | YES               | 26     | 0       | 
-|DOA_rearanged | u_FFTs/u_FFT_Hydro_3/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/btfOut_vld_reg                              | 11     | 1     | YES          | NO                 | YES               | 1      | 0       | 
-|DOA_rearanged | u_FFTs/u_FFT_Hydro_3/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/din_re_reg_reg__0                    | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
-|DOA_rearanged | u_FFTs/u_FFT_Hydro_3/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/din_re_reg_reg                       | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
-|DOA_rearanged | u_FFTs/u_FFT_Hydro_3/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/din_im_reg_reg__0                    | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
-|DOA_rearanged | u_FFTs/u_FFT_Hydro_3/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/din_im_reg_reg                       | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
-|DOA_rearanged | u_FFTs/u_FFT_Hydro_3/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/din_re_reg_reg[17]                   | 4      | 7     | YES          | NO                 | YES               | 7      | 0       | 
-|DOA_rearanged | u_FFTs/u_FFT_Hydro_3/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/din_im_reg_reg[17]                   | 4      | 7     | YES          | NO                 | YES               | 7      | 0       | 
-|DOA_rearanged | u_FFTs/u_FFT_Hydro_3/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_prodOfRe_pipe10__35 | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
-|DOA_rearanged | u_FFTs/u_FFT_Hydro_3/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_ProdOfIm_pipe10__35 | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
-|DOA_rearanged | u_FFTs/u_FFT_Hydro_3/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_prodOfRe_pipe10__34 | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
-|DOA_rearanged | u_FFTs/u_FFT_Hydro_3/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_ProdOfIm_pipe10__34 | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
-|DOA_rearanged | u_FFTs/u_FFT_Hydro_3/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_prodOfRe_pipe10__33 | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
-|DOA_rearanged | u_FFTs/u_FFT_Hydro_3/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_ProdOfIm_pipe10__33 | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
-|DOA_rearanged | u_FFTs/u_FFT_Hydro_3/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_prodOfRe_pipe10__32 | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
-|DOA_rearanged | u_FFTs/u_FFT_Hydro_3/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_ProdOfIm_pipe10__32 | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
-|DOA_rearanged | u_FFTs/u_FFT_Hydro_3/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_prodOfRe_pipe10__31 | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
-|DOA_rearanged | u_FFTs/u_FFT_Hydro_3/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_ProdOfIm_pipe10__31 | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
-|DOA_rearanged | u_FFTs/u_FFT_Hydro_3/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_prodOfRe_pipe10__30 | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
-|DOA_rearanged | u_FFTs/u_FFT_Hydro_3/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_ProdOfIm_pipe10__30 | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
-|DOA_rearanged | u_FFTs/u_FFT_Hydro_3/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_prodOfRe_pipe10__29 | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
-|DOA_rearanged | u_FFTs/u_FFT_Hydro_3/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_ProdOfIm_pipe10__29 | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
-|DOA_rearanged | u_FFTs/u_FFT_Hydro_3/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_prodOfRe_pipe10__28 | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
-|DOA_rearanged | u_FFTs/u_FFT_Hydro_3/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_ProdOfIm_pipe10__28 | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
-|DOA_rearanged | u_FFTs/u_FFT_Hydro_3/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_prodOfRe_pipe10__27 | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
-|DOA_rearanged | u_FFTs/u_FFT_Hydro_3/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_ProdOfIm_pipe10__27 | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
-|DOA_rearanged | u_FFTs/u_FFT_Hydro_3/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_prodOfRe_pipe10__26 | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
-|DOA_rearanged | u_FFTs/u_FFT_Hydro_3/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_ProdOfIm_pipe10__26 | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
-|DOA_rearanged | u_FFTs/u_FFT_Hydro_3/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_prodOfRe_pipe10__25 | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
-|DOA_rearanged | u_FFTs/u_FFT_Hydro_3/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_ProdOfIm_pipe10__25 | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
-|DOA_rearanged | u_FFTs/u_FFT_Hydro_3/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_prodOfRe_pipe10__24 | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
-|DOA_rearanged | u_FFTs/u_FFT_Hydro_3/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_ProdOfIm_pipe10__24 | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
-|DOA_rearanged | u_FFTs/u_FFT_Hydro_3/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_prodOfRe_pipe10__23 | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
-|DOA_rearanged | u_FFTs/u_FFT_Hydro_3/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_ProdOfIm_pipe10__23 | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
-|DOA_rearanged | u_FFTs/u_FFT_Hydro_3/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_prodOfRe_pipe10__22 | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
-|DOA_rearanged | u_FFTs/u_FFT_Hydro_3/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_ProdOfIm_pipe10__22 | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
-|DOA_rearanged | u_FFTs/u_FFT_Hydro_3/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_prodOfRe_pipe10__21 | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
-|DOA_rearanged | u_FFTs/u_FFT_Hydro_3/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_ProdOfIm_pipe10__21 | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
-|DOA_rearanged | u_FFTs/u_FFT_Hydro_3/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_prodOfRe_pipe10__20 | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
-|DOA_rearanged | u_FFTs/u_FFT_Hydro_3/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_ProdOfIm_pipe10__20 | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
-|DOA_rearanged | u_FFTs/u_FFT_Hydro_3/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_prodOfRe_pipe10__19 | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
-|DOA_rearanged | u_FFTs/u_FFT_Hydro_3/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_ProdOfIm_pipe10__19 | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
-|DOA_rearanged | u_FFTs/u_FFT_Hydro_3/u_Complex_to_Magnitude_Angle_HDL_Optimized/Delay_ValidIn_reg_reg[14]                     | 16     | 1     | YES          | NO                 | YES               | 1      | 0       | 
-|DOA_rearanged | u_FFTs/u_FFT_Hydro_3/u_Complex_to_Magnitude_Angle_HDL_Optimized/DelayQC_Control_reg_reg[12][2]                | 13     | 1     | YES          | NO                 | YES               | 1      | 0       | 
-|DOA_rearanged | u_FFTs/u_FFT_Hydro_3/u_Complex_to_Magnitude_Angle_HDL_Optimized/DelayQC_Control_reg_reg[12][1]                | 14     | 2     | YES          | NO                 | YES               | 2      | 0       | 
-|DOA_rearanged | u_FFTs/u_FFT_Hydro_1/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/intdelay_reg_3_reg[7][25]                   | 9      | 26    | YES          | NO                 | YES               | 26     | 0       | 
-|DOA_rearanged | u_FFTs/u_FFT_Hydro_1/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/intdelay_reg_4_reg[7][25]                   | 9      | 26    | YES          | NO                 | YES               | 26     | 0       | 
-|DOA_rearanged | u_FFTs/u_FFT_Hydro_1/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/btfOut_vld_reg                              | 11     | 1     | YES          | NO                 | YES               | 1      | 0       | 
-|DOA_rearanged | u_FFTs/u_FFT_Hydro_1/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/din_re_reg_reg__0                    | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
-|DOA_rearanged | u_FFTs/u_FFT_Hydro_1/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/din_re_reg_reg                       | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
-|DOA_rearanged | u_FFTs/u_FFT_Hydro_1/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/din_im_reg_reg__0                    | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
-|DOA_rearanged | u_FFTs/u_FFT_Hydro_1/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/din_im_reg_reg                       | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
-|DOA_rearanged | u_FFTs/u_FFT_Hydro_1/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/din_re_reg_reg[17]                   | 4      | 7     | YES          | NO                 | YES               | 7      | 0       | 
-|DOA_rearanged | u_FFTs/u_FFT_Hydro_1/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/din_im_reg_reg[17]                   | 4      | 7     | YES          | NO                 | YES               | 7      | 0       | 
-|DOA_rearanged | u_FFTs/u_FFT_Hydro_1/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_prodOfRe_pipe10__35 | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
-|DOA_rearanged | u_FFTs/u_FFT_Hydro_1/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_ProdOfIm_pipe10__35 | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
-|DOA_rearanged | u_FFTs/u_FFT_Hydro_1/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_prodOfRe_pipe10__34 | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
-|DOA_rearanged | u_FFTs/u_FFT_Hydro_1/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_ProdOfIm_pipe10__34 | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
-|DOA_rearanged | u_FFTs/u_FFT_Hydro_1/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_prodOfRe_pipe10__33 | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
-|DOA_rearanged | u_FFTs/u_FFT_Hydro_1/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_ProdOfIm_pipe10__33 | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
-|DOA_rearanged | u_FFTs/u_FFT_Hydro_1/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_prodOfRe_pipe10__32 | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
-|DOA_rearanged | u_FFTs/u_FFT_Hydro_1/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_ProdOfIm_pipe10__32 | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
-|DOA_rearanged | u_FFTs/u_FFT_Hydro_1/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_prodOfRe_pipe10__31 | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
-|DOA_rearanged | u_FFTs/u_FFT_Hydro_1/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_ProdOfIm_pipe10__31 | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
-|DOA_rearanged | u_FFTs/u_FFT_Hydro_1/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_prodOfRe_pipe10__30 | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
-|DOA_rearanged | u_FFTs/u_FFT_Hydro_1/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_ProdOfIm_pipe10__30 | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
-|DOA_rearanged | u_FFTs/u_FFT_Hydro_1/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_prodOfRe_pipe10__29 | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
-|DOA_rearanged | u_FFTs/u_FFT_Hydro_1/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_ProdOfIm_pipe10__29 | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
-|DOA_rearanged | u_FFTs/u_FFT_Hydro_1/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_prodOfRe_pipe10__28 | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
-|DOA_rearanged | u_FFTs/u_FFT_Hydro_1/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_ProdOfIm_pipe10__28 | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
-|DOA_rearanged | u_FFTs/u_FFT_Hydro_1/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_prodOfRe_pipe10__27 | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
-|DOA_rearanged | u_FFTs/u_FFT_Hydro_1/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_ProdOfIm_pipe10__27 | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
-|DOA_rearanged | u_FFTs/u_FFT_Hydro_1/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_prodOfRe_pipe10__26 | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
-|DOA_rearanged | u_FFTs/u_FFT_Hydro_1/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_ProdOfIm_pipe10__26 | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
-|DOA_rearanged | u_FFTs/u_FFT_Hydro_1/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_prodOfRe_pipe10__25 | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
-|DOA_rearanged | u_FFTs/u_FFT_Hydro_1/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_ProdOfIm_pipe10__25 | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
-|DOA_rearanged | u_FFTs/u_FFT_Hydro_1/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_prodOfRe_pipe10__24 | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
-|DOA_rearanged | u_FFTs/u_FFT_Hydro_1/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_ProdOfIm_pipe10__24 | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
-|DOA_rearanged | u_FFTs/u_FFT_Hydro_1/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_prodOfRe_pipe10__23 | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
-|DOA_rearanged | u_FFTs/u_FFT_Hydro_1/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_ProdOfIm_pipe10__23 | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
-|DOA_rearanged | u_FFTs/u_FFT_Hydro_1/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_prodOfRe_pipe10__22 | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
-|DOA_rearanged | u_FFTs/u_FFT_Hydro_1/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_ProdOfIm_pipe10__22 | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
-|DOA_rearanged | u_FFTs/u_FFT_Hydro_1/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_prodOfRe_pipe10__21 | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
-|DOA_rearanged | u_FFTs/u_FFT_Hydro_1/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_ProdOfIm_pipe10__21 | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
-|DOA_rearanged | u_FFTs/u_FFT_Hydro_1/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_prodOfRe_pipe10__20 | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
-|DOA_rearanged | u_FFTs/u_FFT_Hydro_1/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_ProdOfIm_pipe10__20 | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
-|DOA_rearanged | u_FFTs/u_FFT_Hydro_1/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_prodOfRe_pipe10__19 | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
-|DOA_rearanged | u_FFTs/u_FFT_Hydro_1/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_ProdOfIm_pipe10__19 | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
-|DOA_rearanged | u_FFTs/u_FFT_Hydro_1/u_Complex_to_Magnitude_Angle_HDL_Optimized/Delay_ValidIn_reg_reg[14]                     | 16     | 1     | YES          | NO                 | YES               | 1      | 0       | 
-|DOA_rearanged | u_FFTs/u_FFT_Hydro_1/u_Complex_to_Magnitude_Angle_HDL_Optimized/DelayQC_Control_reg_reg[12][2]                | 13     | 1     | YES          | NO                 | YES               | 1      | 0       | 
-|DOA_rearanged | u_FFTs/u_FFT_Hydro_1/u_Complex_to_Magnitude_Angle_HDL_Optimized/DelayQC_Control_reg_reg[12][1]                | 14     | 2     | YES          | NO                 | YES               | 2      | 0       | 
-|DOA_rearanged | u_FFTs/u_Subsystem/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/intdelay_reg_3_reg[7][25]                     | 9      | 26    | YES          | NO                 | YES               | 26     | 0       | 
-|DOA_rearanged | u_FFTs/u_Subsystem/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/intdelay_reg_4_reg[7][25]                     | 9      | 26    | YES          | NO                 | YES               | 26     | 0       | 
-|DOA_rearanged | u_FFTs/u_Subsystem/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/btfOut_vld_reg                                | 11     | 1     | YES          | NO                 | YES               | 1      | 0       | 
-|DOA_rearanged | u_FFTs/u_Subsystem/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/din_re_reg_reg__0                      | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
-|DOA_rearanged | u_FFTs/u_Subsystem/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/din_re_reg_reg                         | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
-|DOA_rearanged | u_FFTs/u_Subsystem/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/din_im_reg_reg__0                      | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
-|DOA_rearanged | u_FFTs/u_Subsystem/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/din_im_reg_reg                         | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
-|DOA_rearanged | u_FFTs/u_Subsystem/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/din_re_reg_reg[17]                     | 4      | 7     | YES          | NO                 | YES               | 7      | 0       | 
-|DOA_rearanged | u_FFTs/u_Subsystem/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/din_im_reg_reg[17]                     | 4      | 7     | YES          | NO                 | YES               | 7      | 0       | 
-|DOA_rearanged | u_FFTs/u_Subsystem/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_prodOfRe_pipe10__35   | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
-|DOA_rearanged | u_FFTs/u_Subsystem/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_ProdOfIm_pipe10__35   | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
-|DOA_rearanged | u_FFTs/u_Subsystem/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_prodOfRe_pipe10__34   | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
-|DOA_rearanged | u_FFTs/u_Subsystem/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_ProdOfIm_pipe10__34   | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
-|DOA_rearanged | u_FFTs/u_Subsystem/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_prodOfRe_pipe10__33   | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
-|DOA_rearanged | u_FFTs/u_Subsystem/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_ProdOfIm_pipe10__33   | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
-|DOA_rearanged | u_FFTs/u_Subsystem/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_prodOfRe_pipe10__32   | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
-|DOA_rearanged | u_FFTs/u_Subsystem/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_ProdOfIm_pipe10__32   | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
-|DOA_rearanged | u_FFTs/u_Subsystem/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_prodOfRe_pipe10__31   | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
-|DOA_rearanged | u_FFTs/u_Subsystem/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_ProdOfIm_pipe10__31   | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
-|DOA_rearanged | u_FFTs/u_Subsystem/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_prodOfRe_pipe10__30   | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
-|DOA_rearanged | u_FFTs/u_Subsystem/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_ProdOfIm_pipe10__30   | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
-|DOA_rearanged | u_FFTs/u_Subsystem/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_prodOfRe_pipe10__29   | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
-|DOA_rearanged | u_FFTs/u_Subsystem/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_ProdOfIm_pipe10__29   | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
-|DOA_rearanged | u_FFTs/u_Subsystem/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_prodOfRe_pipe10__28   | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
-|DOA_rearanged | u_FFTs/u_Subsystem/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_ProdOfIm_pipe10__28   | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
-|DOA_rearanged | u_FFTs/u_Subsystem/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_prodOfRe_pipe10__27   | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
-|DOA_rearanged | u_FFTs/u_Subsystem/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_ProdOfIm_pipe10__27   | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
-|DOA_rearanged | u_FFTs/u_Subsystem/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_prodOfRe_pipe10__26   | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
-|DOA_rearanged | u_FFTs/u_Subsystem/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_ProdOfIm_pipe10__26   | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
-|DOA_rearanged | u_FFTs/u_Subsystem/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_prodOfRe_pipe10__25   | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
-|DOA_rearanged | u_FFTs/u_Subsystem/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_ProdOfIm_pipe10__25   | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
-|DOA_rearanged | u_FFTs/u_Subsystem/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_prodOfRe_pipe10__24   | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
-|DOA_rearanged | u_FFTs/u_Subsystem/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_ProdOfIm_pipe10__24   | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
-|DOA_rearanged | u_FFTs/u_Subsystem/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_prodOfRe_pipe10__23   | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
-|DOA_rearanged | u_FFTs/u_Subsystem/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_ProdOfIm_pipe10__23   | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
-|DOA_rearanged | u_FFTs/u_Subsystem/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_prodOfRe_pipe10__22   | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
-|DOA_rearanged | u_FFTs/u_Subsystem/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_ProdOfIm_pipe10__22   | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
-|DOA_rearanged | u_FFTs/u_Subsystem/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_prodOfRe_pipe10__21   | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
-|DOA_rearanged | u_FFTs/u_Subsystem/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_ProdOfIm_pipe10__21   | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
-|DOA_rearanged | u_FFTs/u_Subsystem/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_prodOfRe_pipe10__20   | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
-|DOA_rearanged | u_FFTs/u_Subsystem/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_ProdOfIm_pipe10__20   | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
-|DOA_rearanged | u_FFTs/u_Subsystem/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_prodOfRe_pipe10__19   | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
-|DOA_rearanged | u_FFTs/u_Subsystem/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_ProdOfIm_pipe10__19   | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
-|DOA_rearanged | u_FFTs/u_Subsystem/u_Complex_to_Magnitude_Angle_HDL_Optimized/Delay_ValidIn_reg_reg[14]                       | 16     | 1     | YES          | NO                 | YES               | 1      | 0       | 
-|DOA_rearanged | u_FFTs/u_Subsystem/u_Complex_to_Magnitude_Angle_HDL_Optimized/DelayQC_Control_reg_reg[12][2]                  | 13     | 1     | YES          | NO                 | YES               | 1      | 0       | 
-|DOA_rearanged | u_FFTs/u_Subsystem/u_Complex_to_Magnitude_Angle_HDL_Optimized/DelayQC_Control_reg_reg[12][1]                  | 14     | 2     | YES          | NO                 | YES               | 2      | 0       | 
-+--------------+---------------------------------------------------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
++------------+-----------------------------------------------------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|Module Name | RTL Name                                                                                                        | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
++------------+-----------------------------------------------------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|Test_DOA    | u_FFTs/u_FFT_Hydro_2/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/intdelay_reg_3_reg[7][25]                     | 9      | 26    | YES          | NO                 | YES               | 26     | 0       | 
+|Test_DOA    | u_FFTs/u_FFT_Hydro_2/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/intdelay_reg_4_reg[7][25]                     | 9      | 26    | YES          | NO                 | YES               | 26     | 0       | 
+|Test_DOA    | u_FFTs/u_FFT_Hydro_2/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/btfOut_vld_reg                                | 11     | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|Test_DOA    | u_FFTs/u_FFT_Hydro_2/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/din_re_reg_reg__0                      | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|Test_DOA    | u_FFTs/u_FFT_Hydro_2/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/din_re_reg_reg                         | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|Test_DOA    | u_FFTs/u_FFT_Hydro_2/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/din_im_reg_reg__0                      | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|Test_DOA    | u_FFTs/u_FFT_Hydro_2/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/din_im_reg_reg                         | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|Test_DOA    | u_FFTs/u_FFT_Hydro_2/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/din_re_reg_reg[17]                     | 4      | 7     | YES          | NO                 | YES               | 7      | 0       | 
+|Test_DOA    | u_FFTs/u_FFT_Hydro_2/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/din_im_reg_reg[17]                     | 4      | 7     | YES          | NO                 | YES               | 7      | 0       | 
+|Test_DOA    | u_FFTs/u_FFT_Hydro_2/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_prodOfRe_pipe10__35   | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|Test_DOA    | u_FFTs/u_FFT_Hydro_2/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_ProdOfIm_pipe10__35   | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|Test_DOA    | u_FFTs/u_FFT_Hydro_2/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_prodOfRe_pipe10__34   | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|Test_DOA    | u_FFTs/u_FFT_Hydro_2/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_ProdOfIm_pipe10__34   | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|Test_DOA    | u_FFTs/u_FFT_Hydro_2/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_prodOfRe_pipe10__33   | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|Test_DOA    | u_FFTs/u_FFT_Hydro_2/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_ProdOfIm_pipe10__33   | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|Test_DOA    | u_FFTs/u_FFT_Hydro_2/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_prodOfRe_pipe10__32   | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|Test_DOA    | u_FFTs/u_FFT_Hydro_2/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_ProdOfIm_pipe10__32   | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|Test_DOA    | u_FFTs/u_FFT_Hydro_2/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_prodOfRe_pipe10__31   | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|Test_DOA    | u_FFTs/u_FFT_Hydro_2/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_ProdOfIm_pipe10__31   | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|Test_DOA    | u_FFTs/u_FFT_Hydro_2/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_prodOfRe_pipe10__30   | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|Test_DOA    | u_FFTs/u_FFT_Hydro_2/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_ProdOfIm_pipe10__30   | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|Test_DOA    | u_FFTs/u_FFT_Hydro_2/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_prodOfRe_pipe10__29   | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|Test_DOA    | u_FFTs/u_FFT_Hydro_2/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_ProdOfIm_pipe10__29   | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|Test_DOA    | u_FFTs/u_FFT_Hydro_2/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_prodOfRe_pipe10__28   | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|Test_DOA    | u_FFTs/u_FFT_Hydro_2/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_ProdOfIm_pipe10__28   | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|Test_DOA    | u_FFTs/u_FFT_Hydro_2/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_prodOfRe_pipe10__27   | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|Test_DOA    | u_FFTs/u_FFT_Hydro_2/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_ProdOfIm_pipe10__27   | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|Test_DOA    | u_FFTs/u_FFT_Hydro_2/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_prodOfRe_pipe10__26   | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|Test_DOA    | u_FFTs/u_FFT_Hydro_2/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_ProdOfIm_pipe10__26   | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|Test_DOA    | u_FFTs/u_FFT_Hydro_2/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_prodOfRe_pipe10__25   | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|Test_DOA    | u_FFTs/u_FFT_Hydro_2/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_ProdOfIm_pipe10__25   | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|Test_DOA    | u_FFTs/u_FFT_Hydro_2/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_prodOfRe_pipe10__24   | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|Test_DOA    | u_FFTs/u_FFT_Hydro_2/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_ProdOfIm_pipe10__24   | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|Test_DOA    | u_FFTs/u_FFT_Hydro_2/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_prodOfRe_pipe10__23   | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|Test_DOA    | u_FFTs/u_FFT_Hydro_2/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_ProdOfIm_pipe10__23   | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|Test_DOA    | u_FFTs/u_FFT_Hydro_2/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_prodOfRe_pipe10__22   | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|Test_DOA    | u_FFTs/u_FFT_Hydro_2/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_ProdOfIm_pipe10__22   | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|Test_DOA    | u_FFTs/u_FFT_Hydro_2/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_prodOfRe_pipe10__21   | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|Test_DOA    | u_FFTs/u_FFT_Hydro_2/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_ProdOfIm_pipe10__21   | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|Test_DOA    | u_FFTs/u_FFT_Hydro_2/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_prodOfRe_pipe10__20   | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|Test_DOA    | u_FFTs/u_FFT_Hydro_2/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_ProdOfIm_pipe10__20   | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|Test_DOA    | u_FFTs/u_FFT_Hydro_2/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_prodOfRe_pipe10__19   | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|Test_DOA    | u_FFTs/u_FFT_Hydro_2/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_ProdOfIm_pipe10__19   | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|Test_DOA    | u_FFTs/u_FFT_Hydro_2/u_Complex_to_Magnitude_Angle_HDL_Optimized/Delay_ValidIn_reg_reg[14]                       | 16     | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|Test_DOA    | u_FFTs/u_FFT_Hydro_2/u_Complex_to_Magnitude_Angle_HDL_Optimized/DelayQC_Control_reg_reg[12][2]                  | 13     | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|Test_DOA    | u_FFTs/u_FFT_Hydro_2/u_Complex_to_Magnitude_Angle_HDL_Optimized/DelayQC_Control_reg_reg[12][1]                  | 14     | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|Test_DOA    | u_FFTs/u_FFT_Hydro_3/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/intdelay_reg_3_reg[7][25]                     | 9      | 26    | YES          | NO                 | YES               | 26     | 0       | 
+|Test_DOA    | u_FFTs/u_FFT_Hydro_3/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/intdelay_reg_4_reg[7][25]                     | 9      | 26    | YES          | NO                 | YES               | 26     | 0       | 
+|Test_DOA    | u_FFTs/u_FFT_Hydro_3/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/btfOut_vld_reg                                | 11     | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|Test_DOA    | u_FFTs/u_FFT_Hydro_3/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/din_re_reg_reg__0                      | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|Test_DOA    | u_FFTs/u_FFT_Hydro_3/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/din_re_reg_reg                         | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|Test_DOA    | u_FFTs/u_FFT_Hydro_3/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/din_im_reg_reg__0                      | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|Test_DOA    | u_FFTs/u_FFT_Hydro_3/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/din_im_reg_reg                         | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|Test_DOA    | u_FFTs/u_FFT_Hydro_3/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/din_re_reg_reg[17]                     | 4      | 7     | YES          | NO                 | YES               | 7      | 0       | 
+|Test_DOA    | u_FFTs/u_FFT_Hydro_3/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/din_im_reg_reg[17]                     | 4      | 7     | YES          | NO                 | YES               | 7      | 0       | 
+|Test_DOA    | u_FFTs/u_FFT_Hydro_3/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_prodOfRe_pipe10__35   | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|Test_DOA    | u_FFTs/u_FFT_Hydro_3/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_ProdOfIm_pipe10__35   | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|Test_DOA    | u_FFTs/u_FFT_Hydro_3/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_prodOfRe_pipe10__34   | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|Test_DOA    | u_FFTs/u_FFT_Hydro_3/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_ProdOfIm_pipe10__34   | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|Test_DOA    | u_FFTs/u_FFT_Hydro_3/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_prodOfRe_pipe10__33   | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|Test_DOA    | u_FFTs/u_FFT_Hydro_3/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_ProdOfIm_pipe10__33   | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|Test_DOA    | u_FFTs/u_FFT_Hydro_3/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_prodOfRe_pipe10__32   | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|Test_DOA    | u_FFTs/u_FFT_Hydro_3/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_ProdOfIm_pipe10__32   | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|Test_DOA    | u_FFTs/u_FFT_Hydro_3/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_prodOfRe_pipe10__31   | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|Test_DOA    | u_FFTs/u_FFT_Hydro_3/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_ProdOfIm_pipe10__31   | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|Test_DOA    | u_FFTs/u_FFT_Hydro_3/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_prodOfRe_pipe10__30   | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|Test_DOA    | u_FFTs/u_FFT_Hydro_3/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_ProdOfIm_pipe10__30   | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|Test_DOA    | u_FFTs/u_FFT_Hydro_3/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_prodOfRe_pipe10__29   | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|Test_DOA    | u_FFTs/u_FFT_Hydro_3/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_ProdOfIm_pipe10__29   | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|Test_DOA    | u_FFTs/u_FFT_Hydro_3/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_prodOfRe_pipe10__28   | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|Test_DOA    | u_FFTs/u_FFT_Hydro_3/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_ProdOfIm_pipe10__28   | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|Test_DOA    | u_FFTs/u_FFT_Hydro_3/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_prodOfRe_pipe10__27   | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|Test_DOA    | u_FFTs/u_FFT_Hydro_3/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_ProdOfIm_pipe10__27   | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|Test_DOA    | u_FFTs/u_FFT_Hydro_3/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_prodOfRe_pipe10__26   | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|Test_DOA    | u_FFTs/u_FFT_Hydro_3/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_ProdOfIm_pipe10__26   | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|Test_DOA    | u_FFTs/u_FFT_Hydro_3/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_prodOfRe_pipe10__25   | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|Test_DOA    | u_FFTs/u_FFT_Hydro_3/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_ProdOfIm_pipe10__25   | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|Test_DOA    | u_FFTs/u_FFT_Hydro_3/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_prodOfRe_pipe10__24   | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|Test_DOA    | u_FFTs/u_FFT_Hydro_3/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_ProdOfIm_pipe10__24   | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|Test_DOA    | u_FFTs/u_FFT_Hydro_3/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_prodOfRe_pipe10__23   | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|Test_DOA    | u_FFTs/u_FFT_Hydro_3/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_ProdOfIm_pipe10__23   | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|Test_DOA    | u_FFTs/u_FFT_Hydro_3/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_prodOfRe_pipe10__22   | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|Test_DOA    | u_FFTs/u_FFT_Hydro_3/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_ProdOfIm_pipe10__22   | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|Test_DOA    | u_FFTs/u_FFT_Hydro_3/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_prodOfRe_pipe10__21   | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|Test_DOA    | u_FFTs/u_FFT_Hydro_3/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_ProdOfIm_pipe10__21   | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|Test_DOA    | u_FFTs/u_FFT_Hydro_3/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_prodOfRe_pipe10__20   | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|Test_DOA    | u_FFTs/u_FFT_Hydro_3/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_ProdOfIm_pipe10__20   | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|Test_DOA    | u_FFTs/u_FFT_Hydro_3/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_prodOfRe_pipe10__19   | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|Test_DOA    | u_FFTs/u_FFT_Hydro_3/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_ProdOfIm_pipe10__19   | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|Test_DOA    | u_FFTs/u_FFT_Hydro_3/u_Complex_to_Magnitude_Angle_HDL_Optimized/Delay_ValidIn_reg_reg[14]                       | 16     | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|Test_DOA    | u_FFTs/u_FFT_Hydro_3/u_Complex_to_Magnitude_Angle_HDL_Optimized/DelayQC_Control_reg_reg[12][2]                  | 13     | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|Test_DOA    | u_FFTs/u_FFT_Hydro_3/u_Complex_to_Magnitude_Angle_HDL_Optimized/DelayQC_Control_reg_reg[12][1]                  | 14     | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|Test_DOA    | u_FFTs/u_FFT_Hydro_1/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/intdelay_reg_3_reg[7][25]                     | 9      | 26    | YES          | NO                 | YES               | 26     | 0       | 
+|Test_DOA    | u_FFTs/u_FFT_Hydro_1/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/intdelay_reg_4_reg[7][25]                     | 9      | 26    | YES          | NO                 | YES               | 26     | 0       | 
+|Test_DOA    | u_FFTs/u_FFT_Hydro_1/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/btfOut_vld_reg                                | 11     | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|Test_DOA    | u_FFTs/u_FFT_Hydro_1/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/din_re_reg_reg__0                      | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|Test_DOA    | u_FFTs/u_FFT_Hydro_1/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/din_re_reg_reg                         | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|Test_DOA    | u_FFTs/u_FFT_Hydro_1/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/din_im_reg_reg__0                      | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|Test_DOA    | u_FFTs/u_FFT_Hydro_1/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/din_im_reg_reg                         | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|Test_DOA    | u_FFTs/u_FFT_Hydro_1/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/din_re_reg_reg[17]                     | 4      | 7     | YES          | NO                 | YES               | 7      | 0       | 
+|Test_DOA    | u_FFTs/u_FFT_Hydro_1/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/din_im_reg_reg[17]                     | 4      | 7     | YES          | NO                 | YES               | 7      | 0       | 
+|Test_DOA    | u_FFTs/u_FFT_Hydro_1/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_prodOfRe_pipe10__35   | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|Test_DOA    | u_FFTs/u_FFT_Hydro_1/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_ProdOfIm_pipe10__35   | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|Test_DOA    | u_FFTs/u_FFT_Hydro_1/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_prodOfRe_pipe10__34   | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|Test_DOA    | u_FFTs/u_FFT_Hydro_1/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_ProdOfIm_pipe10__34   | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|Test_DOA    | u_FFTs/u_FFT_Hydro_1/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_prodOfRe_pipe10__33   | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|Test_DOA    | u_FFTs/u_FFT_Hydro_1/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_ProdOfIm_pipe10__33   | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|Test_DOA    | u_FFTs/u_FFT_Hydro_1/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_prodOfRe_pipe10__32   | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|Test_DOA    | u_FFTs/u_FFT_Hydro_1/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_ProdOfIm_pipe10__32   | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|Test_DOA    | u_FFTs/u_FFT_Hydro_1/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_prodOfRe_pipe10__31   | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|Test_DOA    | u_FFTs/u_FFT_Hydro_1/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_ProdOfIm_pipe10__31   | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|Test_DOA    | u_FFTs/u_FFT_Hydro_1/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_prodOfRe_pipe10__30   | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|Test_DOA    | u_FFTs/u_FFT_Hydro_1/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_ProdOfIm_pipe10__30   | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|Test_DOA    | u_FFTs/u_FFT_Hydro_1/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_prodOfRe_pipe10__29   | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|Test_DOA    | u_FFTs/u_FFT_Hydro_1/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_ProdOfIm_pipe10__29   | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|Test_DOA    | u_FFTs/u_FFT_Hydro_1/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_prodOfRe_pipe10__28   | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|Test_DOA    | u_FFTs/u_FFT_Hydro_1/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_ProdOfIm_pipe10__28   | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|Test_DOA    | u_FFTs/u_FFT_Hydro_1/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_prodOfRe_pipe10__27   | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|Test_DOA    | u_FFTs/u_FFT_Hydro_1/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_ProdOfIm_pipe10__27   | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|Test_DOA    | u_FFTs/u_FFT_Hydro_1/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_prodOfRe_pipe10__26   | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|Test_DOA    | u_FFTs/u_FFT_Hydro_1/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_ProdOfIm_pipe10__26   | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|Test_DOA    | u_FFTs/u_FFT_Hydro_1/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_prodOfRe_pipe10__25   | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|Test_DOA    | u_FFTs/u_FFT_Hydro_1/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_ProdOfIm_pipe10__25   | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|Test_DOA    | u_FFTs/u_FFT_Hydro_1/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_prodOfRe_pipe10__24   | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|Test_DOA    | u_FFTs/u_FFT_Hydro_1/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_ProdOfIm_pipe10__24   | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|Test_DOA    | u_FFTs/u_FFT_Hydro_1/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_prodOfRe_pipe10__23   | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|Test_DOA    | u_FFTs/u_FFT_Hydro_1/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_ProdOfIm_pipe10__23   | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|Test_DOA    | u_FFTs/u_FFT_Hydro_1/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_prodOfRe_pipe10__22   | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|Test_DOA    | u_FFTs/u_FFT_Hydro_1/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_ProdOfIm_pipe10__22   | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|Test_DOA    | u_FFTs/u_FFT_Hydro_1/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_prodOfRe_pipe10__21   | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|Test_DOA    | u_FFTs/u_FFT_Hydro_1/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_ProdOfIm_pipe10__21   | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|Test_DOA    | u_FFTs/u_FFT_Hydro_1/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_prodOfRe_pipe10__20   | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|Test_DOA    | u_FFTs/u_FFT_Hydro_1/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_ProdOfIm_pipe10__20   | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|Test_DOA    | u_FFTs/u_FFT_Hydro_1/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_prodOfRe_pipe10__19   | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|Test_DOA    | u_FFTs/u_FFT_Hydro_1/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_ProdOfIm_pipe10__19   | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|Test_DOA    | u_FFTs/u_FFT_Hydro_1/u_Complex_to_Magnitude_Angle_HDL_Optimized/Delay_ValidIn_reg_reg[14]                       | 16     | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|Test_DOA    | u_FFTs/u_FFT_Hydro_1/u_Complex_to_Magnitude_Angle_HDL_Optimized/DelayQC_Control_reg_reg[12][2]                  | 13     | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|Test_DOA    | u_FFTs/u_FFT_Hydro_1/u_Complex_to_Magnitude_Angle_HDL_Optimized/DelayQC_Control_reg_reg[12][1]                  | 14     | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|Test_DOA    | u_FFTs/u_FFT_Hydro_Ref/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/intdelay_reg_3_reg[7][25]                   | 9      | 26    | YES          | NO                 | YES               | 26     | 0       | 
+|Test_DOA    | u_FFTs/u_FFT_Hydro_Ref/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/intdelay_reg_4_reg[7][25]                   | 9      | 26    | YES          | NO                 | YES               | 26     | 0       | 
+|Test_DOA    | u_FFTs/u_FFT_Hydro_Ref/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/btfOut_vld_reg                              | 11     | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|Test_DOA    | u_FFTs/u_FFT_Hydro_Ref/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/din_re_reg_reg__0                    | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|Test_DOA    | u_FFTs/u_FFT_Hydro_Ref/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/din_re_reg_reg                       | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|Test_DOA    | u_FFTs/u_FFT_Hydro_Ref/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/din_im_reg_reg__0                    | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|Test_DOA    | u_FFTs/u_FFT_Hydro_Ref/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/din_im_reg_reg                       | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|Test_DOA    | u_FFTs/u_FFT_Hydro_Ref/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/din_re_reg_reg[17]                   | 4      | 7     | YES          | NO                 | YES               | 7      | 0       | 
+|Test_DOA    | u_FFTs/u_FFT_Hydro_Ref/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/din_im_reg_reg[17]                   | 4      | 7     | YES          | NO                 | YES               | 7      | 0       | 
+|Test_DOA    | u_FFTs/u_FFT_Hydro_Ref/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_prodOfRe_pipe10__35 | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|Test_DOA    | u_FFTs/u_FFT_Hydro_Ref/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_ProdOfIm_pipe10__35 | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|Test_DOA    | u_FFTs/u_FFT_Hydro_Ref/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_prodOfRe_pipe10__34 | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|Test_DOA    | u_FFTs/u_FFT_Hydro_Ref/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_ProdOfIm_pipe10__34 | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|Test_DOA    | u_FFTs/u_FFT_Hydro_Ref/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_prodOfRe_pipe10__33 | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|Test_DOA    | u_FFTs/u_FFT_Hydro_Ref/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_ProdOfIm_pipe10__33 | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|Test_DOA    | u_FFTs/u_FFT_Hydro_Ref/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_prodOfRe_pipe10__32 | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|Test_DOA    | u_FFTs/u_FFT_Hydro_Ref/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_ProdOfIm_pipe10__32 | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|Test_DOA    | u_FFTs/u_FFT_Hydro_Ref/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_prodOfRe_pipe10__31 | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|Test_DOA    | u_FFTs/u_FFT_Hydro_Ref/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_ProdOfIm_pipe10__31 | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|Test_DOA    | u_FFTs/u_FFT_Hydro_Ref/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_prodOfRe_pipe10__30 | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|Test_DOA    | u_FFTs/u_FFT_Hydro_Ref/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_ProdOfIm_pipe10__30 | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|Test_DOA    | u_FFTs/u_FFT_Hydro_Ref/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_prodOfRe_pipe10__29 | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|Test_DOA    | u_FFTs/u_FFT_Hydro_Ref/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_ProdOfIm_pipe10__29 | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|Test_DOA    | u_FFTs/u_FFT_Hydro_Ref/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_prodOfRe_pipe10__28 | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|Test_DOA    | u_FFTs/u_FFT_Hydro_Ref/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_ProdOfIm_pipe10__28 | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|Test_DOA    | u_FFTs/u_FFT_Hydro_Ref/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_prodOfRe_pipe10__27 | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|Test_DOA    | u_FFTs/u_FFT_Hydro_Ref/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_ProdOfIm_pipe10__27 | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|Test_DOA    | u_FFTs/u_FFT_Hydro_Ref/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_prodOfRe_pipe10__26 | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|Test_DOA    | u_FFTs/u_FFT_Hydro_Ref/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_ProdOfIm_pipe10__26 | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|Test_DOA    | u_FFTs/u_FFT_Hydro_Ref/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_prodOfRe_pipe10__25 | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|Test_DOA    | u_FFTs/u_FFT_Hydro_Ref/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_ProdOfIm_pipe10__25 | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|Test_DOA    | u_FFTs/u_FFT_Hydro_Ref/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_prodOfRe_pipe10__24 | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|Test_DOA    | u_FFTs/u_FFT_Hydro_Ref/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_ProdOfIm_pipe10__24 | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|Test_DOA    | u_FFTs/u_FFT_Hydro_Ref/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_prodOfRe_pipe10__23 | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|Test_DOA    | u_FFTs/u_FFT_Hydro_Ref/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_ProdOfIm_pipe10__23 | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|Test_DOA    | u_FFTs/u_FFT_Hydro_Ref/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_prodOfRe_pipe10__22 | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|Test_DOA    | u_FFTs/u_FFT_Hydro_Ref/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_ProdOfIm_pipe10__22 | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|Test_DOA    | u_FFTs/u_FFT_Hydro_Ref/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_prodOfRe_pipe10__21 | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|Test_DOA    | u_FFTs/u_FFT_Hydro_Ref/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_ProdOfIm_pipe10__21 | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|Test_DOA    | u_FFTs/u_FFT_Hydro_Ref/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_prodOfRe_pipe10__20 | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|Test_DOA    | u_FFTs/u_FFT_Hydro_Ref/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_ProdOfIm_pipe10__20 | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|Test_DOA    | u_FFTs/u_FFT_Hydro_Ref/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_prodOfRe_pipe10__19 | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|Test_DOA    | u_FFTs/u_FFT_Hydro_Ref/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_ProdOfIm_pipe10__19 | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|Test_DOA    | u_FFTs/u_FFT_Hydro_Ref/u_Complex_to_Magnitude_Angle_HDL_Optimized/Delay_ValidIn_reg_reg[14]                     | 16     | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|Test_DOA    | u_FFTs/u_FFT_Hydro_Ref/u_Complex_to_Magnitude_Angle_HDL_Optimized/DelayQC_Control_reg_reg[12][2]                | 13     | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|Test_DOA    | u_FFTs/u_FFT_Hydro_Ref/u_Complex_to_Magnitude_Angle_HDL_Optimized/DelayQC_Control_reg_reg[12][1]                | 14     | 2     | YES          | NO                 | YES               | 2      | 0       | 
++------------+-----------------------------------------------------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
 
 ---------------------------------------------------------------------------------
 Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -1403,33 +1403,33 @@ Report Cell Usage:
 |20    |mb_system_xbar_0_bbox               |     1|
 |21    |CARRY4                              |  2304|
 |22    |DSP48E1                             |    48|
-|28    |LUT1                                |   730|
+|28    |LUT1                                |   729|
 |29    |LUT2                                |  4980|
-|30    |LUT3                                |  3593|
-|31    |LUT4                                |  1543|
+|30    |LUT3                                |  3592|
+|31    |LUT4                                |  1548|
 |32    |LUT5                                |  1838|
-|33    |LUT6                                |  2120|
+|33    |LUT6                                |  2115|
 |34    |RAMB18E1                            |    24|
 |35    |SRL16E                              |   436|
-|36    |FDRE                                | 14050|
+|36    |FDRE                                | 14078|
 |37    |FDSE                                |    41|
 |38    |IBUF                                |    10|
 |39    |IOBUF                               |     5|
 |40    |OBUF                                |    21|
 +------+------------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:01:45 ; elapsed = 00:01:47 . Memory (MB): peak = 1620.059 ; gain = 475.816
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:58 ; elapsed = 00:02:01 . Memory (MB): peak = 1618.273 ; gain = 492.191
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:01:27 ; elapsed = 00:01:39 . Memory (MB): peak = 1620.059 ; gain = 314.215
-Synthesis Optimization Complete : Time (s): cpu = 00:01:45 ; elapsed = 00:01:47 . Memory (MB): peak = 1620.059 ; gain = 475.816
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:40 ; elapsed = 00:01:53 . Memory (MB): peak = 1618.273 ; gain = 325.387
+Synthesis Optimization Complete : Time (s): cpu = 00:01:58 ; elapsed = 00:02:01 . Memory (MB): peak = 1618.273 ; gain = 492.191
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.922 . Memory (MB): peak = 1620.059 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 1618.273 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 2381 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.010 . Memory (MB): peak = 1640.008 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 1640.551 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 5 instances were transformed.
   IOBUF => IOBUF (IBUF, OBUFT): 5 instances
@@ -1437,8 +1437,8 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 INFO: [Common 17-83] Releasing license: Synthesis
 359 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:02:01 ; elapsed = 00:02:05 . Memory (MB): peak = 1640.008 ; gain = 495.766
+synth_design: Time (s): cpu = 00:02:16 ; elapsed = 00:02:20 . Memory (MB): peak = 1640.551 ; gain = 514.469
 INFO: [Common 17-1381] The checkpoint 'C:/Users/franc/hydro_spartan_7/hydro_spartan_7.runs/synth_1/hydro_spartan_7.dcp' has been generated.
-write_checkpoint: Time (s): cpu = 00:00:07 ; elapsed = 00:00:05 . Memory (MB): peak = 1640.008 ; gain = 0.000
+write_checkpoint: Time (s): cpu = 00:00:08 ; elapsed = 00:00:06 . Memory (MB): peak = 1640.551 ; gain = 0.000
 INFO: [runtcl-4] Executing : report_utilization -file hydro_spartan_7_utilization_synth.rpt -pb hydro_spartan_7_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Tue Oct 12 21:25:06 2021...
+INFO: [Common 17-206] Exiting Vivado at Wed Oct 20 16:43:13 2021...

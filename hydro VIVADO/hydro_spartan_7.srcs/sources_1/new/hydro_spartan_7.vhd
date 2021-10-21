@@ -77,7 +77,7 @@ architecture Behavioral of hydro_spartan_7 is
 
 -- Components
 
-component DOA_rearanged
+component Test_DOA
   PORT( clk                               :   IN    std_logic;
         reset                             :   IN    std_logic;
         clk_enable                        :   IN    std_logic;
@@ -89,7 +89,7 @@ component DOA_rearanged
         Signal_Threshold                  :   IN    std_logic_vector(15 DOWNTO 0);  -- uint16
         SNR_Threshold                     :   IN    std_logic_vector(15 DOWNTO 0);  -- uint16
         ce_out                            :   OUT   std_logic;
-        SNR_Check                         :   OUT   std_logic;
+        SNR_Check_1                       :   OUT   std_logic;
         Frequency                         :   OUT   std_logic_vector(26 DOWNTO 0);  -- ufix27
         Y                                 :   OUT   std_logic_vector(30 DOWNTO 0);  -- sfix31_En19
         X                                 :   OUT   std_logic_vector(30 DOWNTO 0);  -- sfix31_En19
@@ -97,8 +97,8 @@ component DOA_rearanged
         );
 END component;
 
-for all : DOA_rearanged
-    use entity work.DOA_rearanged(rtl);
+for all : Test_DOA
+    use entity work.Test_DOA(rtl);
 
 component ADS8327_SPI
 port (
@@ -243,7 +243,7 @@ com_toggle <= '0';
 
 -- Heading, Elevation and Frequency
 
-PhaseHydrophones : DOA_rearanged 
+PhaseHydrophones : Test_DOA
 port map(   clk => u_clk_10mhz,
             reset => global_reset,
             clk_enable => '1',
@@ -254,12 +254,12 @@ port map(   clk => u_clk_10mhz,
             Enable => fifo_data_ready,
             Signal_Threshold => u_signal_threshold,
             SNR_Threshold => u_snr_threshold,
-            SNR_Check => snr_check,
+            SNR_Check_1 => snr_check,
             ce_out => open,                
             Frequency=> u_frequency,
             Y=> u_y,
             X=> u_x,
-            Debug=>u_debug
+            Debug=> u_debug
             );
 
 -- Microblaze

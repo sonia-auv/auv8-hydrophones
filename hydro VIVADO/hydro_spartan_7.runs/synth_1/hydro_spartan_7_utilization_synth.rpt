@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
-| Date         : Tue Oct 12 21:25:06 2021
+| Date         : Wed Oct 20 16:43:13 2021
 | Host         : DESKTOP-3JGF4VF running 64-bit major release  (build 9200)
 | Command      : report_utilization -file hydro_spartan_7_utilization_synth.rpt -pb hydro_spartan_7_utilization_synth.pb
 | Design       : hydro_spartan_7
@@ -30,13 +30,13 @@ Table of Contents
 +----------------------------+-------+-------+-----------+-------+
 |          Site Type         |  Used | Fixed | Available | Util% |
 +----------------------------+-------+-------+-----------+-------+
-| Slice LUTs*                | 13122 |     0 |     32600 | 40.25 |
-|   LUT as Logic             | 12686 |     0 |     32600 | 38.91 |
+| Slice LUTs*                | 13116 |     0 |     32600 | 40.23 |
+|   LUT as Logic             | 12680 |     0 |     32600 | 38.90 |
 |   LUT as Memory            |   436 |     0 |      9600 |  4.54 |
 |     LUT as Distributed RAM |     0 |     0 |           |       |
 |     LUT as Shift Register  |   436 |     0 |           |       |
-| Slice Registers            | 14091 |     0 |     65200 | 21.61 |
-|   Register as Flip Flop    | 14091 |     0 |     65200 | 21.61 |
+| Slice Registers            | 14119 |     0 |     65200 | 21.65 |
+|   Register as Flip Flop    | 14119 |     0 |     65200 | 21.65 |
 |   Register as Latch        |     0 |     0 |     65200 |  0.00 |
 | F7 Muxes                   |     0 |     0 |     16300 |  0.00 |
 | F8 Muxes                   |     0 |     0 |      8150 |  0.00 |
@@ -59,7 +59,7 @@ Table of Contents
 | 0     |          Yes |           - |          Set |
 | 0     |          Yes |           - |        Reset |
 | 41    |          Yes |         Set |            - |
-| 14050 |          Yes |       Reset |            - |
+| 14078 |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -149,14 +149,14 @@ Table of Contents
 +----------+-------+---------------------+
 | Ref Name |  Used | Functional Category |
 +----------+-------+---------------------+
-| FDRE     | 14050 |        Flop & Latch |
+| FDRE     | 14078 |        Flop & Latch |
 | LUT2     |  4980 |                 LUT |
-| LUT3     |  3593 |                 LUT |
+| LUT3     |  3592 |                 LUT |
 | CARRY4   |  2304 |          CarryLogic |
-| LUT6     |  2120 |                 LUT |
+| LUT6     |  2115 |                 LUT |
 | LUT5     |  1838 |                 LUT |
-| LUT4     |  1543 |                 LUT |
-| LUT1     |   730 |                 LUT |
+| LUT4     |  1548 |                 LUT |
+| LUT1     |   729 |                 LUT |
 | SRL16E   |   436 |  Distributed Memory |
 | DSP48E1  |    48 |    Block Arithmetic |
 | FDSE     |    41 |        Flop & Latch |
