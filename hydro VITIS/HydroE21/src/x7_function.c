@@ -23,9 +23,9 @@ void initperipherals(XIOModule *ref, XIOModule *ref2, XIOModule *ref3)
 	error(state);
 	state = XIOModule_Start(ref3);
 	error(state);
-	setpgagain(ref2, 3);
-	setsnrthreshold(ref2, 36);
-	setsignalthreshold(ref2, 30000);
+	setpgagain(ref2, 4);
+	setsnrthreshold(ref2, 10);
+	setsignalthreshold(ref2, 35000);
 }
 
 void displaymenu(void)
@@ -56,7 +56,7 @@ void setpgagain(XIOModule *ref, u8 gain)
 
 void setsnrthreshold(XIOModule *ref, u16 value)
 {
-	if(value >= 0 && value <= 65535)
+	if(value >= 0 && value <= 500)
 	{
 		XIOModule_DiscreteWrite(ref, 3, value);
 		xil_printf("\n\r========= The SNR Threshold is set =========\n\r");
@@ -180,20 +180,19 @@ void error(u8 value)
 	}
 }
 
-void printfloat(float sample)
-{
-	u32 integer = sample;
-	u32 decimal = (sample-integer)*1000;
-
-	xil_printf("%d.%04d,", integer, decimal);
-}
-
 char polluart(void)
 {
 	return XIomodule_In32(XPAR_AXI_UARTLITE_0_BASEADDR);
 }
 
-float conversionFixedPoint(u32 data)
+u8 sumchecksum(unsigned char *array, size_t len)
 {
-	return ((float)data / (float)(1 << FIXED_POINT_FRACTIONAL_BITS));
+	unsigned int sum;
+
+	for(sum = 0; len != 0; len--)
+	{
+		sum += *(array++);
+	}
+
+	return (u8)sum;
 }

@@ -82,3 +82,37 @@ platform active {Hydro_XC7S50}
 platform config -updatehw {C:/Users/franc/hydro_spartan_7/hydro_full_test_2.xsa}
 platform generate -domains 
 platform active {Hydro_XC7S50}
+platform active {Hydro_XC7S50}
+platform config -updatehw {C:/Users/franc/hydro_spartan_7/hydro_pipeline_delay.xsa}
+platform generate
+platform config -updatehw {C:/Users/franc/hydro_spartan_7/hydro_pipeline.xsa}
+platform generate -domains 
+platform config -updatehw {C:/Users/franc/hydro_spartan_7/hydro_perserve_delay.xsa}
+platform generate -domains 
+platform config -updatehw {C:/Users/franc/hydro_spartan_7/hydro_no_pipeline.xsa}
+platform generate -domains 
+platform config -updatehw {C:/Users/franc/hydro_spartan_7/debug_output_test.xsa}
+platform generate -domains 
+platform config -updatehw {C:/Users/franc/hydro_spartan_7/hydro_no_trigger.xsa}
+platform generate -domains 
+platform active {Hydro_XC7S50}
+platform config -updatehw {C:/Users/franc/hydro_spartan_7/debug_output_test.xsa}
+platform generate -domains 
+platform config -updatehw {C:/Users/franc/hydro_spartan_7/test_output_fft_maxRef.xsa}
+platform generate -domains 
+platform config -updatehw {C:/Users/franc/hydro_spartan_7/hydro_coef_out.xsa}
+platform generate -domains 
+platform active {Hydro_XC7S50}
+platform config -updatehw {C:/Users/franc/hydro_spartan_7/hydro_test_fenetrage.xsa}
+platform generate -domains 
+platform config -updatehw {C:/Users/franc/hydro_spartan_7/out_fft_ref_1.xsa}
+platform generate -domains 
+platform config -updatehw {C:/Users/franc/hydro_spartan_7/out_fft_re_im.xsa}
+platform generate -domains 
+platform active {Hydro_XC7S50}
+platform config -updatehw {C:/Users/franc/hydro_spartan_7/change_enable.xsa}
+platform generate -domains 
+platform config -updatehw {C:/Users/franc/hydro_spartan_7/test_out_max_ref.xsa}
+platform generate -domains 
+platform config -updatehw {C:/Users/franc/hydro_spartan_7/hydro_full_with_enable_fix.xsa}
+platform generate -domains 

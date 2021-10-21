@@ -16,16 +16,9 @@ int main()
 	XIOModule dataout2;
 
 	u16 command;
-
-	u16 sample1;
-	u16 sample2;
-	u16 sample3;
-	u16 sample4;
-
-	u32 heading;
-	u32 frequency;
-	u32 x;
-	u32 y;
+	u8 i;
+	u16 arrayh6[4];
+	u32 arrayh1[4];
 
 	xil_printf("\n\r");
 
@@ -109,11 +102,11 @@ int main()
 		{
 			if(state == normalop || state == testping)
 			{
-				heading = readdata(&dataout2, 1);
-				frequency = readdata(&dataout2, 2);
-				x = readdata(&dataout2, 3);
-				y = readdata(&dataout2, 4);
-				xil_printf("\n\r%d,%d,%d,%d", heading, frequency, x, y);
+				for(i = 0; i < 4; i++)
+				{
+					arrayh1[i] = readdata(&dataout2, i+1);
+				}
+				xil_printf("%s,%d,%d,%d,%d\r\n", H1_REGISTER, arrayh1[0], arrayh1[1], arrayh1[2], arrayh1[3]);
 
 				if(state == testping)
 				{
@@ -122,13 +115,14 @@ int main()
 			}
 			else if(state == getrawdata)
 			{
-				sample1 = readdata(&dataout2, 1);
-				sample2 = readdata(&dataout2, 2);
-				sample3 = readdata(&dataout2, 3);
-				sample4 = readdata(&dataout2, 4);
-				xil_printf("\n\r%d,%d,%d,%d", sample1,sample2,sample3,sample4);
+				for(i = 0; i < 4; i++)
+				{
+					arrayh6[i] = readdata(&dataout2, i+1);
+				}
+				xil_printf("%s,%d,%d,%d,%d\r\n", H6_REGISTER, arrayh6[0], arrayh6[1], arrayh6[2], arrayh6[3]);
 			}
 		}
+
 		if(polluart() == 'q')
 		{
 			state = menu;
