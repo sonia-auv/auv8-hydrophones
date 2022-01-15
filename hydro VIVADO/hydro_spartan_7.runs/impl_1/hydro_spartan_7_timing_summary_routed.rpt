@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
-| Date         : Wed Oct 20 16:48:37 2021
+| Date         : Sat Jan 15 13:47:27 2022
 | Host         : DESKTOP-3JGF4VF running 64-bit major release  (build 9200)
 | Command      : report_timing_summary -max_paths 10 -file hydro_spartan_7_timing_summary_routed.rpt -pb hydro_spartan_7_timing_summary_routed.pb -rpx hydro_spartan_7_timing_summary_routed.rpx -warn_on_violation
 | Design       : hydro_spartan_7

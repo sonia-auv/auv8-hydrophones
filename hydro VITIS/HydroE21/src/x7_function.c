@@ -38,7 +38,7 @@ void displaymenu(void)
 	xil_printf("%d - Set SNR threshold\n\r", COMMAND_SET_SNR_THRESHOLD);
 	xil_printf("%d - Set Signal threshold\n\r", COMMAND_SET_SIGNAL_THRESHOLD);
 	xil_printf("%d - Get Raw Data\n\n\r", COMMAND_GET_RAW_DATA);
-	xil_printf(" Your choice :");
+	xil_printf("Your choice :");
 }
 
 void setpgagain(XIOModule *ref, u8 gain)
@@ -183,16 +183,4 @@ void error(u8 value)
 char polluart(void)
 {
 	return XIomodule_In32(XPAR_AXI_UARTLITE_0_BASEADDR);
-}
-
-u8 sumchecksum(unsigned char *array, size_t len)
-{
-	unsigned int sum;
-
-	for(sum = 0; len != 0; len--)
-	{
-		sum += *(array++);
-	}
-
-	return (u8)sum;
 }

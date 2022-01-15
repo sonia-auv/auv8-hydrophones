@@ -6,6 +6,7 @@
  */
 
 #include "x7_function.h"
+#include "checksum.h"
 
 int main()
 {
@@ -15,10 +16,9 @@ int main()
 	XIOModule dataout;
 	XIOModule dataout2;
 
-	u16 command;
-	u8 i;
-	u16 arrayh6[4];
-	u32 arrayh1[4];
+	u16 command = 0;
+	u8 i = 0, offset = 0;
+	u8 arrayChecksum[22];
 
 	xil_printf("\n\r");
 
@@ -97,32 +97,39 @@ int main()
 			xil_printf("\n\rError. Back to the menu.\n\n\r");
 			state = menu;
 		}
-
-		if(dataready(&data_ready_and_settings))
+		if(dataready(&data_ready_and_settings) && (state == normalop || state == testping || state == getrawdata))
 		{
+			arrayChecksum[0] = 0x48; // H
 			if(state == normalop || state == testping)
 			{
-				for(i = 0; i < 4; i++)
-				{
-					arrayh1[i] = readdata(&dataout2, i+1);
-				}
-				xil_printf("%s,%d,%d,%d,%d\r\n", H1_REGISTER, arrayh1[0], arrayh1[1], arrayh1[2], arrayh1[3]);
-
+				arrayChecksum[1] = 0x31; //1
 				if(state == testping)
 				{
 					state = menu;
 				}
 			}
-			else if(state == getrawdata)
+			else
 			{
-				for(i = 0; i < 4; i++)
-				{
-					arrayh6[i] = readdata(&dataout2, i+1);
-				}
-				xil_printf("%s,%d,%d,%d,%d\r\n", H6_REGISTER, arrayh6[0], arrayh6[1], arrayh6[2], arrayh6[3]);
+				arrayChecksum[1] = 0x36; //6
 			}
-		}
 
+			arrayChecksum[2] = 0x2C; // ,
+			offset = 3; // New values need to be placed at [3] of the array
+
+			for(i = 0; i < 4; ++i) // Format simplifies the read on the onboard computer
+			{
+				SerializeU32(arrayChecksum, readdata(&dataout2, i+1), offset);
+				offset += 4;
+				if(i < 3) arrayChecksum[offset] = 0x2C; // ,
+				else arrayChecksum[offset] = 0x2A; // *
+				offset += 1;
+			}
+			for(i = 0; i < offset ; ++i)
+			{
+				xil_printf("%02x", arrayChecksum[i]);
+			}
+			xil_printf("%02x\r\n", CalculateChecksum(arrayChecksum, offset));
+		}
 		if(polluart() == 'q')
 		{
 			state = menu;
