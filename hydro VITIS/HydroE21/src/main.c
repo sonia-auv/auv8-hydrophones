@@ -18,9 +18,9 @@ int main()
 
 	u16 command = 0;
 	u8 i = 0, offset = 0;
-	u8 arrayChecksum[22];
+	char arrayChecksum[256];
 
-	xil_printf("\n\r");
+	xil_printf("\r\n");
 
 	initperipherals(&data_ready_and_settings, &dataout, &dataout2);
 
@@ -39,11 +39,11 @@ int main()
 			{
 				case COMMAND_NORMAL_OP:
 					state = normalop;
-					xil_printf("\n\r========= Normal operation =========\n\r");
+					xil_printf("\r\n========= Normal operation =========\r\n");
 				break;
 				case COMMAND_TEST_PING:
 					state = testping;
-					xil_printf("\n\r========= Test Ping =========\n\r");
+					xil_printf("\r\n========= Test Ping =========\r\n");
 				break;
 				case COMMAND_SET_GAIN:
 					state = setgain;
@@ -56,7 +56,7 @@ int main()
 				break;
 				case COMMAND_GET_RAW_DATA:
 					state = getrawdata;
-					xil_printf("\n\r========= Get Raw Data =========\n\r");
+					xil_printf("\r\n========= Get Raw Data =========\r\n");
 				break;
 				default:
 					state = 9;
@@ -94,7 +94,7 @@ int main()
 		}
 		else
 		{
-			xil_printf("\n\rError. Back to the menu.\n\n\r");
+			xil_printf("\r\n\nError. Back to the menu.\r\n\n");
 			state = menu;
 		}
 		if(dataready(&data_ready_and_settings) && (state == normalop || state == testping || state == getrawdata))
@@ -103,32 +103,21 @@ int main()
 			if(state == normalop || state == testping)
 			{
 				arrayChecksum[1] = 0x31; //1
-				if(state == testping)
-				{
-					state = menu;
-				}
+				if(state == testping) state = menu;
 			}
-			else
-			{
-				arrayChecksum[1] = 0x36; //6
-			}
+			else arrayChecksum[1] = 0x36; //6
 
 			arrayChecksum[2] = 0x2C; // ,
 			offset = 3; // New values need to be placed at [3] of the array
 
-			for(i = 0; i < 4; ++i) // Format simplifies the read on the onboard computer
+			for(i = 0; i < 4; ++i) // Format to calculate the checksum
 			{
-				SerializeU32(arrayChecksum, readdata(&dataout2, i+1), offset);
-				offset += 4;
+				offset += ToString(arrayChecksum, readdata(&dataout2, i+1), offset);
 				if(i < 3) arrayChecksum[offset] = 0x2C; // ,
 				else arrayChecksum[offset] = 0x2A; // *
 				offset += 1;
 			}
-			for(i = 0; i < offset ; ++i)
-			{
-				xil_printf("%02x", arrayChecksum[i]);
-			}
-			xil_printf("%02x\r\n", CalculateChecksum(arrayChecksum, offset));
+			xil_printf("%s%02x\r\n", arrayChecksum, CalculateChecksum(arrayChecksum, offset)); // Include char * in the checksum calculation
 		}
 		if(polluart() == 'q')
 		{

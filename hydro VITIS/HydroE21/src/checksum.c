@@ -7,9 +7,9 @@
 
 #include "checksum.h"
 
-u8 CalculateChecksum(const u8 *array, u8 size)
+int CalculateChecksum(const char *array, int size)
 {
-	u8 check = 0;
+	int check = 0;
 	u8 i;
 
 	for(i = 0; i < size; ++i)
@@ -20,10 +20,22 @@ u8 CalculateChecksum(const u8 *array, u8 size)
 	return check;
 }
 
-void SerializeU32(u8 *buf, u32 val, u8 offset)
+int ToString(char str[], int num, int offset)
 {
-	buf[offset + 3] = val & 0xFF;
-	buf[offset + 2] = (val >> 8) & 0xFF;
-	buf[offset + 1] = (val >> 16) & 0XFF;
-	buf[offset] = (val >> 24) & 0XFF;
+    int i, rem, len = 0, n;
+
+    n = num;
+    while (n != 0)
+    {
+        len++;
+        n /= 10;
+    }
+    for (i = 0; i < len; i++)
+    {
+        rem = num % 10;
+        num = num / 10;
+        str[len - (i + 1) + offset] = rem + '0';
+    }
+    str[len + offset] = '\0';
+    return len;
 }

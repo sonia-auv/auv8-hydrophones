@@ -9,9 +9,11 @@
 #define _CHECKSUM_H
 
 #include <stdio.h>
+#include <string.h>
+#include <math.h>
 #include "xil_types.h"
 
-u8 CalculateChecksum(const u8 *array, u8 size);
-void SerializeU32(u8 *buf, u32 val, u8 offset); // In array data is MSB to LSB & add size verification maybe?
+int CalculateChecksum(const char *array, int size);
+int ToString(char str[], int num, int offset);
 
 #endif
