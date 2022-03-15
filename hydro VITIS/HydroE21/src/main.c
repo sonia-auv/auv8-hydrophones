@@ -6,6 +6,7 @@
  */
 
 #include "x7_function.h"
+#include "checksum.h"
 
 int main()
 {
@@ -15,12 +16,11 @@ int main()
 	XIOModule dataout;
 	XIOModule dataout2;
 
-	u16 command;
-	u8 i;
-	u16 arrayh6[4];
-	u32 arrayh1[4];
+	u16 command = 0;
+	u8 i = 0, offset = 0;
+	char arrayChecksum[256];
 
-	xil_printf("\n\r");
+	xil_printf("\r\n");
 
 	initperipherals(&data_ready_and_settings, &dataout, &dataout2);
 
@@ -39,11 +39,11 @@ int main()
 			{
 				case COMMAND_NORMAL_OP:
 					state = normalop;
-					xil_printf("\n\r========= Normal operation =========\n\r");
+					xil_printf("\r\n========= Normal operation =========\r\n");
 				break;
 				case COMMAND_TEST_PING:
 					state = testping;
-					xil_printf("\n\r========= Test Ping =========\n\r");
+					xil_printf("\r\n========= Test Ping =========\r\n");
 				break;
 				case COMMAND_SET_GAIN:
 					state = setgain;
@@ -56,7 +56,7 @@ int main()
 				break;
 				case COMMAND_GET_RAW_DATA:
 					state = getrawdata;
-					xil_printf("\n\r========= Get Raw Data =========\n\r");
+					xil_printf("\r\n========= Get Raw Data =========\r\n");
 				break;
 				default:
 					state = 9;
@@ -94,35 +94,31 @@ int main()
 		}
 		else
 		{
-			xil_printf("\n\rError. Back to the menu.\n\n\r");
+			xil_printf("\r\n\nError. Back to the menu.\r\n\n");
 			state = menu;
 		}
-
-		if(dataready(&data_ready_and_settings))
+		if(dataready(&data_ready_and_settings) && (state == normalop || state == testping || state == getrawdata))
 		{
+			arrayChecksum[0] = 0x48; // H
 			if(state == normalop || state == testping)
 			{
-				for(i = 0; i < 4; i++)
-				{
-					arrayh1[i] = readdata(&dataout2, i+1);
-				}
-				xil_printf("%s,%d,%d,%d,%d\r\n", H1_REGISTER, arrayh1[0], arrayh1[1], arrayh1[2], arrayh1[3]);
-
-				if(state == testping)
-				{
-					state = menu;
-				}
+				arrayChecksum[1] = 0x31; //1
+				if(state == testping) state = menu;
 			}
-			else if(state == getrawdata)
+			else arrayChecksum[1] = 0x36; //6
+
+			arrayChecksum[2] = 0x2C; // ,
+			offset = 3; // New values need to be placed at [3] of the array
+
+			for(i = 0; i < 4; ++i) // Format to calculate the checksum
 			{
-				for(i = 0; i < 4; i++)
-				{
-					arrayh6[i] = readdata(&dataout2, i+1);
-				}
-				xil_printf("%s,%d,%d,%d,%d\r\n", H6_REGISTER, arrayh6[0], arrayh6[1], arrayh6[2], arrayh6[3]);
+				offset += ToString(arrayChecksum, readdata(&dataout2, i+1), offset);
+				if(i < 3) arrayChecksum[offset] = 0x2C; // ,
+				else arrayChecksum[offset] = 0x2A; // *
+				offset += 1;
 			}
+			xil_printf("%s%02x\r\n", arrayChecksum, CalculateChecksum(arrayChecksum, offset)); // Include char * in the checksum calculation
 		}
-
 		if(polluart() == 'q')
 		{
 			state = menu;

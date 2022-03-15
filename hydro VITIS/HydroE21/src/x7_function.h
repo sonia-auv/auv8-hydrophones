@@ -44,6 +44,5 @@ u32 readdata(XIOModule *ref, u8 device);
 void writedata(XIOModule *ref, u8 device, u32 data);
 void error(u8 value);
 char polluart(void);
-u8 sumchecksum(unsigned char *array, size_t len);
 
 #endif /* SRC_X7_FUNCTION_H_ */
