@@ -7,147 +7,161 @@
 
 #include "x7_function.h"
 
-void initperipherals(XIOModule *ref, XIOModule *ref2, XIOModule *ref3)
+int initperipherals(Hydro *ptr, XUartLite *uart, XIOModule *config, XIOModule *data)
 {
-	u8 state = 0;
+	int status;
 
-	state = XIOModule_Initialize(ref, XPAR_IOMODULE_0_DEVICE_ID);
-	error(state);
-	state = XIOModule_Initialize(ref2, XPAR_IOMODULE_1_DEVICE_ID);
-	error(state);
-	state = XIOModule_Initialize(ref3, XPAR_IOMODULE_2_DEVICE_ID);
-	error(state);
-	state = XIOModule_Start(ref);
-	error(state);
-	state = XIOModule_Start(ref2);
-	error(state);
-	state = XIOModule_Start(ref3);
-	error(state);
-	setpgagain(ref2, 4);
-	setsnrthreshold(ref2, 10);
-	setsignalthreshold(ref2, 35000);
-}
+	init_platform();
 
-void displaymenu(void)
-{
-	xil_printf("\n\n\r========= Hydrophone Application =========\n\n\r");
-	xil_printf("Main menu :\n\n\r");
-	xil_printf("%d - Normal Operation\n\r", COMMAND_NORMAL_OP);
-	xil_printf("%d - Test Ping\n\r", COMMAND_TEST_PING);
-	xil_printf("%d - Set PGA gain\n\r", COMMAND_SET_GAIN);
-	xil_printf("%d - Set SNR threshold\n\r", COMMAND_SET_SNR_THRESHOLD);
-	xil_printf("%d - Set Signal threshold\n\r", COMMAND_SET_SIGNAL_THRESHOLD);
-	xil_printf("%d - Get Raw Data\n\n\r", COMMAND_GET_RAW_DATA);
-	xil_printf("Your choice :");
-}
-
-void setpgagain(XIOModule *ref, u8 gain)
-{
-	if(gain >= 0 && gain <= 7)
-	{
-		XIOModule_DiscreteWrite(ref, 1, gain);
-		xil_printf("\n\r========= The gain is set =========\n\r");
+	/*
+	 * Initialize the Uartlite driver and test it
+	 */
+	status = XUartLite_Initialize(uart, XPAR_UARTLITE_0_DEVICE_ID);
+	if(status != XST_SUCCESS && status != XST_DEVICE_IS_STARTED) {
+		xil_printf("UartLite initialize not working\r\n");
+		return XST_FAILURE;
 	}
-	else
-	{
-		xil_printf("\n\r========= The gain can't be set =========\n\r");
+
+	status = XUartLite_SelfTest(uart);
+	if(status != XST_SUCCESS) {
+		xil_printf("UartLite SelfTest not working\r\n");
+		return XST_FAILURE;
 	}
-}
 
-void setsnrthreshold(XIOModule *ref, u16 value)
-{
-	if(value >= 0 && value <= 500)
-	{
-		XIOModule_DiscreteWrite(ref, 3, value);
-		xil_printf("\n\r========= The SNR Threshold is set =========\n\r");
+	/*
+	 * Initialize the IOModules and test them
+	 */
+	status = XIOModule_Initialize(data, XPAR_DATA_MODULE_DEVICE_ID);
+	if(status != XST_SUCCESS && status != XST_DEVICE_IS_STARTED) {
+		xil_printf("IOModule 0 initialize not working\r\n");
+		return XST_FAILURE;
 	}
-	else
-	{
-		xil_printf("\n\r========= The SNR Threshold can't be set =========\n\r");
+
+	status = XIOModule_SelfTest(data);
+	if(status != XST_SUCCESS) {
+		xil_printf("IOModule 0 SelfTest not working\r\n");
+		return XST_FAILURE;
 	}
-}
 
-void setsignalthreshold(XIOModule *ref, u16 value)
-{
-	if(value >= 0 && value <= 65535)
-	{
-		XIOModule_DiscreteWrite(ref, 2, value);
-		xil_printf("\n\r========= The Signal Threshold is set =========\n\r");
+	status = XIOModule_Start(data);
+	if(status != XST_SUCCESS) {
+		xil_printf("IOModule 0 Start not working\r\n");
+		return XST_FAILURE;
 	}
-	else
-	{
-		xil_printf("\n\r========= The Signal Threshold can't be set =========\n\r");
+
+	status = XIOModule_Initialize(config, XPAR_PARAMETER_MODULE_DEVICE_ID);
+	if(status != XST_SUCCESS && status != XST_DEVICE_IS_STARTED) {
+		xil_printf("IOModule 1 initialize not working\r\n");
+		return XST_FAILURE;
 	}
-}
 
-void commandsetpgagain(XIOModule *ref)
-{
-	xil_printf("\n\r========= Set gain =========\n\r");
-	u8 new_gain = receivedcommand();
-	setpgagain(ref, new_gain);
-}
-
-void commandsetsnrthreshold(XIOModule *ref)
-{
-	xil_printf("\n\r========= Set SNR threshold =========\n\r");
-	u16 new_SNR = receivedcommand();
-	setsnrthreshold(ref, new_SNR);
-}
-
-void commandsetsignalthreshold(XIOModule *ref)
-{
-	xil_printf("\n\r========= Set Signal threshold =========\n\r");
-	u16 new_signal = receivedcommand();
-	setsignalthreshold(ref, new_signal);
-}
-
-u16 receivedcommand()
-{
-	char c = 0;
-	char array[10];
-	u8 i = 0;
-
-	while(i < 10)
-	{
-		c = getchar();
-
-		if(c == 0x0D) // 0x0D is enter key
-		{
-			break;
-		}
-
-		if(c != 0)
-		{
-			xil_printf("%c",c);
-			array[i] = c-48;
-			++i;
-		}
-		c = 0;
+	status = XIOModule_SelfTest(config);
+	if(status != XST_SUCCESS) {
+		xil_printf("IOModule 1 SelfTest not working\r\n");
+		return XST_FAILURE;
 	}
-	return mergedarray(array, i);
+
+	status = XIOModule_Start(config);
+	if(status != XST_SUCCESS) {
+		xil_printf("IOModule 1 Start not working\r\n");
+		return XST_FAILURE;
+	}
+
+	ptr->shell->uart = uart;
+	ptr->config = config;
+	ptr->data_output = data;
+
+	setpgagain(ptr, 2);
+	setsnrthreshold(ptr, 0);
+	setlowsignalthreshold(ptr, 31000);
+	sethighsignalthreshold(ptr, 34000);
+	setagcsignaldetector(ptr, 35000);
+	setagcmaxthreshold(ptr, 60000);
+
+	return XST_SUCCESS;
 }
 
-u16 mergedarray(char *array, u8 size)
+void setpgagain(Hydro *ptr, u8 gain)
 {
-	u16 value = 0;
+	ptr->registers->r1 = updateRegister(ptr->config, 1, gain, PGA_GAIN_MASK, ptr->registers->r1);
+}
+
+void activateagc(Hydro *ptr, u8 state)
+{
+	ptr->registers->r1 = updateRegister(ptr->config, 1, state << 3, AGC_ACTIVATION_MASK, ptr->registers->r1);
+}
+
+void setprocess(Hydro *ptr, operation_mode mode)
+{
+	ptr->operation = mode;
+	ptr->registers->r1 = updateRegister(ptr->config, 1, (u32)mode << 4, PROCESS_MASK, ptr->registers->r1);
+}
+
+void setsnrthreshold(Hydro *ptr, u8 value)
+{
+	ptr->registers->r1 = updateRegister(ptr->config, 1, value << 6, SNR_CHECK_MASK, ptr->registers->r1);
+}
+
+void sethighsignalthreshold(Hydro *ptr, u16 value)
+{
+	ptr->registers->r2 = updateRegister(ptr->config, 2, value, HIGH_SIGNAL_THRESHOLD_MASK, ptr->registers->r2);
+}
+
+void setlowsignalthreshold(Hydro *ptr, u16 value)
+{
+	ptr->registers->r2 = updateRegister(ptr->config, 2, value << 16, LOW_SIGNAL_THRESHOLD_MASK, ptr->registers->r2);
+}
+
+void setagcsignaldetector(Hydro *ptr, u16 value)
+{
+	ptr->registers->r3 = updateRegister(ptr->config, 3, value, AGC_SIGNAL_DETECTOR_MASK, ptr->registers->r3);
+}
+
+void setagcmaxthreshold(Hydro *ptr, u16 value)
+{
+	ptr->registers->r3 = updateRegister(ptr->config, 3, value << 16, AGC_MAX_THRESHOLD_MASK, ptr->registers->r3);
+}
+
+u16 getsnr(Hydro *ptr)
+{
+	u16 snr = readdata(ptr->config, 4) & DOA_SNR_MASK;
+	snr = snr >> 3;
+
+	return snr & 0xFFFF;
+}
+
+s32 mergedarray(const char *array, u8 size)
+{
+	u16 value = 0, tmp = 0;
 
 	for(u8 j=0; j < size; ++j)
 	{
-		value += array[j]*pow(10,size-j-1);
+		if(array[j] >= '0' && array[j] <= '9')
+		{
+			tmp = array[j] - 48;
+		}
+		else
+		{
+			return -1;
+		}
+		value += tmp*pow(10,size-j-1);
 	}
 
-	return value;
+	return (s32)value;
 }
 
 u8 dataready(XIOModule *ref)
 {
-	u8 ready = readdata(ref, 3);
+	return (readdata(ref, 4)) & DATA_READY_MASK;
+}
 
-	if(ready == 1)
-	{
-		return 1;
-	}
-	return 0;
+u32 updateRegister(XIOModule *ref, u8 device, u32 data, u32 mask, u32 previousValue)
+{
+	u32 newValue = 0;
+	newValue = previousValue & ~(mask);
+	newValue = data | newValue;
+	writedata(ref, device, newValue);
+	return newValue;
 }
 
 u32 readdata(XIOModule *ref, u8 device)
@@ -160,27 +174,14 @@ void writedata(XIOModule *ref, u8 device, u32 data)
 	XIOModule_DiscreteWrite(ref, device, data);
 }
 
-void error(u8 value)
+char polluart()
 {
-	static int i = 0;
-
-	if(value == 1 || value == 2)
+	if(!XUartLite_IsReceiveEmpty(XPAR_UARTLITE_0_BASEADDR))
 	{
-		xil_printf("\n\r========= Init didn't work =========\n\r");
-	}
-
-	if(i < 100)
-	{
-		i += 20;
+		return (char)XUartLite_RecvByte(XPAR_UARTLITE_0_BASEADDR);
 	}
 	else
 	{
-		xil_printf("\n\n\r========= Init worked =========\n\r");
-		i=0;
+		return 0;
 	}
-}
-
-char polluart(void)
-{
-	return XIomodule_In32(XPAR_AXI_UARTLITE_0_BASEADDR);
 }

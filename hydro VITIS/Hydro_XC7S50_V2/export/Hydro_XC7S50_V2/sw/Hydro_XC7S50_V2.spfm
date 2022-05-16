@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sdx:platform sdx:vendor="xilinx.com"
+              sdx:library="sdx"
+              sdx:name="Hydro_XC7S50_V2"
+              sdx:version="1.0"
+              sdx:schemaVersion="1.0"
+              xmlns:sdx="http://www.xilinx.com/sdx">
+    <sdx:description>
+Hydro_XC7S50_V2
+    </sdx:description>
+    <sdx:systemConfigurations sdx:defaultConfiguration="Hydro_XC7S50_V2">
+        <sdx:configuration sdx:name="Hydro_XC7S50_V2"
+                           sdx:displayName="Hydro_XC7S50_V2"
+                           sdx:defaultProcessorGroup="standalone_domain"
+                           sdx:runtimes="cpp">
+            <sdx:description>Hydro_XC7S50_V2</sdx:description>
+            <sdx:bootImages sdx:default="standard">
+                <sdx:image sdx:name="standard"
+                            sdx:bif="Hydro_XC7S50_V2/boot/Hydro_XC7S50_V2.bif"
+                            sdx:readme="Hydro_XC7S50_V2/boot/generic.readme"
+                            />
+            </sdx:bootImages>
+            <sdx:processorGroup sdx:name="standalone_domain"
+                                sdx:displayName="standalone on microblaze_0"
+                                sdx:cpuType="microblaze_0"
+                                sdx:cpuInstance="microblaze_0">
+                <sdx:os sdx:name="standalone"
+                        sdx:displayName="standalone"
+                        sdx:bspLibraryPaths="Hydro_XC7S50_V2/standalone_domain/bsplib/lib"
+                        sdx:bspIncludePaths="Hydro_XC7S50_V2/standalone_domain/bspinclude/include"
+                        sdx:bspConfig="Hydro_XC7S50_V2/standalone_domain/system.mss"
+                />
+            </sdx:processorGroup>
+        </sdx:configuration>
+    </sdx:systemConfigurations>
+</sdx:platform>
