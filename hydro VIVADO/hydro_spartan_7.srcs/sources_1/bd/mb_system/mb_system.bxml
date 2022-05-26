@@ -2,10 +2,10 @@
 <Root MajorVersion="0" MinorVersion="39">
   <CompositeFile CompositeFileTopName="mb_system" CanBeSetAsTop="false" CanDisplayChildGraph="true">
     <Description>Composite Fileset</Description>
-    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1632101045"/>
-    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1632101045"/>
-    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1632101045"/>
-    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1632101045"/>
+    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1649685180"/>
+    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1649685180"/>
+    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1649685180"/>
+    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1649685180"/>
     <FileCollection Name="SOURCES" Type="SOURCES">
       <File Name="ip\mb_system_microblaze_0_2\mb_system_microblaze_0_2.xci" Type="IP">
         <Instance HierarchyPath="microblaze_0"/>
@@ -102,16 +102,8 @@
         <UsedIn Val="IMPLEMENTATION"/>
         <UsedIn Val="SIMULATION"/>
       </File>
-      <File Name="ip\mb_system_iomodule_0_1\mb_system_iomodule_0_1.xci" Type="IP">
-        <Instance HierarchyPath="iomodule_0"/>
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="SYNTHESIS"/>
-        <UsedIn Val="IMPLEMENTATION"/>
-        <UsedIn Val="SIMULATION"/>
-      </File>
       <File Name="ip\mb_system_iomodule_1_1\mb_system_iomodule_1_1.xci" Type="IP">
-        <Instance HierarchyPath="iomodule_1"/>
+        <Instance HierarchyPath="Parameter_Module"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>
@@ -119,7 +111,7 @@
         <UsedIn Val="SIMULATION"/>
       </File>
       <File Name="ip\mb_system_iomodule_2_1\mb_system_iomodule_2_1.xci" Type="IP">
-        <Instance HierarchyPath="iomodule_2"/>
+        <Instance HierarchyPath="Data_Module"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>

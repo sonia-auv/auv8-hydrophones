@@ -1252,7 +1252,7 @@
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>C_GPO1_SIZE</spirit:name>
-          <spirit:value spirit:format="long" spirit:resolve="dependent" spirit:id="BUSIFPARAM_VALUE.GPIO1.C_GPO1_SIZE" spirit:dependency="spirit:decode(id(&apos;MODELPARAM_VALUE.C_GPO1_SIZE&apos;))">8</spirit:value>
+          <spirit:value spirit:format="long" spirit:resolve="dependent" spirit:id="BUSIFPARAM_VALUE.GPIO1.C_GPO1_SIZE" spirit:dependency="spirit:decode(id(&apos;MODELPARAM_VALUE.C_GPO1_SIZE&apos;))">32</spirit:value>
           <spirit:vendorExtensions>
             <xilinx:parameterInfo>
               <xilinx:enablement>
@@ -1364,7 +1364,7 @@
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>C_GPO2_SIZE</spirit:name>
-          <spirit:value spirit:format="long" spirit:resolve="dependent" spirit:id="BUSIFPARAM_VALUE.GPIO2.C_GPO2_SIZE" spirit:dependency="spirit:decode(id(&apos;MODELPARAM_VALUE.C_GPO2_SIZE&apos;))">16</spirit:value>
+          <spirit:value spirit:format="long" spirit:resolve="dependent" spirit:id="BUSIFPARAM_VALUE.GPIO2.C_GPO2_SIZE" spirit:dependency="spirit:decode(id(&apos;MODELPARAM_VALUE.C_GPO2_SIZE&apos;))">32</spirit:value>
           <spirit:vendorExtensions>
             <xilinx:parameterInfo>
               <xilinx:enablement>
@@ -1476,7 +1476,7 @@
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>C_GPO3_SIZE</spirit:name>
-          <spirit:value spirit:format="long" spirit:resolve="dependent" spirit:id="BUSIFPARAM_VALUE.GPIO3.C_GPO3_SIZE" spirit:dependency="spirit:decode(id(&apos;MODELPARAM_VALUE.C_GPO3_SIZE&apos;))">16</spirit:value>
+          <spirit:value spirit:format="long" spirit:resolve="dependent" spirit:id="BUSIFPARAM_VALUE.GPIO3.C_GPO3_SIZE" spirit:dependency="spirit:decode(id(&apos;MODELPARAM_VALUE.C_GPO3_SIZE&apos;))">32</spirit:value>
           <spirit:vendorExtensions>
             <xilinx:parameterInfo>
               <xilinx:enablement>
@@ -1588,7 +1588,7 @@
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>C_GPO4_SIZE</spirit:name>
-          <spirit:value spirit:format="long" spirit:resolve="dependent" spirit:id="BUSIFPARAM_VALUE.GPIO4.C_GPO4_SIZE" spirit:dependency="spirit:decode(id(&apos;MODELPARAM_VALUE.C_GPO4_SIZE&apos;))">32</spirit:value>
+          <spirit:value spirit:format="long" spirit:resolve="dependent" spirit:id="BUSIFPARAM_VALUE.GPIO4.C_GPO4_SIZE" spirit:dependency="spirit:decode(id(&apos;MODELPARAM_VALUE.C_GPO4_SIZE&apos;))">16</spirit:value>
           <spirit:vendorExtensions>
             <xilinx:parameterInfo>
               <xilinx:enablement>
@@ -1610,7 +1610,7 @@
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>C_USE_GPI4</spirit:name>
-          <spirit:value spirit:format="long" spirit:resolve="dependent" spirit:id="BUSIFPARAM_VALUE.GPIO4.C_USE_GPI4" spirit:dependency="spirit:decode(id(&apos;MODELPARAM_VALUE.C_USE_GPI4&apos;))">0</spirit:value>
+          <spirit:value spirit:format="long" spirit:resolve="dependent" spirit:id="BUSIFPARAM_VALUE.GPIO4.C_USE_GPI4" spirit:dependency="spirit:decode(id(&apos;MODELPARAM_VALUE.C_USE_GPI4&apos;))">1</spirit:value>
           <spirit:vendorExtensions>
             <xilinx:parameterInfo>
               <xilinx:enablement>
@@ -1656,7 +1656,7 @@
       <spirit:vendorExtensions>
         <xilinx:busInterfaceInfo>
           <xilinx:enablement>
-            <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="BUSIF_ENABLEMENT.GPIO4" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_USE_GPO4&apos;)) = 1) or (spirit:decode(id(&apos;MODELPARAM_VALUE.C_USE_GPI4&apos;)) = 1)">false</xilinx:isEnabled>
+            <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="BUSIF_ENABLEMENT.GPIO4" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_USE_GPO4&apos;)) = 1) or (spirit:decode(id(&apos;MODELPARAM_VALUE.C_USE_GPI4&apos;)) = 1)">true</xilinx:isEnabled>
           </xilinx:enablement>
         </xilinx:busInterfaceInfo>
       </spirit:vendorExtensions>
@@ -1897,7 +1897,7 @@ For each bit:
           <spirit:displayName>General Purpose Output 1 Register</spirit:displayName>
           <spirit:description>General Purpose Output 1 Register</spirit:description>
           <spirit:addressOffset>0x10</spirit:addressOffset>
-          <spirit:size spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_GPO1_SIZE&apos;)))">8</spirit:size>
+          <spirit:size spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_GPO1_SIZE&apos;)))">32</spirit:size>
           <spirit:volatile>true</spirit:volatile>
           <spirit:access>write-only</spirit:access>
           <spirit:reset>
@@ -1911,7 +1911,7 @@ For each bit:
   W - Writes general purpose output value.
 </spirit:description>
             <spirit:bitOffset>0</spirit:bitOffset>
-            <spirit:bitWidth spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_GPO1_SIZE&apos;)))">8</spirit:bitWidth>
+            <spirit:bitWidth spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_GPO1_SIZE&apos;)))">32</spirit:bitWidth>
             <spirit:volatile>true</spirit:volatile>
             <spirit:access>write-only</spirit:access>
             <spirit:writeValueConstraint>
@@ -1933,7 +1933,7 @@ For each bit:
           <spirit:displayName>General Purpose Output 2 Register</spirit:displayName>
           <spirit:description>General Purpose Output 2 Register</spirit:description>
           <spirit:addressOffset>0x14</spirit:addressOffset>
-          <spirit:size spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_GPO2_SIZE&apos;)))">16</spirit:size>
+          <spirit:size spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_GPO2_SIZE&apos;)))">32</spirit:size>
           <spirit:volatile>true</spirit:volatile>
           <spirit:access>write-only</spirit:access>
           <spirit:reset>
@@ -1947,7 +1947,7 @@ For each bit:
   W - Writes general purpose output value.
 </spirit:description>
             <spirit:bitOffset>0</spirit:bitOffset>
-            <spirit:bitWidth spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_GPO2_SIZE&apos;)))">16</spirit:bitWidth>
+            <spirit:bitWidth spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_GPO2_SIZE&apos;)))">32</spirit:bitWidth>
             <spirit:volatile>true</spirit:volatile>
             <spirit:access>write-only</spirit:access>
             <spirit:writeValueConstraint>
@@ -1969,7 +1969,7 @@ For each bit:
           <spirit:displayName>General Purpose Output 3 Register</spirit:displayName>
           <spirit:description>General Purpose Output 3 Register</spirit:description>
           <spirit:addressOffset>0x18</spirit:addressOffset>
-          <spirit:size spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_GPO3_SIZE&apos;)))">16</spirit:size>
+          <spirit:size spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_GPO3_SIZE&apos;)))">32</spirit:size>
           <spirit:volatile>true</spirit:volatile>
           <spirit:access>write-only</spirit:access>
           <spirit:reset>
@@ -1983,7 +1983,7 @@ For each bit:
   W - Writes general purpose output value.
 </spirit:description>
             <spirit:bitOffset>0</spirit:bitOffset>
-            <spirit:bitWidth spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_GPO3_SIZE&apos;)))">16</spirit:bitWidth>
+            <spirit:bitWidth spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_GPO3_SIZE&apos;)))">32</spirit:bitWidth>
             <spirit:volatile>true</spirit:volatile>
             <spirit:access>write-only</spirit:access>
             <spirit:writeValueConstraint>
@@ -2005,7 +2005,7 @@ For each bit:
           <spirit:displayName>General Purpose Output 4 Register</spirit:displayName>
           <spirit:description>General Purpose Output 4 Register</spirit:description>
           <spirit:addressOffset>0x1C</spirit:addressOffset>
-          <spirit:size spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_GPO4_SIZE&apos;)))">32</spirit:size>
+          <spirit:size spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_GPO4_SIZE&apos;)))">16</spirit:size>
           <spirit:volatile>true</spirit:volatile>
           <spirit:access>write-only</spirit:access>
           <spirit:reset>
@@ -2019,7 +2019,7 @@ For each bit:
   W - Writes general purpose output value.
 </spirit:description>
             <spirit:bitOffset>0</spirit:bitOffset>
-            <spirit:bitWidth spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_GPO4_SIZE&apos;)))">32</spirit:bitWidth>
+            <spirit:bitWidth spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_GPO4_SIZE&apos;)))">16</spirit:bitWidth>
             <spirit:volatile>true</spirit:volatile>
             <spirit:access>write-only</spirit:access>
             <spirit:writeValueConstraint>
@@ -2175,7 +2175,7 @@ For each bit:
           <spirit:vendorExtensions>
             <xilinx:registerInfo>
               <xilinx:enablement>
-                <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="REGISTER_ENABLEMENT.SLMB.REG.GPI_4" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_USE_GPI4&apos;)) = 1)">false</xilinx:isEnabled>
+                <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="REGISTER_ENABLEMENT.SLMB.REG.GPI_4" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_USE_GPI4&apos;)) = 1)">true</xilinx:isEnabled>
               </xilinx:enablement>
             </xilinx:registerInfo>
           </spirit:vendorExtensions>
@@ -5626,7 +5626,7 @@ The period is the value + 2.
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:63ad81d7</spirit:value>
+            <spirit:value>9:eaa03ead</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -5634,17 +5634,10 @@ The period is the value + 2.
         <spirit:name>xilinx_synthesisconstraints</spirit:name>
         <spirit:displayName>Synthesis Constraints</spirit:displayName>
         <spirit:envIdentifier>:vivado.xilinx.com:synthesis.constraints</spirit:envIdentifier>
-        <spirit:fileSetRef>
-          <spirit:localName>xilinx_synthesisconstraints_view_fileset</spirit:localName>
-        </spirit:fileSetRef>
         <spirit:parameters>
           <spirit:parameter>
-            <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Fri Aug 13 18:58:34 UTC 2021</spirit:value>
-          </spirit:parameter>
-          <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:63ad81d7</spirit:value>
+            <spirit:value>9:eaa03ead</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -5660,11 +5653,11 @@ The period is the value + 2.
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Fri Aug 13 18:58:34 UTC 2021</spirit:value>
+            <spirit:value>Mon Apr 11 13:52:58 UTC 2022</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:63ad81d7</spirit:value>
+            <spirit:value>9:eaa03ead</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -5684,7 +5677,7 @@ The period is the value + 2.
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:fb707eb4</spirit:value>
+            <spirit:value>9:8e8b2a1b</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -5700,11 +5693,11 @@ The period is the value + 2.
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Fri Aug 13 18:58:34 UTC 2021</spirit:value>
+            <spirit:value>Mon Apr 11 13:52:58 UTC 2022</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:fb707eb4</spirit:value>
+            <spirit:value>9:8e8b2a1b</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -5718,29 +5711,11 @@ The period is the value + 2.
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Fri Aug 13 18:58:34 UTC 2021</spirit:value>
+            <spirit:value>Mon Apr 11 13:52:58 UTC 2022</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:63ad81d7</spirit:value>
-          </spirit:parameter>
-        </spirit:parameters>
-      </spirit:view>
-      <spirit:view>
-        <spirit:name>xilinx_externalfiles</spirit:name>
-        <spirit:displayName>External Files</spirit:displayName>
-        <spirit:envIdentifier>:vivado.xilinx.com:external.files</spirit:envIdentifier>
-        <spirit:fileSetRef>
-          <spirit:localName>xilinx_externalfiles_view_fileset</spirit:localName>
-        </spirit:fileSetRef>
-        <spirit:parameters>
-          <spirit:parameter>
-            <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Fri Aug 13 21:25:17 UTC 2021</spirit:value>
-          </spirit:parameter>
-          <spirit:parameter>
-            <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:63ad81d7</spirit:value>
+            <spirit:value>9:eaa03ead</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -6629,7 +6604,7 @@ The period is the value + 2.
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_GPO1_SIZE&apos;)) - 1)">7</spirit:left>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_GPO1_SIZE&apos;)) - 1)">31</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -6653,7 +6628,7 @@ The period is the value + 2.
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_GPO2_SIZE&apos;)) - 1)">15</spirit:left>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_GPO2_SIZE&apos;)) - 1)">31</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -6677,7 +6652,7 @@ The period is the value + 2.
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_GPO3_SIZE&apos;)) - 1)">15</spirit:left>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_GPO3_SIZE&apos;)) - 1)">31</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -6701,7 +6676,7 @@ The period is the value + 2.
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_GPO4_SIZE&apos;)) - 1)">31</spirit:left>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_GPO4_SIZE&apos;)) - 1)">15</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -6883,7 +6858,7 @@ The period is the value + 2.
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.GPI4" xilinx:dependency="spirit:decode(id(&apos;MODELPARAM_VALUE.C_USE_GPI4&apos;)) = 1">false</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.GPI4" xilinx:dependency="spirit:decode(id(&apos;MODELPARAM_VALUE.C_USE_GPI4&apos;)) = 1">true</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -7693,7 +7668,7 @@ The period is the value + 2.
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>C_GPO1_SIZE</spirit:name>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_GPO1_SIZE" spirit:minimum="1" spirit:maximum="32" spirit:rangeType="long">8</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_GPO1_SIZE" spirit:minimum="1" spirit:maximum="32" spirit:rangeType="long">32</spirit:value>
         <spirit:vendorExtensions>
           <xilinx:parameterInfo>
             <xilinx:enablement>
@@ -7719,7 +7694,7 @@ The period is the value + 2.
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>C_GPO2_SIZE</spirit:name>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_GPO2_SIZE" spirit:minimum="1" spirit:maximum="32" spirit:rangeType="long">16</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_GPO2_SIZE" spirit:minimum="1" spirit:maximum="32" spirit:rangeType="long">32</spirit:value>
         <spirit:vendorExtensions>
           <xilinx:parameterInfo>
             <xilinx:enablement>
@@ -7745,7 +7720,7 @@ The period is the value + 2.
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>C_GPO3_SIZE</spirit:name>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_GPO3_SIZE" spirit:minimum="1" spirit:maximum="32" spirit:rangeType="long">16</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_GPO3_SIZE" spirit:minimum="1" spirit:maximum="32" spirit:rangeType="long">32</spirit:value>
         <spirit:vendorExtensions>
           <xilinx:parameterInfo>
             <xilinx:enablement>
@@ -7771,7 +7746,7 @@ The period is the value + 2.
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>C_GPO4_SIZE</spirit:name>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_GPO4_SIZE" spirit:minimum="1" spirit:maximum="32" spirit:rangeType="long">32</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_GPO4_SIZE" spirit:minimum="1" spirit:maximum="32" spirit:rangeType="long">16</spirit:value>
         <spirit:vendorExtensions>
           <xilinx:parameterInfo>
             <xilinx:enablement>
@@ -7871,7 +7846,7 @@ The period is the value + 2.
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>C_USE_GPI4</spirit:name>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_USE_GPI4">0</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_USE_GPI4">1</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>C_GPI4_SIZE</spirit:name>
@@ -7879,7 +7854,7 @@ The period is the value + 2.
         <spirit:vendorExtensions>
           <xilinx:parameterInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="MODELPARAM_ENABLEMENT.C_GPI4_SIZE" xilinx:dependency="spirit:decode(id(&apos;MODELPARAM_VALUE.C_USE_GPI4&apos;)) = 1">false</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="MODELPARAM_ENABLEMENT.C_GPI4_SIZE" xilinx:dependency="spirit:decode(id(&apos;MODELPARAM_VALUE.C_USE_GPI4&apos;)) = 1">true</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:parameterInfo>
         </spirit:vendorExtensions>
@@ -7890,7 +7865,7 @@ The period is the value + 2.
         <spirit:vendorExtensions>
           <xilinx:parameterInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="MODELPARAM_ENABLEMENT.C_GPI4_INTERRUPT" xilinx:dependency="spirit:decode(id(&apos;MODELPARAM_VALUE.C_USE_GPI4&apos;)) = 1">false</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="MODELPARAM_ENABLEMENT.C_GPI4_INTERRUPT" xilinx:dependency="spirit:decode(id(&apos;MODELPARAM_VALUE.C_USE_GPI4&apos;)) = 1">true</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:parameterInfo>
         </spirit:vendorExtensions>
@@ -8071,16 +8046,6 @@ The period is the value + 2.
       </spirit:file>
     </spirit:fileSet>
     <spirit:fileSet>
-      <spirit:name>xilinx_synthesisconstraints_view_fileset</spirit:name>
-      <spirit:file>
-        <spirit:name>mb_system_iomodule_1_1_ooc.xdc</spirit:name>
-        <spirit:userFileType>xdc</spirit:userFileType>
-        <spirit:userFileType>USED_IN_implementation</spirit:userFileType>
-        <spirit:userFileType>USED_IN_out_of_context</spirit:userFileType>
-        <spirit:userFileType>USED_IN_synthesis</spirit:userFileType>
-      </spirit:file>
-    </spirit:fileSet>
-    <spirit:fileSet>
       <spirit:name>xilinx_vhdlsynthesiswrapper_view_fileset</spirit:name>
       <spirit:file>
         <spirit:name>synth/mb_system_iomodule_1_1.vhd</spirit:name>
@@ -8113,42 +8078,6 @@ The period is the value + 2.
         <spirit:userFileType>USED_IN_board</spirit:userFileType>
         <spirit:userFileType>USED_IN_implementation</spirit:userFileType>
         <spirit:userFileType>USED_IN_synthesis</spirit:userFileType>
-      </spirit:file>
-    </spirit:fileSet>
-    <spirit:fileSet>
-      <spirit:name>xilinx_externalfiles_view_fileset</spirit:name>
-      <spirit:file>
-        <spirit:name>mb_system_iomodule_1_1.dcp</spirit:name>
-        <spirit:userFileType>dcp</spirit:userFileType>
-        <spirit:userFileType>USED_IN_implementation</spirit:userFileType>
-        <spirit:userFileType>USED_IN_synthesis</spirit:userFileType>
-        <spirit:logicalName>xil_defaultlib</spirit:logicalName>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>mb_system_iomodule_1_1_stub.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_synth_blackbox_stub</spirit:userFileType>
-        <spirit:logicalName>xil_defaultlib</spirit:logicalName>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>mb_system_iomodule_1_1_stub.vhdl</spirit:name>
-        <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_synth_blackbox_stub</spirit:userFileType>
-        <spirit:logicalName>xil_defaultlib</spirit:logicalName>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>mb_system_iomodule_1_1_sim_netlist.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_simulation</spirit:userFileType>
-        <spirit:userFileType>USED_IN_single_language</spirit:userFileType>
-        <spirit:logicalName>xil_defaultlib</spirit:logicalName>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>mb_system_iomodule_1_1_sim_netlist.vhdl</spirit:name>
-        <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_simulation</spirit:userFileType>
-        <spirit:userFileType>USED_IN_single_language</spirit:userFileType>
-        <spirit:logicalName>xil_defaultlib</spirit:logicalName>
       </spirit:file>
     </spirit:fileSet>
   </spirit:fileSets>
@@ -8705,7 +8634,7 @@ The period is the value + 2.
     <spirit:parameter>
       <spirit:name>C_GPO1_SIZE</spirit:name>
       <spirit:displayName>Number of Bits</spirit:displayName>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C_GPO1_SIZE" spirit:order="5020" spirit:configGroups="5 GPO" spirit:minimum="1" spirit:maximum="32" spirit:rangeType="long">8</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C_GPO1_SIZE" spirit:order="5020" spirit:configGroups="5 GPO" spirit:minimum="1" spirit:maximum="32" spirit:rangeType="long">32</spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
@@ -8734,7 +8663,7 @@ The period is the value + 2.
     <spirit:parameter>
       <spirit:name>C_GPO2_SIZE</spirit:name>
       <spirit:displayName>Number of Bits</spirit:displayName>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C_GPO2_SIZE" spirit:order="5050" spirit:configGroups="5 GPO" spirit:minimum="1" spirit:maximum="32" spirit:rangeType="long">16</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C_GPO2_SIZE" spirit:order="5050" spirit:configGroups="5 GPO" spirit:minimum="1" spirit:maximum="32" spirit:rangeType="long">32</spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
@@ -8763,7 +8692,7 @@ The period is the value + 2.
     <spirit:parameter>
       <spirit:name>C_GPO3_SIZE</spirit:name>
       <spirit:displayName>Number of Bits</spirit:displayName>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C_GPO3_SIZE" spirit:order="5080" spirit:configGroups="5 GPO" spirit:minimum="1" spirit:maximum="32" spirit:rangeType="long">16</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C_GPO3_SIZE" spirit:order="5080" spirit:configGroups="5 GPO" spirit:minimum="1" spirit:maximum="32" spirit:rangeType="long">32</spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
@@ -8792,7 +8721,7 @@ The period is the value + 2.
     <spirit:parameter>
       <spirit:name>C_GPO4_SIZE</spirit:name>
       <spirit:displayName>Number of Bits</spirit:displayName>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C_GPO4_SIZE" spirit:order="5110" spirit:configGroups="5 GPO" spirit:minimum="1" spirit:maximum="32" spirit:rangeType="long">32</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C_GPO4_SIZE" spirit:order="5110" spirit:configGroups="5 GPO" spirit:minimum="1" spirit:maximum="32" spirit:rangeType="long">16</spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
@@ -8903,7 +8832,7 @@ The period is the value + 2.
     <spirit:parameter>
       <spirit:name>C_USE_GPI4</spirit:name>
       <spirit:displayName>Use GPI</spirit:displayName>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C_USE_GPI4" spirit:choiceRef="choice_pairs_4873554b" spirit:order="6100" spirit:configGroups="6 GPI">0</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C_USE_GPI4" spirit:choiceRef="choice_pairs_4873554b" spirit:order="6100" spirit:configGroups="6 GPI">1</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>C_GPI4_SIZE</spirit:name>
@@ -8912,7 +8841,7 @@ The period is the value + 2.
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
-            <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PARAM_ENABLEMENT.C_GPI4_SIZE" xilinx:dependency="true">false</xilinx:isEnabled>
+            <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PARAM_ENABLEMENT.C_GPI4_SIZE" xilinx:dependency="true">true</xilinx:isEnabled>
           </xilinx:enablement>
         </xilinx:parameterInfo>
       </spirit:vendorExtensions>
@@ -8924,7 +8853,7 @@ The period is the value + 2.
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
-            <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PARAM_ENABLEMENT.C_GPI4_INTERRUPT" xilinx:dependency="true">false</xilinx:isEnabled>
+            <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PARAM_ENABLEMENT.C_GPI4_INTERRUPT" xilinx:dependency="true">true</xilinx:isEnabled>
           </xilinx:enablement>
         </xilinx:parameterInfo>
       </spirit:vendorExtensions>
@@ -9079,6 +9008,13 @@ The period is the value + 2.
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.GPIO3.C_GPO3_SIZE" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.GPIO3.C_USE_GPI3" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.GPIO3.C_USE_GPO3" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.GPIO4.BOARD.ASSOCIATED_PARAM" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.GPIO4.C_GPI4_INTERRUPT" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.GPIO4.C_GPI4_SIZE" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.GPIO4.C_GPO4_INIT" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.GPIO4.C_GPO4_SIZE" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.GPIO4.C_USE_GPI4" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.GPIO4.C_USE_GPO4" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.RST.RST.POLARITY" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.RST.RST.TYPE" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.SLMB.ADDR_WIDTH" xilinx:valuePermission="bd"/>
@@ -9091,6 +9027,7 @@ The period is the value + 2.
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.C_GPO1_SIZE" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.C_GPO2_SIZE" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.C_GPO3_SIZE" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.C_GPO4_SIZE" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.C_HIGHADDR" xilinx:valueSource="propagated" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.C_INTC_ADDR_WIDTH" xilinx:valueSource="propagated" xilinx:valuePermission="bd_and_user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.C_INTC_ASYNC_INTR" xilinx:valuePermission="bd_and_user"/>
@@ -9106,9 +9043,11 @@ The period is the value + 2.
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.C_LMB_PROTOCOL" xilinx:valueSource="propagated" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.C_MASK" xilinx:valueSource="propagated" xilinx:valuePermission="bd_and_user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.C_USE_GPI1" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.C_USE_GPI4" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.C_USE_GPO1" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.C_USE_GPO2" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.C_USE_GPO3" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.C_USE_GPO4" xilinx:valueSource="user"/>
       </xilinx:configElementInfos>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>

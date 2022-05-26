@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
-| Date         : Sat Jan 15 13:46:51 2022
+| Date         : Thu May 19 22:01:51 2022
 | Host         : DESKTOP-3JGF4VF running 64-bit major release  (build 9200)
 | Command      : report_methodology -file hydro_spartan_7_methodology_drc_routed.rpt -pb hydro_spartan_7_methodology_drc_routed.pb -rpx hydro_spartan_7_methodology_drc_routed.rpx
 | Design       : hydro_spartan_7
@@ -23,7 +23,7 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max violations: <unlimited>
-             Violations found: 47
+             Violations found: 11
 +-----------+------------------+------------------------------------------------------------+------------+
 | Rule      | Severity         | Description                                                | Violations |
 +-----------+------------------+------------------------------------------------------------+------------+
@@ -32,7 +32,6 @@ Table of Contents
 | TIMING-54 | Critical Warning | Scoped false path or clock group constraint between clocks | 2          |
 | LUTAR-1   | Warning          | LUT drives async reset alert                               | 5          |
 | PDRC-190  | Warning          | Suboptimally placed synchronized register chain            | 1          |
-| SYNTH-10  | Warning          | Wide multiplier                                            | 36         |
 | TIMING-9  | Warning          | Unknown CDC Logic                                          | 1          |
 +-----------+------------------+------------------------------------------------------------+------------+
 
@@ -60,25 +59,37 @@ Related violations: <none>
 
 LUTAR-1#1 Warning
 LUT drives async reset alert  
-LUT cell FIFO_BUFFERS/FIFO_buffer_1/U0/inst_fifo_gen/gconvfifo.rf/gbi.bi/g7ser_birst.rstbt/gf18e1_inst.sngfifo18e1_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) FIFO_BUFFERS/FIFO_buffer_1/U0/inst_fifo_gen/gconvfifo.rf/gbi.bi/v7_bi_fifo.fblk/gextw[1].gnll_fifo.inst_extd/gonep.inst_prim/gf18e1_inst.sngfifo18e1/RST
+LUT cell FIFO_BUFFERS/FIFO_buffer_1/U0/inst_fifo_gen/gconvfifo.rf/gbi.bi/g7ser_birst.rstbt/gf36e1_inst.sngfifo36e1_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) FIFO_BUFFERS/FIFO_buffer_1/U0/inst_fifo_gen/gconvfifo.rf/gbi.bi/v7_bi_fifo.fblk/gextw[1].gnll_fifo.inst_extd/gonep.inst_prim/gf36e1_inst.sngfifo36e1/RST,
+FIFO_BUFFERS/FIFO_buffer_1/U0/inst_fifo_gen/gconvfifo.rf/gbi.bi/v7_bi_fifo.fblk/gextw[2].gnll_fifo.inst_extd/gonep.inst_prim/gf36e1_inst.sngfifo36e1/RST,
+FIFO_BUFFERS/FIFO_buffer_1/U0/inst_fifo_gen/gconvfifo.rf/gbi.bi/v7_bi_fifo.fblk/gextw[3].gnll_fifo.inst_extd/gonep.inst_prim/gf36e1_inst.sngfifo36e1/RST,
+FIFO_BUFFERS/FIFO_buffer_1/U0/inst_fifo_gen/gconvfifo.rf/gbi.bi/v7_bi_fifo.fblk/gextw[4].gnll_fifo.inst_extd/gonep.inst_prim/gf36e1_inst.sngfifo36e1/RST
 FIFO_BUFFERS/FIFO_buffer_1/U0/inst_fifo_gen/gconvfifo.rf/gbi.bi/v7_bi_fifo.fblk/gv.gv4.VALID_reg/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
 Related violations: <none>
 
 LUTAR-1#2 Warning
 LUT drives async reset alert  
-LUT cell FIFO_BUFFERS/FIFO_buffer_2/U0/inst_fifo_gen/gconvfifo.rf/gbi.bi/g7ser_birst.rstbt/gf18e1_inst.sngfifo18e1_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) FIFO_BUFFERS/FIFO_buffer_2/U0/inst_fifo_gen/gconvfifo.rf/gbi.bi/v7_bi_fifo.fblk/gextw[1].gnll_fifo.inst_extd/gonep.inst_prim/gf18e1_inst.sngfifo18e1/RST
+LUT cell FIFO_BUFFERS/FIFO_buffer_2/U0/inst_fifo_gen/gconvfifo.rf/gbi.bi/g7ser_birst.rstbt/gf36e1_inst.sngfifo36e1_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) FIFO_BUFFERS/FIFO_buffer_2/U0/inst_fifo_gen/gconvfifo.rf/gbi.bi/v7_bi_fifo.fblk/gextw[1].gnll_fifo.inst_extd/gonep.inst_prim/gf36e1_inst.sngfifo36e1/RST,
+FIFO_BUFFERS/FIFO_buffer_2/U0/inst_fifo_gen/gconvfifo.rf/gbi.bi/v7_bi_fifo.fblk/gextw[2].gnll_fifo.inst_extd/gonep.inst_prim/gf36e1_inst.sngfifo36e1/RST,
+FIFO_BUFFERS/FIFO_buffer_2/U0/inst_fifo_gen/gconvfifo.rf/gbi.bi/v7_bi_fifo.fblk/gextw[3].gnll_fifo.inst_extd/gonep.inst_prim/gf36e1_inst.sngfifo36e1/RST,
+FIFO_BUFFERS/FIFO_buffer_2/U0/inst_fifo_gen/gconvfifo.rf/gbi.bi/v7_bi_fifo.fblk/gextw[4].gnll_fifo.inst_extd/gonep.inst_prim/gf36e1_inst.sngfifo36e1/RST
 FIFO_BUFFERS/FIFO_buffer_2/U0/inst_fifo_gen/gconvfifo.rf/gbi.bi/v7_bi_fifo.fblk/gv.gv4.VALID_reg/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
 Related violations: <none>
 
 LUTAR-1#3 Warning
 LUT drives async reset alert  
-LUT cell FIFO_BUFFERS/FIFO_buffer_3/U0/inst_fifo_gen/gconvfifo.rf/gbi.bi/g7ser_birst.rstbt/gf18e1_inst.sngfifo18e1_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) FIFO_BUFFERS/FIFO_buffer_3/U0/inst_fifo_gen/gconvfifo.rf/gbi.bi/v7_bi_fifo.fblk/gextw[1].gnll_fifo.inst_extd/gonep.inst_prim/gf18e1_inst.sngfifo18e1/RST
+LUT cell FIFO_BUFFERS/FIFO_buffer_3/U0/inst_fifo_gen/gconvfifo.rf/gbi.bi/g7ser_birst.rstbt/gf36e1_inst.sngfifo36e1_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) FIFO_BUFFERS/FIFO_buffer_3/U0/inst_fifo_gen/gconvfifo.rf/gbi.bi/v7_bi_fifo.fblk/gextw[1].gnll_fifo.inst_extd/gonep.inst_prim/gf36e1_inst.sngfifo36e1/RST,
+FIFO_BUFFERS/FIFO_buffer_3/U0/inst_fifo_gen/gconvfifo.rf/gbi.bi/v7_bi_fifo.fblk/gextw[2].gnll_fifo.inst_extd/gonep.inst_prim/gf36e1_inst.sngfifo36e1/RST,
+FIFO_BUFFERS/FIFO_buffer_3/U0/inst_fifo_gen/gconvfifo.rf/gbi.bi/v7_bi_fifo.fblk/gextw[3].gnll_fifo.inst_extd/gonep.inst_prim/gf36e1_inst.sngfifo36e1/RST,
+FIFO_BUFFERS/FIFO_buffer_3/U0/inst_fifo_gen/gconvfifo.rf/gbi.bi/v7_bi_fifo.fblk/gextw[4].gnll_fifo.inst_extd/gonep.inst_prim/gf36e1_inst.sngfifo36e1/RST
 FIFO_BUFFERS/FIFO_buffer_3/U0/inst_fifo_gen/gconvfifo.rf/gbi.bi/v7_bi_fifo.fblk/gv.gv4.VALID_reg/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
 Related violations: <none>
 
 LUTAR-1#4 Warning
 LUT drives async reset alert  
-LUT cell FIFO_BUFFERS/FIFO_buffer_4/U0/inst_fifo_gen/gconvfifo.rf/gbi.bi/g7ser_birst.rstbt/gf18e1_inst.sngfifo18e1_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) FIFO_BUFFERS/FIFO_buffer_4/U0/inst_fifo_gen/gconvfifo.rf/gbi.bi/v7_bi_fifo.fblk/gextw[1].gnll_fifo.inst_extd/gonep.inst_prim/gf18e1_inst.sngfifo18e1/RST
+LUT cell FIFO_BUFFERS/FIFO_buffer_4/U0/inst_fifo_gen/gconvfifo.rf/gbi.bi/g7ser_birst.rstbt/gf36e1_inst.sngfifo36e1_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) FIFO_BUFFERS/FIFO_buffer_4/U0/inst_fifo_gen/gconvfifo.rf/gbi.bi/v7_bi_fifo.fblk/gextw[1].gnll_fifo.inst_extd/gonep.inst_prim/gf36e1_inst.sngfifo36e1/RST,
+FIFO_BUFFERS/FIFO_buffer_4/U0/inst_fifo_gen/gconvfifo.rf/gbi.bi/v7_bi_fifo.fblk/gextw[2].gnll_fifo.inst_extd/gonep.inst_prim/gf36e1_inst.sngfifo36e1/RST,
+FIFO_BUFFERS/FIFO_buffer_4/U0/inst_fifo_gen/gconvfifo.rf/gbi.bi/v7_bi_fifo.fblk/gextw[3].gnll_fifo.inst_extd/gonep.inst_prim/gf36e1_inst.sngfifo36e1/RST,
+FIFO_BUFFERS/FIFO_buffer_4/U0/inst_fifo_gen/gconvfifo.rf/gbi.bi/v7_bi_fifo.fblk/gextw[4].gnll_fifo.inst_extd/gonep.inst_prim/gf36e1_inst.sngfifo36e1/RST
 FIFO_BUFFERS/FIFO_buffer_4/U0/inst_fifo_gen/gconvfifo.rf/gbi.bi/v7_bi_fifo.fblk/gv.gv4.VALID_reg/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
 Related violations: <none>
 
@@ -89,187 +100,7 @@ Related violations: <none>
 
 PDRC-190#1 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell FPGA_system/mb_system_i/axi_quad_spi_0/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.CLK_CROSS_I/LOGIC_GENERATION_CDC.RX_FIFO_RST_AX2S_1/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to in site SLICE_X10Y88 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell FPGA_system/mb_system_i/axi_quad_spi_0/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.CLK_CROSS_I/LOGIC_GENERATION_CDC.RX_FIFO_RST_AX2S_1_CDC_1 is not placed in the same (SLICE) site.
-Related violations: <none>
-
-SYNTH-10#1 Warning
-Wide multiplier  
-Detected multiplier at PhaseHydrophones/u_FFTs/u_FFT_Hydro_1/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_ProdOfIm_pipe10 of size 9x18, it is decomposed from a wide multipler into 4 DSP blocks.
-Related violations: <none>
-
-SYNTH-10#2 Warning
-Wide multiplier  
-Detected multiplier at PhaseHydrophones/u_FFTs/u_FFT_Hydro_1/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_ProdOfIm_pipe10__0 of size 18x18, it is decomposed from a wide multipler into 4 DSP blocks.
-Related violations: <none>
-
-SYNTH-10#3 Warning
-Wide multiplier  
-Detected multiplier at PhaseHydrophones/u_FFTs/u_FFT_Hydro_1/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_ProdOfIm_pipe1_reg of size 18x9, it is decomposed from a wide multipler into 4 DSP blocks.
-Related violations: <none>
-
-SYNTH-10#4 Warning
-Wide multiplier  
-Detected multiplier at PhaseHydrophones/u_FFTs/u_FFT_Hydro_1/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_prodOfRe_pipe10 of size 9x18, it is decomposed from a wide multipler into 4 DSP blocks.
-Related violations: <none>
-
-SYNTH-10#5 Warning
-Wide multiplier  
-Detected multiplier at PhaseHydrophones/u_FFTs/u_FFT_Hydro_1/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_prodOfRe_pipe10__0 of size 18x18, it is decomposed from a wide multipler into 4 DSP blocks.
-Related violations: <none>
-
-SYNTH-10#6 Warning
-Wide multiplier  
-Detected multiplier at PhaseHydrophones/u_FFTs/u_FFT_Hydro_1/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_prodOfRe_pipe1_reg of size 18x9, it is decomposed from a wide multipler into 4 DSP blocks.
-Related violations: <none>
-
-SYNTH-10#7 Warning
-Wide multiplier  
-Detected multiplier at PhaseHydrophones/u_FFTs/u_FFT_Hydro_1/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_prodOfSum_pipe10 of size 10x18, it is decomposed from a wide multipler into 4 DSP blocks.
-Related violations: <none>
-
-SYNTH-10#8 Warning
-Wide multiplier  
-Detected multiplier at PhaseHydrophones/u_FFTs/u_FFT_Hydro_1/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_prodOfSum_pipe10__0 of size 18x18, it is decomposed from a wide multipler into 4 DSP blocks.
-Related violations: <none>
-
-SYNTH-10#9 Warning
-Wide multiplier  
-Detected multiplier at PhaseHydrophones/u_FFTs/u_FFT_Hydro_1/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_prodOfSum_pipe1_reg of size 18x10, it is decomposed from a wide multipler into 4 DSP blocks.
-Related violations: <none>
-
-SYNTH-10#10 Warning
-Wide multiplier  
-Detected multiplier at PhaseHydrophones/u_FFTs/u_FFT_Hydro_2/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_ProdOfIm_pipe10 of size 9x18, it is decomposed from a wide multipler into 4 DSP blocks.
-Related violations: <none>
-
-SYNTH-10#11 Warning
-Wide multiplier  
-Detected multiplier at PhaseHydrophones/u_FFTs/u_FFT_Hydro_2/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_ProdOfIm_pipe10__0 of size 18x18, it is decomposed from a wide multipler into 4 DSP blocks.
-Related violations: <none>
-
-SYNTH-10#12 Warning
-Wide multiplier  
-Detected multiplier at PhaseHydrophones/u_FFTs/u_FFT_Hydro_2/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_ProdOfIm_pipe1_reg of size 18x9, it is decomposed from a wide multipler into 4 DSP blocks.
-Related violations: <none>
-
-SYNTH-10#13 Warning
-Wide multiplier  
-Detected multiplier at PhaseHydrophones/u_FFTs/u_FFT_Hydro_2/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_prodOfRe_pipe10 of size 9x18, it is decomposed from a wide multipler into 4 DSP blocks.
-Related violations: <none>
-
-SYNTH-10#14 Warning
-Wide multiplier  
-Detected multiplier at PhaseHydrophones/u_FFTs/u_FFT_Hydro_2/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_prodOfRe_pipe10__0 of size 18x18, it is decomposed from a wide multipler into 4 DSP blocks.
-Related violations: <none>
-
-SYNTH-10#15 Warning
-Wide multiplier  
-Detected multiplier at PhaseHydrophones/u_FFTs/u_FFT_Hydro_2/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_prodOfRe_pipe1_reg of size 18x9, it is decomposed from a wide multipler into 4 DSP blocks.
-Related violations: <none>
-
-SYNTH-10#16 Warning
-Wide multiplier  
-Detected multiplier at PhaseHydrophones/u_FFTs/u_FFT_Hydro_2/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_prodOfSum_pipe10 of size 10x18, it is decomposed from a wide multipler into 4 DSP blocks.
-Related violations: <none>
-
-SYNTH-10#17 Warning
-Wide multiplier  
-Detected multiplier at PhaseHydrophones/u_FFTs/u_FFT_Hydro_2/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_prodOfSum_pipe10__0 of size 18x18, it is decomposed from a wide multipler into 4 DSP blocks.
-Related violations: <none>
-
-SYNTH-10#18 Warning
-Wide multiplier  
-Detected multiplier at PhaseHydrophones/u_FFTs/u_FFT_Hydro_2/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_prodOfSum_pipe1_reg of size 18x10, it is decomposed from a wide multipler into 4 DSP blocks.
-Related violations: <none>
-
-SYNTH-10#19 Warning
-Wide multiplier  
-Detected multiplier at PhaseHydrophones/u_FFTs/u_FFT_Hydro_3/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_ProdOfIm_pipe10 of size 9x18, it is decomposed from a wide multipler into 4 DSP blocks.
-Related violations: <none>
-
-SYNTH-10#20 Warning
-Wide multiplier  
-Detected multiplier at PhaseHydrophones/u_FFTs/u_FFT_Hydro_3/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_ProdOfIm_pipe10__0 of size 18x18, it is decomposed from a wide multipler into 4 DSP blocks.
-Related violations: <none>
-
-SYNTH-10#21 Warning
-Wide multiplier  
-Detected multiplier at PhaseHydrophones/u_FFTs/u_FFT_Hydro_3/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_ProdOfIm_pipe1_reg of size 18x9, it is decomposed from a wide multipler into 4 DSP blocks.
-Related violations: <none>
-
-SYNTH-10#22 Warning
-Wide multiplier  
-Detected multiplier at PhaseHydrophones/u_FFTs/u_FFT_Hydro_3/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_prodOfRe_pipe10 of size 9x18, it is decomposed from a wide multipler into 4 DSP blocks.
-Related violations: <none>
-
-SYNTH-10#23 Warning
-Wide multiplier  
-Detected multiplier at PhaseHydrophones/u_FFTs/u_FFT_Hydro_3/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_prodOfRe_pipe10__0 of size 18x18, it is decomposed from a wide multipler into 4 DSP blocks.
-Related violations: <none>
-
-SYNTH-10#24 Warning
-Wide multiplier  
-Detected multiplier at PhaseHydrophones/u_FFTs/u_FFT_Hydro_3/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_prodOfRe_pipe1_reg of size 18x9, it is decomposed from a wide multipler into 4 DSP blocks.
-Related violations: <none>
-
-SYNTH-10#25 Warning
-Wide multiplier  
-Detected multiplier at PhaseHydrophones/u_FFTs/u_FFT_Hydro_3/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_prodOfSum_pipe10 of size 10x18, it is decomposed from a wide multipler into 4 DSP blocks.
-Related violations: <none>
-
-SYNTH-10#26 Warning
-Wide multiplier  
-Detected multiplier at PhaseHydrophones/u_FFTs/u_FFT_Hydro_3/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_prodOfSum_pipe10__0 of size 18x18, it is decomposed from a wide multipler into 4 DSP blocks.
-Related violations: <none>
-
-SYNTH-10#27 Warning
-Wide multiplier  
-Detected multiplier at PhaseHydrophones/u_FFTs/u_FFT_Hydro_3/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_prodOfSum_pipe1_reg of size 18x10, it is decomposed from a wide multipler into 4 DSP blocks.
-Related violations: <none>
-
-SYNTH-10#28 Warning
-Wide multiplier  
-Detected multiplier at PhaseHydrophones/u_FFTs/u_FFT_Hydro_Ref/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_ProdOfIm_pipe10 of size 9x18, it is decomposed from a wide multipler into 4 DSP blocks.
-Related violations: <none>
-
-SYNTH-10#29 Warning
-Wide multiplier  
-Detected multiplier at PhaseHydrophones/u_FFTs/u_FFT_Hydro_Ref/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_ProdOfIm_pipe10__0 of size 18x18, it is decomposed from a wide multipler into 4 DSP blocks.
-Related violations: <none>
-
-SYNTH-10#30 Warning
-Wide multiplier  
-Detected multiplier at PhaseHydrophones/u_FFTs/u_FFT_Hydro_Ref/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_ProdOfIm_pipe1_reg of size 18x9, it is decomposed from a wide multipler into 4 DSP blocks.
-Related violations: <none>
-
-SYNTH-10#31 Warning
-Wide multiplier  
-Detected multiplier at PhaseHydrophones/u_FFTs/u_FFT_Hydro_Ref/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_prodOfRe_pipe10 of size 9x18, it is decomposed from a wide multipler into 4 DSP blocks.
-Related violations: <none>
-
-SYNTH-10#32 Warning
-Wide multiplier  
-Detected multiplier at PhaseHydrophones/u_FFTs/u_FFT_Hydro_Ref/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_prodOfRe_pipe10__0 of size 18x18, it is decomposed from a wide multipler into 4 DSP blocks.
-Related violations: <none>
-
-SYNTH-10#33 Warning
-Wide multiplier  
-Detected multiplier at PhaseHydrophones/u_FFTs/u_FFT_Hydro_Ref/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_prodOfRe_pipe1_reg of size 18x9, it is decomposed from a wide multipler into 4 DSP blocks.
-Related violations: <none>
-
-SYNTH-10#34 Warning
-Wide multiplier  
-Detected multiplier at PhaseHydrophones/u_FFTs/u_FFT_Hydro_Ref/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_prodOfSum_pipe10 of size 10x18, it is decomposed from a wide multipler into 4 DSP blocks.
-Related violations: <none>
-
-SYNTH-10#35 Warning
-Wide multiplier  
-Detected multiplier at PhaseHydrophones/u_FFTs/u_FFT_Hydro_Ref/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_prodOfSum_pipe10__0 of size 18x18, it is decomposed from a wide multipler into 4 DSP blocks.
-Related violations: <none>
-
-SYNTH-10#36 Warning
-Wide multiplier  
-Detected multiplier at PhaseHydrophones/u_FFTs/u_FFT_Hydro_Ref/u_FFT_HDL_Optimized/u_MinResRX2FFT_BUTTERFLY/u_MUL3/Complex3Multiply_prodOfSum_pipe1_reg of size 18x10, it is decomposed from a wide multipler into 4 DSP blocks.
+The FDRE cell FPGA_system/mb_system_i/axi_quad_spi_0/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.CLK_CROSS_I/LOGIC_GENERATION_CDC.RX_FIFO_RST_AX2S_1/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to in site SLICE_X47Y58 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell FPGA_system/mb_system_i/axi_quad_spi_0/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.CLK_CROSS_I/LOGIC_GENERATION_CDC.RX_FIFO_RST_AX2S_1_CDC_1 is not placed in the same (SLICE) site.
 Related violations: <none>
 
 TIMING-9#1 Warning

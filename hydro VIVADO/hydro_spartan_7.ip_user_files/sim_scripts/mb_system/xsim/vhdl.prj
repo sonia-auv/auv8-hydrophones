@@ -8,7 +8,6 @@ vhdl xil_defaultlib  \
 "../../../bd/mb_system/ip/mb_system_rst_clk_wiz_1_100M_1/sim/mb_system_rst_clk_wiz_1_100M_1.vhd" \
 "../../../bd/mb_system/ip/mb_system_axi_uartlite_0_1/sim/mb_system_axi_uartlite_0_1.vhd" \
 "../../../bd/mb_system/ip/mb_system_axi_quad_spi_0_1/sim/mb_system_axi_quad_spi_0_1.vhd" \
-"../../../bd/mb_system/ip/mb_system_iomodule_0_1/sim/mb_system_iomodule_0_1.vhd" \
 "../../../bd/mb_system/ip/mb_system_iomodule_1_1/sim/mb_system_iomodule_1_1.vhd" \
 "../../../bd/mb_system/ip/mb_system_iomodule_2_1/sim/mb_system_iomodule_2_1.vhd" \
 "../../../bd/mb_system/sim/mb_system.vhd" \
