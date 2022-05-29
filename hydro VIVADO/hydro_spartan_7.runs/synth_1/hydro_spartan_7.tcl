@@ -86,11 +86,11 @@ set_property ip_output_repo c:/Users/franc/hydro_spartan_7/hydro_spartan_7.cache
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-add_files C:/Users/franc/hydro_spartan_7/HydroE21.elf
-set_property SCOPED_TO_REF mb_system [get_files -all C:/Users/franc/hydro_spartan_7/HydroE21.elf]
-set_property SCOPED_TO_CELLS microblaze_0 [get_files -all C:/Users/franc/hydro_spartan_7/HydroE21.elf]
+add_files C:/Users/franc/hydro_spartan_7/HydroH22.elf
+set_property SCOPED_TO_REF mb_system [get_files -all C:/Users/franc/hydro_spartan_7/HydroH22.elf]
+set_property SCOPED_TO_CELLS microblaze_0 [get_files -all C:/Users/franc/hydro_spartan_7/HydroH22.elf]
 read_vhdl -library xil_defaultlib {
-  {C:/Users/franc/OneDrive/Documents techniques/ETS/SONIA/Hydro software/ADS8327_SPI.vhd}
+  C:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/new/ADS8327_SPI.vhd
   C:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/new/clock.vhd
   C:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/bd/mb_system/hdl/mb_system_wrapper.vhd
   C:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/new/hydro_spartan_7.vhd
@@ -110,7 +110,6 @@ read_vhdl -library xil_defaultlib {
   C:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/new/DOA/MINRESRX2FFT_OUTMux_block2.vhd
   C:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/new/DOA/Quadrant_Correction_block1.vhd
   C:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/new/DOA/Subsystem.vhd
-  C:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/new/DOA/Fenetrage.vhd
   C:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/new/DOA/SimpleDualPortRAM_generic.vhd
   C:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/new/DOA/Maximum_Hydro_3.vhd
   C:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/new/DOA/MINRESRX2FFT_MEMSEL.vhd
@@ -175,16 +174,14 @@ read_vhdl -library xil_defaultlib {
   C:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/new/DOA/MINRESRX2FFT_MEMORY_block.vhd
   C:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/new/DOA/MINRESRX2FFT_BTFSEL.vhd
   C:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/new/DOA/Sample_and_Hold.vhd
+  C:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/new/agc_gain.vhd
+  C:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/new/timer.vhd
+  C:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/new/DOA/Trigger.vhd
 }
 add_files C:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/bd/mb_system/mb_system.bd
 set_property used_in_implementation false [get_files -all c:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/bd/mb_system/ip/mb_system_microblaze_0_2/mb_system_microblaze_0_2.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/bd/mb_system/ip/mb_system_microblaze_0_2/mb_system_microblaze_0_2_ooc_debug.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/bd/mb_system/ip/mb_system_microblaze_0_2/mb_system_microblaze_0_2_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/bd/mb_system/ip/mb_system_dlmb_v10_2/mb_system_dlmb_v10_2.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/bd/mb_system/ip/mb_system_dlmb_v10_2/mb_system_dlmb_v10_2_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/bd/mb_system/ip/mb_system_ilmb_v10_2/mb_system_ilmb_v10_2_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/bd/mb_system/ip/mb_system_dlmb_bram_if_cntlr_2/mb_system_dlmb_bram_if_cntlr_2_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/bd/mb_system/ip/mb_system_ilmb_bram_if_cntlr_2/mb_system_ilmb_bram_if_cntlr_2_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/bd/mb_system/ip/mb_system_lmb_bram_2/mb_system_lmb_bram_2_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/bd/mb_system/ip/mb_system_mdm_1_2/mb_system_mdm_1_2.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/bd/mb_system/ip/mb_system_mdm_1_2/mb_system_mdm_1_2_ooc_trace.xdc]
@@ -193,7 +190,6 @@ set_property used_in_implementation false [get_files -all c:/Users/franc/hydro_s
 set_property used_in_implementation false [get_files -all c:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/bd/mb_system/ip/mb_system_clk_wiz_1_1/mb_system_clk_wiz_1_1_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/bd/mb_system/ip/mb_system_rst_clk_wiz_1_100M_1/mb_system_rst_clk_wiz_1_100M_1_board.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/bd/mb_system/ip/mb_system_rst_clk_wiz_1_100M_1/mb_system_rst_clk_wiz_1_100M_1.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/bd/mb_system/ip/mb_system_rst_clk_wiz_1_100M_1/mb_system_rst_clk_wiz_1_100M_1_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/bd/mb_system/ip/mb_system_axi_uartlite_0_1/mb_system_axi_uartlite_0_1_board.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/bd/mb_system/ip/mb_system_axi_uartlite_0_1/mb_system_axi_uartlite_0_1_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/bd/mb_system/ip/mb_system_axi_uartlite_0_1/mb_system_axi_uartlite_0_1.xdc]
@@ -201,13 +197,8 @@ set_property used_in_implementation false [get_files -all c:/Users/franc/hydro_s
 set_property used_in_implementation false [get_files -all c:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/bd/mb_system/ip/mb_system_axi_quad_spi_0_1/mb_system_axi_quad_spi_0_1.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/bd/mb_system/ip/mb_system_axi_quad_spi_0_1/mb_system_axi_quad_spi_0_1_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/bd/mb_system/ip/mb_system_axi_quad_spi_0_1/mb_system_axi_quad_spi_0_1_clocks.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/bd/mb_system/ip/mb_system_iomodule_0_1/mb_system_iomodule_0_1_board.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/bd/mb_system/ip/mb_system_iomodule_0_1/mb_system_iomodule_0_1_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/bd/mb_system/ip/mb_system_iomodule_1_1/mb_system_iomodule_1_1_board.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/bd/mb_system/ip/mb_system_iomodule_1_1/mb_system_iomodule_1_1_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/bd/mb_system/ip/mb_system_iomodule_2_1/mb_system_iomodule_2_1_board.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/bd/mb_system/ip/mb_system_iomodule_2_1/mb_system_iomodule_2_1_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/bd/mb_system/ip/mb_system_xbar_0/mb_system_xbar_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/bd/mb_system/ip/mb_system_clk_wiz_0_0/mb_system_clk_wiz_0_0_board.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/bd/mb_system/ip/mb_system_clk_wiz_0_0/mb_system_clk_wiz_0_0.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/bd/mb_system/ip/mb_system_clk_wiz_0_0/mb_system_clk_wiz_0_0_ooc.xdc]
@@ -217,7 +208,6 @@ set_property used_in_implementation false [get_files -all c:/Users/franc/hydro_s
 read_ip -quiet C:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/ip/fifo_generator_0/fifo_generator_0.xci
 set_property used_in_implementation false [get_files -all c:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/ip/fifo_generator_0/fifo_generator_0.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/ip/fifo_generator_0/fifo_generator_0_clocks.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/ip/fifo_generator_0/fifo_generator_0_ooc.xdc]
 
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being

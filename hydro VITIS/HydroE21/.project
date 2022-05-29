@@ -3,7 +3,7 @@
 	<name>HydroE21</name>
 	<comment>Created by Vitis v2020.2</comment>
 	<projects>
-		<project>Hydro_XC7S50</project>
+		<project>Hydro_XC7S50_V2</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>

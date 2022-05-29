@@ -1,6 +1,0 @@
-/*Hydro_XC7S50*/
-the_ROM_image:
-{
-   <bitstream> 
-   <elf> 
-}

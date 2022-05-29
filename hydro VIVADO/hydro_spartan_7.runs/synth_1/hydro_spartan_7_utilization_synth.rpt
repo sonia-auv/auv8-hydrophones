@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
-| Date         : Sat Jan 15 13:39:41 2022
+| Date         : Thu May 19 21:57:17 2022
 | Host         : DESKTOP-3JGF4VF running 64-bit major release  (build 9200)
 | Command      : report_utilization -file hydro_spartan_7_utilization_synth.rpt -pb hydro_spartan_7_utilization_synth.pb
 | Design       : hydro_spartan_7
@@ -30,15 +30,16 @@ Table of Contents
 +----------------------------+-------+-------+-----------+-------+
 |          Site Type         |  Used | Fixed | Available | Util% |
 +----------------------------+-------+-------+-----------+-------+
-| Slice LUTs*                | 13116 |     0 |     32600 | 40.23 |
-|   LUT as Logic             | 12680 |     0 |     32600 | 38.90 |
-|   LUT as Memory            |   436 |     0 |      9600 |  4.54 |
-|     LUT as Distributed RAM |     0 |     0 |           |       |
-|     LUT as Shift Register  |   436 |     0 |           |       |
-| Slice Registers            | 14119 |     0 |     65200 | 21.65 |
-|   Register as Flip Flop    | 14119 |     0 |     65200 | 21.65 |
+| Slice LUTs*                | 10672 |     0 |     32600 | 32.74 |
+|   LUT as Logic             | 10224 |     0 |     32600 | 31.36 |
+|   LUT as Memory            |   448 |     0 |      9600 |  4.67 |
+|     LUT as Distributed RAM |    80 |     0 |           |       |
+|     LUT as Shift Register  |   368 |     0 |           |       |
+| Slice Registers            | 12084 |     0 |     65200 | 18.53 |
+|   Register as Flip Flop    | 12083 |     0 |     65200 | 18.53 |
 |   Register as Latch        |     0 |     0 |     65200 |  0.00 |
-| F7 Muxes                   |     0 |     0 |     16300 |  0.00 |
+|   Register as AND/OR       |     1 |     0 |     65200 | <0.01 |
+| F7 Muxes                   |   110 |     0 |     16300 |  0.67 |
 | F8 Muxes                   |     0 |     0 |      8150 |  0.00 |
 +----------------------------+-------+-------+-----------+-------+
 * Warning! The Final LUT count, after physical optimizations and full implementation, is typically lower. Run opt_design after synthesis, if not already completed, for a more realistic count.
@@ -50,16 +51,16 @@ Table of Contents
 +-------+--------------+-------------+--------------+
 | Total | Clock Enable | Synchronous | Asynchronous |
 +-------+--------------+-------------+--------------+
-| 0     |            _ |           - |            - |
+| 1     |            _ |           - |            - |
 | 0     |            _ |           - |          Set |
 | 0     |            _ |           - |        Reset |
 | 0     |            _ |         Set |            - |
 | 0     |            _ |       Reset |            - |
 | 0     |          Yes |           - |            - |
-| 0     |          Yes |           - |          Set |
-| 0     |          Yes |           - |        Reset |
-| 41    |          Yes |         Set |            - |
-| 14078 |          Yes |       Reset |            - |
+| 26    |          Yes |           - |          Set |
+| 42    |          Yes |           - |        Reset |
+| 196   |          Yes |         Set |            - |
+| 11819 |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -69,10 +70,12 @@ Table of Contents
 +-------------------+------+-------+-----------+-------+
 |     Site Type     | Used | Fixed | Available | Util% |
 +-------------------+------+-------+-----------+-------+
-| Block RAM Tile    |   12 |     0 |        75 | 16.00 |
-|   RAMB36/FIFO*    |    0 |     0 |        75 |  0.00 |
-|   RAMB18          |   24 |     0 |       150 | 16.00 |
-|     RAMB18E1 only |   24 |       |           |       |
+| Block RAM Tile    | 60.5 |     0 |        75 | 80.67 |
+|   RAMB36/FIFO*    |   48 |     0 |        75 | 64.00 |
+|     FIFO36E1 only |   16 |       |           |       |
+|     RAMB36E1 only |   32 |       |           |       |
+|   RAMB18          |   25 |     0 |       150 | 16.67 |
+|     RAMB18E1 only |   25 |       |           |       |
 +-------------------+------+-------+-----------+-------+
 * Note: Each Block RAM Tile only has one FIFO logic available and therefore can accommodate only one FIFO36E1 or one FIFO18E1. However, if a FIFO18E1 occupies a Block RAM Tile, that tile can still accommodate a RAMB18E1
 
@@ -83,8 +86,8 @@ Table of Contents
 +----------------+------+-------+-----------+-------+
 |    Site Type   | Used | Fixed | Available | Util% |
 +----------------+------+-------+-----------+-------+
-| DSPs           |   48 |     0 |       120 | 40.00 |
-|   DSP48E1 only |   48 |       |           |       |
+| DSPs           |   25 |     0 |       120 | 20.83 |
+|   DSP48E1 only |   25 |       |           |       |
 +----------------+------+-------+-----------+-------+
 
 
@@ -94,7 +97,7 @@ Table of Contents
 +-----------------------------+------+-------+-----------+-------+
 |          Site Type          | Used | Fixed | Available | Util% |
 +-----------------------------+------+-------+-----------+-------+
-| Bonded IOB                  |   36 |     0 |       100 | 36.00 |
+| Bonded IOB                  |   37 |     0 |       100 | 37.00 |
 | Bonded IPADs                |    0 |     0 |         2 |  0.00 |
 | PHY_CONTROL                 |    0 |     0 |         5 |  0.00 |
 | PHASER_REF                  |    0 |     0 |         5 |  0.00 |
@@ -116,10 +119,10 @@ Table of Contents
 +------------+------+-------+-----------+-------+
 |  Site Type | Used | Fixed | Available | Util% |
 +------------+------+-------+-----------+-------+
-| BUFGCTRL   |    0 |     0 |        32 |  0.00 |
+| BUFGCTRL   |    7 |     0 |        32 | 21.88 |
 | BUFIO      |    0 |     0 |        20 |  0.00 |
-| MMCME2_ADV |    0 |     0 |         5 |  0.00 |
-| PLLE2_ADV  |    0 |     0 |         5 |  0.00 |
+| MMCME2_ADV |    1 |     0 |         5 | 20.00 |
+| PLLE2_ADV  |    1 |     0 |         5 | 20.00 |
 | BUFMRCE    |    0 |     0 |        10 |  0.00 |
 | BUFHCE     |    0 |     0 |        72 |  0.00 |
 | BUFR       |    0 |     0 |        20 |  0.00 |
@@ -129,68 +132,65 @@ Table of Contents
 6. Specific Feature
 -------------------
 
-+-------------+------+-------+-----------+-------+
-|  Site Type  | Used | Fixed | Available | Util% |
-+-------------+------+-------+-----------+-------+
-| BSCANE2     |    0 |     0 |         4 |  0.00 |
-| CAPTUREE2   |    0 |     0 |         1 |  0.00 |
-| DNA_PORT    |    0 |     0 |         1 |  0.00 |
-| EFUSE_USR   |    0 |     0 |         1 |  0.00 |
-| FRAME_ECCE2 |    0 |     0 |         1 |  0.00 |
-| ICAPE2      |    0 |     0 |         2 |  0.00 |
-| STARTUPE2   |    0 |     0 |         1 |  0.00 |
-| XADC        |    0 |     0 |         1 |  0.00 |
-+-------------+------+-------+-----------+-------+
++-------------+------+-------+-----------+--------+
+|  Site Type  | Used | Fixed | Available |  Util% |
++-------------+------+-------+-----------+--------+
+| BSCANE2     |    1 |     0 |         4 |  25.00 |
+| CAPTUREE2   |    0 |     0 |         1 |   0.00 |
+| DNA_PORT    |    0 |     0 |         1 |   0.00 |
+| EFUSE_USR   |    0 |     0 |         1 |   0.00 |
+| FRAME_ECCE2 |    0 |     0 |         1 |   0.00 |
+| ICAPE2      |    0 |     0 |         2 |   0.00 |
+| STARTUPE2   |    1 |     0 |         1 | 100.00 |
+| XADC        |    0 |     0 |         1 |   0.00 |
++-------------+------+-------+-----------+--------+
 
 
 7. Primitives
 -------------
 
-+----------+-------+---------------------+
-| Ref Name |  Used | Functional Category |
-+----------+-------+---------------------+
-| FDRE     | 14078 |        Flop & Latch |
-| LUT2     |  4980 |                 LUT |
-| LUT3     |  3592 |                 LUT |
-| CARRY4   |  2304 |          CarryLogic |
-| LUT6     |  2115 |                 LUT |
-| LUT5     |  1838 |                 LUT |
-| LUT4     |  1548 |                 LUT |
-| LUT1     |   729 |                 LUT |
-| SRL16E   |   436 |  Distributed Memory |
-| DSP48E1  |    48 |    Block Arithmetic |
-| FDSE     |    41 |        Flop & Latch |
-| RAMB18E1 |    24 |        Block Memory |
-| OBUF     |    21 |                  IO |
-| IBUF     |    15 |                  IO |
-| OBUFT    |     5 |                  IO |
-+----------+-------+---------------------+
++------------+-------+---------------------+
+|  Ref Name  |  Used | Functional Category |
++------------+-------+---------------------+
+| FDRE       | 11819 |        Flop & Latch |
+| LUT2       |  3040 |                 LUT |
+| LUT3       |  2639 |                 LUT |
+| LUT6       |  2110 |                 LUT |
+| LUT5       |  1966 |                 LUT |
+| LUT4       |  1632 |                 LUT |
+| CARRY4     |  1484 |          CarryLogic |
+| LUT1       |   611 |                 LUT |
+| SRL16E     |   351 |  Distributed Memory |
+| FDSE       |   196 |        Flop & Latch |
+| RAMD32     |   120 |  Distributed Memory |
+| MUXF7      |   110 |               MuxFx |
+| FDCE       |    42 |        Flop & Latch |
+| RAMS32     |    40 |  Distributed Memory |
+| RAMB36E1   |    32 |        Block Memory |
+| FDPE       |    26 |        Flop & Latch |
+| RAMB18E1   |    25 |        Block Memory |
+| DSP48E1    |    25 |    Block Arithmetic |
+| OBUF       |    21 |                  IO |
+| SRLC16E    |    16 |  Distributed Memory |
+| IBUF       |    16 |                  IO |
+| FIFO36E1   |    16 |        Block Memory |
+| BUFG       |     7 |               Clock |
+| OBUFT      |     5 |                  IO |
+| STARTUPE2  |     1 |              Others |
+| SRLC32E    |     1 |  Distributed Memory |
+| PLLE2_ADV  |     1 |               Clock |
+| MMCME2_ADV |     1 |               Clock |
+| BSCANE2    |     1 |              Others |
+| AND2B1L    |     1 |              Others |
++------------+-------+---------------------+
 
 
 8. Black Boxes
 --------------
 
-+--------------------------------+------+
-|            Ref Name            | Used |
-+--------------------------------+------+
-| fifo_generator_0               |    4 |
-| mb_system_xbar_0               |    1 |
-| mb_system_rst_clk_wiz_1_100M_1 |    1 |
-| mb_system_microblaze_0_2       |    1 |
-| mb_system_mdm_1_2              |    1 |
-| mb_system_lmb_bram_2           |    1 |
-| mb_system_iomodule_2_1         |    1 |
-| mb_system_iomodule_1_1         |    1 |
-| mb_system_iomodule_0_1         |    1 |
-| mb_system_ilmb_v10_2           |    1 |
-| mb_system_ilmb_bram_if_cntlr_2 |    1 |
-| mb_system_dlmb_v10_2           |    1 |
-| mb_system_dlmb_bram_if_cntlr_2 |    1 |
-| mb_system_clk_wiz_1_1          |    1 |
-| mb_system_clk_wiz_0_0          |    1 |
-| mb_system_axi_uartlite_0_1     |    1 |
-| mb_system_axi_quad_spi_0_1     |    1 |
-+--------------------------------+------+
++----------+------+
+| Ref Name | Used |
++----------+------+
 
 
 9. Instantiated Netlists

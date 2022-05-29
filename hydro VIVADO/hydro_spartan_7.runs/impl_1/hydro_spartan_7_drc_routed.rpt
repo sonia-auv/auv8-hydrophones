@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
-| Date         : Sat Jan 15 13:46:23 2022
+| Date         : Thu May 19 22:01:43 2022
 | Host         : DESKTOP-3JGF4VF running 64-bit major release  (build 9200)
 | Command      : report_drc -file hydro_spartan_7_drc_routed.rpt -pb hydro_spartan_7_drc_routed.pb -rpx hydro_spartan_7_drc_routed.rpx
 | Design       : hydro_spartan_7
@@ -24,12 +24,12 @@ Table of Contents
       Design limits: <entire design considered>
            Ruledeck: default
              Max violations: <unlimited>
-             Violations found: 24
+             Violations found: 16
 +-----------+----------+--------------------------+------------+
 | Rule      | Severity | Description              | Violations |
 +-----------+----------+--------------------------+------------+
 | BUFC-1    | Warning  | Input Buffer Connections | 1          |
-| DPIP-1    | Warning  | Input pipelining         | 22         |
+| DPIP-1    | Warning  | Input pipelining         | 14         |
 | RTSTAT-10 | Warning  | No routable loads        | 1          |
 +-----------+----------+--------------------------+------------+
 
@@ -77,86 +77,57 @@ Related violations: <none>
 
 DPIP-1#8 Warning
 Input pipelining  
-DSP PhaseHydrophones/u_Calcul_Direction/MatrixMultiply_0_0 input PhaseHydrophones/u_Calcul_Direction/MatrixMultiply_0_0/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP PhaseHydrophones/u_Calcul_Direction/Delay4_out1_reg input PhaseHydrophones/u_Calcul_Direction/Delay4_out1_reg/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#9 Warning
 Input pipelining  
-DSP PhaseHydrophones/u_Calcul_Direction/tmp_MatrixMultiply_dotp_1_1 input PhaseHydrophones/u_Calcul_Direction/tmp_MatrixMultiply_dotp_1_1/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP PhaseHydrophones/u_Calcul_Direction/MatrixMultiply1_0_0 input PhaseHydrophones/u_Calcul_Direction/MatrixMultiply1_0_0/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#10 Warning
 Input pipelining  
-DSP PhaseHydrophones/u_Calcul_Direction/tmp_MatrixMultiply_dotp_2 input PhaseHydrophones/u_Calcul_Direction/tmp_MatrixMultiply_dotp_2/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP PhaseHydrophones/u_Calcul_Direction/MatrixMultiply1_1_0 input PhaseHydrophones/u_Calcul_Direction/MatrixMultiply1_1_0/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#11 Warning
 Input pipelining  
-DSP PhaseHydrophones/u_FFTs/Product1_out1 input PhaseHydrophones/u_FFTs/Product1_out1/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP PhaseHydrophones/u_Calcul_Direction/MatrixMultiply1_2_0 input PhaseHydrophones/u_Calcul_Direction/MatrixMultiply1_2_0/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#12 Warning
 Input pipelining  
-DSP PhaseHydrophones/u_FFTs/Product1_out1 input PhaseHydrophones/u_FFTs/Product1_out1/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP PhaseHydrophones/u_Calcul_Direction/tmp_MatrixMultiply1_dotp_1 input PhaseHydrophones/u_Calcul_Direction/tmp_MatrixMultiply1_dotp_1/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#13 Warning
 Input pipelining  
-DSP PhaseHydrophones/u_FFTs/Product2_out1 input PhaseHydrophones/u_FFTs/Product2_out1/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP PhaseHydrophones/u_Calcul_Direction/tmp_MatrixMultiply1_dotp_1_1 input PhaseHydrophones/u_Calcul_Direction/tmp_MatrixMultiply1_dotp_1_1/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#14 Warning
 Input pipelining  
-DSP PhaseHydrophones/u_FFTs/Product2_out1 input PhaseHydrophones/u_FFTs/Product2_out1/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
-Related violations: <none>
-
-DPIP-1#15 Warning
-Input pipelining  
-DSP PhaseHydrophones/u_FFTs/Product3_out1 input PhaseHydrophones/u_FFTs/Product3_out1/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
-Related violations: <none>
-
-DPIP-1#16 Warning
-Input pipelining  
-DSP PhaseHydrophones/u_FFTs/Product3_out1 input PhaseHydrophones/u_FFTs/Product3_out1/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
-Related violations: <none>
-
-DPIP-1#17 Warning
-Input pipelining  
-DSP PhaseHydrophones/u_FFTs/Product_out1 input PhaseHydrophones/u_FFTs/Product_out1/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
-Related violations: <none>
-
-DPIP-1#18 Warning
-Input pipelining  
-DSP PhaseHydrophones/u_FFTs/Product_out1 input PhaseHydrophones/u_FFTs/Product_out1/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
-Related violations: <none>
-
-DPIP-1#19 Warning
-Input pipelining  
-DSP PhaseHydrophones/u_SNR_Check/Multiply_Accumulate_multiply_out input PhaseHydrophones/u_SNR_Check/Multiply_Accumulate_multiply_out/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
-Related violations: <none>
-
-DPIP-1#20 Warning
-Input pipelining  
-DSP PhaseHydrophones/u_SNR_Check/Multiply_Accumulate_multiply_out input PhaseHydrophones/u_SNR_Check/Multiply_Accumulate_multiply_out/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
-Related violations: <none>
-
-DPIP-1#21 Warning
-Input pipelining  
-DSP PhaseHydrophones/u_SNR_Check/Multiply_Accumulate_multiply_out__0 input PhaseHydrophones/u_SNR_Check/Multiply_Accumulate_multiply_out__0/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
-Related violations: <none>
-
-DPIP-1#22 Warning
-Input pipelining  
-DSP PhaseHydrophones/u_SNR_Check/Multiply_Accumulate_multiply_out__0 input PhaseHydrophones/u_SNR_Check/Multiply_Accumulate_multiply_out__0/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP PhaseHydrophones/u_Calcul_Direction/tmp_MatrixMultiply1_dotp_1_2 input PhaseHydrophones/u_Calcul_Direction/tmp_MatrixMultiply1_dotp_1_2/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 RTSTAT-10#1 Warning
 No routable loads  
-5 net(s) have no routable loads. The problem bus(es) and/or net(s) are FPGA_system/mb_system_i/iomodule_1/U0/IOModule_Core_I1/GPO_I1/GPO1[3],
-FPGA_system/mb_system_i/iomodule_1/U0/IOModule_Core_I1/GPO_I1/GPO1[4],
-FPGA_system/mb_system_i/iomodule_1/U0/IOModule_Core_I1/GPO_I1/GPO1[5],
-FPGA_system/mb_system_i/iomodule_1/U0/IOModule_Core_I1/GPO_I1/GPO1[6]
-FPGA_system/mb_system_i/iomodule_1/U0/IOModule_Core_I1/GPO_I1/GPO1[7].
+18 net(s) have no routable loads. The problem bus(es) and/or net(s) are FPGA_system/mb_system_i/Parameter_Module/U0/IOModule_Core_I1/GPO_I1/GPO1[14],
+FPGA_system/mb_system_i/Parameter_Module/U0/IOModule_Core_I1/GPO_I1/GPO1[15],
+FPGA_system/mb_system_i/Parameter_Module/U0/IOModule_Core_I1/GPO_I1/GPO1[16],
+FPGA_system/mb_system_i/Parameter_Module/U0/IOModule_Core_I1/GPO_I1/GPO1[17],
+FPGA_system/mb_system_i/Parameter_Module/U0/IOModule_Core_I1/GPO_I1/GPO1[18],
+FPGA_system/mb_system_i/Parameter_Module/U0/IOModule_Core_I1/GPO_I1/GPO1[19],
+FPGA_system/mb_system_i/Parameter_Module/U0/IOModule_Core_I1/GPO_I1/GPO1[20],
+FPGA_system/mb_system_i/Parameter_Module/U0/IOModule_Core_I1/GPO_I1/GPO1[21],
+FPGA_system/mb_system_i/Parameter_Module/U0/IOModule_Core_I1/GPO_I1/GPO1[22],
+FPGA_system/mb_system_i/Parameter_Module/U0/IOModule_Core_I1/GPO_I1/GPO1[23],
+FPGA_system/mb_system_i/Parameter_Module/U0/IOModule_Core_I1/GPO_I1/GPO1[24],
+FPGA_system/mb_system_i/Parameter_Module/U0/IOModule_Core_I1/GPO_I1/GPO1[25],
+FPGA_system/mb_system_i/Parameter_Module/U0/IOModule_Core_I1/GPO_I1/GPO1[26],
+FPGA_system/mb_system_i/Parameter_Module/U0/IOModule_Core_I1/GPO_I1/GPO1[27],
+FPGA_system/mb_system_i/Parameter_Module/U0/IOModule_Core_I1/GPO_I1/GPO1[28]
+ (the first 15 of 18 listed).
 Related violations: <none>
 
 

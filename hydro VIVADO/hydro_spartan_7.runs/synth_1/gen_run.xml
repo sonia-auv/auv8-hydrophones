@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7s50ftgb196-2" LaunchTime="1642271712">
+<GenRun Id="synth_1" LaunchPart="xc7s50ftgb196-2" LaunchTime="1653011516">
   <File Type="PA-TCL" Name="hydro_spartan_7.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="hydro_spartan_7_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="hydro_spartan_7_reports.tcl"/>
   <File Type="RDS-RDS" Name="hydro_spartan_7.vds"/>
   <File Type="RDS-UTIL" Name="hydro_spartan_7_utilization_synth.rpt"/>
   <File Type="RDS-UTIL-PB" Name="hydro_spartan_7_utilization_synth.pb"/>
   <File Type="RDS-DCP" Name="hydro_spartan_7.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="hydro_spartan_7_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="hydro_spartan_7_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/bd/mb_system/mb_system.bd">
@@ -15,7 +18,7 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/../OneDrive/Documents techniques/ETS/SONIA/Hydro software/ADS8327_SPI.vhd">
+    <File Path="$PSRCDIR/sources_1/new/ADS8327_SPI.vhd">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -130,12 +133,6 @@
       </FileInfo>
     </File>
     <File Path="$PSRCDIR/sources_1/new/DOA/Subsystem.vhd">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/new/DOA/Fenetrage.vhd">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -525,7 +522,32 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/HydroE21.elf">
+    <File Path="$PSRCDIR/sources_1/new/agc_gain.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/timer.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/DOA/Trigger.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/ip/fifo_generator_0/fifo_generator_0.xci">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/HydroH22.elf">
       <FileInfo>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="ScopedToRef" Val="mb_system"/>
@@ -561,20 +583,4 @@
     <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020"/>
     <Step Id="synth_design"/>
   </Strategy>
-  <BlockFileSet Type="BlockSrcs" Name="mb_system_microblaze_0_2"/>
-  <BlockFileSet Type="BlockSrcs" Name="mb_system_dlmb_v10_2"/>
-  <BlockFileSet Type="BlockSrcs" Name="mb_system_dlmb_bram_if_cntlr_2"/>
-  <BlockFileSet Type="BlockSrcs" Name="mb_system_clk_wiz_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="mb_system_ilmb_v10_2"/>
-  <BlockFileSet Type="BlockSrcs" Name="mb_system_rst_clk_wiz_1_100M_1"/>
-  <BlockFileSet Type="BlockSrcs" Name="mb_system_ilmb_bram_if_cntlr_2"/>
-  <BlockFileSet Type="BlockSrcs" Name="mb_system_lmb_bram_2"/>
-  <BlockFileSet Type="BlockSrcs" Name="mb_system_mdm_1_2"/>
-  <BlockFileSet Type="BlockSrcs" Name="mb_system_clk_wiz_1_1"/>
-  <BlockFileSet Type="BlockSrcs" Name="mb_system_axi_quad_spi_0_1"/>
-  <BlockFileSet Type="BlockSrcs" Name="mb_system_iomodule_0_1"/>
-  <BlockFileSet Type="BlockSrcs" Name="mb_system_iomodule_1_1"/>
-  <BlockFileSet Type="BlockSrcs" Name="mb_system_iomodule_2_1"/>
-  <BlockFileSet Type="BlockSrcs" Name="mb_system_xbar_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="fifo_generator_0"/>
 </GenRun>
