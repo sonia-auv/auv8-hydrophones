@@ -70,6 +70,8 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
+set_param xicom.use_bs_reader 1
+set_msg_config -id {Common 17-41} -limit 10000000
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7s50ftgb196-2
 
@@ -86,9 +88,9 @@ set_property ip_output_repo c:/Users/franc/hydro_spartan_7/hydro_spartan_7.cache
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-add_files C:/Users/franc/hydro_spartan_7/HydroH22.elf
-set_property SCOPED_TO_REF mb_system [get_files -all C:/Users/franc/hydro_spartan_7/HydroH22.elf]
-set_property SCOPED_TO_CELLS microblaze_0 [get_files -all C:/Users/franc/hydro_spartan_7/HydroH22.elf]
+add_files C:/Users/franc/hydro_spartan_7/HydroE21.elf
+set_property SCOPED_TO_REF mb_system [get_files -all C:/Users/franc/hydro_spartan_7/HydroE21.elf]
+set_property SCOPED_TO_CELLS microblaze_0 [get_files -all C:/Users/franc/hydro_spartan_7/HydroE21.elf]
 read_vhdl -library xil_defaultlib {
   C:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/new/ADS8327_SPI.vhd
   C:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/new/clock.vhd

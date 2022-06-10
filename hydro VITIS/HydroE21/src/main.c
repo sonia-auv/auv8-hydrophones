@@ -22,12 +22,10 @@ int main()
 	hydro_ptr->registers->r3 = 0;
 
 	operation_mode actual;
-	u8 i = 0, offset = 0;
-	char arrayChecksum[256];
 
 	if (initperipherals(hydro_ptr, &uart, &config, &data) != XST_SUCCESS)
 	{
-		xil_printf(">�Error with init of the Hydrophone. Bye Bye!");
+		xil_printf("> Error with init of the Hydrophone. Bye Bye!");
 		cleanup_platform();
 		return 0;
 	}
@@ -50,36 +48,46 @@ int main()
 		{
 			if(dataready(hydro_ptr->config))
 			{
-				arrayChecksum[0] = 0x48; //H
+//				arrayChecksum[0] = 0x48; //H
+//				if(actual == normalop || actual == testping)
+//				{
+//					arrayChecksum[1] = 0x31; //1
+//					if(actual == testping) hydro_ptr->operation = idle;
+//				}
+//				else
+//				{
+//					arrayChecksum[1] = 0x36; //6
+//				}
+//
+//				arrayChecksum[2] = 0x2C; // ,
+//				offset = 3; // New values need to be placed at [3] of the array
+//
+//				for(i = 0; i < 4; ++i) // Format to calculate the checksum
+//				{
+//					offset += ToString(arrayChecksum, readdata(hydro_ptr->data_output, i+1), offset);
+//					if(i < 3 || actual == normalop)
+//					{
+//						arrayChecksum[offset] = 0x2C; // ,
+//						offset += 1;
+//					}
+//				}
+//
+//				if(actual == normalop)
+//				{
+//					offset += ToString(arrayChecksum, getsnr(hydro_ptr), offset); // Add SNR check from DOA
+//				}
+
 				if(actual == normalop || actual == testping)
 				{
-					arrayChecksum[1] = 0x31; //1
+					xil_printf("H1,%d,%d,%d,%d,%d\r\n", readdata(hydro_ptr->data_output, 1), readdata(hydro_ptr->data_output,2),
+							readdata(hydro_ptr->data_output, 3), readdata(hydro_ptr->data_output, 4), getsnr(hydro_ptr));
 					if(actual == testping) hydro_ptr->operation = idle;
 				}
 				else
 				{
-					arrayChecksum[1] = 0x36; //6
+					xil_printf("H6,%d,%d,%d,%d\r\n", readdata(hydro_ptr->data_output, 1), readdata(hydro_ptr->data_output,2),
+							readdata(hydro_ptr->data_output, 3), readdata(hydro_ptr->data_output, 4));
 				}
-
-				arrayChecksum[2] = 0x2C; // ,
-				offset = 3; // New values need to be placed at [3] of the array
-
-				for(i = 0; i < 4; ++i) // Format to calculate the checksum
-				{
-					offset += ToString(arrayChecksum, readdata(hydro_ptr->data_output, i+1), offset);
-					if(i < 3 || actual == normalop)
-					{
-						arrayChecksum[offset] = 0x2C; // ,
-						offset += 1;
-					}
-				}
-
-				if(actual == normalop)
-				{
-					offset += ToString(arrayChecksum, getsnr(hydro_ptr), offset); // Add SNR check from DOA
-				}
-
-				xil_printf("%s*%02x\r\n", arrayChecksum, CalculateChecksum(arrayChecksum, offset));
 			}
 			if(polluart() == 'q')
 			{

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7s50ftgb196-2" LaunchTime="1653011844">
+<GenRun Id="impl_1" LaunchPart="xc7s50ftgb196-2" LaunchTime="1654722529">
   <File Type="BITSTR-BMM" Name="hydro_spartan_7_bd.bmm"/>
   <File Type="OPT-METHODOLOGY-DRC" Name="hydro_spartan_7_methodology_drc_opted.rpt"/>
   <File Type="INIT-TIMING" Name="hydro_spartan_7_timing_summary_init.rpt"/>
@@ -613,7 +613,7 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/HydroH22.elf">
+    <File Path="$PPRDIR/HydroE21.elf">
       <FileInfo>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="ScopedToRef" Val="mb_system"/>

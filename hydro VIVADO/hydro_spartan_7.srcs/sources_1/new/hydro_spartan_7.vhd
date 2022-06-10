@@ -84,10 +84,10 @@ component Test_DOA
         ce_out                            :   OUT   std_logic;
         ValidOut                          :   OUT   std_logic;
         Frequency                         :   OUT   std_logic_vector(26 DOWNTO 0);  -- ufix27
-        Y                                 :   OUT   std_logic_vector(30 DOWNTO 0);  -- sfix31_En19
-        X                                 :   OUT   std_logic_vector(30 DOWNTO 0);  -- sfix31_En19
+        Y                                 :   OUT   std_logic_vector(31 DOWNTO 0);  -- sfix32_En19
+        X                                 :   OUT   std_logic_vector(31 DOWNTO 0);  -- sfix32_En19
         SNR                               :   OUT   std_logic_vector(15 DOWNTO 0);  -- uint16
-        Z                                 :   OUT   std_logic_vector(30 DOWNTO 0)  -- sfix31_En19
+        Z                                 :   OUT   std_logic_vector(31 DOWNTO 0)  -- sfix32_En19
         );
 END component;
 
@@ -230,11 +230,11 @@ signal u_threshold_register : std_logic_vector(31 downto 0);
 signal u_gain : std_logic_vector(2 downto 0);
 signal u_out_register : std_logic_vector(31 downto 0);
 
-signal u_x : std_logic_vector(30 downto 0);
+signal u_x : std_logic_vector(31 downto 0);
 signal x : std_logic_vector(31 downto 0);
-signal u_y : std_logic_vector(30 downto 0);
+signal u_y : std_logic_vector(31 downto 0);
 signal y : std_logic_vector(31 downto 0);
-signal u_z : std_logic_vector(30 downto 0);
+signal u_z : std_logic_vector(31 downto 0);
 signal z : std_logic_vector(31 downto 0);
 signal u_frequency : std_logic_vector(26 downto 0);
 signal frequency : std_logic_vector(31 downto 0);
@@ -426,10 +426,10 @@ begin
                 z <= x"0000" & fifo_samples_ch4;
             end if;
             if(u_config_register(5 downto 4)="10") or (u_config_register(5 downto 4)="01")then
-                z <= "0" & u_z;
+                z <= u_z;
                 frequency <= "00000" & u_frequency;
-                x <= "0" & u_x;
-                y <= "0" & u_y;
+                x <= u_x;
+                y <= u_y;
             end if;
         end if;
     end if;

@@ -50,3 +50,19 @@ platform active {Hydro_XC7S50_V2}
 platform config -updatehw {C:/Users/franc/hydro_spartan_7/hydro_bigger_snr_out.xsa}
 platform generate
 platform active {Hydro_XC7S50_V2}
+platform clean
+platform active {Hydro_XC7S50_V2}
+platform config -updatehw {C:/Users/franc/hydro_spartan_7/hydro_20220526.xsa}
+platform generate
+platform active {Hydro_XC7S50_V2}
+platform config -updatehw {C:/Users/franc/hydro_spartan_7/hydro_update_matrix.xsa}
+platform generate -domains 
+platform active {Hydro_XC7S50_V2}
+platform config -updatehw {C:/Users/franc/hydro_spartan_7/hydro_matrix_update.xsa}
+platform generate -domains 
+platform active {Hydro_XC7S50_V2}
+platform generate -domains 
+platform config -updatehw {C:/Users/franc/hydro_spartan_7/hydro_20220608.xsa}
+platform clean
+platform clean
+platform generate

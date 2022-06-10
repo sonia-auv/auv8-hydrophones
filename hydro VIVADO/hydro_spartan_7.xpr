@@ -611,7 +611,7 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/HydroH22.elf">
+      <File Path="$PPRDIR/HydroE21.elf">
         <FileInfo>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="ScopedToRef" Val="mb_system"/>

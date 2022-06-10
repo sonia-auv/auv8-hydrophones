@@ -124,7 +124,7 @@ void shell_put_line(const char *str)
 void shell_boot()
 {
 	sleep(5);
-	shell_put_line("Hydrophone Application 2022-05-09");
+	shell_put_line("Hydrophone Application 2022-06-08");
 	shell_put_line("Author : Francis Alonzo");
 	shell_put_line("Default parameters set");
 }
