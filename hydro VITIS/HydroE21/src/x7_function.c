@@ -150,9 +150,29 @@ s32 mergedarray(const char *array, u8 size)
 	return (s32)value;
 }
 
-u8 dataready(XIOModule *ref)
+u8 dataready(u32 outRegister)
 {
-	return (readdata(ref, 4)) & DATA_READY_MASK;
+	return outRegister & DATA_READY_MASK;
+}
+
+u8 agcon(u32 outRegister)
+{
+	return (outRegister & AGC_ON_MASK) >> 1;
+}
+
+u8 agcerror(u32 outRegister)
+{
+	return (outRegister & AGC_ERROR_MASK) >> 2;
+}
+
+u8 agcgainout(u32 outRegister)
+{
+	return (outRegister & AGC_GAIN_MASK) >> 19;
+}
+
+u32 outRegister(XIOModule *ref)
+{
+	return readdata(ref, 4);
 }
 
 u32 updateRegister(XIOModule *ref, u8 device, u32 data, u32 mask, u32 previousValue)

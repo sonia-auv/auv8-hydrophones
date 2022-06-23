@@ -179,6 +179,8 @@ for all : fifo_buffer
     use entity work.fifo_buffer(Behavioral);
 
 component agc_gain is
+    Generic (PingDuration_ms : integer;
+             DeadTimeDuration_s : integer);
     Port (clk : in std_logic;
           rst : in std_logic;
           enable : in std_logic;
@@ -227,7 +229,6 @@ signal u_uart_done : std_logic;
 signal u_config_register : std_logic_vector(31 downto 0);
 signal u_agc_config : std_logic_vector(31 downto 0);
 signal u_threshold_register : std_logic_vector(31 downto 0);
-signal u_gain : std_logic_vector(2 downto 0);
 signal u_out_register : std_logic_vector(31 downto 0);
 
 signal u_x : std_logic_vector(31 downto 0);
@@ -236,6 +237,7 @@ signal u_y : std_logic_vector(31 downto 0);
 signal y : std_logic_vector(31 downto 0);
 signal u_z : std_logic_vector(31 downto 0);
 signal z : std_logic_vector(31 downto 0);
+signal u_gain : std_logic_vector(2 downto 0);
 signal u_frequency : std_logic_vector(26 downto 0);
 signal frequency : std_logic_vector(31 downto 0);
 
@@ -392,6 +394,9 @@ Clock_device : clock
 -- AGC
 
 Automatic_Gain_Control : agc_gain
+    generic map(
+          PingDuration_ms => 4,
+          DeadTimeDuration_s => 10)
     port map(
           clk => u_clk_10mhz,
           rst => global_reset,
@@ -456,6 +461,8 @@ begin
 end process;
 
 -- PGA utility
+
+u_out_register(21 downto 19) <= u_gain;
 
 pga : process(u_clk_10mhz)
 begin

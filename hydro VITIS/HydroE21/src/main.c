@@ -22,6 +22,8 @@ int main()
 	hydro_ptr->registers->r3 = 0;
 
 	operation_mode actual;
+	u32 outValue = 0;
+	u8 agcActivation = 0, agcError = 0, agcGain = 0;
 
 	if (initperipherals(hydro_ptr, &uart, &config, &data) != XST_SUCCESS)
 	{
@@ -46,37 +48,10 @@ int main()
 
 		while(actual == normalop || actual == testping || actual == getrawdata)
 		{
-			if(dataready(hydro_ptr->config))
-			{
-//				arrayChecksum[0] = 0x48; //H
-//				if(actual == normalop || actual == testping)
-//				{
-//					arrayChecksum[1] = 0x31; //1
-//					if(actual == testping) hydro_ptr->operation = idle;
-//				}
-//				else
-//				{
-//					arrayChecksum[1] = 0x36; //6
-//				}
-//
-//				arrayChecksum[2] = 0x2C; // ,
-//				offset = 3; // New values need to be placed at [3] of the array
-//
-//				for(i = 0; i < 4; ++i) // Format to calculate the checksum
-//				{
-//					offset += ToString(arrayChecksum, readdata(hydro_ptr->data_output, i+1), offset);
-//					if(i < 3 || actual == normalop)
-//					{
-//						arrayChecksum[offset] = 0x2C; // ,
-//						offset += 1;
-//					}
-//				}
-//
-//				if(actual == normalop)
-//				{
-//					offset += ToString(arrayChecksum, getsnr(hydro_ptr), offset); // Add SNR check from DOA
-//				}
+			outValue = outRegister(hydro_ptr->config);
 
+			if(dataready(outValue))
+			{
 				if(actual == normalop || actual == testping)
 				{
 					xil_printf("H1,%d,%d,%d,%d,%d\r\n", readdata(hydro_ptr->data_output, 1), readdata(hydro_ptr->data_output,2),
@@ -89,6 +64,22 @@ int main()
 							readdata(hydro_ptr->data_output, 3), readdata(hydro_ptr->data_output, 4));
 				}
 			}
+			if(agcon(outValue) != agcActivation)
+			{
+				agcActivation = agcon(outValue);
+				xil_printf("> Automatic Gain Control has been set to %d\r\n", agcActivation);
+			}
+			if(agcerror(outValue) != agcError)
+			{
+				agcError = agcerror(outValue);
+				xil_printf("> Automatic Gain Control is in error. User gain will be used\r\n");
+			}
+			if(agcgainout(outValue) != agcGain)
+			{
+				agcGain = agcgainout(outValue);
+				xil_printf("> New gain from the automatic gain control. %d\r\n", agcGain);
+			}
+
 			if(polluart() == 'q')
 			{
 				setprocess(hydro_ptr, idle);

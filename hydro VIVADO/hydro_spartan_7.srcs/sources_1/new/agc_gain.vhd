@@ -18,6 +18,8 @@ use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.NUMERIC_STD.ALL;
 
 entity agc_gain is
+    Generic (PingDuration_ms : integer;                     -- Ping Duration in millisecond
+             DeadTimeDuration_s : integer);                 -- Time between 2 pings before increasing the gain
     Port (clk : in std_logic;                               -- Clock input
           rst : in std_logic;                               -- Reset signal
           enable : in std_logic;                            -- Enable AGC signal
@@ -28,13 +30,12 @@ entity agc_gain is
           agc_on : out std_logic;                           -- AGC enabled 
           error : out std_logic;                            -- AGC maxed out and was disabled                                 
           th_detector : in std_logic_vector(15 downto 0);   -- Threshold to detect a ping is present
-      th_max : in std_logic_vector(15 downto 0));           -- Mx threshold to reduce the gain
+          th_max : in std_logic_vector(15 downto 0));       -- Mx threshold to reduce the gain
 end agc_gain;
 
 architecture Behavioral of agc_gain is
 
 component timer is
-    generic(ClockFrequencyHz : integer);
     port(
         Clk     : in std_logic;
         Reset   : in std_logic;
@@ -67,8 +68,6 @@ agc_on <= enable and not error_agc;
 
 -- Timer for seconds. Used with the saturation of the ADC
 SecondsTimer : timer
-generic map(
-    ClockFrequencyHz => 10000000)
 Port map(
     Clk => clk,
     Reset => rst,
@@ -79,8 +78,6 @@ Port map(
 
 -- Timer for milliseconds. Used for the AGC algorithm
 MillisecondsTimer : timer
-generic map(
-    ClockFrequencyHz => 10000000)
 Port map(
     Clk => clk,
     Reset => rst,
@@ -136,58 +133,66 @@ begin
             busting_adc <= waiting;
             no_ping_count := 0;
         else
-            case receive is 
-                when waiting =>         reset_timer_ms <= '1';
-                                        if edge_detector = "01" and samples > th_detector then
-                                            reset_timer_ms <= '0';
-                                            receive <= receiving;
-                                            highest <= samples;
-                                        end if;
-                when receiving =>       reset_timer_ms <= '0';
-                                        if edge_detector = "01" and samples > highest then
-                                            highest <= samples;
-                                        end if;
-                                        if milliseconds > 4 then
-                                            receive <= end_ping;
-                                        end if;
-                when end_ping =>        reset_timer_ms <= '1';
-                                        receive <= waiting;
-                                        if highest < th_max and unsigned(agc_gain_out) < 7 then             -- Increase gain if not at max threshold
-                                            agc_gain_out <= std_logic_vector(unsigned(agc_gain_out) + 1);   -- or max gain
-                                        elsif unsigned(agc_gain_out) > 1 then 
-                                            agc_gain_out <= std_logic_vector(unsigned(agc_gain_out) - 1);
-                                        end if;
-            end case;
-            -- this state machine should be an other process I think
-            case busting_adc is
-                when waiting =>         reset_timer_s <= '0';
-                                        if seconds > 10 and receive = waiting then
-                                            busting_adc <= no_ping;
-                                        end if;
-                                        if receive = receiving then
-                                            reset_timer_s <= '1';
-                                        end if;
-                                        if edge_detector = "01" and unsigned(samples) = 65535 then
-                                            busting_adc <= saturation;
-                                        end if;
-                when no_ping =>         reset_timer_s <= '1';
-                                        if unsigned(agc_gain_out) < 7 then
-                                            agc_gain_out <= std_logic_vector(unsigned(agc_gain_out) + 1);
-                                        else
-                                            no_ping_count := no_ping_count + 1;
-                                            if no_ping_count = 10 then      -- No ping for 100 seconds.
-                                                agc_gain_out <= user_gain;  -- Switch to user gain
-                                                error_agc <= '1';
-                                                error <= '1';
+            if enable = '1' and error_agc = '0' then
+                case receive is 
+                    when waiting =>         reset_timer_ms <= '1';
+                                            if edge_detector = "01" and samples > th_detector and unsigned(samples) < 65535 then
+                                                reset_timer_ms <= '0';
+                                                receive <= receiving;
+                                                highest <= samples;
                                             end if;
-                                        end if;
-                                        busting_adc <= reset;
-                when saturation =>      agc_gain_out <= std_logic_vector(unsigned(agc_gain_out) - unsigned(agc_gain_out) - 1);
-                                        busting_adc <= reset;   -- Dropping gain to 1
-                                        reset_timer_s <= '1';  
-                when reset =>           reset_timer_s <= '1';   -- State added since the timer module needs
-                                        busting_adc <= waiting; -- 2 clocks cycle to reset
+                    when receiving =>       reset_timer_ms <= '0';
+                                            if edge_detector = "01" and samples > highest then
+                                                highest <= samples;
+                                            end if;
+                                            if milliseconds > PingDuration_ms then
+                                                receive <= end_ping;
+                                            end if;
+                    when end_ping =>        reset_timer_ms <= '1';
+                                            receive <= waiting;
+                                            if highest < th_max and unsigned(agc_gain_out) < 7 then             -- Increase gain if not at max threshold
+                                                agc_gain_out <= std_logic_vector(unsigned(agc_gain_out) + 1);   -- or max gain
+                                            elsif highest > th_max and unsigned(agc_gain_out) > 1 then 
+                                                agc_gain_out <= std_logic_vector(unsigned(agc_gain_out) - 1);
+                                            end if;
                 end case;
+                -- this state machine should be an other process I think
+                case busting_adc is
+                    when waiting =>         reset_timer_s <= '0';
+                                            if seconds > DeadTimeDuration_s and receive = waiting then
+                                                busting_adc <= no_ping;
+                                            end if;
+                                            if receive = receiving then
+                                                reset_timer_s <= '1';
+                                            end if;
+                                            if edge_detector = "01" and unsigned(samples) = 65535 then
+                                                busting_adc <= saturation;
+                                            end if;
+                    when no_ping =>         reset_timer_s <= '1';
+                                            if unsigned(agc_gain_out) < 7 then
+                                                agc_gain_out <= std_logic_vector(unsigned(agc_gain_out) + 1);
+                                            else
+                                                no_ping_count := no_ping_count + 1;
+                                                if no_ping_count = 10 then      -- No ping for 100 seconds.
+                                                    error_agc <= '1';           -- Switch to user gain
+                                                    error <= '1';
+                                                end if;
+                                            end if;
+                                            busting_adc <= reset;
+                    when saturation =>      agc_gain_out <= std_logic_vector(unsigned(agc_gain_out) - (unsigned(agc_gain_out) - 1)); -- Dropping gain to 1
+                                            reset_timer_s <= '1';
+                                            busting_adc <= reset;
+                    when reset =>           reset_timer_s <= '1';   -- State added since the timer module needs
+                                            busting_adc <= waiting; -- 2 clocks cycle to reset
+                end case;
+            else
+                highest <= x"0000";
+                reset_timer_ms <= '1';
+                reset_timer_s <= '1';
+                receive <= waiting;
+                busting_adc <= waiting;
+                no_ping_count := 0;
+            end if;
         end if;
     end if;
  end process;

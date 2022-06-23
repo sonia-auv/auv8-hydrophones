@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
-| Date         : Wed Jun  8 17:07:29 2022
+| Date         : Fri Jun 10 16:55:00 2022
 | Host         : DESKTOP-3JGF4VF running 64-bit major release  (build 9200)
 | Command      : report_utilization -file hydro_spartan_7_utilization_synth.rpt -pb hydro_spartan_7_utilization_synth.pb
 | Design       : hydro_spartan_7
@@ -30,8 +30,8 @@ Table of Contents
 +----------------------------+-------+-------+-----------+-------+
 |          Site Type         |  Used | Fixed | Available | Util% |
 +----------------------------+-------+-------+-----------+-------+
-| Slice LUTs*                | 11299 |     0 |     32600 | 34.66 |
-|   LUT as Logic             | 10851 |     0 |     32600 | 33.29 |
+| Slice LUTs*                | 11311 |     0 |     32600 | 34.70 |
+|   LUT as Logic             | 10863 |     0 |     32600 | 33.32 |
 |   LUT as Memory            |   448 |     0 |      9600 |  4.67 |
 |     LUT as Distributed RAM |    80 |     0 |           |       |
 |     LUT as Shift Register  |   368 |     0 |           |       |
@@ -153,13 +153,13 @@ Table of Contents
 |  Ref Name  |  Used | Functional Category |
 +------------+-------+---------------------+
 | FDRE       | 11920 |        Flop & Latch |
-| LUT2       |  3455 |                 LUT |
-| LUT3       |  2829 |                 LUT |
-| LUT5       |  2106 |                 LUT |
-| LUT6       |  1966 |                 LUT |
-| LUT4       |  1778 |                 LUT |
-| CARRY4     |  1683 |          CarryLogic |
-| LUT1       |   706 |                 LUT |
+| LUT2       |  3459 |                 LUT |
+| LUT3       |  2832 |                 LUT |
+| LUT6       |  2038 |                 LUT |
+| LUT5       |  2038 |                 LUT |
+| LUT4       |  1785 |                 LUT |
+| CARRY4     |  1685 |          CarryLogic |
+| LUT1       |   708 |                 LUT |
 | SRL16E     |   351 |  Distributed Memory |
 | FDSE       |   196 |        Flop & Latch |
 | RAMD32     |   120 |  Distributed Memory |

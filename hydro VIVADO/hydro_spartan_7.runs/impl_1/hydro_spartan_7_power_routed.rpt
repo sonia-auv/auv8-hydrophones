@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
-| Date             : Wed Jun  8 17:13:02 2022
+| Date             : Fri Jun 10 17:02:23 2022
 | Host             : DESKTOP-3JGF4VF running 64-bit major release  (build 9200)
 | Command          : report_power -file hydro_spartan_7_power_routed.rpt -pb hydro_spartan_7_power_summary_routed.pb -rpx hydro_spartan_7_power_routed.rpx
 | Design           : hydro_spartan_7
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.392        |
+| Total On-Chip Power (W)  | 0.393        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.317        |
+| Dynamic (W)              | 0.318        |
 | Device Static (W)        | 0.075        |
 | Effective TJA (C/W)      | 3.3          |
 | Max Ambient (C)          | 83.7         |
@@ -53,22 +53,22 @@ Table of Contents
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
 | Clocks                   |     0.021 |       12 |       --- |             --- |
-| Slice Logic              |     0.014 |    28018 |       --- |             --- |
-|   LUT as Logic           |     0.011 |    10562 |     32600 |           32.40 |
-|   CARRY4                 |     0.001 |     1683 |      8150 |           20.65 |
+| Slice Logic              |     0.013 |    28038 |       --- |             --- |
+|   LUT as Logic           |     0.011 |    10571 |     32600 |           32.43 |
+|   CARRY4                 |     0.001 |     1685 |      8150 |           20.67 |
 |   Register               |    <0.001 |    12027 |     65200 |           18.45 |
 |   LUT as Distributed RAM |    <0.001 |       80 |      9600 |            0.83 |
 |   LUT as Shift Register  |    <0.001 |      286 |      9600 |            2.98 |
 |   F7/F8 Muxes            |    <0.001 |      109 |     32600 |            0.33 |
 |   Others                 |    <0.001 |      983 |       --- |             --- |
-| Signals                  |     0.019 |    20209 |       --- |             --- |
+| Signals                  |     0.020 |    20229 |       --- |             --- |
 | Block RAM                |     0.018 |     60.5 |        75 |           80.67 |
 | MMCM                     |     0.104 |        1 |         5 |           20.00 |
 | PLL                      |     0.125 |        1 |         5 |           20.00 |
 | DSPs                     |     0.004 |       24 |       120 |           20.00 |
 | I/O                      |     0.012 |       37 |       100 |           37.00 |
 | Static Power             |     0.075 |          |           |                 |
-| Total                    |     0.392 |          |           |                 |
+| Total                    |     0.393 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -154,7 +154,7 @@ Table of Contents
 +---------------------------------+-----------+
 | Name                            | Power (W) |
 +---------------------------------+-----------+
-| hydro_spartan_7                 |     0.317 |
+| hydro_spartan_7                 |     0.318 |
 |   FPGA_system                   |     0.276 |
 |     mb_system_i                 |     0.276 |
 |       Parameter_Module          |     0.001 |
@@ -170,7 +170,6 @@ Table of Contents
 |       u_FFT_Hydro_2             |     0.006 |
 |       u_FFT_Hydro_3             |     0.006 |
 |       u_FFT_Hydro_Ref           |     0.006 |
-|     u_SNR_Check                 |     0.001 |
 +---------------------------------+-----------+
 
 

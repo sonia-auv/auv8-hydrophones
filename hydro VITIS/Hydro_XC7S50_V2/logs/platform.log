@@ -7704,3 +7704,668 @@ TRACE::2022-06-08.10:28:55::SCWMssOS::Checking the sw design at  C:/Users/franc/
 TRACE::2022-06-08.10:28:55::SCWMssOS::DEBUG:  swdes dump  C:/Users/franc/workspace/Hydro_XC7S50_V2/microblaze_0/standalone_domain/bsp/system.mss|system||
 
 TRACE::2022-06-08.10:28:55::SCWMssOS::Sw design exists and opened at  C:/Users/franc/workspace/Hydro_XC7S50_V2/microblaze_0/standalone_domain/bsp/system.mss
+TRACE::2022-06-10.12:46:48::SCWPlatform::Trying to open the hw design at C:/Users/franc/workspace/Hydro_XC7S50_V2/hw/hydro_20220608.xsa
+TRACE::2022-06-10.12:46:48::SCWPlatform::DSA given C:/Users/franc/workspace/Hydro_XC7S50_V2/hw/hydro_20220608.xsa
+TRACE::2022-06-10.12:46:48::SCWPlatform::DSA absoulate path C:/Users/franc/workspace/Hydro_XC7S50_V2/hw/hydro_20220608.xsa
+TRACE::2022-06-10.12:46:50::SCWPlatform::DSA directory C:/Users/franc/workspace/Hydro_XC7S50_V2/hw
+TRACE::2022-06-10.12:46:50::SCWPlatform:: Platform Path C:/Users/franc/workspace/Hydro_XC7S50_V2/hw/hydro_20220608.xsa
+TRACE::2022-06-10.12:46:50::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2022-06-10.12:46:50::SCWPlatform::Do not have an existing db opened. 
+TRACE::2022-06-10.12:46:51::SCWPlatform::Opened new HwDB with name hydro_spartan_7
+TRACE::2022-06-10.12:46:51::SCWReader::Active system found as  Hydro_XC7S50_V2
+TRACE::2022-06-10.12:46:51::SCWReader::Handling sysconfig Hydro_XC7S50_V2
+TRACE::2022-06-10.12:46:51::SCWDomain::checking for install qemu data   : 
+TRACE::2022-06-10.12:46:51::SCWPlatform::Trying to open the hw design at C:/Users/franc/workspace/Hydro_XC7S50_V2/hw/hydro_20220608.xsa
+TRACE::2022-06-10.12:46:51::SCWPlatform::DSA given C:/Users/franc/workspace/Hydro_XC7S50_V2/hw/hydro_20220608.xsa
+TRACE::2022-06-10.12:46:51::SCWPlatform::DSA absoulate path C:/Users/franc/workspace/Hydro_XC7S50_V2/hw/hydro_20220608.xsa
+TRACE::2022-06-10.12:46:51::SCWPlatform::DSA directory C:/Users/franc/workspace/Hydro_XC7S50_V2/hw
+TRACE::2022-06-10.12:46:51::SCWPlatform:: Platform Path C:/Users/franc/workspace/Hydro_XC7S50_V2/hw/hydro_20220608.xsa
+TRACE::2022-06-10.12:46:51::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2022-06-10.12:46:51::SCWPlatform::Trying to set the existing hwdb with name hydro_spartan_7
+TRACE::2022-06-10.12:46:51::SCWPlatform::Opened existing hwdb hydro_spartan_7
+TRACE::2022-06-10.12:46:51::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2022-06-10.12:46:51::SCWPlatform::Trying to open the hw design at C:/Users/franc/workspace/Hydro_XC7S50_V2/hw/hydro_20220608.xsa
+TRACE::2022-06-10.12:46:51::SCWPlatform::DSA given C:/Users/franc/workspace/Hydro_XC7S50_V2/hw/hydro_20220608.xsa
+TRACE::2022-06-10.12:46:51::SCWPlatform::DSA absoulate path C:/Users/franc/workspace/Hydro_XC7S50_V2/hw/hydro_20220608.xsa
+TRACE::2022-06-10.12:46:51::SCWPlatform::DSA directory C:/Users/franc/workspace/Hydro_XC7S50_V2/hw
+TRACE::2022-06-10.12:46:51::SCWPlatform:: Platform Path C:/Users/franc/workspace/Hydro_XC7S50_V2/hw/hydro_20220608.xsa
+TRACE::2022-06-10.12:46:51::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2022-06-10.12:46:51::SCWPlatform::Trying to set the existing hwdb with name hydro_spartan_7
+TRACE::2022-06-10.12:46:51::SCWPlatform::Opened existing hwdb hydro_spartan_7
+TRACE::2022-06-10.12:46:51::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2022-06-10.12:46:51::SCWPlatform::Trying to open the hw design at C:/Users/franc/workspace/Hydro_XC7S50_V2/hw/hydro_20220608.xsa
+TRACE::2022-06-10.12:46:51::SCWPlatform::DSA given C:/Users/franc/workspace/Hydro_XC7S50_V2/hw/hydro_20220608.xsa
+TRACE::2022-06-10.12:46:51::SCWPlatform::DSA absoulate path C:/Users/franc/workspace/Hydro_XC7S50_V2/hw/hydro_20220608.xsa
+TRACE::2022-06-10.12:46:51::SCWPlatform::DSA directory C:/Users/franc/workspace/Hydro_XC7S50_V2/hw
+TRACE::2022-06-10.12:46:51::SCWPlatform:: Platform Path C:/Users/franc/workspace/Hydro_XC7S50_V2/hw/hydro_20220608.xsa
+TRACE::2022-06-10.12:46:51::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2022-06-10.12:46:51::SCWPlatform::Trying to set the existing hwdb with name hydro_spartan_7
+TRACE::2022-06-10.12:46:51::SCWPlatform::Opened existing hwdb hydro_spartan_7
+TRACE::2022-06-10.12:46:51::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2022-06-10.12:46:51::SCWPlatform::Trying to open the hw design at C:/Users/franc/workspace/Hydro_XC7S50_V2/hw/hydro_20220608.xsa
+TRACE::2022-06-10.12:46:51::SCWPlatform::DSA given C:/Users/franc/workspace/Hydro_XC7S50_V2/hw/hydro_20220608.xsa
+TRACE::2022-06-10.12:46:51::SCWPlatform::DSA absoulate path C:/Users/franc/workspace/Hydro_XC7S50_V2/hw/hydro_20220608.xsa
+TRACE::2022-06-10.12:46:51::SCWPlatform::DSA directory C:/Users/franc/workspace/Hydro_XC7S50_V2/hw
+TRACE::2022-06-10.12:46:51::SCWPlatform:: Platform Path C:/Users/franc/workspace/Hydro_XC7S50_V2/hw/hydro_20220608.xsa
+TRACE::2022-06-10.12:46:51::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2022-06-10.12:46:51::SCWPlatform::Trying to set the existing hwdb with name hydro_spartan_7
+TRACE::2022-06-10.12:46:51::SCWPlatform::Opened existing hwdb hydro_spartan_7
+TRACE::2022-06-10.12:46:51::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2022-06-10.12:46:51::SCWMssOS::Checking the sw design at  C:/Users/franc/workspace/Hydro_XC7S50_V2/microblaze_0/standalone_domain/bsp/system.mss
+TRACE::2022-06-10.12:46:51::SCWMssOS::DEBUG:  swdes dump  
+TRACE::2022-06-10.12:46:51::SCWMssOS::No sw design opened at  C:/Users/franc/workspace/Hydro_XC7S50_V2/microblaze_0/standalone_domain/bsp/system.mss
+TRACE::2022-06-10.12:46:51::SCWMssOS::mss exists loading the mss file  C:/Users/franc/workspace/Hydro_XC7S50_V2/microblaze_0/standalone_domain/bsp/system.mss
+TRACE::2022-06-10.12:46:51::SCWMssOS::Opened the sw design from mss  C:/Users/franc/workspace/Hydro_XC7S50_V2/microblaze_0/standalone_domain/bsp/system.mss
+TRACE::2022-06-10.12:46:51::SCWMssOS::Adding the swdes entry C:/Users/franc/workspace/Hydro_XC7S50_V2/microblaze_0/standalone_domain/bsp/system.mss with des name system
+TRACE::2022-06-10.12:46:51::SCWMssOS::updating the scw layer about changes
+TRACE::2022-06-10.12:46:51::SCWMssOS::Opened the sw design.  C:/Users/franc/workspace/Hydro_XC7S50_V2/microblaze_0/standalone_domain/bsp/system.mss
+TRACE::2022-06-10.12:46:51::SCWMssOS::Saving the mss changes C:/Users/franc/workspace/Hydro_XC7S50_V2/microblaze_0/standalone_domain/bsp/system.mss
+TRACE::2022-06-10.12:46:51::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2022-06-10.12:46:51::SCWMssOS::Completed writemss as part of save.
+TRACE::2022-06-10.12:46:51::SCWMssOS::Commit changes completed.
+TRACE::2022-06-10.12:46:51::SCWReader::Adding prebuilt librarypaths as   
+TRACE::2022-06-10.12:46:51::SCWReader::Adding prebuilt incpaths  as   
+TRACE::2022-06-10.12:46:51::SCWPlatform::Trying to open the hw design at C:/Users/franc/workspace/Hydro_XC7S50_V2/hw/hydro_20220608.xsa
+TRACE::2022-06-10.12:46:51::SCWPlatform::DSA given C:/Users/franc/workspace/Hydro_XC7S50_V2/hw/hydro_20220608.xsa
+TRACE::2022-06-10.12:46:51::SCWPlatform::DSA absoulate path C:/Users/franc/workspace/Hydro_XC7S50_V2/hw/hydro_20220608.xsa
+TRACE::2022-06-10.12:46:51::SCWPlatform::DSA directory C:/Users/franc/workspace/Hydro_XC7S50_V2/hw
+TRACE::2022-06-10.12:46:51::SCWPlatform:: Platform Path C:/Users/franc/workspace/Hydro_XC7S50_V2/hw/hydro_20220608.xsa
+TRACE::2022-06-10.12:46:51::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2022-06-10.12:46:51::SCWPlatform::Trying to set the existing hwdb with name hydro_spartan_7
+TRACE::2022-06-10.12:46:51::SCWPlatform::Opened existing hwdb hydro_spartan_7
+TRACE::2022-06-10.12:46:51::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2022-06-10.12:46:51::SCWMssOS::Checking the sw design at  C:/Users/franc/workspace/Hydro_XC7S50_V2/microblaze_0/standalone_domain/bsp/system.mss
+TRACE::2022-06-10.12:46:51::SCWMssOS::DEBUG:  swdes dump  C:/Users/franc/workspace/Hydro_XC7S50_V2/microblaze_0/standalone_domain/bsp/system.mss|system||
+
+TRACE::2022-06-10.12:46:51::SCWMssOS::Sw design exists and opened at  C:/Users/franc/workspace/Hydro_XC7S50_V2/microblaze_0/standalone_domain/bsp/system.mss
+TRACE::2022-06-10.12:46:51::SCWReader::No isolation master present  
+TRACE::2022-06-10.12:46:56::SCWPlatform::DSA given C:/Users/franc/workspace/Hydro_XC7S50_V2/tempdsa/hydro_20220610.xsa
+TRACE::2022-06-10.12:46:56::SCWPlatform::DSA absoulate path C:/Users/franc/workspace/Hydro_XC7S50_V2/tempdsa/hydro_20220610.xsa
+TRACE::2022-06-10.12:46:56::SCWPlatform:: Platform location is C:/Users/franc/workspace/Hydro_XC7S50_V2/tempdsa
+TRACE::2022-06-10.12:46:56::SCWPlatform:: Platform Path C:/Users/franc/workspace/Hydro_XC7S50_V2/tempdsa/hydro_20220610.xsa
+TRACE::2022-06-10.12:46:56::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2022-06-10.12:46:56::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2022-06-10.12:46:56::SCWMssOS::Doing hw sync for the mss in domain: standalone_domain
+TRACE::2022-06-10.12:46:56::SCWPlatform::Trying to open the hw design at C:/Users/franc/workspace/Hydro_XC7S50_V2/hw/hydro_20220608.xsa
+TRACE::2022-06-10.12:46:56::SCWPlatform::DSA given C:/Users/franc/workspace/Hydro_XC7S50_V2/hw/hydro_20220608.xsa
+TRACE::2022-06-10.12:46:56::SCWPlatform::DSA absoulate path C:/Users/franc/workspace/Hydro_XC7S50_V2/hw/hydro_20220608.xsa
+TRACE::2022-06-10.12:46:56::SCWPlatform::DSA directory C:/Users/franc/workspace/Hydro_XC7S50_V2/hw
+TRACE::2022-06-10.12:46:56::SCWPlatform:: Platform Path C:/Users/franc/workspace/Hydro_XC7S50_V2/hw/hydro_20220608.xsa
+TRACE::2022-06-10.12:46:56::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2022-06-10.12:46:56::SCWPlatform::Trying to set the existing hwdb with name hydro_spartan_7
+TRACE::2022-06-10.12:46:56::SCWPlatform::Opened existing hwdb hydro_spartan_7
+TRACE::2022-06-10.12:46:56::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2022-06-10.12:46:56::SCWPlatform::Trying to open the hw design at C:/Users/franc/workspace/Hydro_XC7S50_V2/hw/hydro_20220608.xsa
+TRACE::2022-06-10.12:46:56::SCWPlatform::DSA given C:/Users/franc/workspace/Hydro_XC7S50_V2/hw/hydro_20220608.xsa
+TRACE::2022-06-10.12:46:56::SCWPlatform::DSA absoulate path C:/Users/franc/workspace/Hydro_XC7S50_V2/hw/hydro_20220608.xsa
+TRACE::2022-06-10.12:46:56::SCWPlatform::DSA directory C:/Users/franc/workspace/Hydro_XC7S50_V2/hw
+TRACE::2022-06-10.12:46:56::SCWPlatform:: Platform Path C:/Users/franc/workspace/Hydro_XC7S50_V2/hw/hydro_20220608.xsa
+TRACE::2022-06-10.12:46:56::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2022-06-10.12:46:56::SCWPlatform::Trying to set the existing hwdb with name hydro_spartan_7
+TRACE::2022-06-10.12:46:56::SCWPlatform::Opened existing hwdb hydro_spartan_7
+TRACE::2022-06-10.12:46:56::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2022-06-10.12:46:56::SCWMssOS::Checking the sw design at  C:/Users/franc/workspace/Hydro_XC7S50_V2/microblaze_0/standalone_domain/bsp/system.mss
+TRACE::2022-06-10.12:46:56::SCWMssOS::DEBUG:  swdes dump  C:/Users/franc/workspace/Hydro_XC7S50_V2/microblaze_0/standalone_domain/bsp/system.mss|system||
+
+TRACE::2022-06-10.12:46:56::SCWMssOS::Sw design exists and opened at  C:/Users/franc/workspace/Hydro_XC7S50_V2/microblaze_0/standalone_domain/bsp/system.mss
+TRACE::2022-06-10.12:46:56::SCWPlatform::Trying to open the hw design at C:/Users/franc/workspace/Hydro_XC7S50_V2/tempdsa/hydro_20220610.xsa
+TRACE::2022-06-10.12:46:56::SCWPlatform::DSA given C:/Users/franc/workspace/Hydro_XC7S50_V2/tempdsa/hydro_20220610.xsa
+TRACE::2022-06-10.12:46:56::SCWPlatform::DSA absoulate path C:/Users/franc/workspace/Hydro_XC7S50_V2/tempdsa/hydro_20220610.xsa
+TRACE::2022-06-10.12:46:56::SCWPlatform::DSA directory C:/Users/franc/workspace/Hydro_XC7S50_V2/tempdsa
+TRACE::2022-06-10.12:46:56::SCWPlatform:: Platform Path C:/Users/franc/workspace/Hydro_XC7S50_V2/tempdsa/hydro_20220610.xsa
+TRACE::2022-06-10.12:46:56::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2022-06-10.12:46:56::SCWPlatform::update - Opened existing hwdb hydro_spartan_7_0
+TRACE::2022-06-10.12:46:56::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2022-06-10.12:46:56::SCWMssOS::Saving the mss changes C:/Users/franc/workspace/Hydro_XC7S50_V2/microblaze_0/standalone_domain/bsp/system.mss
+TRACE::2022-06-10.12:46:56::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2022-06-10.12:46:56::SCWMssOS::Completed writemss as part of save.
+TRACE::2022-06-10.12:46:56::SCWMssOS::Commit changes completed.
+TRACE::2022-06-10.12:46:56::SCWMssOS::Completed hw sync for the mss in domain: standalone_domain
+TRACE::2022-06-10.12:46:56::SCWMssOS::Removing the swdes entry for  C:/Users/franc/workspace/Hydro_XC7S50_V2/microblaze_0/standalone_domain/bsp/system.mss
+TRACE::2022-06-10.12:46:56::SCWPlatform::Trying to open the hw design at C:/Users/franc/workspace/Hydro_XC7S50_V2/hw/hydro_20220610.xsa
+TRACE::2022-06-10.12:46:56::SCWPlatform::DSA given C:/Users/franc/workspace/Hydro_XC7S50_V2/hw/hydro_20220610.xsa
+TRACE::2022-06-10.12:46:56::SCWPlatform::DSA absoulate path C:/Users/franc/workspace/Hydro_XC7S50_V2/hw/hydro_20220610.xsa
+TRACE::2022-06-10.12:46:56::SCWPlatform::DSA directory C:/Users/franc/workspace/Hydro_XC7S50_V2/hw
+TRACE::2022-06-10.12:46:56::SCWPlatform:: Platform Path C:/Users/franc/workspace/Hydro_XC7S50_V2/hw/hydro_20220610.xsa
+TRACE::2022-06-10.12:46:56::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2022-06-10.12:46:56::SCWPlatform::Do not have an existing db opened. 
+TRACE::2022-06-10.12:46:56::SCWPlatform::Opened new HwDB with name hydro_spartan_7_1
+TRACE::2022-06-10.12:46:56::SCWMssOS::Saving the mss changes C:/Users/franc/workspace/Hydro_XC7S50_V2/microblaze_0/standalone_domain/bsp/system.mss
+TRACE::2022-06-10.12:46:56::SCWMssOS::Adding the swdes entry, mss present, able to open swdb C:/Users/franc/workspace/Hydro_XC7S50_V2/microblaze_0/standalone_domain/bsp/system.mss with des name system
+TRACE::2022-06-10.12:46:56::SCWMssOS::Writing the mss file completed C:/Users/franc/workspace/Hydro_XC7S50_V2/microblaze_0/standalone_domain/bsp/system.mss
+TRACE::2022-06-10.12:46:56::SCWMssOS::Commit changes completed.
+TRACE::2022-06-10.12:46:56::SCWPlatform::Trying to open the hw design at C:/Users/franc/workspace/Hydro_XC7S50_V2/hw/hydro_20220610.xsa
+TRACE::2022-06-10.12:46:56::SCWPlatform::DSA given C:/Users/franc/workspace/Hydro_XC7S50_V2/hw/hydro_20220610.xsa
+TRACE::2022-06-10.12:46:56::SCWPlatform::DSA absoulate path C:/Users/franc/workspace/Hydro_XC7S50_V2/hw/hydro_20220610.xsa
+TRACE::2022-06-10.12:46:56::SCWPlatform::DSA directory C:/Users/franc/workspace/Hydro_XC7S50_V2/hw
+TRACE::2022-06-10.12:46:56::SCWPlatform:: Platform Path C:/Users/franc/workspace/Hydro_XC7S50_V2/hw/hydro_20220610.xsa
+TRACE::2022-06-10.12:46:56::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2022-06-10.12:46:56::SCWPlatform::Trying to set the existing hwdb with name hydro_spartan_7_1
+TRACE::2022-06-10.12:46:56::SCWPlatform::Opened existing hwdb hydro_spartan_7_1
+TRACE::2022-06-10.12:46:56::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2022-06-10.12:46:56::SCWMssOS::Checking the sw design at  C:/Users/franc/workspace/Hydro_XC7S50_V2/microblaze_0/standalone_domain/bsp/system.mss
+TRACE::2022-06-10.12:46:56::SCWMssOS::DEBUG:  swdes dump  C:/Users/franc/workspace/Hydro_XC7S50_V2/microblaze_0/standalone_domain/bsp/system.mss|system||
+
+TRACE::2022-06-10.12:46:56::SCWMssOS::Sw design exists and opened at  C:/Users/franc/workspace/Hydro_XC7S50_V2/microblaze_0/standalone_domain/bsp/system.mss
+TRACE::2022-06-10.12:46:56::SCWWriter::formatted JSON is {
+	"platformName":	"Hydro_XC7S50_V2",
+	"sprVersion":	"2.0",
+	"mode":	"gui",
+	"dsaType":	"Fixed",
+	"platformDesc":	"Hydro_XC7S50_V2",
+	"platHandOff":	"C:/Users/franc/hydro_spartan_7/hydro_20220610.xsa",
+	"platIntHandOff":	"<platformDir>/hw/hydro_20220610.xsa",
+	"deviceType":	"FPGA",
+	"platIsPrebuiltAutogen":	"false",
+	"platIsNoBootBsp":	"false",
+	"hasFsblMakeHasChanges":	"false",
+	"hasPmufwMakeHasChanges":	"false",
+	"platPreBuiltFlag":	false,
+	"platformSamplesDir":	"",
+	"platActiveSys":	"Hydro_XC7S50_V2",
+	"systems":	[{
+			"systemName":	"Hydro_XC7S50_V2",
+			"systemDesc":	"Hydro_XC7S50_V2",
+			"sysIsBootAutoGen":	"true",
+			"systemDispName":	"Hydro_XC7S50_V2",
+			"sysActiveDom":	"standalone_domain",
+			"sysDefaultDom":	"standalone_domain",
+			"domains":	[{
+					"domainName":	"standalone_domain",
+					"domainDispName":	"standalone on microblaze_0",
+					"domainDesc":	"standalone_domain",
+					"processors":	"microblaze_0",
+					"os":	"standalone",
+					"sdxOs":	"standalone",
+					"debugEnable":	"False",
+					"domRuntimes":	["cpp"],
+					"swRepo":	"",
+					"mssOsVer":	"7.3",
+					"mssFile":	"",
+					"md5Digest":	"08474ed28eb0ce84697fa13ba160f356",
+					"compatibleApp":	"",
+					"domType":	"mssDomain",
+					"arch":	"32-bit",
+					"appSettings":	{
+						"appCompilerFlags":	"",
+						"appLinkerFlags":	""
+					},
+					"addedLibs":	[],
+					"libOptions":	{
+						"libsContainingOptions":	[]
+					},
+					"prebuiltLibs":	{
+						"prebuiltIncPath":	[],
+						"prebuiltLibPath":	[]
+					},
+					"isolation":	{
+					}
+				}]
+		}]
+}
+LOG::2022-06-10.12:47:04::SCWPlatform::Started generating the artifacts platform Hydro_XC7S50_V2
+TRACE::2022-06-10.12:47:04::SCWPlatform::Sanity checking of platform is completed
+LOG::2022-06-10.12:47:04::SCWPlatform::Started generating the artifacts for system configuration Hydro_XC7S50_V2
+LOG::2022-06-10.12:47:04::SCWSystem::Checking the domain standalone_domain
+LOG::2022-06-10.12:47:04::SCWSystem::Not a boot domain 
+LOG::2022-06-10.12:47:04::SCWSystem::Started Processing the domain standalone_domain
+TRACE::2022-06-10.12:47:04::SCWDomain::Generating domain artifcats
+TRACE::2022-06-10.12:47:04::SCWMssOS::Generating standalone artifcats
+TRACE::2022-06-10.12:47:04::SCWMssOS:: Copying the user libraries. 
+TRACE::2022-06-10.12:47:04::SCWPlatform::Trying to open the hw design at C:/Users/franc/workspace/Hydro_XC7S50_V2/hw/hydro_20220610.xsa
+TRACE::2022-06-10.12:47:04::SCWPlatform::DSA given C:/Users/franc/workspace/Hydro_XC7S50_V2/hw/hydro_20220610.xsa
+TRACE::2022-06-10.12:47:04::SCWPlatform::DSA absoulate path C:/Users/franc/workspace/Hydro_XC7S50_V2/hw/hydro_20220610.xsa
+TRACE::2022-06-10.12:47:04::SCWPlatform::DSA directory C:/Users/franc/workspace/Hydro_XC7S50_V2/hw
+TRACE::2022-06-10.12:47:04::SCWPlatform:: Platform Path C:/Users/franc/workspace/Hydro_XC7S50_V2/hw/hydro_20220610.xsa
+TRACE::2022-06-10.12:47:04::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2022-06-10.12:47:04::SCWPlatform::Trying to set the existing hwdb with name hydro_spartan_7_1
+TRACE::2022-06-10.12:47:04::SCWPlatform::Opened existing hwdb hydro_spartan_7_1
+TRACE::2022-06-10.12:47:04::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2022-06-10.12:47:04::SCWMssOS::Checking the sw design at  C:/Users/franc/workspace/Hydro_XC7S50_V2/microblaze_0/standalone_domain/bsp/system.mss
+TRACE::2022-06-10.12:47:04::SCWMssOS::DEBUG:  swdes dump  C:/Users/franc/workspace/Hydro_XC7S50_V2/microblaze_0/standalone_domain/bsp/system.mss|system||
+
+TRACE::2022-06-10.12:47:04::SCWMssOS::Sw design exists and opened at  C:/Users/franc/workspace/Hydro_XC7S50_V2/microblaze_0/standalone_domain/bsp/system.mss
+TRACE::2022-06-10.12:47:04::SCWMssOS::Completed writing the mss file at C:/Users/franc/workspace/Hydro_XC7S50_V2/microblaze_0/standalone_domain/bsp
+TRACE::2022-06-10.12:47:04::SCWMssOS::Mss edits present, copying mssfile into export location C:/Users/franc/workspace/Hydro_XC7S50_V2/microblaze_0/standalone_domain/bsp/system.mss
+TRACE::2022-06-10.12:47:04::SCWMssOS::bsp generated is upto date with the mss file. Skipping bsp generation.
+TRACE::2022-06-10.12:47:04::SCWMssOS::BSP is already built. skipping the bsp build ... 
+TRACE::2022-06-10.12:47:04::SCWDomain::Skipping the build for domain :  standalone_domain
+TRACE::2022-06-10.12:47:04::SCWMssOS::skipping the bsp build ... 
+TRACE::2022-06-10.12:47:04::SCWMssOS::Copying to export directory.
+TRACE::2022-06-10.12:47:04::SCWMssOS:: Checking if to create the Supporting Applications
+TRACE::2022-06-10.12:47:04::SCWMssOS:: No Linux domain exists, trying to generate FSBL 
+LOG::2022-06-10.12:47:04::SCWSystem::Completed Processing the domain standalone_domain
+LOG::2022-06-10.12:47:04::SCWSystem::Completed Processing the sysconfig Hydro_XC7S50_V2
+LOG::2022-06-10.12:47:04::SCWPlatform::Completed generating the artifacts for system configuration Hydro_XC7S50_V2
+TRACE::2022-06-10.12:47:04::SCWPlatform::Started preparing the platform 
+TRACE::2022-06-10.12:47:04::SCWSystem::Writing the bif file for system config Hydro_XC7S50_V2
+TRACE::2022-06-10.12:47:04::SCWSystem::dir created 
+TRACE::2022-06-10.12:47:04::SCWSystem::Writing the bif 
+TRACE::2022-06-10.12:47:04::SCWPlatform::Started writing the spfm file 
+TRACE::2022-06-10.12:47:04::SCWPlatform::Started writing the xpfm file 
+TRACE::2022-06-10.12:47:04::SCWPlatform::Completed generating the platform
+TRACE::2022-06-10.12:47:04::SCWMssOS::Saving the mss changes C:/Users/franc/workspace/Hydro_XC7S50_V2/microblaze_0/standalone_domain/bsp/system.mss
+TRACE::2022-06-10.12:47:04::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2022-06-10.12:47:04::SCWMssOS::Completed writemss as part of save.
+TRACE::2022-06-10.12:47:04::SCWMssOS::Commit changes completed.
+TRACE::2022-06-10.12:47:04::SCWPlatform::Trying to open the hw design at C:/Users/franc/workspace/Hydro_XC7S50_V2/hw/hydro_20220610.xsa
+TRACE::2022-06-10.12:47:04::SCWPlatform::DSA given C:/Users/franc/workspace/Hydro_XC7S50_V2/hw/hydro_20220610.xsa
+TRACE::2022-06-10.12:47:04::SCWPlatform::DSA absoulate path C:/Users/franc/workspace/Hydro_XC7S50_V2/hw/hydro_20220610.xsa
+TRACE::2022-06-10.12:47:04::SCWPlatform::DSA directory C:/Users/franc/workspace/Hydro_XC7S50_V2/hw
+TRACE::2022-06-10.12:47:04::SCWPlatform:: Platform Path C:/Users/franc/workspace/Hydro_XC7S50_V2/hw/hydro_20220610.xsa
+TRACE::2022-06-10.12:47:04::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2022-06-10.12:47:04::SCWPlatform::Trying to set the existing hwdb with name hydro_spartan_7_1
+TRACE::2022-06-10.12:47:04::SCWPlatform::Opened existing hwdb hydro_spartan_7_1
+TRACE::2022-06-10.12:47:04::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2022-06-10.12:47:04::SCWMssOS::Checking the sw design at  C:/Users/franc/workspace/Hydro_XC7S50_V2/microblaze_0/standalone_domain/bsp/system.mss
+TRACE::2022-06-10.12:47:04::SCWMssOS::DEBUG:  swdes dump  C:/Users/franc/workspace/Hydro_XC7S50_V2/microblaze_0/standalone_domain/bsp/system.mss|system||
+
+TRACE::2022-06-10.12:47:04::SCWMssOS::Sw design exists and opened at  C:/Users/franc/workspace/Hydro_XC7S50_V2/microblaze_0/standalone_domain/bsp/system.mss
+TRACE::2022-06-10.12:47:04::SCWWriter::formatted JSON is {
+	"platformName":	"Hydro_XC7S50_V2",
+	"sprVersion":	"2.0",
+	"mode":	"gui",
+	"dsaType":	"Fixed",
+	"platformDesc":	"Hydro_XC7S50_V2",
+	"platHandOff":	"C:/Users/franc/hydro_spartan_7/hydro_20220610.xsa",
+	"platIntHandOff":	"<platformDir>/hw/hydro_20220610.xsa",
+	"deviceType":	"FPGA",
+	"platIsPrebuiltAutogen":	"false",
+	"platIsNoBootBsp":	"false",
+	"hasFsblMakeHasChanges":	"false",
+	"hasPmufwMakeHasChanges":	"false",
+	"platPreBuiltFlag":	false,
+	"platformSamplesDir":	"",
+	"platActiveSys":	"Hydro_XC7S50_V2",
+	"systems":	[{
+			"systemName":	"Hydro_XC7S50_V2",
+			"systemDesc":	"Hydro_XC7S50_V2",
+			"sysIsBootAutoGen":	"true",
+			"systemDispName":	"Hydro_XC7S50_V2",
+			"sysActiveDom":	"standalone_domain",
+			"sysDefaultDom":	"standalone_domain",
+			"domains":	[{
+					"domainName":	"standalone_domain",
+					"domainDispName":	"standalone on microblaze_0",
+					"domainDesc":	"standalone_domain",
+					"processors":	"microblaze_0",
+					"os":	"standalone",
+					"sdxOs":	"standalone",
+					"debugEnable":	"False",
+					"domRuntimes":	["cpp"],
+					"swRepo":	"",
+					"mssOsVer":	"7.3",
+					"mssFile":	"",
+					"md5Digest":	"08474ed28eb0ce84697fa13ba160f356",
+					"compatibleApp":	"",
+					"domType":	"mssDomain",
+					"arch":	"32-bit",
+					"appSettings":	{
+						"appCompilerFlags":	"",
+						"appLinkerFlags":	""
+					},
+					"addedLibs":	[],
+					"libOptions":	{
+						"libsContainingOptions":	[]
+					},
+					"prebuiltLibs":	{
+						"prebuiltIncPath":	[],
+						"prebuiltLibPath":	[]
+					},
+					"isolation":	{
+					}
+				}]
+		}]
+}
+KEYINFO::2022-06-10.12:47:04::SCWPlatform::updated the xpfm file.
+TRACE::2022-06-10.12:47:05::SCWPlatform::Trying to open the hw design at C:/Users/franc/workspace/Hydro_XC7S50_V2/hw/hydro_20220610.xsa
+TRACE::2022-06-10.12:47:05::SCWPlatform::DSA given C:/Users/franc/workspace/Hydro_XC7S50_V2/hw/hydro_20220610.xsa
+TRACE::2022-06-10.12:47:05::SCWPlatform::DSA absoulate path C:/Users/franc/workspace/Hydro_XC7S50_V2/hw/hydro_20220610.xsa
+TRACE::2022-06-10.12:47:05::SCWPlatform::DSA directory C:/Users/franc/workspace/Hydro_XC7S50_V2/hw
+TRACE::2022-06-10.12:47:05::SCWPlatform:: Platform Path C:/Users/franc/workspace/Hydro_XC7S50_V2/hw/hydro_20220610.xsa
+TRACE::2022-06-10.12:47:05::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2022-06-10.12:47:05::SCWPlatform::Trying to set the existing hwdb with name hydro_spartan_7_1
+TRACE::2022-06-10.12:47:05::SCWPlatform::Opened existing hwdb hydro_spartan_7_1
+TRACE::2022-06-10.12:47:05::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2022-06-10.12:47:05::SCWMssOS::Checking the sw design at  C:/Users/franc/workspace/Hydro_XC7S50_V2/microblaze_0/standalone_domain/bsp/system.mss
+TRACE::2022-06-10.12:47:05::SCWMssOS::DEBUG:  swdes dump  C:/Users/franc/workspace/Hydro_XC7S50_V2/microblaze_0/standalone_domain/bsp/system.mss|system||
+
+TRACE::2022-06-10.12:47:05::SCWMssOS::Sw design exists and opened at  C:/Users/franc/workspace/Hydro_XC7S50_V2/microblaze_0/standalone_domain/bsp/system.mss
+TRACE::2022-06-10.20:46:54::SCWPlatform::Clearing the existing platform
+TRACE::2022-06-10.20:46:54::SCWSystem::Clearing the existing sysconfig
+TRACE::2022-06-10.20:46:54::SCWMssOS::Removing the swdes entry for  C:/Users/franc/workspace/Hydro_XC7S50_V2/microblaze_0/standalone_domain/bsp/system.mss
+TRACE::2022-06-10.20:46:54::SCWSystem::Clearing the domains completed.
+TRACE::2022-06-10.20:46:54::SCWPlatform::Clearing the opened hw db.
+TRACE::2022-06-10.20:46:54::SCWPlatform::DSA given C:/Users/franc/workspace/Hydro_XC7S50_V2/hw/hydro_20220610.xsa
+TRACE::2022-06-10.20:46:54::SCWPlatform::DSA absoulate path C:/Users/franc/workspace/Hydro_XC7S50_V2/hw/hydro_20220610.xsa
+TRACE::2022-06-10.20:46:54::SCWPlatform:: Platform location is C:/Users/franc/workspace/Hydro_XC7S50_V2/hw
+TRACE::2022-06-10.20:46:54::SCWPlatform:: Platform Path C:/Users/franc/workspace/Hydro_XC7S50_V2/hw/hydro_20220610.xsa
+TRACE::2022-06-10.20:46:54::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2022-06-10.20:46:54::SCWPlatform::Removing the HwDB with name C:/Users/franc/workspace/Hydro_XC7S50_V2/hw/hydro_20220610.xsa
+TRACE::2022-06-10.20:46:54::SCWPlatform::Trying to open the hw design at C:/Users/franc/workspace/Hydro_XC7S50_V2/hw/hydro_20220610.xsa
+TRACE::2022-06-10.20:46:54::SCWPlatform::DSA given C:/Users/franc/workspace/Hydro_XC7S50_V2/hw/hydro_20220610.xsa
+TRACE::2022-06-10.20:46:54::SCWPlatform::DSA absoulate path C:/Users/franc/workspace/Hydro_XC7S50_V2/hw/hydro_20220610.xsa
+TRACE::2022-06-10.20:46:54::SCWPlatform::DSA directory C:/Users/franc/workspace/Hydro_XC7S50_V2/hw
+TRACE::2022-06-10.20:46:54::SCWPlatform:: Platform Path C:/Users/franc/workspace/Hydro_XC7S50_V2/hw/hydro_20220610.xsa
+TRACE::2022-06-10.20:46:54::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2022-06-10.20:46:54::SCWPlatform::Do not have an existing db opened. 
+TRACE::2022-06-10.20:46:55::SCWPlatform::Opened new HwDB with name hydro_spartan_7_3
+TRACE::2022-06-10.20:46:55::SCWReader::Active system found as  Hydro_XC7S50_V2
+TRACE::2022-06-10.20:46:55::SCWReader::Handling sysconfig Hydro_XC7S50_V2
+TRACE::2022-06-10.20:46:55::SCWDomain::checking for install qemu data   : 
+TRACE::2022-06-10.20:46:55::SCWPlatform::Trying to open the hw design at C:/Users/franc/workspace/Hydro_XC7S50_V2/hw/hydro_20220610.xsa
+TRACE::2022-06-10.20:46:55::SCWPlatform::DSA given C:/Users/franc/workspace/Hydro_XC7S50_V2/hw/hydro_20220610.xsa
+TRACE::2022-06-10.20:46:55::SCWPlatform::DSA absoulate path C:/Users/franc/workspace/Hydro_XC7S50_V2/hw/hydro_20220610.xsa
+TRACE::2022-06-10.20:46:55::SCWPlatform::DSA directory C:/Users/franc/workspace/Hydro_XC7S50_V2/hw
+TRACE::2022-06-10.20:46:55::SCWPlatform:: Platform Path C:/Users/franc/workspace/Hydro_XC7S50_V2/hw/hydro_20220610.xsa
+TRACE::2022-06-10.20:46:55::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2022-06-10.20:46:55::SCWPlatform::Trying to set the existing hwdb with name hydro_spartan_7_3
+TRACE::2022-06-10.20:46:55::SCWPlatform::Opened existing hwdb hydro_spartan_7_3
+TRACE::2022-06-10.20:46:55::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2022-06-10.20:46:55::SCWPlatform::Trying to open the hw design at C:/Users/franc/workspace/Hydro_XC7S50_V2/hw/hydro_20220610.xsa
+TRACE::2022-06-10.20:46:55::SCWPlatform::DSA given C:/Users/franc/workspace/Hydro_XC7S50_V2/hw/hydro_20220610.xsa
+TRACE::2022-06-10.20:46:55::SCWPlatform::DSA absoulate path C:/Users/franc/workspace/Hydro_XC7S50_V2/hw/hydro_20220610.xsa
+TRACE::2022-06-10.20:46:55::SCWPlatform::DSA directory C:/Users/franc/workspace/Hydro_XC7S50_V2/hw
+TRACE::2022-06-10.20:46:55::SCWPlatform:: Platform Path C:/Users/franc/workspace/Hydro_XC7S50_V2/hw/hydro_20220610.xsa
+TRACE::2022-06-10.20:46:55::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2022-06-10.20:46:55::SCWPlatform::Trying to set the existing hwdb with name hydro_spartan_7_3
+TRACE::2022-06-10.20:46:55::SCWPlatform::Opened existing hwdb hydro_spartan_7_3
+TRACE::2022-06-10.20:46:55::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2022-06-10.20:46:55::SCWPlatform::Trying to open the hw design at C:/Users/franc/workspace/Hydro_XC7S50_V2/hw/hydro_20220610.xsa
+TRACE::2022-06-10.20:46:55::SCWPlatform::DSA given C:/Users/franc/workspace/Hydro_XC7S50_V2/hw/hydro_20220610.xsa
+TRACE::2022-06-10.20:46:55::SCWPlatform::DSA absoulate path C:/Users/franc/workspace/Hydro_XC7S50_V2/hw/hydro_20220610.xsa
+TRACE::2022-06-10.20:46:55::SCWPlatform::DSA directory C:/Users/franc/workspace/Hydro_XC7S50_V2/hw
+TRACE::2022-06-10.20:46:55::SCWPlatform:: Platform Path C:/Users/franc/workspace/Hydro_XC7S50_V2/hw/hydro_20220610.xsa
+TRACE::2022-06-10.20:46:55::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2022-06-10.20:46:55::SCWPlatform::Trying to set the existing hwdb with name hydro_spartan_7_3
+TRACE::2022-06-10.20:46:55::SCWPlatform::Opened existing hwdb hydro_spartan_7_3
+TRACE::2022-06-10.20:46:55::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2022-06-10.20:46:55::SCWPlatform::Trying to open the hw design at C:/Users/franc/workspace/Hydro_XC7S50_V2/hw/hydro_20220610.xsa
+TRACE::2022-06-10.20:46:55::SCWPlatform::DSA given C:/Users/franc/workspace/Hydro_XC7S50_V2/hw/hydro_20220610.xsa
+TRACE::2022-06-10.20:46:55::SCWPlatform::DSA absoulate path C:/Users/franc/workspace/Hydro_XC7S50_V2/hw/hydro_20220610.xsa
+TRACE::2022-06-10.20:46:55::SCWPlatform::DSA directory C:/Users/franc/workspace/Hydro_XC7S50_V2/hw
+TRACE::2022-06-10.20:46:55::SCWPlatform:: Platform Path C:/Users/franc/workspace/Hydro_XC7S50_V2/hw/hydro_20220610.xsa
+TRACE::2022-06-10.20:46:55::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2022-06-10.20:46:55::SCWPlatform::Trying to set the existing hwdb with name hydro_spartan_7_3
+TRACE::2022-06-10.20:46:55::SCWPlatform::Opened existing hwdb hydro_spartan_7_3
+TRACE::2022-06-10.20:46:55::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2022-06-10.20:46:55::SCWMssOS::Checking the sw design at  C:/Users/franc/workspace/Hydro_XC7S50_V2/microblaze_0/standalone_domain/bsp/system.mss
+TRACE::2022-06-10.20:46:55::SCWMssOS::DEBUG:  swdes dump  
+TRACE::2022-06-10.20:46:55::SCWMssOS::No sw design opened at  C:/Users/franc/workspace/Hydro_XC7S50_V2/microblaze_0/standalone_domain/bsp/system.mss
+TRACE::2022-06-10.20:46:55::SCWMssOS::mss exists loading the mss file  C:/Users/franc/workspace/Hydro_XC7S50_V2/microblaze_0/standalone_domain/bsp/system.mss
+TRACE::2022-06-10.20:46:55::SCWMssOS::Opened the sw design from mss  C:/Users/franc/workspace/Hydro_XC7S50_V2/microblaze_0/standalone_domain/bsp/system.mss
+TRACE::2022-06-10.20:46:55::SCWMssOS::Adding the swdes entry C:/Users/franc/workspace/Hydro_XC7S50_V2/microblaze_0/standalone_domain/bsp/system.mss with des name system
+TRACE::2022-06-10.20:46:55::SCWMssOS::updating the scw layer about changes
+TRACE::2022-06-10.20:46:55::SCWMssOS::Opened the sw design.  C:/Users/franc/workspace/Hydro_XC7S50_V2/microblaze_0/standalone_domain/bsp/system.mss
+TRACE::2022-06-10.20:46:55::SCWMssOS::Saving the mss changes C:/Users/franc/workspace/Hydro_XC7S50_V2/microblaze_0/standalone_domain/bsp/system.mss
+TRACE::2022-06-10.20:46:55::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2022-06-10.20:46:55::SCWMssOS::Completed writemss as part of save.
+TRACE::2022-06-10.20:46:55::SCWMssOS::Commit changes completed.
+TRACE::2022-06-10.20:46:55::SCWReader::Adding prebuilt librarypaths as   
+TRACE::2022-06-10.20:46:55::SCWReader::Adding prebuilt incpaths  as   
+TRACE::2022-06-10.20:46:55::SCWPlatform::Trying to open the hw design at C:/Users/franc/workspace/Hydro_XC7S50_V2/hw/hydro_20220610.xsa
+TRACE::2022-06-10.20:46:55::SCWPlatform::DSA given C:/Users/franc/workspace/Hydro_XC7S50_V2/hw/hydro_20220610.xsa
+TRACE::2022-06-10.20:46:55::SCWPlatform::DSA absoulate path C:/Users/franc/workspace/Hydro_XC7S50_V2/hw/hydro_20220610.xsa
+TRACE::2022-06-10.20:46:55::SCWPlatform::DSA directory C:/Users/franc/workspace/Hydro_XC7S50_V2/hw
+TRACE::2022-06-10.20:46:55::SCWPlatform:: Platform Path C:/Users/franc/workspace/Hydro_XC7S50_V2/hw/hydro_20220610.xsa
+TRACE::2022-06-10.20:46:55::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2022-06-10.20:46:55::SCWPlatform::Trying to set the existing hwdb with name hydro_spartan_7_3
+TRACE::2022-06-10.20:46:55::SCWPlatform::Opened existing hwdb hydro_spartan_7_3
+TRACE::2022-06-10.20:46:55::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2022-06-10.20:46:55::SCWMssOS::Checking the sw design at  C:/Users/franc/workspace/Hydro_XC7S50_V2/microblaze_0/standalone_domain/bsp/system.mss
+TRACE::2022-06-10.20:46:55::SCWMssOS::DEBUG:  swdes dump  C:/Users/franc/workspace/Hydro_XC7S50_V2/microblaze_0/standalone_domain/bsp/system.mss|system||
+
+TRACE::2022-06-10.20:46:55::SCWMssOS::Sw design exists and opened at  C:/Users/franc/workspace/Hydro_XC7S50_V2/microblaze_0/standalone_domain/bsp/system.mss
+TRACE::2022-06-10.20:46:55::SCWReader::No isolation master present  
+TRACE::2022-06-10.20:47:00::SCWPlatform::DSA given C:/Users/franc/workspace/Hydro_XC7S50_V2/tempdsa/hydro_20220610-2.xsa
+TRACE::2022-06-10.20:47:00::SCWPlatform::DSA absoulate path C:/Users/franc/workspace/Hydro_XC7S50_V2/tempdsa/hydro_20220610-2.xsa
+TRACE::2022-06-10.20:47:00::SCWPlatform:: Platform location is C:/Users/franc/workspace/Hydro_XC7S50_V2/tempdsa
+TRACE::2022-06-10.20:47:00::SCWPlatform:: Platform Path C:/Users/franc/workspace/Hydro_XC7S50_V2/tempdsa/hydro_20220610-2.xsa
+TRACE::2022-06-10.20:47:00::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2022-06-10.20:47:00::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2022-06-10.20:47:00::SCWMssOS::Doing hw sync for the mss in domain: standalone_domain
+TRACE::2022-06-10.20:47:00::SCWPlatform::Trying to open the hw design at C:/Users/franc/workspace/Hydro_XC7S50_V2/hw/hydro_20220610.xsa
+TRACE::2022-06-10.20:47:00::SCWPlatform::DSA given C:/Users/franc/workspace/Hydro_XC7S50_V2/hw/hydro_20220610.xsa
+TRACE::2022-06-10.20:47:00::SCWPlatform::DSA absoulate path C:/Users/franc/workspace/Hydro_XC7S50_V2/hw/hydro_20220610.xsa
+TRACE::2022-06-10.20:47:00::SCWPlatform::DSA directory C:/Users/franc/workspace/Hydro_XC7S50_V2/hw
+TRACE::2022-06-10.20:47:00::SCWPlatform:: Platform Path C:/Users/franc/workspace/Hydro_XC7S50_V2/hw/hydro_20220610.xsa
+TRACE::2022-06-10.20:47:00::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2022-06-10.20:47:00::SCWPlatform::Trying to set the existing hwdb with name hydro_spartan_7_3
+TRACE::2022-06-10.20:47:00::SCWPlatform::Opened existing hwdb hydro_spartan_7_3
+TRACE::2022-06-10.20:47:00::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2022-06-10.20:47:00::SCWPlatform::Trying to open the hw design at C:/Users/franc/workspace/Hydro_XC7S50_V2/hw/hydro_20220610.xsa
+TRACE::2022-06-10.20:47:00::SCWPlatform::DSA given C:/Users/franc/workspace/Hydro_XC7S50_V2/hw/hydro_20220610.xsa
+TRACE::2022-06-10.20:47:00::SCWPlatform::DSA absoulate path C:/Users/franc/workspace/Hydro_XC7S50_V2/hw/hydro_20220610.xsa
+TRACE::2022-06-10.20:47:00::SCWPlatform::DSA directory C:/Users/franc/workspace/Hydro_XC7S50_V2/hw
+TRACE::2022-06-10.20:47:00::SCWPlatform:: Platform Path C:/Users/franc/workspace/Hydro_XC7S50_V2/hw/hydro_20220610.xsa
+TRACE::2022-06-10.20:47:00::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2022-06-10.20:47:00::SCWPlatform::Trying to set the existing hwdb with name hydro_spartan_7_3
+TRACE::2022-06-10.20:47:00::SCWPlatform::Opened existing hwdb hydro_spartan_7_3
+TRACE::2022-06-10.20:47:00::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2022-06-10.20:47:00::SCWMssOS::Checking the sw design at  C:/Users/franc/workspace/Hydro_XC7S50_V2/microblaze_0/standalone_domain/bsp/system.mss
+TRACE::2022-06-10.20:47:00::SCWMssOS::DEBUG:  swdes dump  C:/Users/franc/workspace/Hydro_XC7S50_V2/microblaze_0/standalone_domain/bsp/system.mss|system||
+
+TRACE::2022-06-10.20:47:00::SCWMssOS::Sw design exists and opened at  C:/Users/franc/workspace/Hydro_XC7S50_V2/microblaze_0/standalone_domain/bsp/system.mss
+TRACE::2022-06-10.20:47:00::SCWPlatform::Trying to open the hw design at C:/Users/franc/workspace/Hydro_XC7S50_V2/tempdsa/hydro_20220610-2.xsa
+TRACE::2022-06-10.20:47:00::SCWPlatform::DSA given C:/Users/franc/workspace/Hydro_XC7S50_V2/tempdsa/hydro_20220610-2.xsa
+TRACE::2022-06-10.20:47:00::SCWPlatform::DSA absoulate path C:/Users/franc/workspace/Hydro_XC7S50_V2/tempdsa/hydro_20220610-2.xsa
+TRACE::2022-06-10.20:47:00::SCWPlatform::DSA directory C:/Users/franc/workspace/Hydro_XC7S50_V2/tempdsa
+TRACE::2022-06-10.20:47:00::SCWPlatform:: Platform Path C:/Users/franc/workspace/Hydro_XC7S50_V2/tempdsa/hydro_20220610-2.xsa
+TRACE::2022-06-10.20:47:00::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2022-06-10.20:47:00::SCWPlatform::update - Opened existing hwdb hydro_spartan_7_4
+TRACE::2022-06-10.20:47:00::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2022-06-10.20:47:00::SCWMssOS::Saving the mss changes C:/Users/franc/workspace/Hydro_XC7S50_V2/microblaze_0/standalone_domain/bsp/system.mss
+TRACE::2022-06-10.20:47:00::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2022-06-10.20:47:00::SCWMssOS::Completed writemss as part of save.
+TRACE::2022-06-10.20:47:00::SCWMssOS::Commit changes completed.
+TRACE::2022-06-10.20:47:00::SCWMssOS::Completed hw sync for the mss in domain: standalone_domain
+TRACE::2022-06-10.20:47:00::SCWMssOS::Removing the swdes entry for  C:/Users/franc/workspace/Hydro_XC7S50_V2/microblaze_0/standalone_domain/bsp/system.mss
+TRACE::2022-06-10.20:47:00::SCWPlatform::Trying to open the hw design at C:/Users/franc/workspace/Hydro_XC7S50_V2/hw/hydro_20220610-2.xsa
+TRACE::2022-06-10.20:47:00::SCWPlatform::DSA given C:/Users/franc/workspace/Hydro_XC7S50_V2/hw/hydro_20220610-2.xsa
+TRACE::2022-06-10.20:47:00::SCWPlatform::DSA absoulate path C:/Users/franc/workspace/Hydro_XC7S50_V2/hw/hydro_20220610-2.xsa
+TRACE::2022-06-10.20:47:00::SCWPlatform::DSA directory C:/Users/franc/workspace/Hydro_XC7S50_V2/hw
+TRACE::2022-06-10.20:47:00::SCWPlatform:: Platform Path C:/Users/franc/workspace/Hydro_XC7S50_V2/hw/hydro_20220610-2.xsa
+TRACE::2022-06-10.20:47:00::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2022-06-10.20:47:00::SCWPlatform::Do not have an existing db opened. 
+TRACE::2022-06-10.20:47:00::SCWPlatform::Opened new HwDB with name hydro_spartan_7_5
+TRACE::2022-06-10.20:47:00::SCWMssOS::Saving the mss changes C:/Users/franc/workspace/Hydro_XC7S50_V2/microblaze_0/standalone_domain/bsp/system.mss
+TRACE::2022-06-10.20:47:00::SCWMssOS::Adding the swdes entry, mss present, able to open swdb C:/Users/franc/workspace/Hydro_XC7S50_V2/microblaze_0/standalone_domain/bsp/system.mss with des name system
+TRACE::2022-06-10.20:47:00::SCWMssOS::Writing the mss file completed C:/Users/franc/workspace/Hydro_XC7S50_V2/microblaze_0/standalone_domain/bsp/system.mss
+TRACE::2022-06-10.20:47:00::SCWMssOS::Commit changes completed.
+TRACE::2022-06-10.20:47:00::SCWPlatform::Trying to open the hw design at C:/Users/franc/workspace/Hydro_XC7S50_V2/hw/hydro_20220610-2.xsa
+TRACE::2022-06-10.20:47:00::SCWPlatform::DSA given C:/Users/franc/workspace/Hydro_XC7S50_V2/hw/hydro_20220610-2.xsa
+TRACE::2022-06-10.20:47:00::SCWPlatform::DSA absoulate path C:/Users/franc/workspace/Hydro_XC7S50_V2/hw/hydro_20220610-2.xsa
+TRACE::2022-06-10.20:47:00::SCWPlatform::DSA directory C:/Users/franc/workspace/Hydro_XC7S50_V2/hw
+TRACE::2022-06-10.20:47:00::SCWPlatform:: Platform Path C:/Users/franc/workspace/Hydro_XC7S50_V2/hw/hydro_20220610-2.xsa
+TRACE::2022-06-10.20:47:00::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2022-06-10.20:47:00::SCWPlatform::Trying to set the existing hwdb with name hydro_spartan_7_5
+TRACE::2022-06-10.20:47:00::SCWPlatform::Opened existing hwdb hydro_spartan_7_5
+TRACE::2022-06-10.20:47:00::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2022-06-10.20:47:00::SCWMssOS::Checking the sw design at  C:/Users/franc/workspace/Hydro_XC7S50_V2/microblaze_0/standalone_domain/bsp/system.mss
+TRACE::2022-06-10.20:47:00::SCWMssOS::DEBUG:  swdes dump  C:/Users/franc/workspace/Hydro_XC7S50_V2/microblaze_0/standalone_domain/bsp/system.mss|system||
+
+TRACE::2022-06-10.20:47:00::SCWMssOS::Sw design exists and opened at  C:/Users/franc/workspace/Hydro_XC7S50_V2/microblaze_0/standalone_domain/bsp/system.mss
+TRACE::2022-06-10.20:47:00::SCWWriter::formatted JSON is {
+	"platformName":	"Hydro_XC7S50_V2",
+	"sprVersion":	"2.0",
+	"mode":	"gui",
+	"dsaType":	"Fixed",
+	"platformDesc":	"Hydro_XC7S50_V2",
+	"platHandOff":	"C:/Users/franc/hydro_spartan_7/hydro_20220610-2.xsa",
+	"platIntHandOff":	"<platformDir>/hw/hydro_20220610-2.xsa",
+	"deviceType":	"FPGA",
+	"platIsPrebuiltAutogen":	"false",
+	"platIsNoBootBsp":	"false",
+	"hasFsblMakeHasChanges":	"false",
+	"hasPmufwMakeHasChanges":	"false",
+	"platPreBuiltFlag":	false,
+	"platformSamplesDir":	"",
+	"platActiveSys":	"Hydro_XC7S50_V2",
+	"systems":	[{
+			"systemName":	"Hydro_XC7S50_V2",
+			"systemDesc":	"Hydro_XC7S50_V2",
+			"sysIsBootAutoGen":	"true",
+			"systemDispName":	"Hydro_XC7S50_V2",
+			"sysActiveDom":	"standalone_domain",
+			"sysDefaultDom":	"standalone_domain",
+			"domains":	[{
+					"domainName":	"standalone_domain",
+					"domainDispName":	"standalone on microblaze_0",
+					"domainDesc":	"standalone_domain",
+					"processors":	"microblaze_0",
+					"os":	"standalone",
+					"sdxOs":	"standalone",
+					"debugEnable":	"False",
+					"domRuntimes":	["cpp"],
+					"swRepo":	"",
+					"mssOsVer":	"7.3",
+					"mssFile":	"",
+					"md5Digest":	"08474ed28eb0ce84697fa13ba160f356",
+					"compatibleApp":	"",
+					"domType":	"mssDomain",
+					"arch":	"32-bit",
+					"appSettings":	{
+						"appCompilerFlags":	"",
+						"appLinkerFlags":	""
+					},
+					"addedLibs":	[],
+					"libOptions":	{
+						"libsContainingOptions":	[]
+					},
+					"prebuiltLibs":	{
+						"prebuiltIncPath":	[],
+						"prebuiltLibPath":	[]
+					},
+					"isolation":	{
+					}
+				}]
+		}]
+}
+LOG::2022-06-10.20:47:08::SCWPlatform::Started generating the artifacts platform Hydro_XC7S50_V2
+TRACE::2022-06-10.20:47:08::SCWPlatform::Sanity checking of platform is completed
+LOG::2022-06-10.20:47:08::SCWPlatform::Started generating the artifacts for system configuration Hydro_XC7S50_V2
+LOG::2022-06-10.20:47:08::SCWSystem::Checking the domain standalone_domain
+LOG::2022-06-10.20:47:08::SCWSystem::Not a boot domain 
+LOG::2022-06-10.20:47:08::SCWSystem::Started Processing the domain standalone_domain
+TRACE::2022-06-10.20:47:08::SCWDomain::Generating domain artifcats
+TRACE::2022-06-10.20:47:08::SCWMssOS::Generating standalone artifcats
+TRACE::2022-06-10.20:47:08::SCWMssOS:: Copying the user libraries. 
+TRACE::2022-06-10.20:47:08::SCWPlatform::Trying to open the hw design at C:/Users/franc/workspace/Hydro_XC7S50_V2/hw/hydro_20220610-2.xsa
+TRACE::2022-06-10.20:47:08::SCWPlatform::DSA given C:/Users/franc/workspace/Hydro_XC7S50_V2/hw/hydro_20220610-2.xsa
+TRACE::2022-06-10.20:47:08::SCWPlatform::DSA absoulate path C:/Users/franc/workspace/Hydro_XC7S50_V2/hw/hydro_20220610-2.xsa
+TRACE::2022-06-10.20:47:08::SCWPlatform::DSA directory C:/Users/franc/workspace/Hydro_XC7S50_V2/hw
+TRACE::2022-06-10.20:47:08::SCWPlatform:: Platform Path C:/Users/franc/workspace/Hydro_XC7S50_V2/hw/hydro_20220610-2.xsa
+TRACE::2022-06-10.20:47:08::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2022-06-10.20:47:08::SCWPlatform::Trying to set the existing hwdb with name hydro_spartan_7_5
+TRACE::2022-06-10.20:47:08::SCWPlatform::Opened existing hwdb hydro_spartan_7_5
+TRACE::2022-06-10.20:47:08::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2022-06-10.20:47:08::SCWMssOS::Checking the sw design at  C:/Users/franc/workspace/Hydro_XC7S50_V2/microblaze_0/standalone_domain/bsp/system.mss
+TRACE::2022-06-10.20:47:08::SCWMssOS::DEBUG:  swdes dump  C:/Users/franc/workspace/Hydro_XC7S50_V2/microblaze_0/standalone_domain/bsp/system.mss|system||
+
+TRACE::2022-06-10.20:47:08::SCWMssOS::Sw design exists and opened at  C:/Users/franc/workspace/Hydro_XC7S50_V2/microblaze_0/standalone_domain/bsp/system.mss
+TRACE::2022-06-10.20:47:08::SCWMssOS::Completed writing the mss file at C:/Users/franc/workspace/Hydro_XC7S50_V2/microblaze_0/standalone_domain/bsp
+TRACE::2022-06-10.20:47:08::SCWMssOS::Mss edits present, copying mssfile into export location C:/Users/franc/workspace/Hydro_XC7S50_V2/microblaze_0/standalone_domain/bsp/system.mss
+TRACE::2022-06-10.20:47:08::SCWMssOS::bsp generated is upto date with the mss file. Skipping bsp generation.
+TRACE::2022-06-10.20:47:08::SCWMssOS::BSP is already built. skipping the bsp build ... 
+TRACE::2022-06-10.20:47:08::SCWDomain::Skipping the build for domain :  standalone_domain
+TRACE::2022-06-10.20:47:08::SCWMssOS::skipping the bsp build ... 
+TRACE::2022-06-10.20:47:08::SCWMssOS::Copying to export directory.
+TRACE::2022-06-10.20:47:08::SCWMssOS:: Checking if to create the Supporting Applications
+TRACE::2022-06-10.20:47:08::SCWMssOS:: No Linux domain exists, trying to generate FSBL 
+LOG::2022-06-10.20:47:08::SCWSystem::Completed Processing the domain standalone_domain
+LOG::2022-06-10.20:47:08::SCWSystem::Completed Processing the sysconfig Hydro_XC7S50_V2
+LOG::2022-06-10.20:47:08::SCWPlatform::Completed generating the artifacts for system configuration Hydro_XC7S50_V2
+TRACE::2022-06-10.20:47:08::SCWPlatform::Started preparing the platform 
+TRACE::2022-06-10.20:47:08::SCWSystem::Writing the bif file for system config Hydro_XC7S50_V2
+TRACE::2022-06-10.20:47:08::SCWSystem::dir created 
+TRACE::2022-06-10.20:47:08::SCWSystem::Writing the bif 
+TRACE::2022-06-10.20:47:08::SCWPlatform::Started writing the spfm file 
+TRACE::2022-06-10.20:47:08::SCWPlatform::Started writing the xpfm file 
+TRACE::2022-06-10.20:47:08::SCWPlatform::Completed generating the platform
+TRACE::2022-06-10.20:47:08::SCWMssOS::Saving the mss changes C:/Users/franc/workspace/Hydro_XC7S50_V2/microblaze_0/standalone_domain/bsp/system.mss
+TRACE::2022-06-10.20:47:08::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2022-06-10.20:47:08::SCWMssOS::Completed writemss as part of save.
+TRACE::2022-06-10.20:47:08::SCWMssOS::Commit changes completed.
+TRACE::2022-06-10.20:47:08::SCWPlatform::Trying to open the hw design at C:/Users/franc/workspace/Hydro_XC7S50_V2/hw/hydro_20220610-2.xsa
+TRACE::2022-06-10.20:47:08::SCWPlatform::DSA given C:/Users/franc/workspace/Hydro_XC7S50_V2/hw/hydro_20220610-2.xsa
+TRACE::2022-06-10.20:47:08::SCWPlatform::DSA absoulate path C:/Users/franc/workspace/Hydro_XC7S50_V2/hw/hydro_20220610-2.xsa
+TRACE::2022-06-10.20:47:08::SCWPlatform::DSA directory C:/Users/franc/workspace/Hydro_XC7S50_V2/hw
+TRACE::2022-06-10.20:47:08::SCWPlatform:: Platform Path C:/Users/franc/workspace/Hydro_XC7S50_V2/hw/hydro_20220610-2.xsa
+TRACE::2022-06-10.20:47:08::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2022-06-10.20:47:08::SCWPlatform::Trying to set the existing hwdb with name hydro_spartan_7_5
+TRACE::2022-06-10.20:47:08::SCWPlatform::Opened existing hwdb hydro_spartan_7_5
+TRACE::2022-06-10.20:47:08::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2022-06-10.20:47:08::SCWMssOS::Checking the sw design at  C:/Users/franc/workspace/Hydro_XC7S50_V2/microblaze_0/standalone_domain/bsp/system.mss
+TRACE::2022-06-10.20:47:08::SCWMssOS::DEBUG:  swdes dump  C:/Users/franc/workspace/Hydro_XC7S50_V2/microblaze_0/standalone_domain/bsp/system.mss|system||
+
+TRACE::2022-06-10.20:47:08::SCWMssOS::Sw design exists and opened at  C:/Users/franc/workspace/Hydro_XC7S50_V2/microblaze_0/standalone_domain/bsp/system.mss
+TRACE::2022-06-10.20:47:08::SCWWriter::formatted JSON is {
+	"platformName":	"Hydro_XC7S50_V2",
+	"sprVersion":	"2.0",
+	"mode":	"gui",
+	"dsaType":	"Fixed",
+	"platformDesc":	"Hydro_XC7S50_V2",
+	"platHandOff":	"C:/Users/franc/hydro_spartan_7/hydro_20220610-2.xsa",
+	"platIntHandOff":	"<platformDir>/hw/hydro_20220610-2.xsa",
+	"deviceType":	"FPGA",
+	"platIsPrebuiltAutogen":	"false",
+	"platIsNoBootBsp":	"false",
+	"hasFsblMakeHasChanges":	"false",
+	"hasPmufwMakeHasChanges":	"false",
+	"platPreBuiltFlag":	false,
+	"platformSamplesDir":	"",
+	"platActiveSys":	"Hydro_XC7S50_V2",
+	"systems":	[{
+			"systemName":	"Hydro_XC7S50_V2",
+			"systemDesc":	"Hydro_XC7S50_V2",
+			"sysIsBootAutoGen":	"true",
+			"systemDispName":	"Hydro_XC7S50_V2",
+			"sysActiveDom":	"standalone_domain",
+			"sysDefaultDom":	"standalone_domain",
+			"domains":	[{
+					"domainName":	"standalone_domain",
+					"domainDispName":	"standalone on microblaze_0",
+					"domainDesc":	"standalone_domain",
+					"processors":	"microblaze_0",
+					"os":	"standalone",
+					"sdxOs":	"standalone",
+					"debugEnable":	"False",
+					"domRuntimes":	["cpp"],
+					"swRepo":	"",
+					"mssOsVer":	"7.3",
+					"mssFile":	"",
+					"md5Digest":	"08474ed28eb0ce84697fa13ba160f356",
+					"compatibleApp":	"",
+					"domType":	"mssDomain",
+					"arch":	"32-bit",
+					"appSettings":	{
+						"appCompilerFlags":	"",
+						"appLinkerFlags":	""
+					},
+					"addedLibs":	[],
+					"libOptions":	{
+						"libsContainingOptions":	[]
+					},
+					"prebuiltLibs":	{
+						"prebuiltIncPath":	[],
+						"prebuiltLibPath":	[]
+					},
+					"isolation":	{
+					}
+				}]
+		}]
+}
+KEYINFO::2022-06-10.20:47:08::SCWPlatform::updated the xpfm file.
+TRACE::2022-06-10.20:47:08::SCWPlatform::Trying to open the hw design at C:/Users/franc/workspace/Hydro_XC7S50_V2/hw/hydro_20220610-2.xsa
+TRACE::2022-06-10.20:47:08::SCWPlatform::DSA given C:/Users/franc/workspace/Hydro_XC7S50_V2/hw/hydro_20220610-2.xsa
+TRACE::2022-06-10.20:47:08::SCWPlatform::DSA absoulate path C:/Users/franc/workspace/Hydro_XC7S50_V2/hw/hydro_20220610-2.xsa
+TRACE::2022-06-10.20:47:08::SCWPlatform::DSA directory C:/Users/franc/workspace/Hydro_XC7S50_V2/hw
+TRACE::2022-06-10.20:47:08::SCWPlatform:: Platform Path C:/Users/franc/workspace/Hydro_XC7S50_V2/hw/hydro_20220610-2.xsa
+TRACE::2022-06-10.20:47:08::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2022-06-10.20:47:08::SCWPlatform::Trying to set the existing hwdb with name hydro_spartan_7_5
+TRACE::2022-06-10.20:47:08::SCWPlatform::Opened existing hwdb hydro_spartan_7_5
+TRACE::2022-06-10.20:47:08::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2022-06-10.20:47:08::SCWMssOS::Checking the sw design at  C:/Users/franc/workspace/Hydro_XC7S50_V2/microblaze_0/standalone_domain/bsp/system.mss
+TRACE::2022-06-10.20:47:08::SCWMssOS::DEBUG:  swdes dump  C:/Users/franc/workspace/Hydro_XC7S50_V2/microblaze_0/standalone_domain/bsp/system.mss|system||
+
+TRACE::2022-06-10.20:47:08::SCWMssOS::Sw design exists and opened at  C:/Users/franc/workspace/Hydro_XC7S50_V2/microblaze_0/standalone_domain/bsp/system.mss

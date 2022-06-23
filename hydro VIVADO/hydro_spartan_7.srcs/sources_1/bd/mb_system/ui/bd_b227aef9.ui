@@ -2,7 +2,7 @@
    "ActiveEmotionalView":"Default View",
    "Default View_Layers":"/clk_wiz_0_clk_26mhz:true|/clk_wiz_0_clk_50mhz:true|/rst_clk_wiz_0_100M_bus_struct_reset:true|/mdm_1_Debug_SYS_Rst:true|/clk_100MHz_1:true|/rst_clk_wiz_0_100M_peripheral_reset:true|/clk_wiz_0_clk_10mhz:true|/reset_rtl_0_1:true|/rst_clk_wiz_0_100M_peripheral_aresetn:true|/rst_clk_wiz_0_100M_mb_reset:true|",
    "Default View_ScaleFactor":"0.976289",
-   "Default View_TopLeft":"-377,0",
+   "Default View_TopLeft":"823,0",
    "Display-PortTypeClock":"true",
    "Display-PortTypeOthers":"true",
    "Display-PortTypeReset":"true",

@@ -66,3 +66,8 @@ platform config -updatehw {C:/Users/franc/hydro_spartan_7/hydro_20220608.xsa}
 platform clean
 platform clean
 platform generate
+platform active {Hydro_XC7S50_V2}
+platform config -updatehw {C:/Users/franc/hydro_spartan_7/hydro_20220610.xsa}
+platform generate -domains 
+platform config -updatehw {C:/Users/franc/hydro_spartan_7/hydro_20220610-2.xsa}
+platform generate -domains 
