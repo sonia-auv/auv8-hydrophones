@@ -123,6 +123,9 @@
   "../../../bd/mb_system/ip/mb_system_clk_wiz_0_0/mb_system_clk_wiz_0_0.v" \
 -endlib
 -makelib xcelium_lib/xil_defaultlib \
+  "../../../bd/mb_system/ip/mb_system_iomodule_0_0/sim/mb_system_iomodule_0_0.vhd" \
+-endlib
+-makelib xcelium_lib/xil_defaultlib \
   glbl.v
 -endlib
 

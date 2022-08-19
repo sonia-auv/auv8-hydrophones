@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7s50ftgb196-2" LaunchTime="1654894249">
+<GenRun Id="synth_1" LaunchPart="xc7s50ftgb196-2" LaunchTime="1657915355">
   <File Type="PA-TCL" Name="hydro_spartan_7.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="hydro_spartan_7_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="hydro_spartan_7_reports.tcl"/>
@@ -547,7 +547,7 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/HydroE21.elf">
+    <File Path="$PPRDIR/Hydro20220710.elf">
       <FileInfo>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="ScopedToRef" Val="mb_system"/>

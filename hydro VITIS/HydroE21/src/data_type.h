@@ -32,6 +32,7 @@ typedef struct Hydro
 	Tiny_Shell *shell;
 	XIOModule *config;
 	XIOModule *data_output;
+	XIOModule *data_output2;
 	Config_Registers *registers;
 	operation_mode operation;
 } Hydro;

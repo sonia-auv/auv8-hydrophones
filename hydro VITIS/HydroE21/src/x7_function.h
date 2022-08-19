@@ -36,6 +36,7 @@
 #define AGC_ERROR_MASK				0x4
 #define DOA_SNR_MASK				0x7FFF8
 #define AGC_GAIN_MASK				0x380000
+#define INDEX_MASK					0x1FFFF
 
 Hydro *hydro_ptr;
 
@@ -47,9 +48,10 @@ Hydro *hydro_ptr;
  * @param uart Pointer to the XUartLite structure
  * @param config Pointer to the XIOModule structure for the configuration
  * @param data Pointer for the XIOModule structure for the data output
+ * @param data2 Pointer for the XIOModule structure for the data output
  * @return int 0 for success or <0 for error
  */
-int initperipherals(Hydro *ptr, XUartLite *uart, XIOModule *config, XIOModule *data);
+int initperipherals(Hydro *ptr, XUartLite *uart, XIOModule *config, XIOModule *data, XIOModule *data2);
 
 /**
  * @brief Update the register for the new programmable amplifier gain
@@ -128,6 +130,8 @@ void setagcmaxthreshold(Hydro *ptr, u16 value);
  * @return u16 SNR value
  */
 u16 getsnr(Hydro *ptr);
+
+u32 getindex(Hydro *ptr);
 
 /**
  * @brief Convert a char array into the signed integer. Values in

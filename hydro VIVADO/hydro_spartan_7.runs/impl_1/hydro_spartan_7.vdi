@@ -2,8 +2,8 @@
 # Vivado v2020.2 (64-bit)
 # SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
 # IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
-# Start of session at: Fri Jun 10 21:14:14 2022
-# Process ID: 1408
+# Start of session at: Fri Jul 15 16:45:07 2022
+# Process ID: 9264
 # Current directory: C:/Users/franc/hydro_spartan_7/hydro_spartan_7.runs/impl_1
 # Command line: vivado.exe -log hydro_spartan_7.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source hydro_spartan_7.tcl -notrace
 # Log file: C:/Users/franc/hydro_spartan_7/hydro_spartan_7.runs/impl_1/hydro_spartan_7.vdi
@@ -14,10 +14,10 @@ Command: open_checkpoint hydro_spartan_7_routed.dcp
 
 Starting open_checkpoint Task
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.115 . Memory (MB): peak = 1125.918 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.046 . Memory (MB): peak = 1126.105 ; gain = 0.000
 INFO: [Device 21-403] Loading part xc7s50ftgb196-2
-Netlist sorting complete. Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1125.918 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 2014 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.644 . Memory (MB): peak = 1126.105 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 1788 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-479] Netlist was created with Vivado 2020.2
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -28,10 +28,10 @@ INFO: [Project 1-853] Binary constraint restore complete.
 Reading XDEF placement.
 Reading placer database...
 Reading XDEF routing.
-Read XDEF File: Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1616.512 ; gain = 9.520
+Read XDEF File: Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1605.664 ; gain = 7.867
 Restored from archive | CPU: 2.000000 secs | Memory: 0.000000 MB |
-Finished XDEF File Restore: Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1616.512 ; gain = 9.520
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.035 . Memory (MB): peak = 1616.512 ; gain = 0.000
+Finished XDEF File Restore: Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1605.664 ; gain = 7.867
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.016 . Memory (MB): peak = 1605.664 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 122 instances were transformed.
   IOBUF => IOBUF (IBUF, OBUFT): 5 instances
@@ -40,7 +40,7 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   SRLC16E => SRL16E: 2 instances
 
 INFO: [Project 1-604] Checkpoint was created with Vivado v2020.2 (64-bit) build 3064766
-open_checkpoint: Time (s): cpu = 00:00:58 ; elapsed = 00:01:03 . Memory (MB): peak = 1618.551 ; gain = 492.633
+open_checkpoint: Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 1607.809 ; gain = 481.703
 INFO: [Memdata 28-208] The XPM instance: <FPGA_system/mb_system_i/axi_quad_spi_0/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/LOGIC_FOR_MD_12_GEN.SPI_MODE_1_LUT_LOGIC_I/QSPI_LOOK_UP_MODE_2_MEMORY_4.xpm_mem_gen_QSPI_LOOK_UP_MODE_2_MEMORY_4.xpm_memory_inst/xpm_memory_base_inst> is part of IP: <FPGA_system/mb_system_i/axi_quad_spi_0>. This XPM instance will be excluded from the .mmi because updatemem is prohibited from making changes to an XPM that is part of an IP.
 INFO: [Memdata 28-167] Found XPM memory block FPGA_system/mb_system_i/axi_quad_spi_0/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.TX_FIFO_II/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst with a P_MEMORY_PRIMITIVE property set to auto. A value of block is required. You will not be able to use the updatemem program to update the bitstream with new data for the FPGA_system/mb_system_i/axi_quad_spi_0/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.TX_FIFO_II/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst block.
 INFO: [Memdata 28-167] Found XPM memory block FPGA_system/mb_system_i/axi_quad_spi_0/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.RX_FIFO_II/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst with a P_MEMORY_PRIMITIVE property set to auto. A value of block is required. You will not be able to use the updatemem program to update the bitstream with new data for the FPGA_system/mb_system_i/axi_quad_spi_0/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.RX_FIFO_II/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst block.
@@ -57,19 +57,10 @@ WARNING: [DRC DPIP-1] Input pipelining: DSP FPGA_system/mb_system_i/microblaze_0
 WARNING: [DRC DPIP-1] Input pipelining: DSP FPGA_system/mb_system_i/microblaze_0/U0/MicroBlaze_Core_I/Performance.Core/Data_Flow_I/MUL_Unit_I/Use_HW_MUL.Using_DSP48_Architectures.No_MUL64.dsp_module_I2/Using_DSP48E1.DSP48E1_I1/Using_FPGA.DSP48E1_I1 input FPGA_system/mb_system_i/microblaze_0/U0/MicroBlaze_Core_I/Performance.Core/Data_Flow_I/MUL_Unit_I/Use_HW_MUL.Using_DSP48_Architectures.No_MUL64.dsp_module_I2/Using_DSP48E1.DSP48E1_I1/Using_FPGA.DSP48E1_I1/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 WARNING: [DRC DPIP-1] Input pipelining: DSP FPGA_system/mb_system_i/microblaze_0/U0/MicroBlaze_Core_I/Performance.Core/Data_Flow_I/MUL_Unit_I/Use_HW_MUL.Using_DSP48_Architectures.dsp_module_I1/Using_DSP48E1.DSP48E1_I1/Using_FPGA.DSP48E1_I1 input FPGA_system/mb_system_i/microblaze_0/U0/MicroBlaze_Core_I/Performance.Core/Data_Flow_I/MUL_Unit_I/Use_HW_MUL.Using_DSP48_Architectures.dsp_module_I1/Using_DSP48E1.DSP48E1_I1/Using_FPGA.DSP48E1_I1/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 WARNING: [DRC DPIP-1] Input pipelining: DSP FPGA_system/mb_system_i/microblaze_0/U0/MicroBlaze_Core_I/Performance.Core/Data_Flow_I/MUL_Unit_I/Use_HW_MUL.Using_DSP48_Architectures.dsp_module_I1/Using_DSP48E1.DSP48E1_I1/Using_FPGA.DSP48E1_I1 input FPGA_system/mb_system_i/microblaze_0/U0/MicroBlaze_Core_I/Performance.Core/Data_Flow_I/MUL_Unit_I/Use_HW_MUL.Using_DSP48_Architectures.dsp_module_I1/Using_DSP48E1.DSP48E1_I1/Using_FPGA.DSP48E1_I1/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-1] Input pipelining: DSP PhaseHydrophones/u_Calcul_Direction/Delay3_out1_reg input PhaseHydrophones/u_Calcul_Direction/Delay3_out1_reg/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-1] Input pipelining: DSP PhaseHydrophones/u_Calcul_Direction/tmp_MatrixMultiply1_dotp_0 input PhaseHydrophones/u_Calcul_Direction/tmp_MatrixMultiply1_dotp_0/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-1] Input pipelining: DSP PhaseHydrophones/u_Calcul_Direction/tmp_MatrixMultiply1_dotp_0_1 input PhaseHydrophones/u_Calcul_Direction/tmp_MatrixMultiply1_dotp_0_1/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-1] Input pipelining: DSP PhaseHydrophones/u_Calcul_Direction/tmp_MatrixMultiply1_dotp_0_2 input PhaseHydrophones/u_Calcul_Direction/tmp_MatrixMultiply1_dotp_0_2/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-1] Input pipelining: DSP PhaseHydrophones/u_Calcul_Direction/tmp_MatrixMultiply1_dotp_1 input PhaseHydrophones/u_Calcul_Direction/tmp_MatrixMultiply1_dotp_1/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-1] Input pipelining: DSP PhaseHydrophones/u_Calcul_Direction/tmp_MatrixMultiply1_dotp_1_2 input PhaseHydrophones/u_Calcul_Direction/tmp_MatrixMultiply1_dotp_1_2/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-1] Input pipelining: DSP PhaseHydrophones/u_Calcul_Direction/tmp_MatrixMultiply1_dotp_2 input PhaseHydrophones/u_Calcul_Direction/tmp_MatrixMultiply1_dotp_2/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-1] Input pipelining: DSP PhaseHydrophones/u_Calcul_Direction/tmp_MatrixMultiply1_dotp_2_1 input PhaseHydrophones/u_Calcul_Direction/tmp_MatrixMultiply1_dotp_2_1/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-1] Input pipelining: DSP PhaseHydrophones/u_Calcul_Direction/tmp_MatrixMultiply1_dotp_2_2 input PhaseHydrophones/u_Calcul_Direction/tmp_MatrixMultiply1_dotp_2_2/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 WARNING: [DRC RTSTAT-10] No routable loads: 18 net(s) have no routable loads. The problem bus(es) and/or net(s) are FPGA_system/mb_system_i/Parameter_Module/U0/IOModule_Core_I1/GPO_I1/GPO1[14], FPGA_system/mb_system_i/Parameter_Module/U0/IOModule_Core_I1/GPO_I1/GPO1[15], FPGA_system/mb_system_i/Parameter_Module/U0/IOModule_Core_I1/GPO_I1/GPO1[16], FPGA_system/mb_system_i/Parameter_Module/U0/IOModule_Core_I1/GPO_I1/GPO1[17], FPGA_system/mb_system_i/Parameter_Module/U0/IOModule_Core_I1/GPO_I1/GPO1[18], FPGA_system/mb_system_i/Parameter_Module/U0/IOModule_Core_I1/GPO_I1/GPO1[19], FPGA_system/mb_system_i/Parameter_Module/U0/IOModule_Core_I1/GPO_I1/GPO1[20], FPGA_system/mb_system_i/Parameter_Module/U0/IOModule_Core_I1/GPO_I1/GPO1[21], FPGA_system/mb_system_i/Parameter_Module/U0/IOModule_Core_I1/GPO_I1/GPO1[22], FPGA_system/mb_system_i/Parameter_Module/U0/IOModule_Core_I1/GPO_I1/GPO1[23], FPGA_system/mb_system_i/Parameter_Module/U0/IOModule_Core_I1/GPO_I1/GPO1[24], FPGA_system/mb_system_i/Parameter_Module/U0/IOModule_Core_I1/GPO_I1/GPO1[25], FPGA_system/mb_system_i/Parameter_Module/U0/IOModule_Core_I1/GPO_I1/GPO1[26], FPGA_system/mb_system_i/Parameter_Module/U0/IOModule_Core_I1/GPO_I1/GPO1[27], FPGA_system/mb_system_i/Parameter_Module/U0/IOModule_Core_I1/GPO_I1/GPO1[28]... and (the first 15 of 18 listed).
-INFO: [Vivado 12-3199] DRC finished with 0 Errors, 15 Warnings
+INFO: [Vivado 12-3199] DRC finished with 0 Errors, 6 Warnings
 INFO: [Vivado 12-3200] Please refer to the DRC report (report_drc) for more information.
-INFO: [Memdata 28-144] Successfully populated the BRAM INIT strings from the following elf files: C:/Users/franc/hydro_spartan_7/HydroE21.elf 
+INFO: [Memdata 28-144] Successfully populated the BRAM INIT strings from the following elf files: C:/Users/franc/hydro_spartan_7/hydro20220715.elf 
 INFO: [Designutils 20-2272] Running write_bitstream with 2 threads.
 Loading data files...
 Loading site data...
@@ -77,12 +68,12 @@ Loading route data...
 Processing options...
 Creating bitmap...
 Creating bitstream...
-Bitstream compression saved 7429120 bits.
+Bitstream compression saved 8170816 bits.
 Writing bitstream ./hydro_spartan_7.bit...
 Writing bitstream ./hydro_spartan_7.bin...
 INFO: [Vivado 12-1842] Bitgen Completed Successfully.
 INFO: [Common 17-83] Releasing license: Implementation
-25 Infos, 15 Warnings, 0 Critical Warnings and 0 Errors encountered.
+25 Infos, 6 Warnings, 0 Critical Warnings and 0 Errors encountered.
 write_bitstream completed successfully
-write_bitstream: Time (s): cpu = 00:00:41 ; elapsed = 00:00:29 . Memory (MB): peak = 2220.180 ; gain = 580.816
-INFO: [Common 17-206] Exiting Vivado at Fri Jun 10 21:15:52 2022...
+write_bitstream: Time (s): cpu = 00:00:38 ; elapsed = 00:00:27 . Memory (MB): peak = 2194.383 ; gain = 565.727
+INFO: [Common 17-206] Exiting Vivado at Fri Jul 15 16:46:06 2022...

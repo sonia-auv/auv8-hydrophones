@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0xB51E9618B0A1485C",
+      "boundary_crc": "0xDFFE06E4825D4EB6",
       "device": "xc7s50ftgb196-2",
       "name": "mb_system",
       "rev_ctrl_bd_flag": "RevCtrlBdOff",
@@ -31,7 +31,8 @@
         "m01_couplers": {}
       },
       "rst_clk_wiz_1_100M": "",
-      "clk_wiz_0": ""
+      "clk_wiz_0": "",
+      "Data_Module_2": ""
     },
     "interface_ports": {
       "uart_rs232": {
@@ -42,19 +43,19 @@
         "mode": "Master",
         "vlnv": "xilinx.com:interface:spi_rtl:1.0"
       },
-      "Z": {
+      "PHASE3": {
         "mode": "Master",
         "vlnv": "xilinx.com:interface:gpio_rtl:1.0"
       },
-      "FREQUENCY": {
+      "PHASEREF": {
         "mode": "Master",
         "vlnv": "xilinx.com:interface:gpio_rtl:1.0"
       },
-      "X": {
+      "PHASE1": {
         "mode": "Master",
         "vlnv": "xilinx.com:interface:gpio_rtl:1.0"
       },
-      "Y": {
+      "PHASE2": {
         "mode": "Master",
         "vlnv": "xilinx.com:interface:gpio_rtl:1.0"
       },
@@ -71,6 +72,10 @@
         "vlnv": "xilinx.com:interface:gpio_rtl:1.0"
       },
       "OUT_REGISTER": {
+        "mode": "Master",
+        "vlnv": "xilinx.com:interface:gpio_rtl:1.0"
+      },
+      "INDEX": {
         "mode": "Master",
         "vlnv": "xilinx.com:interface:gpio_rtl:1.0"
       }
@@ -183,6 +188,10 @@
           "LMB_Sl_2": {
             "mode": "MirroredSlave",
             "vlnv": "xilinx.com:interface:lmb_rtl:1.0"
+          },
+          "LMB_Sl_3": {
+            "mode": "MirroredSlave",
+            "vlnv": "xilinx.com:interface:lmb_rtl:1.0"
           }
         },
         "ports": {
@@ -220,7 +229,7 @@
             "xci_name": "mb_system_dlmb_v10_2",
             "parameters": {
               "C_LMB_NUM_SLAVES": {
-                "value": "3"
+                "value": "4"
               }
             },
             "interface_ports": {
@@ -229,7 +238,8 @@
                 "bridges": [
                   "LMB_Sl_0",
                   "LMB_Sl_1",
-                  "LMB_Sl_2"
+                  "LMB_Sl_2",
+                  "LMB_Sl_3"
                 ]
               }
             }
@@ -284,22 +294,10 @@
           }
         },
         "interface_nets": {
-          "microblaze_0_ilmb": {
+          "microblaze_0_dlmb_bus": {
             "interface_ports": [
-              "ILMB",
-              "ilmb_v10/LMB_M"
-            ]
-          },
-          "microblaze_0_ilmb_cntlr": {
-            "interface_ports": [
-              "ilmb_bram_if_cntlr/BRAM_PORT",
-              "lmb_bram/BRAM_PORTB"
-            ]
-          },
-          "microblaze_0_dlmb_cntlr": {
-            "interface_ports": [
-              "dlmb_bram_if_cntlr/BRAM_PORT",
-              "lmb_bram/BRAM_PORTA"
+              "dlmb_v10/LMB_Sl_0",
+              "dlmb_bram_if_cntlr/SLMB"
             ]
           },
           "microblaze_0_dlmb": {
@@ -308,16 +306,28 @@
               "dlmb_v10/LMB_M"
             ]
           },
+          "dlmb_v10_iomodule_2": {
+            "interface_ports": [
+              "LMB_Sl_3",
+              "dlmb_v10/LMB_Sl_3"
+            ]
+          },
+          "microblaze_0_dlmb_cntlr": {
+            "interface_ports": [
+              "dlmb_bram_if_cntlr/BRAM_PORT",
+              "lmb_bram/BRAM_PORTA"
+            ]
+          },
           "dlmb_v10_iomodule_1": {
             "interface_ports": [
               "LMB_Sl_2",
               "dlmb_v10/LMB_Sl_2"
             ]
           },
-          "microblaze_0_dlmb_bus": {
+          "microblaze_0_ilmb_cntlr": {
             "interface_ports": [
-              "dlmb_v10/LMB_Sl_0",
-              "dlmb_bram_if_cntlr/SLMB"
+              "ilmb_bram_if_cntlr/BRAM_PORT",
+              "lmb_bram/BRAM_PORTB"
             ]
           },
           "microblaze_0_ilmb_bus": {
@@ -330,6 +340,12 @@
             "interface_ports": [
               "LMB_Sl_1",
               "dlmb_v10/LMB_Sl_1"
+            ]
+          },
+          "microblaze_0_ilmb": {
+            "interface_ports": [
+              "ILMB",
+              "ilmb_v10/LMB_M"
             ]
           }
         },
@@ -995,22 +1011,16 @@
           }
         },
         "interface_nets": {
+          "xbar_to_m01_couplers": {
+            "interface_ports": [
+              "xbar/M01_AXI",
+              "m01_couplers/S_AXI"
+            ]
+          },
           "m00_couplers_to_microblaze_0_axi_periph": {
             "interface_ports": [
               "M00_AXI",
               "m00_couplers/M_AXI"
-            ]
-          },
-          "microblaze_0_axi_periph_to_s00_couplers": {
-            "interface_ports": [
-              "S00_AXI",
-              "s00_couplers/S_AXI"
-            ]
-          },
-          "s00_couplers_to_xbar": {
-            "interface_ports": [
-              "s00_couplers/M_AXI",
-              "xbar/S00_AXI"
             ]
           },
           "xbar_to_m00_couplers": {
@@ -1019,16 +1029,22 @@
               "m00_couplers/S_AXI"
             ]
           },
-          "xbar_to_m01_couplers": {
-            "interface_ports": [
-              "xbar/M01_AXI",
-              "m01_couplers/S_AXI"
-            ]
-          },
           "m01_couplers_to_microblaze_0_axi_periph": {
             "interface_ports": [
               "M01_AXI",
               "m01_couplers/M_AXI"
+            ]
+          },
+          "s00_couplers_to_xbar": {
+            "interface_ports": [
+              "s00_couplers/M_AXI",
+              "xbar/S00_AXI"
+            ]
+          },
+          "microblaze_0_axi_periph_to_s00_couplers": {
+            "interface_ports": [
+              "S00_AXI",
+              "s00_couplers/S_AXI"
             ]
           }
         },
@@ -1119,31 +1135,28 @@
             "value": "PLL"
           }
         }
+      },
+      "Data_Module_2": {
+        "vlnv": "xilinx.com:ip:iomodule:3.1",
+        "xci_name": "mb_system_iomodule_0_0",
+        "parameters": {
+          "C_GPI1_SIZE": {
+            "value": "17"
+          },
+          "C_USE_GPI1": {
+            "value": "1"
+          },
+          "C_USE_GPI4": {
+            "value": "0"
+          }
+        }
       }
     },
     "interface_nets": {
-      "Parameter_Module_GPIO4": {
-        "interface_ports": [
-          "OUT_REGISTER",
-          "Parameter_Module/GPIO4"
-        ]
-      },
-      "Data_Module_GPIO1": {
-        "interface_ports": [
-          "FREQUENCY",
-          "Data_Module/GPIO1"
-        ]
-      },
       "axi_uartlite_0_UART": {
         "interface_ports": [
           "uart_rs232",
           "axi_uartlite_0/UART"
-        ]
-      },
-      "iomodule_1_GPIO2": {
-        "interface_ports": [
-          "THRESHOLD_REGISTER",
-          "Parameter_Module/GPIO2"
         ]
       },
       "microblaze_0_axi_periph_M01_AXI": {
@@ -1152,40 +1165,10 @@
           "axi_quad_spi_0/AXI_LITE"
         ]
       },
-      "Conn1": {
+      "axi_quad_spi_0_SPI_0": {
         "interface_ports": [
-          "microblaze_0_local_memory/LMB_Sl_2",
-          "Data_Module/SLMB"
-        ]
-      },
-      "microblaze_0_ilmb_1": {
-        "interface_ports": [
-          "microblaze_0/ILMB",
-          "microblaze_0_local_memory/ILMB"
-        ]
-      },
-      "microblaze_0_debug": {
-        "interface_ports": [
-          "mdm_1/MBDEBUG_0",
-          "microblaze_0/DEBUG"
-        ]
-      },
-      "Conn": {
-        "interface_ports": [
-          "microblaze_0_local_memory/LMB_Sl_1",
-          "Parameter_Module/SLMB"
-        ]
-      },
-      "Data_Module_GPIO2": {
-        "interface_ports": [
-          "X",
-          "Data_Module/GPIO2"
-        ]
-      },
-      "Parameter_Module_GPIO3": {
-        "interface_ports": [
-          "AGC_CONFIG_REGISTER",
-          "Parameter_Module/GPIO3"
+          "spi_0",
+          "axi_quad_spi_0/SPI_0"
         ]
       },
       "microblaze_0_dlmb_1": {
@@ -1194,16 +1177,10 @@
           "microblaze_0_local_memory/DLMB"
         ]
       },
-      "microblaze_0_M_AXI_DP": {
+      "iomodule_1_GPIO2": {
         "interface_ports": [
-          "microblaze_0/M_AXI_DP",
-          "microblaze_0_axi_periph/S00_AXI"
-        ]
-      },
-      "iomodule_1_GPIO1": {
-        "interface_ports": [
-          "CONFIG_REGISTER",
-          "Parameter_Module/GPIO1"
+          "THRESHOLD_REGISTER",
+          "Parameter_Module/GPIO2"
         ]
       },
       "microblaze_0_axi_periph_M00_AXI": {
@@ -1212,22 +1189,88 @@
           "axi_uartlite_0/S_AXI"
         ]
       },
-      "axi_quad_spi_0_SPI_0": {
+      "microblaze_0_debug": {
         "interface_ports": [
-          "spi_0",
-          "axi_quad_spi_0/SPI_0"
+          "mdm_1/MBDEBUG_0",
+          "microblaze_0/DEBUG"
         ]
       },
-      "Data_Module_GPIO4": {
+      "dlmb_v10_iomodule_0": {
         "interface_ports": [
-          "Z",
-          "Data_Module/GPIO4"
+          "Data_Module_2/SLMB",
+          "microblaze_0_local_memory/LMB_Sl_3"
         ]
       },
       "Data_Module_GPIO3": {
         "interface_ports": [
-          "Y",
+          "PHASE2",
           "Data_Module/GPIO3"
+        ]
+      },
+      "Parameter_Module_GPIO3": {
+        "interface_ports": [
+          "AGC_CONFIG_REGISTER",
+          "Parameter_Module/GPIO3"
+        ]
+      },
+      "Data_Module_GPIO2": {
+        "interface_ports": [
+          "PHASE1",
+          "Data_Module/GPIO2"
+        ]
+      },
+      "iomodule_1_GPIO1": {
+        "interface_ports": [
+          "CONFIG_REGISTER",
+          "Parameter_Module/GPIO1"
+        ]
+      },
+      "microblaze_0_ilmb_1": {
+        "interface_ports": [
+          "microblaze_0/ILMB",
+          "microblaze_0_local_memory/ILMB"
+        ]
+      },
+      "microblaze_0_M_AXI_DP": {
+        "interface_ports": [
+          "microblaze_0/M_AXI_DP",
+          "microblaze_0_axi_periph/S00_AXI"
+        ]
+      },
+      "Data_Module_GPIO4": {
+        "interface_ports": [
+          "PHASE3",
+          "Data_Module/GPIO4"
+        ]
+      },
+      "Parameter_Module_GPIO4": {
+        "interface_ports": [
+          "OUT_REGISTER",
+          "Parameter_Module/GPIO4"
+        ]
+      },
+      "Conn": {
+        "interface_ports": [
+          "microblaze_0_local_memory/LMB_Sl_1",
+          "Parameter_Module/SLMB"
+        ]
+      },
+      "Data_Module_GPIO1": {
+        "interface_ports": [
+          "PHASEREF",
+          "Data_Module/GPIO1"
+        ]
+      },
+      "Conn1": {
+        "interface_ports": [
+          "microblaze_0_local_memory/LMB_Sl_2",
+          "Data_Module/SLMB"
+        ]
+      },
+      "iomodule_0_GPIO1": {
+        "interface_ports": [
+          "INDEX",
+          "Data_Module_2/GPIO1"
         ]
       }
     },
@@ -1246,7 +1289,8 @@
           "microblaze_0_axi_periph/M00_ACLK",
           "microblaze_0_axi_periph/M01_ACLK",
           "rst_clk_wiz_1_100M/slowest_sync_clk",
-          "clk_wiz_0/clk_in1"
+          "clk_wiz_0/clk_in1",
+          "Data_Module_2/Clk"
         ]
       },
       "clk_wiz_1_locked": {
@@ -1310,7 +1354,8 @@
         "ports": [
           "rst_clk_wiz_1_100M/peripheral_reset",
           "Parameter_Module/Rst",
-          "Data_Module/Rst"
+          "Data_Module/Rst",
+          "Data_Module_2/Rst"
         ]
       },
       "Net1": {
@@ -1330,6 +1375,11 @@
         "address_spaces": {
           "Data": {
             "segments": {
+              "SEG_Data_Module_2_Reg": {
+                "address_block": "/Data_Module_2/SLMB/Reg",
+                "offset": "0x44A10000",
+                "range": "64K"
+              },
               "SEG_axi_quad_spi_0_Reg": {
                 "address_block": "/axi_quad_spi_0/AXI_LITE/Reg",
                 "offset": "0x44A00000",
@@ -1371,9 +1421,9 @@
     },
     "elf_association": {
       "file": {
-        "name": "C:/Users/franc/hydro_spartan_7/HydroE21.elf",
+        "name": "C:/Users/franc/hydro_spartan_7/hydro20220715.elf",
         "type": "ELF",
-        "checksum": "3515547912",
+        "checksum": "2726661022",
         "IsVisible": "1",
         "ScopedToRef": "mb_system",
         "ScopedToCell": [

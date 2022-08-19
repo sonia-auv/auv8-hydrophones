@@ -70,8 +70,6 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
-set_param chipscope.maxJobs 3
-set_param xicom.use_bs_reader 1
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7s50ftgb196-2
 
@@ -88,9 +86,9 @@ set_property ip_output_repo c:/Users/franc/hydro_spartan_7/hydro_spartan_7.cache
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-add_files C:/Users/franc/hydro_spartan_7/HydroE21.elf
-set_property SCOPED_TO_REF mb_system [get_files -all C:/Users/franc/hydro_spartan_7/HydroE21.elf]
-set_property SCOPED_TO_CELLS microblaze_0 [get_files -all C:/Users/franc/hydro_spartan_7/HydroE21.elf]
+add_files C:/Users/franc/hydro_spartan_7/Hydro20220710.elf
+set_property SCOPED_TO_REF mb_system [get_files -all C:/Users/franc/hydro_spartan_7/Hydro20220710.elf]
+set_property SCOPED_TO_CELLS microblaze_0 [get_files -all C:/Users/franc/hydro_spartan_7/Hydro20220710.elf]
 read_vhdl -library xil_defaultlib {
   C:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/new/ADS8327_SPI.vhd
   C:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/new/clock.vhd
@@ -204,6 +202,7 @@ set_property used_in_implementation false [get_files -all c:/Users/franc/hydro_s
 set_property used_in_implementation false [get_files -all c:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/bd/mb_system/ip/mb_system_clk_wiz_0_0/mb_system_clk_wiz_0_0_board.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/bd/mb_system/ip/mb_system_clk_wiz_0_0/mb_system_clk_wiz_0_0.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/bd/mb_system/ip/mb_system_clk_wiz_0_0/mb_system_clk_wiz_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/bd/mb_system/ip/mb_system_iomodule_0_0/mb_system_iomodule_0_0_board.xdc]
 set_property used_in_implementation false [get_files -all C:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/bd/mb_system/mb_system_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/franc/hydro_spartan_7/hydro_spartan_7.srcs/sources_1/bd/mb_system/ip/mb_system_microblaze_0_2/data/mb_bootloop_le.elf]
 

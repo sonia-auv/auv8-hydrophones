@@ -7,7 +7,7 @@
 
 #include "x7_function.h"
 
-int initperipherals(Hydro *ptr, XUartLite *uart, XIOModule *config, XIOModule *data)
+int initperipherals(Hydro *ptr, XUartLite *uart, XIOModule *config, XIOModule *data, XIOModule *data2)
 {
 	int status;
 
@@ -67,16 +67,35 @@ int initperipherals(Hydro *ptr, XUartLite *uart, XIOModule *config, XIOModule *d
 		return XST_FAILURE;
 	}
 
+	status = XIOModule_Initialize(data2, XPAR_DATA_MODULE_2_DEVICE_ID);
+	if(status != XST_SUCCESS && status != XST_DEVICE_IS_STARTED) {
+		xil_printf("IOModule 2 initialize not working\r\n");
+		return XST_FAILURE;
+	}
+
+	status = XIOModule_SelfTest(data2);
+	if(status != XST_SUCCESS) {
+		xil_printf("IOModule 2 SelfTest not working\r\n");
+		return XST_FAILURE;
+	}
+
+	status = XIOModule_Start(data2);
+	if(status != XST_SUCCESS) {
+		xil_printf("IOModule 2 Start not working\r\n");
+		return XST_FAILURE;
+	}
+
 	ptr->shell->uart = uart;
 	ptr->config = config;
 	ptr->data_output = data;
+	ptr->data_output2 = data2;
 
-	setpgagain(ptr, 2);
+	/*setpgagain(ptr, 2);
 	setsnrthreshold(ptr, 0);
 	setlowsignalthreshold(ptr, 31000);
 	sethighsignalthreshold(ptr, 34000);
 	setagcsignaldetector(ptr, 35000);
-	setagcmaxthreshold(ptr, 60000);
+	setagcmaxthreshold(ptr, 60000);*/
 
 	return XST_SUCCESS;
 }
@@ -128,6 +147,12 @@ u16 getsnr(Hydro *ptr)
 	snr = snr >> 3;
 
 	return snr & 0xFFFF;
+}
+
+u32 getindex(Hydro *ptr)
+{
+	u32 index = readdata(ptr->data_output2, 1) & INDEX_MASK;
+	return index;
 }
 
 s32 mergedarray(const char *array, u8 size)

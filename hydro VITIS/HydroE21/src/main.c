@@ -13,6 +13,7 @@ int main()
 	XUartLite uart;
 	XIOModule config;
 	XIOModule data;
+	XIOModule data2;
 
 	hydro_ptr = allocationHydro();
 	hydro_ptr->shell = allocationTinyShell();
@@ -25,7 +26,7 @@ int main()
 	u32 outValue = 0;
 	u8 agcActivation = 0, agcError = 0, agcGain = 0;
 
-	if (initperipherals(hydro_ptr, &uart, &config, &data) != XST_SUCCESS)
+	if (initperipherals(hydro_ptr, &uart, &config, &data, &data2) != XST_SUCCESS)
 	{
 		xil_printf("> Error with init of the Hydrophone. Bye Bye!");
 		cleanup_platform();
@@ -54,8 +55,8 @@ int main()
 			{
 				if(actual == normalop || actual == testping)
 				{
-					xil_printf("H1,%d,%d,%d,%d,%d\r\n", readdata(hydro_ptr->data_output, 1), readdata(hydro_ptr->data_output,2),
-							readdata(hydro_ptr->data_output, 3), readdata(hydro_ptr->data_output, 4), getsnr(hydro_ptr));
+					xil_printf("H1,%d,%d,%d,%d,%d,%d\r\n", readdata(hydro_ptr->data_output, 1), readdata(hydro_ptr->data_output,2),
+							readdata(hydro_ptr->data_output, 3), readdata(hydro_ptr->data_output, 4), getsnr(hydro_ptr), getindex(hydro_ptr));
 					if(actual == testping) hydro_ptr->operation = idle;
 				}
 				else

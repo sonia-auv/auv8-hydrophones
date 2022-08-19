@@ -11,5 +11,6 @@ vhdl xil_defaultlib  \
 "../../../bd/mb_system/ip/mb_system_iomodule_1_1/sim/mb_system_iomodule_1_1.vhd" \
 "../../../bd/mb_system/ip/mb_system_iomodule_2_1/sim/mb_system_iomodule_2_1.vhd" \
 "../../../bd/mb_system/sim/mb_system.vhd" \
+"../../../bd/mb_system/ip/mb_system_iomodule_0_0/sim/mb_system_iomodule_0_0.vhd" \
 
 nosort

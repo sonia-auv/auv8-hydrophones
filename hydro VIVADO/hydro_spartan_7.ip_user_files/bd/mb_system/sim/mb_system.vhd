@@ -1,7 +1,7 @@
 --Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
---Date        : Mon Apr 11 09:52:52 2022
+--Date        : Fri Jul 15 15:46:22 2022
 --Host        : DESKTOP-3JGF4VF running 64-bit major release  (build 9200)
 --Command     : generate_target mb_system.bd
 --Design      : mb_system
@@ -257,6 +257,17 @@ entity microblaze_0_local_memory_imp_TERCO3 is
     LMB_Sl_2_wait : in STD_LOGIC;
     LMB_Sl_2_writedbus : out STD_LOGIC_VECTOR ( 0 to 31 );
     LMB_Sl_2_writestrobe : out STD_LOGIC;
+    LMB_Sl_3_abus : out STD_LOGIC_VECTOR ( 0 to 31 );
+    LMB_Sl_3_addrstrobe : out STD_LOGIC;
+    LMB_Sl_3_be : out STD_LOGIC_VECTOR ( 0 to 3 );
+    LMB_Sl_3_ce : in STD_LOGIC;
+    LMB_Sl_3_readdbus : in STD_LOGIC_VECTOR ( 0 to 31 );
+    LMB_Sl_3_readstrobe : out STD_LOGIC;
+    LMB_Sl_3_ready : in STD_LOGIC;
+    LMB_Sl_3_ue : in STD_LOGIC;
+    LMB_Sl_3_wait : in STD_LOGIC;
+    LMB_Sl_3_writedbus : out STD_LOGIC_VECTOR ( 0 to 31 );
+    LMB_Sl_3_writestrobe : out STD_LOGIC;
     SYS_Rst : in STD_LOGIC
   );
 end microblaze_0_local_memory_imp_TERCO3;
@@ -297,11 +308,11 @@ architecture STRUCTURE of microblaze_0_local_memory_imp_TERCO3 is
     M_AddrStrobe : in STD_LOGIC;
     M_DBus : in STD_LOGIC_VECTOR ( 0 to 31 );
     M_BE : in STD_LOGIC_VECTOR ( 0 to 3 );
-    Sl_DBus : in STD_LOGIC_VECTOR ( 0 to 95 );
-    Sl_Ready : in STD_LOGIC_VECTOR ( 0 to 2 );
-    Sl_Wait : in STD_LOGIC_VECTOR ( 0 to 2 );
-    Sl_UE : in STD_LOGIC_VECTOR ( 0 to 2 );
-    Sl_CE : in STD_LOGIC_VECTOR ( 0 to 2 );
+    Sl_DBus : in STD_LOGIC_VECTOR ( 0 to 127 );
+    Sl_Ready : in STD_LOGIC_VECTOR ( 0 to 3 );
+    Sl_Wait : in STD_LOGIC_VECTOR ( 0 to 3 );
+    Sl_UE : in STD_LOGIC_VECTOR ( 0 to 3 );
+    Sl_CE : in STD_LOGIC_VECTOR ( 0 to 3 );
     LMB_ABus : out STD_LOGIC_VECTOR ( 0 to 31 );
     LMB_ReadStrobe : out STD_LOGIC;
     LMB_WriteStrobe : out STD_LOGIC;
@@ -399,6 +410,11 @@ architecture STRUCTURE of microblaze_0_local_memory_imp_TERCO3 is
   signal dlmb_v10_iomodule_1_READY : STD_LOGIC;
   signal dlmb_v10_iomodule_1_UE : STD_LOGIC;
   signal dlmb_v10_iomodule_1_WAIT : STD_LOGIC;
+  signal dlmb_v10_iomodule_2_CE : STD_LOGIC;
+  signal dlmb_v10_iomodule_2_READDBUS : STD_LOGIC_VECTOR ( 0 to 31 );
+  signal dlmb_v10_iomodule_2_READY : STD_LOGIC;
+  signal dlmb_v10_iomodule_2_UE : STD_LOGIC;
+  signal dlmb_v10_iomodule_2_WAIT : STD_LOGIC;
   signal microblaze_0_Clk : STD_LOGIC;
   signal microblaze_0_dlmb_ABUS : STD_LOGIC_VECTOR ( 0 to 31 );
   signal microblaze_0_dlmb_ADDRSTROBE : STD_LOGIC;
@@ -486,6 +502,12 @@ begin
   LMB_Sl_2_readstrobe <= microblaze_0_dlmb_bus_READSTROBE;
   LMB_Sl_2_writedbus(0 to 31) <= microblaze_0_dlmb_bus_WRITEDBUS(0 to 31);
   LMB_Sl_2_writestrobe <= microblaze_0_dlmb_bus_WRITESTROBE;
+  LMB_Sl_3_abus(0 to 31) <= microblaze_0_dlmb_bus_ABUS(0 to 31);
+  LMB_Sl_3_addrstrobe <= microblaze_0_dlmb_bus_ADDRSTROBE;
+  LMB_Sl_3_be(0 to 3) <= microblaze_0_dlmb_bus_BE(0 to 3);
+  LMB_Sl_3_readstrobe <= microblaze_0_dlmb_bus_READSTROBE;
+  LMB_Sl_3_writedbus(0 to 31) <= microblaze_0_dlmb_bus_WRITEDBUS(0 to 31);
+  LMB_Sl_3_writestrobe <= microblaze_0_dlmb_bus_WRITESTROBE;
   SYS_Rst_1 <= SYS_Rst;
   dlmb_v10_iomodule_0_CE <= LMB_Sl_1_ce;
   dlmb_v10_iomodule_0_READDBUS(0 to 31) <= LMB_Sl_1_readdbus(0 to 31);
@@ -497,6 +519,11 @@ begin
   dlmb_v10_iomodule_1_READY <= LMB_Sl_2_ready;
   dlmb_v10_iomodule_1_UE <= LMB_Sl_2_ue;
   dlmb_v10_iomodule_1_WAIT <= LMB_Sl_2_wait;
+  dlmb_v10_iomodule_2_CE <= LMB_Sl_3_ce;
+  dlmb_v10_iomodule_2_READDBUS(0 to 31) <= LMB_Sl_3_readdbus(0 to 31);
+  dlmb_v10_iomodule_2_READY <= LMB_Sl_3_ready;
+  dlmb_v10_iomodule_2_UE <= LMB_Sl_3_ue;
+  dlmb_v10_iomodule_2_WAIT <= LMB_Sl_3_wait;
   microblaze_0_Clk <= LMB_Clk;
   microblaze_0_dlmb_ABUS(0 to 31) <= DLMB_abus(0 to 31);
   microblaze_0_dlmb_ADDRSTROBE <= DLMB_addrstrobe;
@@ -586,18 +613,23 @@ dlmb_v10: component mb_system_dlmb_v10_2
       Sl_CE(0) => microblaze_0_dlmb_bus_CE,
       Sl_CE(1) => dlmb_v10_iomodule_0_CE,
       Sl_CE(2) => dlmb_v10_iomodule_1_CE,
+      Sl_CE(3) => dlmb_v10_iomodule_2_CE,
       Sl_DBus(0 to 31) => microblaze_0_dlmb_bus_READDBUS(0 to 31),
       Sl_DBus(32 to 63) => dlmb_v10_iomodule_0_READDBUS(0 to 31),
       Sl_DBus(64 to 95) => dlmb_v10_iomodule_1_READDBUS(0 to 31),
+      Sl_DBus(96 to 127) => dlmb_v10_iomodule_2_READDBUS(0 to 31),
       Sl_Ready(0) => microblaze_0_dlmb_bus_READY,
       Sl_Ready(1) => dlmb_v10_iomodule_0_READY,
       Sl_Ready(2) => dlmb_v10_iomodule_1_READY,
+      Sl_Ready(3) => dlmb_v10_iomodule_2_READY,
       Sl_UE(0) => microblaze_0_dlmb_bus_UE,
       Sl_UE(1) => dlmb_v10_iomodule_0_UE,
       Sl_UE(2) => dlmb_v10_iomodule_1_UE,
+      Sl_UE(3) => dlmb_v10_iomodule_2_UE,
       Sl_Wait(0) => microblaze_0_dlmb_bus_WAIT,
       Sl_Wait(1) => dlmb_v10_iomodule_0_WAIT,
-      Sl_Wait(2) => dlmb_v10_iomodule_1_WAIT
+      Sl_Wait(2) => dlmb_v10_iomodule_1_WAIT,
+      Sl_Wait(3) => dlmb_v10_iomodule_2_WAIT
     );
 ilmb_bram_if_cntlr: component mb_system_ilmb_bram_if_cntlr_2
      port map (
@@ -1419,13 +1451,14 @@ entity mb_system is
   port (
     AGC_CONFIG_REGISTER_tri_o : out STD_LOGIC_VECTOR ( 31 downto 0 );
     CONFIG_REGISTER_tri_o : out STD_LOGIC_VECTOR ( 31 downto 0 );
-    FREQUENCY_tri_i : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    INDEX_tri_i : in STD_LOGIC_VECTOR ( 16 downto 0 );
     OUT_REGISTER_tri_i : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    PHASE1_tri_i : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    PHASE2_tri_i : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    PHASE3_tri_i : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    PHASEREF_tri_i : in STD_LOGIC_VECTOR ( 31 downto 0 );
     Reset : in STD_LOGIC;
     THRESHOLD_REGISTER_tri_o : out STD_LOGIC_VECTOR ( 31 downto 0 );
-    X_tri_i : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    Y_tri_i : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    Z_tri_i : in STD_LOGIC_VECTOR ( 31 downto 0 );
     clk : in STD_LOGIC;
     clk_10mhz : out STD_LOGIC;
     clk_25mhz : out STD_LOGIC;
@@ -1449,7 +1482,7 @@ entity mb_system is
     uart_rs232_txd : out STD_LOGIC
   );
   attribute CORE_GENERATION_INFO : string;
-  attribute CORE_GENERATION_INFO of mb_system : entity is "mb_system,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=mb_system,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=20,numReposBlks=15,numNonXlnxBlks=0,numHierBlks=5,maxHierDepth=1,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=20,da_board_cnt=34,da_bram_cntlr_cnt=11,da_clkrst_cnt=96,da_iomodule_cnt=6,da_mb_cnt=3,synth_mode=Global}";
+  attribute CORE_GENERATION_INFO of mb_system : entity is "mb_system,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=mb_system,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=21,numReposBlks=16,numNonXlnxBlks=0,numHierBlks=5,maxHierDepth=1,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=20,da_board_cnt=35,da_bram_cntlr_cnt=11,da_clkrst_cnt=96,da_iomodule_cnt=7,da_mb_cnt=3,synth_mode=Global}";
   attribute HW_HANDOFF : string;
   attribute HW_HANDOFF of mb_system : entity is "mb_system.hwdef";
 end mb_system;
@@ -1669,6 +1702,24 @@ architecture STRUCTURE of mb_system is
     locked : out STD_LOGIC
   );
   end component mb_system_clk_wiz_0_0;
+  component mb_system_iomodule_0_0 is
+  port (
+    Clk : in STD_LOGIC;
+    Rst : in STD_LOGIC;
+    GPI1 : in STD_LOGIC_VECTOR ( 16 downto 0 );
+    LMB_ABus : in STD_LOGIC_VECTOR ( 0 to 31 );
+    LMB_WriteDBus : in STD_LOGIC_VECTOR ( 0 to 31 );
+    LMB_AddrStrobe : in STD_LOGIC;
+    LMB_ReadStrobe : in STD_LOGIC;
+    LMB_WriteStrobe : in STD_LOGIC;
+    LMB_BE : in STD_LOGIC_VECTOR ( 0 to 3 );
+    Sl_DBus : out STD_LOGIC_VECTOR ( 0 to 31 );
+    Sl_Ready : out STD_LOGIC;
+    Sl_Wait : out STD_LOGIC;
+    Sl_UE : out STD_LOGIC;
+    Sl_CE : out STD_LOGIC
+  );
+  end component mb_system_iomodule_0_0;
   signal Conn1_ABUS : STD_LOGIC_VECTOR ( 0 to 31 );
   signal Conn1_ADDRSTROBE : STD_LOGIC;
   signal Conn1_BE : STD_LOGIC_VECTOR ( 0 to 3 );
@@ -1722,6 +1773,18 @@ architecture STRUCTURE of mb_system is
   signal clk_wiz_1_clk_out2 : STD_LOGIC;
   signal clk_wiz_1_clk_out3 : STD_LOGIC;
   signal clk_wiz_1_locked : STD_LOGIC;
+  signal dlmb_v10_iomodule_0_ABUS : STD_LOGIC_VECTOR ( 0 to 31 );
+  signal dlmb_v10_iomodule_0_ADDRSTROBE : STD_LOGIC;
+  signal dlmb_v10_iomodule_0_BE : STD_LOGIC_VECTOR ( 0 to 3 );
+  signal dlmb_v10_iomodule_0_CE : STD_LOGIC;
+  signal dlmb_v10_iomodule_0_READDBUS : STD_LOGIC_VECTOR ( 0 to 31 );
+  signal dlmb_v10_iomodule_0_READSTROBE : STD_LOGIC;
+  signal dlmb_v10_iomodule_0_READY : STD_LOGIC;
+  signal dlmb_v10_iomodule_0_UE : STD_LOGIC;
+  signal dlmb_v10_iomodule_0_WAIT : STD_LOGIC;
+  signal dlmb_v10_iomodule_0_WRITEDBUS : STD_LOGIC_VECTOR ( 0 to 31 );
+  signal dlmb_v10_iomodule_0_WRITESTROBE : STD_LOGIC;
+  signal iomodule_0_GPIO1_TRI_I : STD_LOGIC_VECTOR ( 16 downto 0 );
   signal iomodule_1_GPIO1_TRI_O : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal iomodule_1_GPIO2_TRI_O : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal mdm_1_debug_sys_rst : STD_LOGIC;
@@ -1845,21 +1908,22 @@ architecture STRUCTURE of mb_system is
   attribute X_INTERFACE_INFO of uart_rs232_txd : signal is "xilinx.com:interface:uart:1.0 uart_rs232 TxD";
   attribute X_INTERFACE_INFO of AGC_CONFIG_REGISTER_tri_o : signal is "xilinx.com:interface:gpio:1.0 AGC_CONFIG_REGISTER TRI_O";
   attribute X_INTERFACE_INFO of CONFIG_REGISTER_tri_o : signal is "xilinx.com:interface:gpio:1.0 CONFIG_REGISTER TRI_O";
-  attribute X_INTERFACE_INFO of FREQUENCY_tri_i : signal is "xilinx.com:interface:gpio:1.0 FREQUENCY TRI_I";
+  attribute X_INTERFACE_INFO of INDEX_tri_i : signal is "xilinx.com:interface:gpio:1.0 INDEX TRI_I";
   attribute X_INTERFACE_INFO of OUT_REGISTER_tri_i : signal is "xilinx.com:interface:gpio:1.0 OUT_REGISTER TRI_I";
+  attribute X_INTERFACE_INFO of PHASE1_tri_i : signal is "xilinx.com:interface:gpio:1.0 PHASE1 TRI_I";
+  attribute X_INTERFACE_INFO of PHASE2_tri_i : signal is "xilinx.com:interface:gpio:1.0 PHASE2 TRI_I";
+  attribute X_INTERFACE_INFO of PHASE3_tri_i : signal is "xilinx.com:interface:gpio:1.0 PHASE3 TRI_I";
+  attribute X_INTERFACE_INFO of PHASEREF_tri_i : signal is "xilinx.com:interface:gpio:1.0 PHASEREF TRI_I";
   attribute X_INTERFACE_INFO of THRESHOLD_REGISTER_tri_o : signal is "xilinx.com:interface:gpio:1.0 THRESHOLD_REGISTER TRI_O";
-  attribute X_INTERFACE_INFO of X_tri_i : signal is "xilinx.com:interface:gpio:1.0 X TRI_I";
-  attribute X_INTERFACE_INFO of Y_tri_i : signal is "xilinx.com:interface:gpio:1.0 Y TRI_I";
-  attribute X_INTERFACE_INFO of Z_tri_i : signal is "xilinx.com:interface:gpio:1.0 Z TRI_I";
   attribute X_INTERFACE_INFO of spi_0_ss_i : signal is "xilinx.com:interface:spi:1.0 spi_0 SS_I";
   attribute X_INTERFACE_INFO of spi_0_ss_o : signal is "xilinx.com:interface:spi:1.0 spi_0 SS_O";
 begin
   AGC_CONFIG_REGISTER_tri_o(31 downto 0) <= Parameter_Module_GPIO3_TRI_O(31 downto 0);
   CONFIG_REGISTER_tri_o(31 downto 0) <= iomodule_1_GPIO1_TRI_O(31 downto 0);
-  Data_Module_GPIO1_TRI_I(31 downto 0) <= FREQUENCY_tri_i(31 downto 0);
-  Data_Module_GPIO2_TRI_I(31 downto 0) <= X_tri_i(31 downto 0);
-  Data_Module_GPIO3_TRI_I(31 downto 0) <= Y_tri_i(31 downto 0);
-  Data_Module_GPIO4_TRI_I(31 downto 0) <= Z_tri_i(31 downto 0);
+  Data_Module_GPIO1_TRI_I(31 downto 0) <= PHASEREF_tri_i(31 downto 0);
+  Data_Module_GPIO2_TRI_I(31 downto 0) <= PHASE1_tri_i(31 downto 0);
+  Data_Module_GPIO3_TRI_I(31 downto 0) <= PHASE2_tri_i(31 downto 0);
+  Data_Module_GPIO4_TRI_I(31 downto 0) <= PHASE3_tri_i(31 downto 0);
   Parameter_Module_GPIO4_TRI_I(31 downto 0) <= OUT_REGISTER_tri_i(31 downto 0);
   Reset_1 <= Reset;
   THRESHOLD_REGISTER_tri_o(31 downto 0) <= iomodule_1_GPIO2_TRI_O(31 downto 0);
@@ -1873,6 +1937,7 @@ begin
   clk_10mhz <= clk_wiz_1_clk_out3;
   clk_25mhz <= clk_wiz_0_clk_out1;
   clk_50mhz <= clk_wiz_1_clk_out2;
+  iomodule_0_GPIO1_TRI_I(16 downto 0) <= INDEX_tri_i(16 downto 0);
   spi_0_io0_o <= axi_quad_spi_0_SPI_0_IO0_O;
   spi_0_io0_t <= axi_quad_spi_0_SPI_0_IO0_T;
   spi_0_io1_o <= axi_quad_spi_0_SPI_0_IO1_O;
@@ -1903,6 +1968,23 @@ Data_Module: component mb_system_iomodule_2_1
       Sl_Ready => Conn1_READY,
       Sl_UE => Conn1_UE,
       Sl_Wait => Conn1_WAIT
+    );
+Data_Module_2: component mb_system_iomodule_0_0
+     port map (
+      Clk => microblaze_0_Clk,
+      GPI1(16 downto 0) => iomodule_0_GPIO1_TRI_I(16 downto 0),
+      LMB_ABus(0 to 31) => dlmb_v10_iomodule_0_ABUS(0 to 31),
+      LMB_AddrStrobe => dlmb_v10_iomodule_0_ADDRSTROBE,
+      LMB_BE(0 to 3) => dlmb_v10_iomodule_0_BE(0 to 3),
+      LMB_ReadStrobe => dlmb_v10_iomodule_0_READSTROBE,
+      LMB_WriteDBus(0 to 31) => dlmb_v10_iomodule_0_WRITEDBUS(0 to 31),
+      LMB_WriteStrobe => dlmb_v10_iomodule_0_WRITESTROBE,
+      Rst => Net(0),
+      Sl_CE => dlmb_v10_iomodule_0_CE,
+      Sl_DBus(0 to 31) => dlmb_v10_iomodule_0_READDBUS(0 to 31),
+      Sl_Ready => dlmb_v10_iomodule_0_READY,
+      Sl_UE => dlmb_v10_iomodule_0_UE,
+      Sl_Wait => dlmb_v10_iomodule_0_WAIT
     );
 Parameter_Module: component mb_system_iomodule_1_1
      port map (
@@ -2184,6 +2266,17 @@ microblaze_0_local_memory: entity work.microblaze_0_local_memory_imp_TERCO3
       LMB_Sl_2_wait => Conn1_WAIT,
       LMB_Sl_2_writedbus(0 to 31) => Conn1_WRITEDBUS(0 to 31),
       LMB_Sl_2_writestrobe => Conn1_WRITESTROBE,
+      LMB_Sl_3_abus(0 to 31) => dlmb_v10_iomodule_0_ABUS(0 to 31),
+      LMB_Sl_3_addrstrobe => dlmb_v10_iomodule_0_ADDRSTROBE,
+      LMB_Sl_3_be(0 to 3) => dlmb_v10_iomodule_0_BE(0 to 3),
+      LMB_Sl_3_ce => dlmb_v10_iomodule_0_CE,
+      LMB_Sl_3_readdbus(0 to 31) => dlmb_v10_iomodule_0_READDBUS(0 to 31),
+      LMB_Sl_3_readstrobe => dlmb_v10_iomodule_0_READSTROBE,
+      LMB_Sl_3_ready => dlmb_v10_iomodule_0_READY,
+      LMB_Sl_3_ue => dlmb_v10_iomodule_0_UE,
+      LMB_Sl_3_wait => dlmb_v10_iomodule_0_WAIT,
+      LMB_Sl_3_writedbus(0 to 31) => dlmb_v10_iomodule_0_WRITEDBUS(0 to 31),
+      LMB_Sl_3_writestrobe => dlmb_v10_iomodule_0_WRITESTROBE,
       SYS_Rst => rst_clk_wiz_1_100M_bus_struct_reset(0)
     );
 rst_clk_wiz_1_100M: component mb_system_rst_clk_wiz_1_100M_1

@@ -54,6 +54,9 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==mb_system_x
 # IP: bd/mb_system/ip/mb_system_clk_wiz_0_0/mb_system_clk_wiz_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==mb_system_clk_wiz_0_0 || ORIG_REF_NAME==mb_system_clk_wiz_0_0} -quiet] -quiet
 
+# IP: bd/mb_system/ip/mb_system_iomodule_0_0/mb_system_iomodule_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==mb_system_iomodule_0_0 || ORIG_REF_NAME==mb_system_iomodule_0_0} -quiet] -quiet
+
 # IP: ip/fifo_generator_0/fifo_generator_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==fifo_generator_0 || ORIG_REF_NAME==fifo_generator_0} -quiet] -quiet
 
@@ -118,6 +121,9 @@ set_property KEEP_HIERARCHY SOFT [get_cells [split [join [get_cells -hier -filte
 #dup# set_property KEEP_HIERARCHY SOFT [get_cells [split [join [get_cells -hier -filter {REF_NAME==mb_system_clk_wiz_0_0 || ORIG_REF_NAME==mb_system_clk_wiz_0_0} -quiet] {/inst } ]/inst ] -quiet] -quiet
 
 # XDC: bd/mb_system/ip/mb_system_clk_wiz_0_0/mb_system_clk_wiz_0_0_ooc.xdc
+
+# XDC: bd/mb_system/ip/mb_system_iomodule_0_0/mb_system_iomodule_0_0_board.xdc
+set_property KEEP_HIERARCHY SOFT [get_cells [split [join [get_cells -hier -filter {REF_NAME==mb_system_iomodule_0_0 || ORIG_REF_NAME==mb_system_iomodule_0_0} -quiet] {/U0 } ]/U0 ] -quiet] -quiet
 
 # XDC: bd/mb_system/mb_system_ooc.xdc
 
