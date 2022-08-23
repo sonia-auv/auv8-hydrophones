@@ -17,7 +17,6 @@ use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.MATH_REAL.ALL;
 
 entity timer is
-    generic(ClockFrequencyHz : integer);
     port(
         Clk     : in std_logic;
         Reset   : in std_logic;

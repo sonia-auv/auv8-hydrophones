@@ -83,11 +83,12 @@ component Test_DOA
         LowThreshold                      :   IN    std_logic_vector(15 DOWNTO 0);  -- uint16
         ce_out                            :   OUT   std_logic;
         ValidOut                          :   OUT   std_logic;
-        Frequency                         :   OUT   std_logic_vector(26 DOWNTO 0);  -- ufix27
-        Y                                 :   OUT   std_logic_vector(30 DOWNTO 0);  -- sfix31_En19
-        X                                 :   OUT   std_logic_vector(30 DOWNTO 0);  -- sfix31_En19
+        Index                             :   OUT   std_logic_vector(16 DOWNTO 0);  -- ufix17
+        Phase1                            :   OUT   std_logic_vector(31 DOWNTO 0);  -- sfix32_En19
+        PhaseRef                          :   OUT   std_logic_vector(31 DOWNTO 0);  -- sfix32_En19
         SNR                               :   OUT   std_logic_vector(15 DOWNTO 0);  -- uint16
-        Z                                 :   OUT   std_logic_vector(30 DOWNTO 0)  -- sfix31_En19
+        Phase2                            :   OUT   std_logic_vector(31 DOWNTO 0);  -- sfix32_En19
+        Phase3                            :   OUT   std_logic_vector(31 DOWNTO 0)  -- sfix32_En19
         );
 END component;
 
@@ -116,13 +117,14 @@ component mb_system_wrapper is
   port (
     AGC_CONFIG_REGISTER_tri_o : out STD_LOGIC_VECTOR ( 31 downto 0 );
     CONFIG_REGISTER_tri_o : out STD_LOGIC_VECTOR ( 31 downto 0 );
-    FREQUENCY_tri_i : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    INDEX_tri_i : in STD_LOGIC_VECTOR ( 16 downto 0 );
     OUT_REGISTER_tri_i : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    PHASE1_tri_i : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    PHASE2_tri_i : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    PHASE3_tri_i : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    PHASEREF_tri_i : in STD_LOGIC_VECTOR ( 31 downto 0 );
     Reset : in STD_LOGIC;
     THRESHOLD_REGISTER_tri_o : out STD_LOGIC_VECTOR ( 31 downto 0 );
-    X_tri_i : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    Y_tri_i : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    Z_tri_i : in STD_LOGIC_VECTOR ( 31 downto 0 );
     clk : in STD_LOGIC;
     clk_10mhz : out STD_LOGIC;
     clk_25mhz : out STD_LOGIC;
@@ -179,6 +181,8 @@ for all : fifo_buffer
     use entity work.fifo_buffer(Behavioral);
 
 component agc_gain is
+    Generic (PingDuration_ms : integer;
+             DeadTimeDuration_s : integer);
     Port (clk : in std_logic;
           rst : in std_logic;
           enable : in std_logic;
@@ -227,17 +231,19 @@ signal u_uart_done : std_logic;
 signal u_config_register : std_logic_vector(31 downto 0);
 signal u_agc_config : std_logic_vector(31 downto 0);
 signal u_threshold_register : std_logic_vector(31 downto 0);
-signal u_gain : std_logic_vector(2 downto 0);
 signal u_out_register : std_logic_vector(31 downto 0);
 
-signal u_x : std_logic_vector(30 downto 0);
-signal x : std_logic_vector(31 downto 0);
-signal u_y : std_logic_vector(30 downto 0);
-signal y : std_logic_vector(31 downto 0);
-signal u_z : std_logic_vector(30 downto 0);
-signal z : std_logic_vector(31 downto 0);
-signal u_frequency : std_logic_vector(26 downto 0);
-signal frequency : std_logic_vector(31 downto 0);
+signal u_phase_ref : std_logic_vector(31 downto 0);
+signal phase_ref : std_logic_vector(31 downto 0);
+signal u_phase_1 : std_logic_vector(31 downto 0);
+signal phase_1 : std_logic_vector(31 downto 0);
+signal u_phase_2 : std_logic_vector(31 downto 0);
+signal phase_2 : std_logic_vector(31 downto 0);
+signal u_phase_3 : std_logic_vector(31 downto 0);
+signal phase_3 : std_logic_vector(31 downto 0);
+signal u_gain : std_logic_vector(2 downto 0);
+signal index : std_logic_vector(16 downto 0);
+signal u_index : std_logic_vector(16 downto 0);
 
 begin
 
@@ -260,11 +266,12 @@ port map(   clk => u_clk_10mhz,
             LowThreshold => u_threshold_register(31 downto 16),
             ValidOut => snr_check,
             ce_out => open,                
-            Frequency => u_frequency,
-            Y => u_y,
-            X => u_x,
-            SNR => u_out_register(18 downto 3),
-            Z => u_z
+            Index => u_index,
+            Phase1 => u_phase_1,
+            PhaseRef => u_phase_ref,
+            Phase2 => u_phase_2,
+            Phase3 => u_phase_3,
+            SNR => u_out_register(18 downto 3)
             );
 
 -- Microblaze
@@ -273,13 +280,14 @@ FPGA_system : mb_system_wrapper
     port map(
         AGC_CONFIG_REGISTER_tri_o => u_agc_config,
         CONFIG_REGISTER_tri_o => u_config_register,
-        FREQUENCY_tri_i => frequency,
+        INDEX_tri_i => index,
         OUT_REGISTER_tri_i => u_out_register,
-        Reset => global_reset,        
+        PHASE1_tri_i => phase_1,
+        PHASE2_tri_i => phase_2,
+        PHASE3_tri_i => phase_3,
+        PHASEREF_tri_i => phase_ref,
+        Reset => global_reset,  
         THRESHOLD_REGISTER_tri_o => u_threshold_register,
-        X_tri_i => x,
-        Y_tri_i => y,
-        Z_tri_i => z,
         spi_0_io0_io => spi_d00,
         spi_0_io1_io => spi_d01,
         spi_0_io2_io => spi_d02,
@@ -392,6 +400,9 @@ Clock_device : clock
 -- AGC
 
 Automatic_Gain_Control : agc_gain
+    generic map(
+          PingDuration_ms => 4,
+          DeadTimeDuration_s => 10)
     port map(
           clk => u_clk_10mhz,
           rst => global_reset,
@@ -414,22 +425,25 @@ data : process(u_clk_10mhz) --Changement à 10Mhz pcq le data est shifter à 10Mhz
 begin
     if(rising_edge(u_clk_10mhz))then
         if(global_reset='1')then
-            z <= x"00000000";
-            frequency <= x"00000000";
-            x <= x"00000000";
-            y <= x"00000000";
+            phase_ref <= x"00000000";
+            phase_1 <= x"00000000";
+            phase_2 <= x"00000000";
+            phase_3 <= x"00000000";
+            index <= x"0000" & "0";
         else
             if(u_config_register(5 downto 4)="11")then
-                frequency <= x"0000" & fifo_samples_ch1;
-                x <= x"0000" & fifo_samples_ch2;
-                y <= x"0000" & fifo_samples_ch3;
-                z <= x"0000" & fifo_samples_ch4;
+                phase_ref <= x"0000" & fifo_samples_ch1;
+                phase_1 <= x"0000" & fifo_samples_ch2;
+                phase_2 <= x"0000" & fifo_samples_ch3;
+                phase_3 <= x"0000" & fifo_samples_ch4;
+                index <= x"0000" & "0";
             end if;
             if(u_config_register(5 downto 4)="10") or (u_config_register(5 downto 4)="01")then
-                z <= "0" & u_z;
-                frequency <= "00000" & u_frequency;
-                x <= "0" & u_x;
-                y <= "0" & u_y;
+                phase_ref <= u_phase_ref;
+                phase_1 <= u_phase_1;
+                phase_2 <= u_phase_2;
+                phase_3 <= u_phase_3;
+                index <= u_index;
             end if;
         end if;
     end if;
@@ -456,6 +470,8 @@ begin
 end process;
 
 -- PGA utility
+
+u_out_register(21 downto 19) <= u_gain;
 
 pga : process(u_clk_10mhz)
 begin

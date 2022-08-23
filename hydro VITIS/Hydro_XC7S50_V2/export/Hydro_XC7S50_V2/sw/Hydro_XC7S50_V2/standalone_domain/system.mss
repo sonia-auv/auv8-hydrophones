@@ -54,4 +54,10 @@ BEGIN DRIVER
  PARAMETER HW_INSTANCE = microblaze_0_local_memory_ilmb_bram_if_cntlr
 END
 
+BEGIN DRIVER
+ PARAMETER DRIVER_NAME = iomodule
+ PARAMETER DRIVER_VER = 2.9
+ PARAMETER HW_INSTANCE = Data_Module_2
+END
+
 

@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
-| Date         : Thu May 19 21:59:04 2022
+| Date         : Fri Jul 15 16:11:08 2022
 | Host         : DESKTOP-3JGF4VF running 64-bit major release  (build 9200)
 | Command      : report_drc -file hydro_spartan_7_drc_opted.rpt -pb hydro_spartan_7_drc_opted.pb -rpx hydro_spartan_7_drc_opted.rpx
 | Design       : hydro_spartan_7
@@ -24,12 +24,12 @@ Table of Contents
       Design limits: <entire design considered>
            Ruledeck: default
              Max violations: <unlimited>
-             Violations found: 15
+             Violations found: 5
 +--------+----------+--------------------------+------------+
 | Rule   | Severity | Description              | Violations |
 +--------+----------+--------------------------+------------+
 | BUFC-1 | Warning  | Input Buffer Connections | 1          |
-| DPIP-1 | Warning  | Input pipelining         | 14         |
+| DPIP-1 | Warning  | Input pipelining         | 4          |
 +--------+----------+--------------------------+------------+
 
 2. REPORT DETAILS
@@ -57,56 +57,6 @@ Related violations: <none>
 DPIP-1#4 Warning
 Input pipelining  
 DSP FPGA_system/mb_system_i/microblaze_0/U0/MicroBlaze_Core_I/Performance.Core/Data_Flow_I/MUL_Unit_I/Use_HW_MUL.Using_DSP48_Architectures.dsp_module_I1/Using_DSP48E1.DSP48E1_I1/Using_FPGA.DSP48E1_I1 input FPGA_system/mb_system_i/microblaze_0/U0/MicroBlaze_Core_I/Performance.Core/Data_Flow_I/MUL_Unit_I/Use_HW_MUL.Using_DSP48_Architectures.dsp_module_I1/Using_DSP48E1.DSP48E1_I1/Using_FPGA.DSP48E1_I1/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
-Related violations: <none>
-
-DPIP-1#5 Warning
-Input pipelining  
-DSP PhaseHydrophones/u_Calcul_Direction/Delay1_out1_reg input PhaseHydrophones/u_Calcul_Direction/Delay1_out1_reg/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
-Related violations: <none>
-
-DPIP-1#6 Warning
-Input pipelining  
-DSP PhaseHydrophones/u_Calcul_Direction/Delay2_out1_reg input PhaseHydrophones/u_Calcul_Direction/Delay2_out1_reg/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
-Related violations: <none>
-
-DPIP-1#7 Warning
-Input pipelining  
-DSP PhaseHydrophones/u_Calcul_Direction/Delay3_out1_reg input PhaseHydrophones/u_Calcul_Direction/Delay3_out1_reg/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
-Related violations: <none>
-
-DPIP-1#8 Warning
-Input pipelining  
-DSP PhaseHydrophones/u_Calcul_Direction/Delay4_out1_reg input PhaseHydrophones/u_Calcul_Direction/Delay4_out1_reg/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
-Related violations: <none>
-
-DPIP-1#9 Warning
-Input pipelining  
-DSP PhaseHydrophones/u_Calcul_Direction/MatrixMultiply1_0_0 input PhaseHydrophones/u_Calcul_Direction/MatrixMultiply1_0_0/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
-Related violations: <none>
-
-DPIP-1#10 Warning
-Input pipelining  
-DSP PhaseHydrophones/u_Calcul_Direction/MatrixMultiply1_1_0 input PhaseHydrophones/u_Calcul_Direction/MatrixMultiply1_1_0/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
-Related violations: <none>
-
-DPIP-1#11 Warning
-Input pipelining  
-DSP PhaseHydrophones/u_Calcul_Direction/MatrixMultiply1_2_0 input PhaseHydrophones/u_Calcul_Direction/MatrixMultiply1_2_0/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
-Related violations: <none>
-
-DPIP-1#12 Warning
-Input pipelining  
-DSP PhaseHydrophones/u_Calcul_Direction/tmp_MatrixMultiply1_dotp_1 input PhaseHydrophones/u_Calcul_Direction/tmp_MatrixMultiply1_dotp_1/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
-Related violations: <none>
-
-DPIP-1#13 Warning
-Input pipelining  
-DSP PhaseHydrophones/u_Calcul_Direction/tmp_MatrixMultiply1_dotp_1_1 input PhaseHydrophones/u_Calcul_Direction/tmp_MatrixMultiply1_dotp_1_1/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
-Related violations: <none>
-
-DPIP-1#14 Warning
-Input pipelining  
-DSP PhaseHydrophones/u_Calcul_Direction/tmp_MatrixMultiply1_dotp_1_2 input PhaseHydrophones/u_Calcul_Direction/tmp_MatrixMultiply1_dotp_1_2/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 

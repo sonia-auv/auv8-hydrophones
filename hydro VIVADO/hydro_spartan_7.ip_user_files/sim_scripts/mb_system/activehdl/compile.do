@@ -175,6 +175,9 @@ vlog -work xil_defaultlib  -v2k5 "+incdir+../../../../hydro_spartan_7.srcs/sourc
 "../../../bd/mb_system/ip/mb_system_clk_wiz_0_0/mb_system_clk_wiz_0_0_clk_wiz.v" \
 "../../../bd/mb_system/ip/mb_system_clk_wiz_0_0/mb_system_clk_wiz_0_0.v" \
 
+vcom -work xil_defaultlib -93 \
+"../../../bd/mb_system/ip/mb_system_iomodule_0_0/sim/mb_system_iomodule_0_0.vhd" \
+
 vlog -work xil_defaultlib \
 "glbl.v"
 
