@@ -120,7 +120,7 @@ wire clk_in2_mb_system_clk_wiz_0_0;
 
   PLLE2_ADV
   #(.BANDWIDTH            ("OPTIMIZED"),
-    .COMPENSATION         ("ZHOLD"),
+    .COMPENSATION         ("BUF_IN"),
     .STARTUP_WAIT         ("FALSE"),
     .DIVCLK_DIVIDE        (5),
     .CLKFBOUT_MULT        (64),

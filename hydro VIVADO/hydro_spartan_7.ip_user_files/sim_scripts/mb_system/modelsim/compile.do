@@ -147,7 +147,6 @@ vcom -work iomodule_v3_1_6  -93 \
 "../../../../hydro_spartan_7.srcs/sources_1/bd/mb_system/ipshared/8c53/hdl/iomodule_v3_1_vh_rfs.vhd" \
 
 vcom -work xil_defaultlib  -93 \
-"../../../bd/mb_system/ip/mb_system_iomodule_0_1/sim/mb_system_iomodule_0_1.vhd" \
 "../../../bd/mb_system/ip/mb_system_iomodule_1_1/sim/mb_system_iomodule_1_1.vhd" \
 "../../../bd/mb_system/ip/mb_system_iomodule_2_1/sim/mb_system_iomodule_2_1.vhd" \
 
@@ -175,6 +174,9 @@ vcom -work xil_defaultlib  -93 \
 vlog -work xil_defaultlib  -incr "+incdir+../../../../hydro_spartan_7.srcs/sources_1/bd/mb_system/ipshared/d0f7" "+incdir+../../../../hydro_spartan_7.srcs/sources_1/bd/mb_system/ipshared/ec67/hdl" \
 "../../../bd/mb_system/ip/mb_system_clk_wiz_0_0/mb_system_clk_wiz_0_0_clk_wiz.v" \
 "../../../bd/mb_system/ip/mb_system_clk_wiz_0_0/mb_system_clk_wiz_0_0.v" \
+
+vcom -work xil_defaultlib  -93 \
+"../../../bd/mb_system/ip/mb_system_iomodule_0_0/sim/mb_system_iomodule_0_0.vhd" \
 
 vlog -work xil_defaultlib \
 "glbl.v"

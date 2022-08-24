@@ -94,7 +94,6 @@
   "../../../../hydro_spartan_7.srcs/sources_1/bd/mb_system/ipshared/8c53/hdl/iomodule_v3_1_vh_rfs.vhd" \
 -endlib
 -makelib xcelium_lib/xil_defaultlib \
-  "../../../bd/mb_system/ip/mb_system_iomodule_0_1/sim/mb_system_iomodule_0_1.vhd" \
   "../../../bd/mb_system/ip/mb_system_iomodule_1_1/sim/mb_system_iomodule_1_1.vhd" \
   "../../../bd/mb_system/ip/mb_system_iomodule_2_1/sim/mb_system_iomodule_2_1.vhd" \
 -endlib
@@ -122,6 +121,9 @@
 -makelib xcelium_lib/xil_defaultlib \
   "../../../bd/mb_system/ip/mb_system_clk_wiz_0_0/mb_system_clk_wiz_0_0_clk_wiz.v" \
   "../../../bd/mb_system/ip/mb_system_clk_wiz_0_0/mb_system_clk_wiz_0_0.v" \
+-endlib
+-makelib xcelium_lib/xil_defaultlib \
+  "../../../bd/mb_system/ip/mb_system_iomodule_0_0/sim/mb_system_iomodule_0_0.vhd" \
 -endlib
 -makelib xcelium_lib/xil_defaultlib \
   glbl.v

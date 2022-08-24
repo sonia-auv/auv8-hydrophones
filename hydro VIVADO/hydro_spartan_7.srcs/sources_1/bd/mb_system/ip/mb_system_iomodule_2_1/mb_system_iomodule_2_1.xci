@@ -259,7 +259,7 @@
         <spirit:configurableElementValue spirit:referenceId="RUNTIME_PARAM.SELECTEDSIMMODEL"/>
         <spirit:configurableElementValue spirit:referenceId="RUNTIME_PARAM.SHAREDDIR">../../ipshared</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="RUNTIME_PARAM.SWVERSION">2020.2</spirit:configurableElementValue>
-        <spirit:configurableElementValue spirit:referenceId="RUNTIME_PARAM.SYNTHESISFLOW">OUT_OF_CONTEXT</spirit:configurableElementValue>
+        <spirit:configurableElementValue spirit:referenceId="RUNTIME_PARAM.SYNTHESISFLOW">GLOBAL</spirit:configurableElementValue>
       </spirit:configurableElementValues>
       <spirit:vendorExtensions>
         <xilinx:componentInstanceExtensions>
@@ -292,10 +292,12 @@
             <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.C_LMB_DWIDTH" xilinx:valueSource="propagated"/>
             <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.C_LMB_PROTOCOL" xilinx:valueSource="propagated" xilinx:valuePermission="bd"/>
             <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.C_MASK" xilinx:valueSource="propagated" xilinx:valuePermission="bd_and_user"/>
+            <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.C_TMR" xilinx:valueSource="user"/>
             <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.C_USE_GPI1" xilinx:valueSource="user"/>
             <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.C_USE_GPI2" xilinx:valueSource="user"/>
             <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.C_USE_GPI3" xilinx:valueSource="user"/>
             <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.C_USE_GPI4" xilinx:valueSource="user"/>
+            <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.C_USE_IO_BUS" xilinx:valueSource="user"/>
           </xilinx:configElementInfos>
           <xilinx:boundaryDescriptionInfo>
             <xilinx:boundaryDescription xilinx:boundaryDescriptionJSON="{&quot;ip_boundary&quot;:{&quot;ports&quot;:{&quot;Clk&quot;:{&quot;direction&quot;:&quot;in&quot;,&quot;physical_left&quot;:&quot;0&quot;,&quot;physical_right&quot;:&quot;0&quot;},&quot;Rst&quot;:{&quot;direction&quot;:&quot;in&quot;,&quot;physical_left&quot;:&quot;0&quot;,&quot;physical_right&quot;:&quot;0&quot;},&quot;GPI1&quot;:{&quot;direction&quot;:&quot;in&quot;,&quot;physical_left&quot;:&quot;31&quot;,&quot;physical_right&quot;:&quot;0&quot;},&quot;GPI2&quot;:{&quot;direction&quot;:&quot;in&quot;,&quot;physical_left&quot;:&quot;31&quot;,&quot;physical_right&quot;:&quot;0&quot;},&quot;GPI3&quot;:{&quot;direction&quot;:&quot;in&quot;,&quot;physical_left&quot;:&quot;31&quot;,&quot;physical_right&quot;:&quot;0&quot;},&quot;GPI4&quot;:{&quot;direction&quot;:&quot;in&quot;,&quot;physical_left&quot;:&quot;31&quot;,&quot;physical_right&quot;:&quot;0&quot;},&quot;LMB_ABus&quot;:{&quot;direction&quot;:&quot;in&quot;,&quot;physical_left&quot;:&quot;0&quot;,&quot;physical_right&quot;:&quot;31&quot;},&quot;LMB_WriteDBus&quot;:{&quot;direction&quot;:&quot;in&quot;,&quot;physical_left&quot;:&quot;0&quot;,&quot;physical_right&quot;:&quot;31&quot;},&quot;LMB_AddrStrobe&quot;:{&quot;direction&quot;:&quot;in&quot;,&quot;physical_left&quot;:&quot;0&quot;,&quot;physical_right&quot;:&quot;0&quot;},&quot;LMB_ReadStrobe&quot;:{&quot;direction&quot;:&quot;in&quot;,&quot;physical_left&quot;:&quot;0&quot;,&quot;physical_right&quot;:&quot;0&quot;},&quot;LMB_WriteStrobe&quot;:{&quot;direction&quot;:&quot;in&quot;,&quot;physical_left&quot;:&quot;0&quot;,&quot;physical_right&quot;:&quot;0&quot;},&quot;LMB_BE&quot;:{&quot;direction&quot;:&quot;in&quot;,&quot;physical_left&quot;:&quot;0&quot;,&quot;physical_right&quot;:&quot;3&quot;},&quot;Sl_DBus&quot;:{&quot;direction&quot;:&quot;out&quot;,&quot;physical_left&quot;:&quot;0&quot;,&quot;physical_right&quot;:&quot;31&quot;},&quot;Sl_Ready&quot;:{&quot;direction&quot;:&quot;out&quot;,&quot;physical_left&quot;:&quot;0

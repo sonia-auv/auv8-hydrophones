@@ -24,7 +24,16 @@ int ToString(char str[], int num, int offset)
 {
     int i, rem, len = 0, n;
 
+    if(num == 0)
+    {
+    	str[len + offset] = '0';
+    	len++;
+    	str[len + offset] = '\0';
+    	return len;
+    }
+
     n = num;
+
     while (n != 0)
     {
         len++;

@@ -2,8 +2,8 @@
 # Vivado v2020.2 (64-bit)
 # SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
 # IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
-# Start of session at: Sat Jan 15 13:35:17 2022
-# Process ID: 2756
+# Start of session at: Fri Jul 15 16:02:38 2022
+# Process ID: 14880
 # Current directory: C:/Users/franc/hydro_spartan_7/hydro_spartan_7.runs/synth_1
 # Command line: vivado.exe -log hydro_spartan_7.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source hydro_spartan_7.tcl
 # Log file: C:/Users/franc/hydro_spartan_7/hydro_spartan_7.runs/synth_1/hydro_spartan_7.vds

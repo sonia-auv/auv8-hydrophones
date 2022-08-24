@@ -1,7 +1,7 @@
 --Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
---Date        : Sun Sep 19 21:24:01 2021
+--Date        : Fri Jul 15 15:46:21 2022
 --Host        : DESKTOP-3JGF4VF running 64-bit major release  (build 9200)
 --Command     : generate_target mb_system.bd
 --Design      : mb_system
@@ -1449,17 +1449,16 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity mb_system is
   port (
-    DATA_READY_tri_i : in STD_LOGIC_VECTOR ( 0 to 0 );
-    Gain_PGA_tri_o : out STD_LOGIC_VECTOR ( 7 downto 0 );
-    Phase1_tri_i : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    Phase2_tri_i : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    Phase3_tri_i : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    PhaseRef_tri_i : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    AGC_CONFIG_REGISTER_tri_o : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    CONFIG_REGISTER_tri_o : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    INDEX_tri_i : in STD_LOGIC_VECTOR ( 16 downto 0 );
+    OUT_REGISTER_tri_i : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    PHASE1_tri_i : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    PHASE2_tri_i : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    PHASE3_tri_i : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    PHASEREF_tri_i : in STD_LOGIC_VECTOR ( 31 downto 0 );
     Reset : in STD_LOGIC;
-    SET_PROCESS_tri_o : out STD_LOGIC_VECTOR ( 1 downto 0 );
-    SNR_Threshold_tri_o : out STD_LOGIC_VECTOR ( 15 downto 0 );
-    Signal_Threshold_tri_o : out STD_LOGIC_VECTOR ( 15 downto 0 );
-    UART_Buffer_tri_o : out STD_LOGIC_VECTOR ( 0 to 0 );
+    THRESHOLD_REGISTER_tri_o : out STD_LOGIC_VECTOR ( 31 downto 0 );
     clk : in STD_LOGIC;
     clk_10mhz : out STD_LOGIC;
     clk_25mhz : out STD_LOGIC;
@@ -1483,7 +1482,7 @@ entity mb_system is
     uart_rs232_txd : out STD_LOGIC
   );
   attribute CORE_GENERATION_INFO : string;
-  attribute CORE_GENERATION_INFO of mb_system : entity is "mb_system,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=mb_system,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=21,numReposBlks=16,numNonXlnxBlks=0,numHierBlks=5,maxHierDepth=1,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=20,da_board_cnt=30,da_bram_cntlr_cnt=11,da_clkrst_cnt=96,da_iomodule_cnt=6,da_mb_cnt=3,synth_mode=OOC_per_IP}";
+  attribute CORE_GENERATION_INFO of mb_system : entity is "mb_system,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=mb_system,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=21,numReposBlks=16,numNonXlnxBlks=0,numHierBlks=5,maxHierDepth=1,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=20,da_board_cnt=35,da_bram_cntlr_cnt=11,da_clkrst_cnt=96,da_iomodule_cnt=7,da_mb_cnt=3,synth_mode=Global}";
   attribute HW_HANDOFF : string;
   attribute HW_HANDOFF of mb_system : entity is "mb_system.hwdef";
 end mb_system;
@@ -1569,33 +1568,14 @@ architecture STRUCTURE of mb_system is
     locked : out STD_LOGIC
   );
   end component mb_system_clk_wiz_1_1;
-  component mb_system_iomodule_0_1 is
-  port (
-    Clk : in STD_LOGIC;
-    Rst : in STD_LOGIC;
-    GPO1 : out STD_LOGIC_VECTOR ( 0 to 0 );
-    GPO2 : out STD_LOGIC_VECTOR ( 1 downto 0 );
-    GPI3 : in STD_LOGIC_VECTOR ( 0 to 0 );
-    LMB_ABus : in STD_LOGIC_VECTOR ( 0 to 31 );
-    LMB_WriteDBus : in STD_LOGIC_VECTOR ( 0 to 31 );
-    LMB_AddrStrobe : in STD_LOGIC;
-    LMB_ReadStrobe : in STD_LOGIC;
-    LMB_WriteStrobe : in STD_LOGIC;
-    LMB_BE : in STD_LOGIC_VECTOR ( 0 to 3 );
-    Sl_DBus : out STD_LOGIC_VECTOR ( 0 to 31 );
-    Sl_Ready : out STD_LOGIC;
-    Sl_Wait : out STD_LOGIC;
-    Sl_UE : out STD_LOGIC;
-    Sl_CE : out STD_LOGIC
-  );
-  end component mb_system_iomodule_0_1;
   component mb_system_iomodule_1_1 is
   port (
     Clk : in STD_LOGIC;
     Rst : in STD_LOGIC;
-    GPO1 : out STD_LOGIC_VECTOR ( 7 downto 0 );
-    GPO2 : out STD_LOGIC_VECTOR ( 15 downto 0 );
-    GPO3 : out STD_LOGIC_VECTOR ( 15 downto 0 );
+    GPO1 : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    GPO2 : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    GPO3 : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    GPI4 : in STD_LOGIC_VECTOR ( 31 downto 0 );
     LMB_ABus : in STD_LOGIC_VECTOR ( 0 to 31 );
     LMB_WriteDBus : in STD_LOGIC_VECTOR ( 0 to 31 );
     LMB_AddrStrobe : in STD_LOGIC;
@@ -1722,6 +1702,54 @@ architecture STRUCTURE of mb_system is
     locked : out STD_LOGIC
   );
   end component mb_system_clk_wiz_0_0;
+  component mb_system_iomodule_0_0 is
+  port (
+    Clk : in STD_LOGIC;
+    Rst : in STD_LOGIC;
+    GPI1 : in STD_LOGIC_VECTOR ( 16 downto 0 );
+    LMB_ABus : in STD_LOGIC_VECTOR ( 0 to 31 );
+    LMB_WriteDBus : in STD_LOGIC_VECTOR ( 0 to 31 );
+    LMB_AddrStrobe : in STD_LOGIC;
+    LMB_ReadStrobe : in STD_LOGIC;
+    LMB_WriteStrobe : in STD_LOGIC;
+    LMB_BE : in STD_LOGIC_VECTOR ( 0 to 3 );
+    Sl_DBus : out STD_LOGIC_VECTOR ( 0 to 31 );
+    Sl_Ready : out STD_LOGIC;
+    Sl_Wait : out STD_LOGIC;
+    Sl_UE : out STD_LOGIC;
+    Sl_CE : out STD_LOGIC
+  );
+  end component mb_system_iomodule_0_0;
+  signal Conn1_ABUS : STD_LOGIC_VECTOR ( 0 to 31 );
+  signal Conn1_ADDRSTROBE : STD_LOGIC;
+  signal Conn1_BE : STD_LOGIC_VECTOR ( 0 to 3 );
+  signal Conn1_CE : STD_LOGIC;
+  signal Conn1_READDBUS : STD_LOGIC_VECTOR ( 0 to 31 );
+  signal Conn1_READSTROBE : STD_LOGIC;
+  signal Conn1_READY : STD_LOGIC;
+  signal Conn1_UE : STD_LOGIC;
+  signal Conn1_WAIT : STD_LOGIC;
+  signal Conn1_WRITEDBUS : STD_LOGIC_VECTOR ( 0 to 31 );
+  signal Conn1_WRITESTROBE : STD_LOGIC;
+  signal Conn_ABUS : STD_LOGIC_VECTOR ( 0 to 31 );
+  signal Conn_ADDRSTROBE : STD_LOGIC;
+  signal Conn_BE : STD_LOGIC_VECTOR ( 0 to 3 );
+  signal Conn_CE : STD_LOGIC;
+  signal Conn_READDBUS : STD_LOGIC_VECTOR ( 0 to 31 );
+  signal Conn_READSTROBE : STD_LOGIC;
+  signal Conn_READY : STD_LOGIC;
+  signal Conn_UE : STD_LOGIC;
+  signal Conn_WAIT : STD_LOGIC;
+  signal Conn_WRITEDBUS : STD_LOGIC_VECTOR ( 0 to 31 );
+  signal Conn_WRITESTROBE : STD_LOGIC;
+  signal Data_Module_GPIO1_TRI_I : STD_LOGIC_VECTOR ( 31 downto 0 );
+  signal Data_Module_GPIO2_TRI_I : STD_LOGIC_VECTOR ( 31 downto 0 );
+  signal Data_Module_GPIO3_TRI_I : STD_LOGIC_VECTOR ( 31 downto 0 );
+  signal Data_Module_GPIO4_TRI_I : STD_LOGIC_VECTOR ( 31 downto 0 );
+  signal Net : STD_LOGIC_VECTOR ( 0 to 0 );
+  signal Net1 : STD_LOGIC_VECTOR ( 0 to 0 );
+  signal Parameter_Module_GPIO3_TRI_O : STD_LOGIC_VECTOR ( 31 downto 0 );
+  signal Parameter_Module_GPIO4_TRI_I : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal Reset_1 : STD_LOGIC;
   signal axi_quad_spi_0_SPI_0_IO0_I : STD_LOGIC;
   signal axi_quad_spi_0_SPI_0_IO0_O : STD_LOGIC;
@@ -1756,38 +1784,9 @@ architecture STRUCTURE of mb_system is
   signal dlmb_v10_iomodule_0_WAIT : STD_LOGIC;
   signal dlmb_v10_iomodule_0_WRITEDBUS : STD_LOGIC_VECTOR ( 0 to 31 );
   signal dlmb_v10_iomodule_0_WRITESTROBE : STD_LOGIC;
-  signal dlmb_v10_iomodule_1_ABUS : STD_LOGIC_VECTOR ( 0 to 31 );
-  signal dlmb_v10_iomodule_1_ADDRSTROBE : STD_LOGIC;
-  signal dlmb_v10_iomodule_1_BE : STD_LOGIC_VECTOR ( 0 to 3 );
-  signal dlmb_v10_iomodule_1_CE : STD_LOGIC;
-  signal dlmb_v10_iomodule_1_READDBUS : STD_LOGIC_VECTOR ( 0 to 31 );
-  signal dlmb_v10_iomodule_1_READSTROBE : STD_LOGIC;
-  signal dlmb_v10_iomodule_1_READY : STD_LOGIC;
-  signal dlmb_v10_iomodule_1_UE : STD_LOGIC;
-  signal dlmb_v10_iomodule_1_WAIT : STD_LOGIC;
-  signal dlmb_v10_iomodule_1_WRITEDBUS : STD_LOGIC_VECTOR ( 0 to 31 );
-  signal dlmb_v10_iomodule_1_WRITESTROBE : STD_LOGIC;
-  signal dlmb_v10_iomodule_2_ABUS : STD_LOGIC_VECTOR ( 0 to 31 );
-  signal dlmb_v10_iomodule_2_ADDRSTROBE : STD_LOGIC;
-  signal dlmb_v10_iomodule_2_BE : STD_LOGIC_VECTOR ( 0 to 3 );
-  signal dlmb_v10_iomodule_2_CE : STD_LOGIC;
-  signal dlmb_v10_iomodule_2_READDBUS : STD_LOGIC_VECTOR ( 0 to 31 );
-  signal dlmb_v10_iomodule_2_READSTROBE : STD_LOGIC;
-  signal dlmb_v10_iomodule_2_READY : STD_LOGIC;
-  signal dlmb_v10_iomodule_2_UE : STD_LOGIC;
-  signal dlmb_v10_iomodule_2_WAIT : STD_LOGIC;
-  signal dlmb_v10_iomodule_2_WRITEDBUS : STD_LOGIC_VECTOR ( 0 to 31 );
-  signal dlmb_v10_iomodule_2_WRITESTROBE : STD_LOGIC;
-  signal iomodule_0_GPIO1_TRI_O : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal iomodule_0_GPIO2_TRI_O : STD_LOGIC_VECTOR ( 1 downto 0 );
-  signal iomodule_0_GPIO3_TRI_I : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal iomodule_1_GPIO1_TRI_O : STD_LOGIC_VECTOR ( 7 downto 0 );
-  signal iomodule_1_GPIO2_TRI_O : STD_LOGIC_VECTOR ( 15 downto 0 );
-  signal iomodule_1_GPIO3_TRI_O : STD_LOGIC_VECTOR ( 15 downto 0 );
-  signal iomodule_2_GPIO1_TRI_I : STD_LOGIC_VECTOR ( 31 downto 0 );
-  signal iomodule_2_GPIO2_TRI_I : STD_LOGIC_VECTOR ( 31 downto 0 );
-  signal iomodule_2_GPIO3_TRI_I : STD_LOGIC_VECTOR ( 31 downto 0 );
-  signal iomodule_2_GPIO4_TRI_I : STD_LOGIC_VECTOR ( 31 downto 0 );
+  signal iomodule_0_GPIO1_TRI_I : STD_LOGIC_VECTOR ( 16 downto 0 );
+  signal iomodule_1_GPIO1_TRI_O : STD_LOGIC_VECTOR ( 31 downto 0 );
+  signal iomodule_1_GPIO2_TRI_O : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal mdm_1_debug_sys_rst : STD_LOGIC;
   signal microblaze_0_Clk : STD_LOGIC;
   signal microblaze_0_M_AXI_DP_ARADDR : STD_LOGIC_VECTOR ( 31 downto 0 );
@@ -1873,8 +1872,6 @@ architecture STRUCTURE of mb_system is
   signal microblaze_0_ilmb_1_WAIT : STD_LOGIC;
   signal rst_clk_wiz_1_100M_bus_struct_reset : STD_LOGIC_VECTOR ( 0 to 0 );
   signal rst_clk_wiz_1_100M_mb_reset : STD_LOGIC;
-  signal rst_clk_wiz_1_100M_peripheral_aresetn : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal rst_clk_wiz_1_100M_peripheral_reset : STD_LOGIC_VECTOR ( 0 to 0 );
   signal NLW_axi_quad_spi_0_cfgclk_UNCONNECTED : STD_LOGIC;
   signal NLW_axi_quad_spi_0_cfgmclk_UNCONNECTED : STD_LOGIC;
   signal NLW_axi_quad_spi_0_eos_UNCONNECTED : STD_LOGIC;
@@ -1909,25 +1906,27 @@ architecture STRUCTURE of mb_system is
   attribute X_INTERFACE_INFO of spi_0_ss_t : signal is "xilinx.com:interface:spi:1.0 spi_0 SS_T";
   attribute X_INTERFACE_INFO of uart_rs232_rxd : signal is "xilinx.com:interface:uart:1.0 uart_rs232 RxD";
   attribute X_INTERFACE_INFO of uart_rs232_txd : signal is "xilinx.com:interface:uart:1.0 uart_rs232 TxD";
-  attribute X_INTERFACE_INFO of DATA_READY_tri_i : signal is "xilinx.com:interface:gpio:1.0 DATA_READY TRI_I";
-  attribute X_INTERFACE_INFO of Gain_PGA_tri_o : signal is "xilinx.com:interface:gpio:1.0 Gain_PGA TRI_O";
-  attribute X_INTERFACE_INFO of Phase1_tri_i : signal is "xilinx.com:interface:gpio:1.0 Phase1 TRI_I";
-  attribute X_INTERFACE_INFO of Phase2_tri_i : signal is "xilinx.com:interface:gpio:1.0 Phase2 TRI_I";
-  attribute X_INTERFACE_INFO of Phase3_tri_i : signal is "xilinx.com:interface:gpio:1.0 Phase3 TRI_I";
-  attribute X_INTERFACE_INFO of PhaseRef_tri_i : signal is "xilinx.com:interface:gpio:1.0 PhaseRef TRI_I";
-  attribute X_INTERFACE_INFO of SET_PROCESS_tri_o : signal is "xilinx.com:interface:gpio:1.0 SET_PROCESS TRI_O";
-  attribute X_INTERFACE_INFO of SNR_Threshold_tri_o : signal is "xilinx.com:interface:gpio:1.0 SNR_Threshold TRI_O";
-  attribute X_INTERFACE_INFO of Signal_Threshold_tri_o : signal is "xilinx.com:interface:gpio:1.0 Signal_Threshold TRI_O";
-  attribute X_INTERFACE_INFO of UART_Buffer_tri_o : signal is "xilinx.com:interface:gpio:1.0 UART_Buffer TRI_O";
+  attribute X_INTERFACE_INFO of AGC_CONFIG_REGISTER_tri_o : signal is "xilinx.com:interface:gpio:1.0 AGC_CONFIG_REGISTER TRI_O";
+  attribute X_INTERFACE_INFO of CONFIG_REGISTER_tri_o : signal is "xilinx.com:interface:gpio:1.0 CONFIG_REGISTER TRI_O";
+  attribute X_INTERFACE_INFO of INDEX_tri_i : signal is "xilinx.com:interface:gpio:1.0 INDEX TRI_I";
+  attribute X_INTERFACE_INFO of OUT_REGISTER_tri_i : signal is "xilinx.com:interface:gpio:1.0 OUT_REGISTER TRI_I";
+  attribute X_INTERFACE_INFO of PHASE1_tri_i : signal is "xilinx.com:interface:gpio:1.0 PHASE1 TRI_I";
+  attribute X_INTERFACE_INFO of PHASE2_tri_i : signal is "xilinx.com:interface:gpio:1.0 PHASE2 TRI_I";
+  attribute X_INTERFACE_INFO of PHASE3_tri_i : signal is "xilinx.com:interface:gpio:1.0 PHASE3 TRI_I";
+  attribute X_INTERFACE_INFO of PHASEREF_tri_i : signal is "xilinx.com:interface:gpio:1.0 PHASEREF TRI_I";
+  attribute X_INTERFACE_INFO of THRESHOLD_REGISTER_tri_o : signal is "xilinx.com:interface:gpio:1.0 THRESHOLD_REGISTER TRI_O";
   attribute X_INTERFACE_INFO of spi_0_ss_i : signal is "xilinx.com:interface:spi:1.0 spi_0 SS_I";
   attribute X_INTERFACE_INFO of spi_0_ss_o : signal is "xilinx.com:interface:spi:1.0 spi_0 SS_O";
 begin
-  Gain_PGA_tri_o(7 downto 0) <= iomodule_1_GPIO1_TRI_O(7 downto 0);
+  AGC_CONFIG_REGISTER_tri_o(31 downto 0) <= Parameter_Module_GPIO3_TRI_O(31 downto 0);
+  CONFIG_REGISTER_tri_o(31 downto 0) <= iomodule_1_GPIO1_TRI_O(31 downto 0);
+  Data_Module_GPIO1_TRI_I(31 downto 0) <= PHASEREF_tri_i(31 downto 0);
+  Data_Module_GPIO2_TRI_I(31 downto 0) <= PHASE1_tri_i(31 downto 0);
+  Data_Module_GPIO3_TRI_I(31 downto 0) <= PHASE2_tri_i(31 downto 0);
+  Data_Module_GPIO4_TRI_I(31 downto 0) <= PHASE3_tri_i(31 downto 0);
+  Parameter_Module_GPIO4_TRI_I(31 downto 0) <= OUT_REGISTER_tri_i(31 downto 0);
   Reset_1 <= Reset;
-  SET_PROCESS_tri_o(1 downto 0) <= iomodule_0_GPIO2_TRI_O(1 downto 0);
-  SNR_Threshold_tri_o(15 downto 0) <= iomodule_1_GPIO3_TRI_O(15 downto 0);
-  Signal_Threshold_tri_o(15 downto 0) <= iomodule_1_GPIO2_TRI_O(15 downto 0);
-  UART_Buffer_tri_o(0) <= iomodule_0_GPIO1_TRI_O(0);
+  THRESHOLD_REGISTER_tri_o(31 downto 0) <= iomodule_1_GPIO2_TRI_O(31 downto 0);
   axi_quad_spi_0_SPI_0_IO0_I <= spi_0_io0_i;
   axi_quad_spi_0_SPI_0_IO1_I <= spi_0_io1_i;
   axi_quad_spi_0_SPI_0_IO2_I <= spi_0_io2_i;
@@ -1938,11 +1937,7 @@ begin
   clk_10mhz <= clk_wiz_1_clk_out3;
   clk_25mhz <= clk_wiz_0_clk_out1;
   clk_50mhz <= clk_wiz_1_clk_out2;
-  iomodule_0_GPIO3_TRI_I(0) <= DATA_READY_tri_i(0);
-  iomodule_2_GPIO1_TRI_I(31 downto 0) <= PhaseRef_tri_i(31 downto 0);
-  iomodule_2_GPIO2_TRI_I(31 downto 0) <= Phase1_tri_i(31 downto 0);
-  iomodule_2_GPIO3_TRI_I(31 downto 0) <= Phase2_tri_i(31 downto 0);
-  iomodule_2_GPIO4_TRI_I(31 downto 0) <= Phase3_tri_i(31 downto 0);
+  iomodule_0_GPIO1_TRI_I(16 downto 0) <= INDEX_tri_i(16 downto 0);
   spi_0_io0_o <= axi_quad_spi_0_SPI_0_IO0_O;
   spi_0_io0_t <= axi_quad_spi_0_SPI_0_IO0_T;
   spi_0_io1_o <= axi_quad_spi_0_SPI_0_IO1_O;
@@ -1954,6 +1949,63 @@ begin
   spi_0_ss_o(0) <= axi_quad_spi_0_SPI_0_SS_O(0);
   spi_0_ss_t <= axi_quad_spi_0_SPI_0_SS_T;
   uart_rs232_txd <= axi_uartlite_0_UART_TxD;
+Data_Module: component mb_system_iomodule_2_1
+     port map (
+      Clk => microblaze_0_Clk,
+      GPI1(31 downto 0) => Data_Module_GPIO1_TRI_I(31 downto 0),
+      GPI2(31 downto 0) => Data_Module_GPIO2_TRI_I(31 downto 0),
+      GPI3(31 downto 0) => Data_Module_GPIO3_TRI_I(31 downto 0),
+      GPI4(31 downto 0) => Data_Module_GPIO4_TRI_I(31 downto 0),
+      LMB_ABus(0 to 31) => Conn1_ABUS(0 to 31),
+      LMB_AddrStrobe => Conn1_ADDRSTROBE,
+      LMB_BE(0 to 3) => Conn1_BE(0 to 3),
+      LMB_ReadStrobe => Conn1_READSTROBE,
+      LMB_WriteDBus(0 to 31) => Conn1_WRITEDBUS(0 to 31),
+      LMB_WriteStrobe => Conn1_WRITESTROBE,
+      Rst => Net(0),
+      Sl_CE => Conn1_CE,
+      Sl_DBus(0 to 31) => Conn1_READDBUS(0 to 31),
+      Sl_Ready => Conn1_READY,
+      Sl_UE => Conn1_UE,
+      Sl_Wait => Conn1_WAIT
+    );
+Data_Module_2: component mb_system_iomodule_0_0
+     port map (
+      Clk => microblaze_0_Clk,
+      GPI1(16 downto 0) => iomodule_0_GPIO1_TRI_I(16 downto 0),
+      LMB_ABus(0 to 31) => dlmb_v10_iomodule_0_ABUS(0 to 31),
+      LMB_AddrStrobe => dlmb_v10_iomodule_0_ADDRSTROBE,
+      LMB_BE(0 to 3) => dlmb_v10_iomodule_0_BE(0 to 3),
+      LMB_ReadStrobe => dlmb_v10_iomodule_0_READSTROBE,
+      LMB_WriteDBus(0 to 31) => dlmb_v10_iomodule_0_WRITEDBUS(0 to 31),
+      LMB_WriteStrobe => dlmb_v10_iomodule_0_WRITESTROBE,
+      Rst => Net(0),
+      Sl_CE => dlmb_v10_iomodule_0_CE,
+      Sl_DBus(0 to 31) => dlmb_v10_iomodule_0_READDBUS(0 to 31),
+      Sl_Ready => dlmb_v10_iomodule_0_READY,
+      Sl_UE => dlmb_v10_iomodule_0_UE,
+      Sl_Wait => dlmb_v10_iomodule_0_WAIT
+    );
+Parameter_Module: component mb_system_iomodule_1_1
+     port map (
+      Clk => microblaze_0_Clk,
+      GPI4(31 downto 0) => Parameter_Module_GPIO4_TRI_I(31 downto 0),
+      GPO1(31 downto 0) => iomodule_1_GPIO1_TRI_O(31 downto 0),
+      GPO2(31 downto 0) => iomodule_1_GPIO2_TRI_O(31 downto 0),
+      GPO3(31 downto 0) => Parameter_Module_GPIO3_TRI_O(31 downto 0),
+      LMB_ABus(0 to 31) => Conn_ABUS(0 to 31),
+      LMB_AddrStrobe => Conn_ADDRSTROBE,
+      LMB_BE(0 to 3) => Conn_BE(0 to 3),
+      LMB_ReadStrobe => Conn_READSTROBE,
+      LMB_WriteDBus(0 to 31) => Conn_WRITEDBUS(0 to 31),
+      LMB_WriteStrobe => Conn_WRITESTROBE,
+      Rst => Net(0),
+      Sl_CE => Conn_CE,
+      Sl_DBus(0 to 31) => Conn_READDBUS(0 to 31),
+      Sl_Ready => Conn_READY,
+      Sl_UE => Conn_UE,
+      Sl_Wait => Conn_WAIT
+    );
 axi_quad_spi_0: component mb_system_axi_quad_spi_0_1
      port map (
       cfgclk => NLW_axi_quad_spi_0_cfgclk_UNCONNECTED,
@@ -1976,7 +2028,7 @@ axi_quad_spi_0: component mb_system_axi_quad_spi_0_1
       preq => NLW_axi_quad_spi_0_preq_UNCONNECTED,
       s_axi_aclk => microblaze_0_Clk,
       s_axi_araddr(6 downto 0) => microblaze_0_axi_periph_M01_AXI_ARADDR(6 downto 0),
-      s_axi_aresetn => rst_clk_wiz_1_100M_peripheral_aresetn(0),
+      s_axi_aresetn => Net1(0),
       s_axi_arready => microblaze_0_axi_periph_M01_AXI_ARREADY,
       s_axi_arvalid => microblaze_0_axi_periph_M01_AXI_ARVALID(0),
       s_axi_awaddr(6 downto 0) => microblaze_0_axi_periph_M01_AXI_AWADDR(6 downto 0),
@@ -2003,7 +2055,7 @@ axi_uartlite_0: component mb_system_axi_uartlite_0_1
       rx => axi_uartlite_0_UART_RxD,
       s_axi_aclk => microblaze_0_Clk,
       s_axi_araddr(3 downto 0) => microblaze_0_axi_periph_M00_AXI_ARADDR(3 downto 0),
-      s_axi_aresetn => rst_clk_wiz_1_100M_peripheral_aresetn(0),
+      s_axi_aresetn => Net1(0),
       s_axi_arready => microblaze_0_axi_periph_M00_AXI_ARREADY,
       s_axi_arvalid => microblaze_0_axi_periph_M00_AXI_ARVALID(0),
       s_axi_awaddr(3 downto 0) => microblaze_0_axi_periph_M00_AXI_AWADDR(3 downto 0),
@@ -2037,64 +2089,6 @@ clk_wiz_1: component mb_system_clk_wiz_1_1
       clk_out3 => clk_wiz_1_clk_out3,
       locked => clk_wiz_1_locked,
       reset => Reset_1
-    );
-iomodule_0: component mb_system_iomodule_0_1
-     port map (
-      Clk => microblaze_0_Clk,
-      GPI3(0) => iomodule_0_GPIO3_TRI_I(0),
-      GPO1(0) => iomodule_0_GPIO1_TRI_O(0),
-      GPO2(1 downto 0) => iomodule_0_GPIO2_TRI_O(1 downto 0),
-      LMB_ABus(0 to 31) => dlmb_v10_iomodule_0_ABUS(0 to 31),
-      LMB_AddrStrobe => dlmb_v10_iomodule_0_ADDRSTROBE,
-      LMB_BE(0 to 3) => dlmb_v10_iomodule_0_BE(0 to 3),
-      LMB_ReadStrobe => dlmb_v10_iomodule_0_READSTROBE,
-      LMB_WriteDBus(0 to 31) => dlmb_v10_iomodule_0_WRITEDBUS(0 to 31),
-      LMB_WriteStrobe => dlmb_v10_iomodule_0_WRITESTROBE,
-      Rst => rst_clk_wiz_1_100M_peripheral_reset(0),
-      Sl_CE => dlmb_v10_iomodule_0_CE,
-      Sl_DBus(0 to 31) => dlmb_v10_iomodule_0_READDBUS(0 to 31),
-      Sl_Ready => dlmb_v10_iomodule_0_READY,
-      Sl_UE => dlmb_v10_iomodule_0_UE,
-      Sl_Wait => dlmb_v10_iomodule_0_WAIT
-    );
-iomodule_1: component mb_system_iomodule_1_1
-     port map (
-      Clk => microblaze_0_Clk,
-      GPO1(7 downto 0) => iomodule_1_GPIO1_TRI_O(7 downto 0),
-      GPO2(15 downto 0) => iomodule_1_GPIO2_TRI_O(15 downto 0),
-      GPO3(15 downto 0) => iomodule_1_GPIO3_TRI_O(15 downto 0),
-      LMB_ABus(0 to 31) => dlmb_v10_iomodule_1_ABUS(0 to 31),
-      LMB_AddrStrobe => dlmb_v10_iomodule_1_ADDRSTROBE,
-      LMB_BE(0 to 3) => dlmb_v10_iomodule_1_BE(0 to 3),
-      LMB_ReadStrobe => dlmb_v10_iomodule_1_READSTROBE,
-      LMB_WriteDBus(0 to 31) => dlmb_v10_iomodule_1_WRITEDBUS(0 to 31),
-      LMB_WriteStrobe => dlmb_v10_iomodule_1_WRITESTROBE,
-      Rst => rst_clk_wiz_1_100M_peripheral_reset(0),
-      Sl_CE => dlmb_v10_iomodule_1_CE,
-      Sl_DBus(0 to 31) => dlmb_v10_iomodule_1_READDBUS(0 to 31),
-      Sl_Ready => dlmb_v10_iomodule_1_READY,
-      Sl_UE => dlmb_v10_iomodule_1_UE,
-      Sl_Wait => dlmb_v10_iomodule_1_WAIT
-    );
-iomodule_2: component mb_system_iomodule_2_1
-     port map (
-      Clk => microblaze_0_Clk,
-      GPI1(31 downto 0) => iomodule_2_GPIO1_TRI_I(31 downto 0),
-      GPI2(31 downto 0) => iomodule_2_GPIO2_TRI_I(31 downto 0),
-      GPI3(31 downto 0) => iomodule_2_GPIO3_TRI_I(31 downto 0),
-      GPI4(31 downto 0) => iomodule_2_GPIO4_TRI_I(31 downto 0),
-      LMB_ABus(0 to 31) => dlmb_v10_iomodule_2_ABUS(0 to 31),
-      LMB_AddrStrobe => dlmb_v10_iomodule_2_ADDRSTROBE,
-      LMB_BE(0 to 3) => dlmb_v10_iomodule_2_BE(0 to 3),
-      LMB_ReadStrobe => dlmb_v10_iomodule_2_READSTROBE,
-      LMB_WriteDBus(0 to 31) => dlmb_v10_iomodule_2_WRITEDBUS(0 to 31),
-      LMB_WriteStrobe => dlmb_v10_iomodule_2_WRITESTROBE,
-      Rst => rst_clk_wiz_1_100M_peripheral_reset(0),
-      Sl_CE => dlmb_v10_iomodule_2_CE,
-      Sl_DBus(0 to 31) => dlmb_v10_iomodule_2_READDBUS(0 to 31),
-      Sl_Ready => dlmb_v10_iomodule_2_READY,
-      Sl_UE => dlmb_v10_iomodule_2_UE,
-      Sl_Wait => dlmb_v10_iomodule_2_WAIT
     );
 mdm_1: component mb_system_mdm_1_2
      port map (
@@ -2167,9 +2161,9 @@ microblaze_0: component mb_system_microblaze_0_2
 microblaze_0_axi_periph: entity work.mb_system_microblaze_0_axi_periph_2
      port map (
       ACLK => microblaze_0_Clk,
-      ARESETN => rst_clk_wiz_1_100M_peripheral_aresetn(0),
+      ARESETN => Net1(0),
       M00_ACLK => microblaze_0_Clk,
-      M00_ARESETN => rst_clk_wiz_1_100M_peripheral_aresetn(0),
+      M00_ARESETN => Net1(0),
       M00_AXI_araddr(31 downto 0) => microblaze_0_axi_periph_M00_AXI_ARADDR(31 downto 0),
       M00_AXI_arready(0) => microblaze_0_axi_periph_M00_AXI_ARREADY,
       M00_AXI_arvalid(0) => microblaze_0_axi_periph_M00_AXI_ARVALID(0),
@@ -2188,7 +2182,7 @@ microblaze_0_axi_periph: entity work.mb_system_microblaze_0_axi_periph_2
       M00_AXI_wstrb(3 downto 0) => microblaze_0_axi_periph_M00_AXI_WSTRB(3 downto 0),
       M00_AXI_wvalid(0) => microblaze_0_axi_periph_M00_AXI_WVALID(0),
       M01_ACLK => microblaze_0_Clk,
-      M01_ARESETN => rst_clk_wiz_1_100M_peripheral_aresetn(0),
+      M01_ARESETN => Net1(0),
       M01_AXI_araddr(31 downto 0) => microblaze_0_axi_periph_M01_AXI_ARADDR(31 downto 0),
       M01_AXI_arready(0) => microblaze_0_axi_periph_M01_AXI_ARREADY,
       M01_AXI_arvalid(0) => microblaze_0_axi_periph_M01_AXI_ARVALID(0),
@@ -2207,7 +2201,7 @@ microblaze_0_axi_periph: entity work.mb_system_microblaze_0_axi_periph_2
       M01_AXI_wstrb(3 downto 0) => microblaze_0_axi_periph_M01_AXI_WSTRB(3 downto 0),
       M01_AXI_wvalid(0) => microblaze_0_axi_periph_M01_AXI_WVALID(0),
       S00_ACLK => microblaze_0_Clk,
-      S00_ARESETN => rst_clk_wiz_1_100M_peripheral_aresetn(0),
+      S00_ARESETN => Net1(0),
       S00_AXI_araddr(31 downto 0) => microblaze_0_M_AXI_DP_ARADDR(31 downto 0),
       S00_AXI_arprot(2 downto 0) => microblaze_0_M_AXI_DP_ARPROT(2 downto 0),
       S00_AXI_arready(0) => microblaze_0_M_AXI_DP_ARREADY(0),
@@ -2250,39 +2244,39 @@ microblaze_0_local_memory: entity work.microblaze_0_local_memory_imp_TERCO3
       ILMB_ue => microblaze_0_ilmb_1_UE,
       ILMB_wait => microblaze_0_ilmb_1_WAIT,
       LMB_Clk => microblaze_0_Clk,
-      LMB_Sl_1_abus(0 to 31) => dlmb_v10_iomodule_0_ABUS(0 to 31),
-      LMB_Sl_1_addrstrobe => dlmb_v10_iomodule_0_ADDRSTROBE,
-      LMB_Sl_1_be(0 to 3) => dlmb_v10_iomodule_0_BE(0 to 3),
-      LMB_Sl_1_ce => dlmb_v10_iomodule_0_CE,
-      LMB_Sl_1_readdbus(0 to 31) => dlmb_v10_iomodule_0_READDBUS(0 to 31),
-      LMB_Sl_1_readstrobe => dlmb_v10_iomodule_0_READSTROBE,
-      LMB_Sl_1_ready => dlmb_v10_iomodule_0_READY,
-      LMB_Sl_1_ue => dlmb_v10_iomodule_0_UE,
-      LMB_Sl_1_wait => dlmb_v10_iomodule_0_WAIT,
-      LMB_Sl_1_writedbus(0 to 31) => dlmb_v10_iomodule_0_WRITEDBUS(0 to 31),
-      LMB_Sl_1_writestrobe => dlmb_v10_iomodule_0_WRITESTROBE,
-      LMB_Sl_2_abus(0 to 31) => dlmb_v10_iomodule_1_ABUS(0 to 31),
-      LMB_Sl_2_addrstrobe => dlmb_v10_iomodule_1_ADDRSTROBE,
-      LMB_Sl_2_be(0 to 3) => dlmb_v10_iomodule_1_BE(0 to 3),
-      LMB_Sl_2_ce => dlmb_v10_iomodule_1_CE,
-      LMB_Sl_2_readdbus(0 to 31) => dlmb_v10_iomodule_1_READDBUS(0 to 31),
-      LMB_Sl_2_readstrobe => dlmb_v10_iomodule_1_READSTROBE,
-      LMB_Sl_2_ready => dlmb_v10_iomodule_1_READY,
-      LMB_Sl_2_ue => dlmb_v10_iomodule_1_UE,
-      LMB_Sl_2_wait => dlmb_v10_iomodule_1_WAIT,
-      LMB_Sl_2_writedbus(0 to 31) => dlmb_v10_iomodule_1_WRITEDBUS(0 to 31),
-      LMB_Sl_2_writestrobe => dlmb_v10_iomodule_1_WRITESTROBE,
-      LMB_Sl_3_abus(0 to 31) => dlmb_v10_iomodule_2_ABUS(0 to 31),
-      LMB_Sl_3_addrstrobe => dlmb_v10_iomodule_2_ADDRSTROBE,
-      LMB_Sl_3_be(0 to 3) => dlmb_v10_iomodule_2_BE(0 to 3),
-      LMB_Sl_3_ce => dlmb_v10_iomodule_2_CE,
-      LMB_Sl_3_readdbus(0 to 31) => dlmb_v10_iomodule_2_READDBUS(0 to 31),
-      LMB_Sl_3_readstrobe => dlmb_v10_iomodule_2_READSTROBE,
-      LMB_Sl_3_ready => dlmb_v10_iomodule_2_READY,
-      LMB_Sl_3_ue => dlmb_v10_iomodule_2_UE,
-      LMB_Sl_3_wait => dlmb_v10_iomodule_2_WAIT,
-      LMB_Sl_3_writedbus(0 to 31) => dlmb_v10_iomodule_2_WRITEDBUS(0 to 31),
-      LMB_Sl_3_writestrobe => dlmb_v10_iomodule_2_WRITESTROBE,
+      LMB_Sl_1_abus(0 to 31) => Conn_ABUS(0 to 31),
+      LMB_Sl_1_addrstrobe => Conn_ADDRSTROBE,
+      LMB_Sl_1_be(0 to 3) => Conn_BE(0 to 3),
+      LMB_Sl_1_ce => Conn_CE,
+      LMB_Sl_1_readdbus(0 to 31) => Conn_READDBUS(0 to 31),
+      LMB_Sl_1_readstrobe => Conn_READSTROBE,
+      LMB_Sl_1_ready => Conn_READY,
+      LMB_Sl_1_ue => Conn_UE,
+      LMB_Sl_1_wait => Conn_WAIT,
+      LMB_Sl_1_writedbus(0 to 31) => Conn_WRITEDBUS(0 to 31),
+      LMB_Sl_1_writestrobe => Conn_WRITESTROBE,
+      LMB_Sl_2_abus(0 to 31) => Conn1_ABUS(0 to 31),
+      LMB_Sl_2_addrstrobe => Conn1_ADDRSTROBE,
+      LMB_Sl_2_be(0 to 3) => Conn1_BE(0 to 3),
+      LMB_Sl_2_ce => Conn1_CE,
+      LMB_Sl_2_readdbus(0 to 31) => Conn1_READDBUS(0 to 31),
+      LMB_Sl_2_readstrobe => Conn1_READSTROBE,
+      LMB_Sl_2_ready => Conn1_READY,
+      LMB_Sl_2_ue => Conn1_UE,
+      LMB_Sl_2_wait => Conn1_WAIT,
+      LMB_Sl_2_writedbus(0 to 31) => Conn1_WRITEDBUS(0 to 31),
+      LMB_Sl_2_writestrobe => Conn1_WRITESTROBE,
+      LMB_Sl_3_abus(0 to 31) => dlmb_v10_iomodule_0_ABUS(0 to 31),
+      LMB_Sl_3_addrstrobe => dlmb_v10_iomodule_0_ADDRSTROBE,
+      LMB_Sl_3_be(0 to 3) => dlmb_v10_iomodule_0_BE(0 to 3),
+      LMB_Sl_3_ce => dlmb_v10_iomodule_0_CE,
+      LMB_Sl_3_readdbus(0 to 31) => dlmb_v10_iomodule_0_READDBUS(0 to 31),
+      LMB_Sl_3_readstrobe => dlmb_v10_iomodule_0_READSTROBE,
+      LMB_Sl_3_ready => dlmb_v10_iomodule_0_READY,
+      LMB_Sl_3_ue => dlmb_v10_iomodule_0_UE,
+      LMB_Sl_3_wait => dlmb_v10_iomodule_0_WAIT,
+      LMB_Sl_3_writedbus(0 to 31) => dlmb_v10_iomodule_0_WRITEDBUS(0 to 31),
+      LMB_Sl_3_writestrobe => dlmb_v10_iomodule_0_WRITESTROBE,
       SYS_Rst => rst_clk_wiz_1_100M_bus_struct_reset(0)
     );
 rst_clk_wiz_1_100M: component mb_system_rst_clk_wiz_1_100M_1
@@ -2294,8 +2288,8 @@ rst_clk_wiz_1_100M: component mb_system_rst_clk_wiz_1_100M_1
       interconnect_aresetn(0) => NLW_rst_clk_wiz_1_100M_interconnect_aresetn_UNCONNECTED(0),
       mb_debug_sys_rst => mdm_1_debug_sys_rst,
       mb_reset => rst_clk_wiz_1_100M_mb_reset,
-      peripheral_aresetn(0) => rst_clk_wiz_1_100M_peripheral_aresetn(0),
-      peripheral_reset(0) => rst_clk_wiz_1_100M_peripheral_reset(0),
+      peripheral_aresetn(0) => Net1(0),
+      peripheral_reset(0) => Net(0),
       slowest_sync_clk => microblaze_0_Clk
     );
 end STRUCTURE;

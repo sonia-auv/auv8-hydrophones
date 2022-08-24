@@ -22,15 +22,7 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.std_logic_unsigned.all;
-
--- Uncomment the following library declaration if using
--- arithmetic functions with Signed or Unsigned values
 use IEEE.NUMERIC_STD.ALL;
-
--- Uncomment the following library declaration if instantiating
--- any Xilinx leaf cells in this code.
---library UNISIM;
---use UNISIM.VComponents.all;
 
 entity hydro_spartan_7 is
     Port ( adc_sclk_ch1 : out std_logic;
@@ -86,14 +78,17 @@ component Test_DOA
         Canal3                            :   IN    std_logic_vector(15 DOWNTO 0);  -- uint16
         Canal4                            :   IN    std_logic_vector(15 DOWNTO 0);  -- uint16
         Enable                            :   IN    std_logic;
-        Signal_Threshold                  :   IN    std_logic_vector(15 DOWNTO 0);  -- uint16
-        SNR_Threshold                     :   IN    std_logic_vector(15 DOWNTO 0);  -- uint16
+        HighThreshold                     :   IN    std_logic_vector(15 DOWNTO 0);  -- uint16
+        SNR_Threshold                     :   IN    std_logic_vector(7 DOWNTO 0);  -- uint8
+        LowThreshold                      :   IN    std_logic_vector(15 DOWNTO 0);  -- uint16
         ce_out                            :   OUT   std_logic;
-        SNR_Check_1                       :   OUT   std_logic;
-        Frequency                         :   OUT   std_logic_vector(26 DOWNTO 0);  -- ufix27
-        Y                                 :   OUT   std_logic_vector(30 DOWNTO 0);  -- sfix31_En19
-        X                                 :   OUT   std_logic_vector(30 DOWNTO 0);  -- sfix31_En19
-        Debug                             :   OUT   std_logic_vector(26 DOWNTO 0)  -- sfix27
+        ValidOut                          :   OUT   std_logic;
+        Index                             :   OUT   std_logic_vector(16 DOWNTO 0);  -- ufix17
+        Phase1                            :   OUT   std_logic_vector(31 DOWNTO 0);  -- sfix32_En19
+        PhaseRef                          :   OUT   std_logic_vector(31 DOWNTO 0);  -- sfix32_En19
+        SNR                               :   OUT   std_logic_vector(15 DOWNTO 0);  -- uint16
+        Phase2                            :   OUT   std_logic_vector(31 DOWNTO 0);  -- sfix32_En19
+        Phase3                            :   OUT   std_logic_vector(31 DOWNTO 0)  -- sfix32_En19
         );
 END component;
 
@@ -119,22 +114,21 @@ for all : ADS8327_SPI
     use entity work.ADS8327_SPI(Behavioral);
 
 component mb_system_wrapper is
-port (
-    DATA_READY_tri_i : in STD_LOGIC_VECTOR ( 0 to 0 );
-    GAIN_PGA_tri_o : out STD_LOGIC_VECTOR ( 7 downto 0 );
-    Phase1_tri_i : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    Phase2_tri_i : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    Phase3_tri_i : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    PhaseRef_tri_i : in STD_LOGIC_VECTOR ( 31 downto 0 );
+  port (
+    AGC_CONFIG_REGISTER_tri_o : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    CONFIG_REGISTER_tri_o : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    INDEX_tri_i : in STD_LOGIC_VECTOR ( 16 downto 0 );
+    OUT_REGISTER_tri_i : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    PHASE1_tri_i : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    PHASE2_tri_i : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    PHASE3_tri_i : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    PHASEREF_tri_i : in STD_LOGIC_VECTOR ( 31 downto 0 );
     Reset : in STD_LOGIC;
-    SET_PROCESS_tri_o : out STD_LOGIC_VECTOR ( 1 downto 0 );
-    SNR_Threshold_tri_o : out STD_LOGIC_VECTOR ( 15 downto 0 );
-    Signal_Threshold_tri_o : out STD_LOGIC_VECTOR ( 15 downto 0 );
-    UART_Buffer_tri_o : out STD_LOGIC_VECTOR ( 0 to 0 );
+    THRESHOLD_REGISTER_tri_o : out STD_LOGIC_VECTOR ( 31 downto 0 );
     clk : in STD_LOGIC;
     clk_10mhz : out STD_LOGIC;
-    clk_50mhz : out STD_LOGIC;
     clk_25mhz : out STD_LOGIC;
+    clk_50mhz : out STD_LOGIC;
     spi_0_io0_io : inout STD_LOGIC;
     spi_0_io1_io : inout STD_LOGIC;
     spi_0_io2_io : inout STD_LOGIC;
@@ -177,12 +171,33 @@ component fifo_buffer is
             write_en_4 : in std_logic;
             data_ready : out std_logic;
             read_process : in std_logic_vector(1 downto 0);
-            uart_ready : in std_logic
+            uart_ready : in std_logic;
+            fifo_full : out std_logic;
+            write_enable : out std_logic         
      );
 end component;
 
 for all : fifo_buffer
     use entity work.fifo_buffer(Behavioral);
+
+component agc_gain is
+    Generic (PingDuration_ms : integer;
+             DeadTimeDuration_s : integer);
+    Port (clk : in std_logic;
+          rst : in std_logic;
+          enable : in std_logic;
+          samples : in std_logic_vector(15 downto 0) := x"0000";
+          samples_rdy : in std_logic := '0';
+          user_gain : in std_logic_vector(2 downto 0);
+          gain : out std_logic_vector(2 downto 0);
+          agc_on : out std_logic;
+          error : out std_logic;
+          th_detector : in std_logic_vector(15 downto 0);
+          th_max : in std_logic_vector(15 downto 0));
+end component;
+
+for all : agc_gain
+    use entity work.agc_gain(Behavioral);
 
 -- Signals
 
@@ -211,30 +226,24 @@ signal ready_ch1 : std_logic;
 signal ready_ch2 : std_logic;
 signal ready_ch3 : std_logic;
 signal ready_ch4 : std_logic;
-signal set_process : std_logic_vector(1 downto 0);
 signal u_uart_done : std_logic;
 
-signal u_gain_entry : std_logic_vector(7 downto 0);
-signal u_signal_threshold : std_logic_vector(15 downto 0);
-signal u_snr_threshold : std_logic_vector(15 downto 0);
+signal u_config_register : std_logic_vector(31 downto 0);
+signal u_agc_config : std_logic_vector(31 downto 0);
+signal u_threshold_register : std_logic_vector(31 downto 0);
+signal u_out_register : std_logic_vector(31 downto 0);
 
-signal u_phaseRef : std_logic_vector(28 downto 0);
-signal phaseRef : std_logic_vector(28 downto 0);
-signal u_phase1 : std_logic_vector(28 downto 0);
-signal phase1 : std_logic_vector(28 downto 0);
-signal u_phase2 : std_logic_vector(28 downto 0);
-signal phase2 : std_logic_vector(28 downto 0);
-signal u_phase3 : std_logic_vector(28 downto 0);
-signal phase3 : std_logic_vector(28 downto 0);
-
-signal u_x : std_logic_vector(30 downto 0);
-signal x : std_logic_vector(31 downto 0);
-signal u_y : std_logic_vector(30 downto 0);
-signal y : std_logic_vector(31 downto 0);
-signal u_debug : std_logic_vector(26 downto 0);
-signal debug : std_logic_vector(31 downto 0);
-signal u_frequency : std_logic_vector(26 downto 0);
-signal frequency : std_logic_vector(31 downto 0);
+signal u_phase_ref : std_logic_vector(31 downto 0);
+signal phase_ref : std_logic_vector(31 downto 0);
+signal u_phase_1 : std_logic_vector(31 downto 0);
+signal phase_1 : std_logic_vector(31 downto 0);
+signal u_phase_2 : std_logic_vector(31 downto 0);
+signal phase_2 : std_logic_vector(31 downto 0);
+signal u_phase_3 : std_logic_vector(31 downto 0);
+signal phase_3 : std_logic_vector(31 downto 0);
+signal u_gain : std_logic_vector(2 downto 0);
+signal index : std_logic_vector(16 downto 0);
+signal u_index : std_logic_vector(16 downto 0);
 
 begin
 
@@ -252,31 +261,33 @@ port map(   clk => u_clk_10mhz,
             Canal3 => fifo_samples_ch3,
             Canal4 => fifo_samples_ch4,
             Enable => fifo_data_ready,
-            Signal_Threshold => u_signal_threshold,
-            SNR_Threshold => u_snr_threshold,
-            SNR_Check_1 => snr_check,
+            HighThreshold => u_threshold_register(15 downto 0),
+            SNR_Threshold => u_config_register(13 downto 6),
+            LowThreshold => u_threshold_register(31 downto 16),
+            ValidOut => snr_check,
             ce_out => open,                
-            Frequency=> u_frequency,
-            Y=> u_y,
-            X=> u_x,
-            Debug=> u_debug
+            Index => u_index,
+            Phase1 => u_phase_1,
+            PhaseRef => u_phase_ref,
+            Phase2 => u_phase_2,
+            Phase3 => u_phase_3,
+            SNR => u_out_register(18 downto 3)
             );
 
 -- Microblaze
 
 FPGA_system : mb_system_wrapper
     port map(
-        DATA_READY_tri_i => data_ready_array,
-        GAIN_PGA_tri_o => u_gain_entry,
-        Phase1_tri_i => frequency,
-        Phase2_tri_i => x,
-        Phase3_tri_i => y,
-        PhaseRef_tri_i => debug,
-        Reset => global_reset,
-        SET_PROCESS_tri_o => set_process,
-        SNR_Threshold_tri_o => u_snr_threshold,
-        Signal_Threshold_tri_o => u_signal_threshold,
-        UART_Buffer_tri_o => open,
+        AGC_CONFIG_REGISTER_tri_o => u_agc_config,
+        CONFIG_REGISTER_tri_o => u_config_register,
+        INDEX_tri_i => index,
+        OUT_REGISTER_tri_i => u_out_register,
+        PHASE1_tri_i => phase_1,
+        PHASE2_tri_i => phase_2,
+        PHASE3_tri_i => phase_3,
+        PHASEREF_tri_i => phase_ref,
+        Reset => global_reset,  
+        THRESHOLD_REGISTER_tri_o => u_threshold_register,
         spi_0_io0_io => spi_d00,
         spi_0_io1_io => spi_d01,
         spi_0_io2_io => spi_d02,
@@ -317,7 +328,7 @@ ADC_ch2 : ADS8327_SPI
         SCLK => adc_sclk_ch2,
         CS => adc_cs_ch2,
         samples => samples_ch2,
-        data_rdy => ready_ch2,
+        data_rdy => ready_ch2,
         rst => global_reset
     );
 ADC_ch3 : ADS8327_SPI
@@ -331,7 +342,7 @@ ADC_ch3 : ADS8327_SPI
         SCLK => adc_sclk_ch3,
         CS => adc_cs_ch3,
         samples => samples_ch3,
-        data_rdy => ready_ch3,
+        data_rdy => ready_ch3,
         rst => global_reset
     );
 ADC_ch4 : ADS8327_SPI
@@ -368,9 +379,11 @@ FIFO_BUFFERS : fifo_buffer
         write_en_2 => ready_ch2,
         write_en_3 => ready_ch3,
         write_en_4 => ready_ch4,
-        data_ready => fifo_data_ready,
-        read_process => set_process,
-        uart_ready => u_uart_done
+        data_ready => fifo_data_ready,
+        read_process => u_config_register(5 downto 4),
+        uart_ready => u_uart_done,
+        fifo_full => open,
+        write_enable => open
     );
     
 -- Clock 256kHz
@@ -383,31 +396,54 @@ Clock_device : clock
         clk_uart => u_uart_done,
         rst => global_reset
     );
+    
+-- AGC
+
+Automatic_Gain_Control : agc_gain
+    generic map(
+          PingDuration_ms => 4,
+          DeadTimeDuration_s => 10)
+    port map(
+          clk => u_clk_10mhz,
+          rst => global_reset,
+          enable => u_config_register(3),
+          samples => fifo_samples_ch1,
+          samples_rdy => fifo_data_ready,
+          user_gain => u_config_register(2 downto 0),
+          gain => u_gain,
+          agc_on => u_out_register(1),
+          error => u_out_register(2),
+          th_detector => u_agc_config(15 downto 0),
+          th_max => u_agc_config(31 downto 16)
+    );
 
 --UTILITY SECTION
 
 -- Data utility
 
-data : process(u_clk_50mhz)
+data : process(u_clk_10mhz) --Changement à 10Mhz pcq le data est shifter à 10Mhz au lieu de 50Mhz
 begin
-    if(rising_edge(u_clk_50mhz))then
+    if(rising_edge(u_clk_10mhz))then
         if(global_reset='1')then
-            debug <= x"00000000";
-            frequency <= x"00000000";
-            x <= x"00000000";
-            y <= x"00000000";
+            phase_ref <= x"00000000";
+            phase_1 <= x"00000000";
+            phase_2 <= x"00000000";
+            phase_3 <= x"00000000";
+            index <= x"0000" & "0";
         else
-            if(set_process="10")then
-                debug <= x"0000" & fifo_samples_ch1;
-                frequency <= x"0000" & fifo_samples_ch2;
-                x <= x"0000" & fifo_samples_ch3;
-                y <= x"0000" & fifo_samples_ch4;
+            if(u_config_register(5 downto 4)="11")then
+                phase_ref <= x"0000" & fifo_samples_ch1;
+                phase_1 <= x"0000" & fifo_samples_ch2;
+                phase_2 <= x"0000" & fifo_samples_ch3;
+                phase_3 <= x"0000" & fifo_samples_ch4;
+                index <= x"0000" & "0";
             end if;
-            if(set_process="00") or (set_process="01")then
-                debug <= "00000" & u_debug;
-                frequency <= "00000" & u_frequency;
-                x <= "0" & u_x;
-                y <= "0" & u_y;
+            if(u_config_register(5 downto 4)="10") or (u_config_register(5 downto 4)="01")then
+                phase_ref <= u_phase_ref;
+                phase_1 <= u_phase_1;
+                phase_2 <= u_phase_2;
+                phase_3 <= u_phase_3;
+                index <= u_index;
             end if;
         end if;
     end if;
@@ -420,14 +456,14 @@ ready_state : process(u_clk_10mhz)
 begin
     if(rising_edge(u_clk_10mhz))then
         if(global_reset='1')then
-            data_ready_array(0) <= '0';
+            u_out_register(0) <= '0';
         else
-            if(fifo_data_ready = '1') and (set_process = "10")then
-                data_ready_array(0) <= '1';
-            elsif(snr_check = '1') and ((set_process = "00") or (set_process = "01"))then
-                data_ready_array(0) <= '1';
+            if(fifo_data_ready = '1') and (u_config_register(5 downto 4) = "11")then
+                u_out_register(0) <= '1';
+            elsif(snr_check = '1') and ((u_config_register(5 downto 4) = "01") or (u_config_register(5 downto 4) = "10"))then
+                u_out_register(0) <= '1';
             else
-                data_ready_array(0) <= '0';
+                u_out_register(0) <= '0';
             end if;
         end if;
     end if;
@@ -435,17 +471,19 @@ end process;
 
 -- PGA utility
 
-pga : process(u_clk_50mhz)
+u_out_register(21 downto 19) <= u_gain;
+
+pga : process(u_clk_10mhz)
 begin
-    if(rising_edge(u_clk_50mhz))then
+    if(rising_edge(u_clk_10mhz))then
         if(global_reset='1')then
             g0 <= '0';
             g1 <= '0';
             g2 <= '0';
         else
-            g0 <= u_gain_entry(0);
-            g1 <= u_gain_entry(1);
-            g2 <= u_gain_entry(2);
+            g0 <= u_gain(0);
+            g1 <= u_gain(1);
+            g2 <= u_gain(2);
         end if;
     end if;
 end process;

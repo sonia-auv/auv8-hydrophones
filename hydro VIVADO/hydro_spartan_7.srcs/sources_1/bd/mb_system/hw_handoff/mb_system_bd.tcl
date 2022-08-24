@@ -257,25 +257,23 @@ proc create_root_design { parentCell } {
 
 
   # Create interface ports
-  set DATA_READY [ create_bd_intf_port -mode Master -vlnv xilinx.com:interface:gpio_rtl:1.0 DATA_READY ]
+  set AGC_CONFIG_REGISTER [ create_bd_intf_port -mode Master -vlnv xilinx.com:interface:gpio_rtl:1.0 AGC_CONFIG_REGISTER ]
 
-  set Gain_PGA [ create_bd_intf_port -mode Master -vlnv xilinx.com:interface:gpio_rtl:1.0 Gain_PGA ]
+  set CONFIG_REGISTER [ create_bd_intf_port -mode Master -vlnv xilinx.com:interface:gpio_rtl:1.0 CONFIG_REGISTER ]
 
-  set Phase1 [ create_bd_intf_port -mode Master -vlnv xilinx.com:interface:gpio_rtl:1.0 Phase1 ]
+  set INDEX [ create_bd_intf_port -mode Master -vlnv xilinx.com:interface:gpio_rtl:1.0 INDEX ]
 
-  set Phase2 [ create_bd_intf_port -mode Master -vlnv xilinx.com:interface:gpio_rtl:1.0 Phase2 ]
+  set OUT_REGISTER [ create_bd_intf_port -mode Master -vlnv xilinx.com:interface:gpio_rtl:1.0 OUT_REGISTER ]
 
-  set Phase3 [ create_bd_intf_port -mode Master -vlnv xilinx.com:interface:gpio_rtl:1.0 Phase3 ]
+  set PHASE1 [ create_bd_intf_port -mode Master -vlnv xilinx.com:interface:gpio_rtl:1.0 PHASE1 ]
 
-  set PhaseRef [ create_bd_intf_port -mode Master -vlnv xilinx.com:interface:gpio_rtl:1.0 PhaseRef ]
+  set PHASE2 [ create_bd_intf_port -mode Master -vlnv xilinx.com:interface:gpio_rtl:1.0 PHASE2 ]
 
-  set SET_PROCESS [ create_bd_intf_port -mode Master -vlnv xilinx.com:interface:gpio_rtl:1.0 SET_PROCESS ]
+  set PHASE3 [ create_bd_intf_port -mode Master -vlnv xilinx.com:interface:gpio_rtl:1.0 PHASE3 ]
 
-  set SNR_Threshold [ create_bd_intf_port -mode Master -vlnv xilinx.com:interface:gpio_rtl:1.0 SNR_Threshold ]
+  set PHASEREF [ create_bd_intf_port -mode Master -vlnv xilinx.com:interface:gpio_rtl:1.0 PHASEREF ]
 
-  set Signal_Threshold [ create_bd_intf_port -mode Master -vlnv xilinx.com:interface:gpio_rtl:1.0 Signal_Threshold ]
-
-  set UART_Buffer [ create_bd_intf_port -mode Master -vlnv xilinx.com:interface:gpio_rtl:1.0 UART_Buffer ]
+  set THRESHOLD_REGISTER [ create_bd_intf_port -mode Master -vlnv xilinx.com:interface:gpio_rtl:1.0 THRESHOLD_REGISTER ]
 
   set spi_0 [ create_bd_intf_port -mode Master -vlnv xilinx.com:interface:spi_rtl:1.0 spi_0 ]
 
@@ -294,6 +292,45 @@ proc create_root_design { parentCell } {
   set clk_10mhz [ create_bd_port -dir O clk_10mhz ]
   set clk_25mhz [ create_bd_port -dir O clk_25mhz ]
   set clk_50mhz [ create_bd_port -dir O clk_50mhz ]
+
+  # Create instance: Data_Module, and set properties
+  set Data_Module [ create_bd_cell -type ip -vlnv xilinx.com:ip:iomodule:3.1 Data_Module ]
+  set_property -dict [ list \
+   CONFIG.C_GPI1_SIZE {32} \
+   CONFIG.C_GPI2_SIZE {32} \
+   CONFIG.C_GPI3_SIZE {32} \
+   CONFIG.C_GPI4_SIZE {32} \
+   CONFIG.C_TMR {0} \
+   CONFIG.C_USE_GPI1 {1} \
+   CONFIG.C_USE_GPI2 {1} \
+   CONFIG.C_USE_GPI3 {1} \
+   CONFIG.C_USE_GPI4 {1} \
+   CONFIG.C_USE_IO_BUS {0} \
+ ] $Data_Module
+
+  # Create instance: Data_Module_2, and set properties
+  set Data_Module_2 [ create_bd_cell -type ip -vlnv xilinx.com:ip:iomodule:3.1 Data_Module_2 ]
+  set_property -dict [ list \
+   CONFIG.C_GPI1_SIZE {17} \
+   CONFIG.C_USE_GPI1 {1} \
+   CONFIG.C_USE_GPI4 {0} \
+ ] $Data_Module_2
+
+  # Create instance: Parameter_Module, and set properties
+  set Parameter_Module [ create_bd_cell -type ip -vlnv xilinx.com:ip:iomodule:3.1 Parameter_Module ]
+  set_property -dict [ list \
+   CONFIG.C_GPI1_SIZE {17} \
+   CONFIG.C_GPO1_SIZE {32} \
+   CONFIG.C_GPO2_SIZE {32} \
+   CONFIG.C_GPO3_SIZE {32} \
+   CONFIG.C_GPO4_SIZE {16} \
+   CONFIG.C_USE_GPI1 {0} \
+   CONFIG.C_USE_GPI4 {1} \
+   CONFIG.C_USE_GPO1 {1} \
+   CONFIG.C_USE_GPO2 {1} \
+   CONFIG.C_USE_GPO3 {1} \
+   CONFIG.C_USE_GPO4 {0} \
+ ] $Parameter_Module
 
   # Create instance: axi_quad_spi_0, and set properties
   set axi_quad_spi_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_quad_spi:3.2 axi_quad_spi_0 ]
@@ -383,46 +420,6 @@ proc create_root_design { parentCell } {
    CONFIG.USE_SPREAD_SPECTRUM {false} \
  ] $clk_wiz_1
 
-  # Create instance: iomodule_0, and set properties
-  set iomodule_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:iomodule:3.1 iomodule_0 ]
-  set_property -dict [ list \
-   CONFIG.C_GPI2_SIZE {32} \
-   CONFIG.C_GPI3_SIZE {1} \
-   CONFIG.C_GPO1_SIZE {1} \
-   CONFIG.C_GPO2_INIT {0x00000000} \
-   CONFIG.C_GPO2_SIZE {2} \
-   CONFIG.C_USE_GPI2 {0} \
-   CONFIG.C_USE_GPI3 {1} \
-   CONFIG.C_USE_GPO1 {1} \
-   CONFIG.C_USE_GPO2 {1} \
- ] $iomodule_0
-
-  # Create instance: iomodule_1, and set properties
-  set iomodule_1 [ create_bd_cell -type ip -vlnv xilinx.com:ip:iomodule:3.1 iomodule_1 ]
-  set_property -dict [ list \
-   CONFIG.C_GPI1_SIZE {17} \
-   CONFIG.C_GPO1_SIZE {8} \
-   CONFIG.C_GPO2_SIZE {16} \
-   CONFIG.C_GPO3_SIZE {16} \
-   CONFIG.C_USE_GPI1 {0} \
-   CONFIG.C_USE_GPO1 {1} \
-   CONFIG.C_USE_GPO2 {1} \
-   CONFIG.C_USE_GPO3 {1} \
- ] $iomodule_1
-
-  # Create instance: iomodule_2, and set properties
-  set iomodule_2 [ create_bd_cell -type ip -vlnv xilinx.com:ip:iomodule:3.1 iomodule_2 ]
-  set_property -dict [ list \
-   CONFIG.C_GPI1_SIZE {32} \
-   CONFIG.C_GPI2_SIZE {32} \
-   CONFIG.C_GPI3_SIZE {32} \
-   CONFIG.C_GPI4_SIZE {32} \
-   CONFIG.C_USE_GPI1 {1} \
-   CONFIG.C_USE_GPI2 {1} \
-   CONFIG.C_USE_GPI3 {1} \
-   CONFIG.C_USE_GPI4 {1} \
- ] $iomodule_2
-
   # Create instance: mdm_1, and set properties
   set mdm_1 [ create_bd_cell -type ip -vlnv xilinx.com:ip:mdm:3.2 mdm_1 ]
 
@@ -471,21 +468,20 @@ proc create_root_design { parentCell } {
   set rst_clk_wiz_1_100M [ create_bd_cell -type ip -vlnv xilinx.com:ip:proc_sys_reset:5.0 rst_clk_wiz_1_100M ]
 
   # Create interface connections
+  connect_bd_intf_net -intf_net Conn [get_bd_intf_pins Parameter_Module/SLMB] [get_bd_intf_pins microblaze_0_local_memory/LMB_Sl_1]
+  connect_bd_intf_net -intf_net Conn1 [get_bd_intf_pins Data_Module/SLMB] [get_bd_intf_pins microblaze_0_local_memory/LMB_Sl_2]
+  connect_bd_intf_net -intf_net Data_Module_GPIO1 [get_bd_intf_ports PHASEREF] [get_bd_intf_pins Data_Module/GPIO1]
+  connect_bd_intf_net -intf_net Data_Module_GPIO2 [get_bd_intf_ports PHASE1] [get_bd_intf_pins Data_Module/GPIO2]
+  connect_bd_intf_net -intf_net Data_Module_GPIO3 [get_bd_intf_ports PHASE2] [get_bd_intf_pins Data_Module/GPIO3]
+  connect_bd_intf_net -intf_net Data_Module_GPIO4 [get_bd_intf_ports PHASE3] [get_bd_intf_pins Data_Module/GPIO4]
+  connect_bd_intf_net -intf_net Parameter_Module_GPIO3 [get_bd_intf_ports AGC_CONFIG_REGISTER] [get_bd_intf_pins Parameter_Module/GPIO3]
+  connect_bd_intf_net -intf_net Parameter_Module_GPIO4 [get_bd_intf_ports OUT_REGISTER] [get_bd_intf_pins Parameter_Module/GPIO4]
   connect_bd_intf_net -intf_net axi_quad_spi_0_SPI_0 [get_bd_intf_ports spi_0] [get_bd_intf_pins axi_quad_spi_0/SPI_0]
   connect_bd_intf_net -intf_net axi_uartlite_0_UART [get_bd_intf_ports uart_rs232] [get_bd_intf_pins axi_uartlite_0/UART]
-  connect_bd_intf_net -intf_net dlmb_v10_iomodule_0 [get_bd_intf_pins iomodule_0/SLMB] [get_bd_intf_pins microblaze_0_local_memory/LMB_Sl_1]
-  connect_bd_intf_net -intf_net dlmb_v10_iomodule_1 [get_bd_intf_pins iomodule_1/SLMB] [get_bd_intf_pins microblaze_0_local_memory/LMB_Sl_2]
-  connect_bd_intf_net -intf_net dlmb_v10_iomodule_2 [get_bd_intf_pins iomodule_2/SLMB] [get_bd_intf_pins microblaze_0_local_memory/LMB_Sl_3]
-  connect_bd_intf_net -intf_net iomodule_0_GPIO1 [get_bd_intf_ports UART_Buffer] [get_bd_intf_pins iomodule_0/GPIO1]
-  connect_bd_intf_net -intf_net iomodule_0_GPIO2 [get_bd_intf_ports SET_PROCESS] [get_bd_intf_pins iomodule_0/GPIO2]
-  connect_bd_intf_net -intf_net iomodule_0_GPIO3 [get_bd_intf_ports DATA_READY] [get_bd_intf_pins iomodule_0/GPIO3]
-  connect_bd_intf_net -intf_net iomodule_1_GPIO1 [get_bd_intf_ports Gain_PGA] [get_bd_intf_pins iomodule_1/GPIO1]
-  connect_bd_intf_net -intf_net iomodule_1_GPIO2 [get_bd_intf_ports Signal_Threshold] [get_bd_intf_pins iomodule_1/GPIO2]
-  connect_bd_intf_net -intf_net iomodule_1_GPIO3 [get_bd_intf_ports SNR_Threshold] [get_bd_intf_pins iomodule_1/GPIO3]
-  connect_bd_intf_net -intf_net iomodule_2_GPIO1 [get_bd_intf_ports PhaseRef] [get_bd_intf_pins iomodule_2/GPIO1]
-  connect_bd_intf_net -intf_net iomodule_2_GPIO2 [get_bd_intf_ports Phase1] [get_bd_intf_pins iomodule_2/GPIO2]
-  connect_bd_intf_net -intf_net iomodule_2_GPIO3 [get_bd_intf_ports Phase2] [get_bd_intf_pins iomodule_2/GPIO3]
-  connect_bd_intf_net -intf_net iomodule_2_GPIO4 [get_bd_intf_ports Phase3] [get_bd_intf_pins iomodule_2/GPIO4]
+  connect_bd_intf_net -intf_net dlmb_v10_iomodule_0 [get_bd_intf_pins Data_Module_2/SLMB] [get_bd_intf_pins microblaze_0_local_memory/LMB_Sl_3]
+  connect_bd_intf_net -intf_net iomodule_0_GPIO1 [get_bd_intf_ports INDEX] [get_bd_intf_pins Data_Module_2/GPIO1]
+  connect_bd_intf_net -intf_net iomodule_1_GPIO1 [get_bd_intf_ports CONFIG_REGISTER] [get_bd_intf_pins Parameter_Module/GPIO1]
+  connect_bd_intf_net -intf_net iomodule_1_GPIO2 [get_bd_intf_ports THRESHOLD_REGISTER] [get_bd_intf_pins Parameter_Module/GPIO2]
   connect_bd_intf_net -intf_net microblaze_0_M_AXI_DP [get_bd_intf_pins microblaze_0/M_AXI_DP] [get_bd_intf_pins microblaze_0_axi_periph/S00_AXI]
   connect_bd_intf_net -intf_net microblaze_0_axi_periph_M00_AXI [get_bd_intf_pins axi_uartlite_0/S_AXI] [get_bd_intf_pins microblaze_0_axi_periph/M00_AXI]
   connect_bd_intf_net -intf_net microblaze_0_axi_periph_M01_AXI [get_bd_intf_pins axi_quad_spi_0/AXI_LITE] [get_bd_intf_pins microblaze_0_axi_periph/M01_AXI]
@@ -494,6 +490,8 @@ proc create_root_design { parentCell } {
   connect_bd_intf_net -intf_net microblaze_0_ilmb_1 [get_bd_intf_pins microblaze_0/ILMB] [get_bd_intf_pins microblaze_0_local_memory/ILMB]
 
   # Create port connections
+  connect_bd_net -net Net [get_bd_pins Data_Module/Rst] [get_bd_pins Data_Module_2/Rst] [get_bd_pins Parameter_Module/Rst] [get_bd_pins rst_clk_wiz_1_100M/peripheral_reset]
+  connect_bd_net -net Net1 [get_bd_pins axi_quad_spi_0/s_axi_aresetn] [get_bd_pins axi_uartlite_0/s_axi_aresetn] [get_bd_pins microblaze_0_axi_periph/ARESETN] [get_bd_pins microblaze_0_axi_periph/M00_ARESETN] [get_bd_pins microblaze_0_axi_periph/M01_ARESETN] [get_bd_pins microblaze_0_axi_periph/S00_ARESETN] [get_bd_pins rst_clk_wiz_1_100M/peripheral_aresetn]
   connect_bd_net -net Reset_1 [get_bd_ports Reset] [get_bd_pins clk_wiz_1/reset] [get_bd_pins rst_clk_wiz_1_100M/ext_reset_in]
   connect_bd_net -net clk_1 [get_bd_ports clk] [get_bd_pins clk_wiz_1/clk_in1]
   connect_bd_net -net clk_wiz_0_clk_out1 [get_bd_ports clk_25mhz] [get_bd_pins clk_wiz_0/clk_out1]
@@ -501,20 +499,18 @@ proc create_root_design { parentCell } {
   connect_bd_net -net clk_wiz_1_clk_out3 [get_bd_ports clk_10mhz] [get_bd_pins clk_wiz_1/clk_out3]
   connect_bd_net -net clk_wiz_1_locked [get_bd_pins clk_wiz_1/locked] [get_bd_pins rst_clk_wiz_1_100M/dcm_locked]
   connect_bd_net -net mdm_1_debug_sys_rst [get_bd_pins clk_wiz_0/reset] [get_bd_pins mdm_1/Debug_SYS_Rst] [get_bd_pins rst_clk_wiz_1_100M/mb_debug_sys_rst]
-  connect_bd_net -net microblaze_0_Clk [get_bd_pins axi_quad_spi_0/s_axi_aclk] [get_bd_pins axi_uartlite_0/s_axi_aclk] [get_bd_pins clk_wiz_0/clk_in1] [get_bd_pins clk_wiz_1/clk_out1] [get_bd_pins iomodule_0/Clk] [get_bd_pins iomodule_1/Clk] [get_bd_pins iomodule_2/Clk] [get_bd_pins microblaze_0/Clk] [get_bd_pins microblaze_0_axi_periph/ACLK] [get_bd_pins microblaze_0_axi_periph/M00_ACLK] [get_bd_pins microblaze_0_axi_periph/M01_ACLK] [get_bd_pins microblaze_0_axi_periph/S00_ACLK] [get_bd_pins microblaze_0_local_memory/LMB_Clk] [get_bd_pins rst_clk_wiz_1_100M/slowest_sync_clk]
+  connect_bd_net -net microblaze_0_Clk [get_bd_pins Data_Module/Clk] [get_bd_pins Data_Module_2/Clk] [get_bd_pins Parameter_Module/Clk] [get_bd_pins axi_quad_spi_0/s_axi_aclk] [get_bd_pins axi_uartlite_0/s_axi_aclk] [get_bd_pins clk_wiz_0/clk_in1] [get_bd_pins clk_wiz_1/clk_out1] [get_bd_pins microblaze_0/Clk] [get_bd_pins microblaze_0_axi_periph/ACLK] [get_bd_pins microblaze_0_axi_periph/M00_ACLK] [get_bd_pins microblaze_0_axi_periph/M01_ACLK] [get_bd_pins microblaze_0_axi_periph/S00_ACLK] [get_bd_pins microblaze_0_local_memory/LMB_Clk] [get_bd_pins rst_clk_wiz_1_100M/slowest_sync_clk]
   connect_bd_net -net rst_clk_wiz_1_100M_bus_struct_reset [get_bd_pins microblaze_0_local_memory/SYS_Rst] [get_bd_pins rst_clk_wiz_1_100M/bus_struct_reset]
   connect_bd_net -net rst_clk_wiz_1_100M_mb_reset [get_bd_pins microblaze_0/Reset] [get_bd_pins rst_clk_wiz_1_100M/mb_reset]
-  connect_bd_net -net rst_clk_wiz_1_100M_peripheral_aresetn [get_bd_pins axi_quad_spi_0/s_axi_aresetn] [get_bd_pins axi_uartlite_0/s_axi_aresetn] [get_bd_pins microblaze_0_axi_periph/ARESETN] [get_bd_pins microblaze_0_axi_periph/M00_ARESETN] [get_bd_pins microblaze_0_axi_periph/M01_ARESETN] [get_bd_pins microblaze_0_axi_periph/S00_ARESETN] [get_bd_pins rst_clk_wiz_1_100M/peripheral_aresetn]
-  connect_bd_net -net rst_clk_wiz_1_100M_peripheral_reset [get_bd_pins iomodule_0/Rst] [get_bd_pins iomodule_1/Rst] [get_bd_pins iomodule_2/Rst] [get_bd_pins rst_clk_wiz_1_100M/peripheral_reset]
 
   # Create address segments
+  assign_bd_address -offset 0x44A10000 -range 0x00010000 -target_address_space [get_bd_addr_spaces microblaze_0/Data] [get_bd_addr_segs Data_Module_2/SLMB/Reg] -force
   assign_bd_address -offset 0x44A00000 -range 0x00010000 -target_address_space [get_bd_addr_spaces microblaze_0/Data] [get_bd_addr_segs axi_quad_spi_0/AXI_LITE/Reg] -force
   assign_bd_address -offset 0x40600000 -range 0x00010000 -target_address_space [get_bd_addr_spaces microblaze_0/Data] [get_bd_addr_segs axi_uartlite_0/S_AXI/Reg] -force
   assign_bd_address -offset 0x00000000 -range 0x00020000 -target_address_space [get_bd_addr_spaces microblaze_0/Data] [get_bd_addr_segs microblaze_0_local_memory/dlmb_bram_if_cntlr/SLMB/Mem] -force
   assign_bd_address -offset 0x00000000 -range 0x00020000 -target_address_space [get_bd_addr_spaces microblaze_0/Instruction] [get_bd_addr_segs microblaze_0_local_memory/ilmb_bram_if_cntlr/SLMB/Mem] -force
-  assign_bd_address -offset 0x44A10000 -range 0x00010000 -target_address_space [get_bd_addr_spaces microblaze_0/Data] [get_bd_addr_segs iomodule_0/SLMB/Reg] -force
-  assign_bd_address -offset 0x44A20000 -range 0x00010000 -target_address_space [get_bd_addr_spaces microblaze_0/Data] [get_bd_addr_segs iomodule_1/SLMB/Reg] -force
-  assign_bd_address -offset 0x44A30000 -range 0x00010000 -target_address_space [get_bd_addr_spaces microblaze_0/Data] [get_bd_addr_segs iomodule_2/SLMB/Reg] -force
+  assign_bd_address -offset 0x44A20000 -range 0x00010000 -target_address_space [get_bd_addr_spaces microblaze_0/Data] [get_bd_addr_segs Parameter_Module/SLMB/Reg] -force
+  assign_bd_address -offset 0x44A30000 -range 0x00010000 -target_address_space [get_bd_addr_spaces microblaze_0/Data] [get_bd_addr_segs Data_Module/SLMB/Reg] -force
 
 
   # Restore current instance

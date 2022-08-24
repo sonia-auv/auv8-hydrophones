@@ -10,118 +10,82 @@
 
 int main()
 {
-	state_machine state = menu;
+	XUartLite uart;
+	XIOModule config;
+	XIOModule data;
+	XIOModule data2;
 
-	XIOModule data_ready_and_settings;
-	XIOModule dataout;
-	XIOModule dataout2;
+	hydro_ptr = allocationHydro();
+	hydro_ptr->shell = allocationTinyShell();
+	hydro_ptr->registers = allocationConfigRegisters();
+	hydro_ptr->registers->r1 = 0;
+	hydro_ptr->registers->r2 = 0;
+	hydro_ptr->registers->r3 = 0;
 
-	u16 command = 0;
-	u8 i = 0, offset = 0;
-	char arrayChecksum[256];
+	operation_mode actual;
+	u32 outValue = 0;
+	u8 agcActivation = 0, agcError = 0, agcGain = 0;
 
-	xil_printf("\r\n");
+	if (initperipherals(hydro_ptr, &uart, &config, &data, &data2) != XST_SUCCESS)
+	{
+		xil_printf("> Error with init of the Hydrophone. Bye Bye!");
+		cleanup_platform();
+		return 0;
+	}
 
-	initperipherals(&data_ready_and_settings, &dataout, &dataout2);
+	setprocess(hydro_ptr, idle);
+	shell_boot();
 
 	while(1)
 	{
-		if(state == menu)
+		shell_prompt();
+		if (shell_wait_command(hydro_ptr->shell))
 		{
-			displaymenu();
-			state = waitcommand;
+			shell_put_line("> Error with the receiving. Trying to erase the buffer");
+			reset_tiny_shell(hydro_ptr->shell);
 		}
 
-		else if(state==waitcommand)
+		actual = hydro_ptr->operation;
+
+		while(actual == normalop || actual == testping || actual == getrawdata)
 		{
-			command = receivedcommand();
-			switch(command)
+			outValue = outRegister(hydro_ptr->config);
+
+			if(dataready(outValue))
 			{
-				case COMMAND_NORMAL_OP:
-					state = normalop;
-					xil_printf("\r\n========= Normal operation =========\r\n");
-				break;
-				case COMMAND_TEST_PING:
-					state = testping;
-					xil_printf("\r\n========= Test Ping =========\r\n");
-				break;
-				case COMMAND_SET_GAIN:
-					state = setgain;
-				break;
-				case COMMAND_SET_SNR_THRESHOLD:
-					state = SNRthreshold;
-				break;
-				case COMMAND_SET_SIGNAL_THRESHOLD:
-					state = Signalthreshold;
-				break;
-				case COMMAND_GET_RAW_DATA:
-					state = getrawdata;
-					xil_printf("\r\n========= Get Raw Data =========\r\n");
-				break;
-				default:
-					state = 9;
-				break;
+				if(actual == normalop || actual == testping)
+				{
+					xil_printf("H1,%d,%d,%d,%d,%d,%d\r\n", readdata(hydro_ptr->data_output, 1), readdata(hydro_ptr->data_output,2),
+							readdata(hydro_ptr->data_output, 3), readdata(hydro_ptr->data_output, 4), getsnr(hydro_ptr), getindex(hydro_ptr));
+					if(actual == testping) hydro_ptr->operation = idle;
+				}
+				else
+				{
+					xil_printf("H6,%d,%d,%d,%d\r\n", readdata(hydro_ptr->data_output, 1), readdata(hydro_ptr->data_output,2),
+							readdata(hydro_ptr->data_output, 3), readdata(hydro_ptr->data_output, 4));
+				}
 			}
-		command = 0;
-		}
-
-		else if(state==normalop)
-		{
-			writedata(&data_ready_and_settings, 2, 0);
-		}
-		else if(state==testping)
-		{
-			writedata(&data_ready_and_settings, 2, 1);
-		}
-		else if(state==setgain)
-		{
-			state = menu;
-			commandsetpgagain(&dataout);
-		}
-		else if(state==SNRthreshold)
-		{
-			state = menu;
-			commandsetsnrthreshold(&dataout);
-		}
-		else if(state==Signalthreshold)
-		{
-			state = menu;
-			commandsetsignalthreshold(&dataout);
-		}
-		else if(state==getrawdata)
-		{
-			writedata(&data_ready_and_settings, 2, 2);
-		}
-		else
-		{
-			xil_printf("\r\n\nError. Back to the menu.\r\n\n");
-			state = menu;
-		}
-		if(dataready(&data_ready_and_settings) && (state == normalop || state == testping || state == getrawdata))
-		{
-			arrayChecksum[0] = 0x48; // H
-			if(state == normalop || state == testping)
+			if(agcon(outValue) != agcActivation)
 			{
-				arrayChecksum[1] = 0x31; //1
-				if(state == testping) state = menu;
+				agcActivation = agcon(outValue);
+				xil_printf("> Automatic Gain Control has been set to %d\r\n", agcActivation);
 			}
-			else arrayChecksum[1] = 0x36; //6
-
-			arrayChecksum[2] = 0x2C; // ,
-			offset = 3; // New values need to be placed at [3] of the array
-
-			for(i = 0; i < 4; ++i) // Format to calculate the checksum
+			if(agcerror(outValue) != agcError)
 			{
-				offset += ToString(arrayChecksum, readdata(&dataout2, i+1), offset);
-				if(i < 3) arrayChecksum[offset] = 0x2C; // ,
-				else arrayChecksum[offset] = 0x2A; // *
-				offset += 1;
+				agcError = agcerror(outValue);
+				xil_printf("> Automatic Gain Control is in error. User gain will be used\r\n");
 			}
-			xil_printf("%s%02x\r\n", arrayChecksum, CalculateChecksum(arrayChecksum, offset)); // Include char * in the checksum calculation
-		}
-		if(polluart() == 'q')
-		{
-			state = menu;
+			if(agcgainout(outValue) != agcGain)
+			{
+				agcGain = agcgainout(outValue);
+				xil_printf("> New gain from the automatic gain control. %d\r\n", agcGain);
+			}
+
+			if(polluart() == 'q')
+			{
+				setprocess(hydro_ptr, idle);
+				actual = hydro_ptr->operation;
+			}
 		}
 	}
 	return 0;

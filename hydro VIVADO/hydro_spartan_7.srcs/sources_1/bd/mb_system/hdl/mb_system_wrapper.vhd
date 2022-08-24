@@ -1,7 +1,7 @@
 --Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
---Date        : Sun Sep 19 21:24:02 2021
+--Date        : Fri Jul 15 15:46:22 2022
 --Host        : DESKTOP-3JGF4VF running 64-bit major release  (build 9200)
 --Command     : generate_target mb_system_wrapper.bd
 --Design      : mb_system_wrapper
@@ -13,17 +13,16 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity mb_system_wrapper is
   port (
-    DATA_READY_tri_i : in STD_LOGIC_VECTOR ( 0 to 0 );
-    Gain_PGA_tri_o : out STD_LOGIC_VECTOR ( 7 downto 0 );
-    Phase1_tri_i : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    Phase2_tri_i : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    Phase3_tri_i : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    PhaseRef_tri_i : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    AGC_CONFIG_REGISTER_tri_o : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    CONFIG_REGISTER_tri_o : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    INDEX_tri_i : in STD_LOGIC_VECTOR ( 16 downto 0 );
+    OUT_REGISTER_tri_i : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    PHASE1_tri_i : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    PHASE2_tri_i : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    PHASE3_tri_i : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    PHASEREF_tri_i : in STD_LOGIC_VECTOR ( 31 downto 0 );
     Reset : in STD_LOGIC;
-    SET_PROCESS_tri_o : out STD_LOGIC_VECTOR ( 1 downto 0 );
-    SNR_Threshold_tri_o : out STD_LOGIC_VECTOR ( 15 downto 0 );
-    Signal_Threshold_tri_o : out STD_LOGIC_VECTOR ( 15 downto 0 );
-    UART_Buffer_tri_o : out STD_LOGIC_VECTOR ( 0 to 0 );
+    THRESHOLD_REGISTER_tri_o : out STD_LOGIC_VECTOR ( 31 downto 0 );
     clk : in STD_LOGIC;
     clk_10mhz : out STD_LOGIC;
     clk_25mhz : out STD_LOGIC;
@@ -46,6 +45,8 @@ architecture STRUCTURE of mb_system_wrapper is
     clk_25mhz : out STD_LOGIC;
     clk_10mhz : out STD_LOGIC;
     clk_50mhz : out STD_LOGIC;
+    uart_rs232_rxd : in STD_LOGIC;
+    uart_rs232_txd : out STD_LOGIC;
     spi_0_io0_i : in STD_LOGIC;
     spi_0_io0_o : out STD_LOGIC;
     spi_0_io0_t : out STD_LOGIC;
@@ -61,18 +62,15 @@ architecture STRUCTURE of mb_system_wrapper is
     spi_0_ss_i : in STD_LOGIC_VECTOR ( 0 to 0 );
     spi_0_ss_o : out STD_LOGIC_VECTOR ( 0 to 0 );
     spi_0_ss_t : out STD_LOGIC;
-    Phase2_tri_i : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    UART_Buffer_tri_o : out STD_LOGIC_VECTOR ( 0 to 0 );
-    Phase1_tri_i : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    Signal_Threshold_tri_o : out STD_LOGIC_VECTOR ( 15 downto 0 );
-    uart_rs232_rxd : in STD_LOGIC;
-    uart_rs232_txd : out STD_LOGIC;
-    PhaseRef_tri_i : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    DATA_READY_tri_i : in STD_LOGIC_VECTOR ( 0 to 0 );
-    SNR_Threshold_tri_o : out STD_LOGIC_VECTOR ( 15 downto 0 );
-    SET_PROCESS_tri_o : out STD_LOGIC_VECTOR ( 1 downto 0 );
-    Phase3_tri_i : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    Gain_PGA_tri_o : out STD_LOGIC_VECTOR ( 7 downto 0 )
+    PHASEREF_tri_i : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    AGC_CONFIG_REGISTER_tri_o : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    PHASE3_tri_i : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    INDEX_tri_i : in STD_LOGIC_VECTOR ( 16 downto 0 );
+    PHASE2_tri_i : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    PHASE1_tri_i : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    THRESHOLD_REGISTER_tri_o : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    CONFIG_REGISTER_tri_o : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    OUT_REGISTER_tri_i : in STD_LOGIC_VECTOR ( 31 downto 0 )
   );
   end component mb_system;
   component IOBUF is
@@ -102,17 +100,16 @@ architecture STRUCTURE of mb_system_wrapper is
 begin
 mb_system_i: component mb_system
      port map (
-      DATA_READY_tri_i(0) => DATA_READY_tri_i(0),
-      Gain_PGA_tri_o(7 downto 0) => Gain_PGA_tri_o(7 downto 0),
-      Phase1_tri_i(31 downto 0) => Phase1_tri_i(31 downto 0),
-      Phase2_tri_i(31 downto 0) => Phase2_tri_i(31 downto 0),
-      Phase3_tri_i(31 downto 0) => Phase3_tri_i(31 downto 0),
-      PhaseRef_tri_i(31 downto 0) => PhaseRef_tri_i(31 downto 0),
+      AGC_CONFIG_REGISTER_tri_o(31 downto 0) => AGC_CONFIG_REGISTER_tri_o(31 downto 0),
+      CONFIG_REGISTER_tri_o(31 downto 0) => CONFIG_REGISTER_tri_o(31 downto 0),
+      INDEX_tri_i(16 downto 0) => INDEX_tri_i(16 downto 0),
+      OUT_REGISTER_tri_i(31 downto 0) => OUT_REGISTER_tri_i(31 downto 0),
+      PHASE1_tri_i(31 downto 0) => PHASE1_tri_i(31 downto 0),
+      PHASE2_tri_i(31 downto 0) => PHASE2_tri_i(31 downto 0),
+      PHASE3_tri_i(31 downto 0) => PHASE3_tri_i(31 downto 0),
+      PHASEREF_tri_i(31 downto 0) => PHASEREF_tri_i(31 downto 0),
       Reset => Reset,
-      SET_PROCESS_tri_o(1 downto 0) => SET_PROCESS_tri_o(1 downto 0),
-      SNR_Threshold_tri_o(15 downto 0) => SNR_Threshold_tri_o(15 downto 0),
-      Signal_Threshold_tri_o(15 downto 0) => Signal_Threshold_tri_o(15 downto 0),
-      UART_Buffer_tri_o(0) => UART_Buffer_tri_o(0),
+      THRESHOLD_REGISTER_tri_o(31 downto 0) => THRESHOLD_REGISTER_tri_o(31 downto 0),
       clk => clk,
       clk_10mhz => clk_10mhz,
       clk_25mhz => clk_25mhz,
